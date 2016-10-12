@@ -1,7 +1,7 @@
 # Gambas Form File 3.0
 
 { Form Form
-  MoveScaled(0,0,80,59)
+  MoveScaled(0,0,80,46)
   Icon = Picture["icon175x175.jpeg"]
   { PictureBox1 PictureBox
     MoveScaled(1,0,17,17)
@@ -9,10 +9,44 @@
     Stretch = True
   }
   { Label1 Label
-    MoveScaled(20,1,55,7)
+    MoveScaled(25,3,54,7)
     Font = Font["Zero Velocity BRK,+8"]
     Foreground = &HFF0000&
     AutoResize = True
     Text = ("EDUCATIVO")
+  }
+  { Label2 Label
+    MoveScaled(25,2,55,7)
+    Font = Font["Zero Velocity BRK,+8"]
+    Foreground = &H778B9F&
+    AutoResize = True
+    Text = ("EDUCATIVO")
+  }
+  { ButtonCrearEditar Button
+    MoveScaled(29,17,32,8)
+    Text = ("Crear o Editar")
+    Picture = Picture["icon:/32/new"]
+  }
+  { ButtonJugar Button
+    MoveScaled(29,29,32,9)
+    Text = ("Jugar")
+    Picture = Picture["icon:/32/game"]
+  }
+  { Label3 Label
+    MoveScaled(4,39,70,4)
+    Text = ("Realizado en Gambas3.5.4 para la distribución MininoPicaros 2015")
+    Alignment = Align.Center
+  }
+  { Labelversion Label
+    MoveScaled(36,11,20,3)
+  }
+  { Label4 Label
+    MoveScaled(4,42,70,4)
+    Text = ("Autores: Julio Sanchez Berro (jsbsan) y Antonio Sanchez (introlinux)")
+    Alignment = Align.Center
+  }
+  { PictureBox2 PictureBox
+    MoveScaled(5,22,9,9)
+    Picture = Picture["icon:/64/gambas"]
   }
 }

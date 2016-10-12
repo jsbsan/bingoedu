@@ -5,6 +5,8 @@ Public Sub _new()
 End
 
 Public Sub Form_Open()
+Labelversion.text = ("Version") & ": " & Application.Version
 Me.Center
 Me.Title = ("Bingo Educativo")
+
 End

@@ -18,10 +18,30 @@ msgstr ""
 msgid "Juego del bingo educativo para refrescar conocimientos."
 msgstr ""
 
-#: FMain.form:22
+#: FMain.form:29
 msgid "EDUCATIVO"
 msgstr ""
 
-#: FMain.class:9
+#: FMain.form:42
+msgid "Crear o Editar"
+msgstr ""
+
+#: FMain.form:48
+msgid "Jugar"
+msgstr ""
+
+#: FMain.form:54
+msgid "Realizado en Gambas3.5.4 para la distribución MininoPicaros 2015"
+msgstr ""
+
+#: FMain.form:64
+msgid "Autores: Julio Sanchez Berro (jsbsan) y Antonio Sanchez (introlinux)"
+msgstr ""
+
+#: FMain.class:8
+msgid "Version"
+msgstr ""
+
+#: FMain.class:10
 msgid "Bingo Educativo"
 msgstr ""

@@ -6,4 +6,5 @@ End
 
 Public Sub Form_Open()
 Me.Center
+Me.Title = ("Bingo Educativo")
 End
