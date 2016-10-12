@@ -1,0 +1,10 @@
+' Gambas class file
+
+Public Sub _new()
+
+End
+
+Public Sub Form_Open()
+Me.Center
+Me.Title = ("Bingo Educativo")
+End

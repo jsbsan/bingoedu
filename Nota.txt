@@ -1,0 +1,2 @@
+Ver uso de json:
+http://jsbsan.blogspot.com.es/2015/04/gambas3-ejemplo-de-json-y-extraer-datos.html
