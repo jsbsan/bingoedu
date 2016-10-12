@@ -18,24 +18,28 @@ msgstr ""
 msgid "Juego del bingo educativo para refrescar conocimientos."
 msgstr ""
 
-#: FMain.form:29
+#: FMain.form:30
 msgid "EDUCATIVO"
 msgstr ""
 
-#: FMain.form:42
+#: FMain.form:43
 msgid "Crear o Editar"
 msgstr ""
 
-#: FMain.form:48
+#: FMain.form:49
 msgid "Jugar"
 msgstr ""
 
-#: FMain.form:54
+#: FMain.form:55
 msgid "Realizado en Gambas3.5.4 para la distribución MininoPicaros 2015"
 msgstr ""
 
-#: FMain.form:64
+#: FMain.form:65
 msgid "Autores: Julio Sanchez Berro (jsbsan) y Antonio Sanchez (introlinux)"
+msgstr ""
+
+#: FMain.form:76
+msgid "hola"
 msgstr ""
 
 #: FMain.class:8
@@ -44,4 +48,120 @@ msgstr ""
 
 #: FMain.class:10
 msgid "Bingo Educativo"
+msgstr ""
+
+#: FormCartones.form:33
+msgid "TextBox1"
+msgstr ""
+
+#: FormCartones.form:38
+msgid "aqui se define el titulo que vendrá en cada carton"
+msgstr ""
+
+#: FormCartones.form:39
+msgid "Titulo:"
+msgstr ""
+
+#: FormCartones.form:45
+msgid "Tamaño de la Cuadrícula del Cartón"
+msgstr ""
+
+#: FormCartones.form:49
+msgid "4x3"
+msgstr ""
+
+#: FormCartones.form:55
+msgid "5x4"
+msgstr ""
+
+#: FormCartones.form:60
+msgid "5x5"
+msgstr ""
+
+#: FormCartones.form:71
+msgid "Huecos:"
+msgstr ""
+
+#: FormCartones.form:75
+msgid "Negros (rellenos):"
+msgstr ""
+
+#: FormCartones.form:80
+msgid "Blancos (vacíos):"
+msgstr ""
+
+#: FormCartones.form:96
+msgid "Número de cartones distintos a Generar:"
+msgstr ""
+
+#: FormCartones.form:101
+msgid ""
+"<b>Nota:</b><br>\n"
+"El número de cartones diferentes que se pueden generar, dependerá del número "
+"de elementos que tenga el Bingo. A mayor número de elementos del bingo, "
+"mayor número de cartones distintos que se podrań crear."
+msgstr ""
+
+#: FormCartones.form:110
+msgid "Elementos que se repitirán en todos los cartones:"
+msgstr ""
+
+#: FormCartones.form:115
+msgid "Pulse botón derecho para añadir elementos del bingo"
+msgstr ""
+
+#: FormCartones.form:125
+msgid "Previsualizar"
+msgstr ""
+
+#: FormCartones.form:136
+msgid "Generar"
+msgstr ""
+
+#: FormCartones.form:143 FormEditarCrear.form:46
+msgid "Salir"
+msgstr ""
+
+#: FormCartones.class:6 FormularioCreador.form:31
+msgid "Cartones"
+msgstr ""
+
+#: FormEditarCrear.form:18
+msgid "Editar/Crear"
+msgstr ""
+
+#: FormEditarCrear.form:24
+msgid "Crear"
+msgstr ""
+
+#: FormEditarCrear.form:30
+msgid "Editar"
+msgstr ""
+
+#: FormEditarCrear.form:36
+msgid "Borrar"
+msgstr ""
+
+#: FormEditarCrear.form:52
+msgid "Añadir"
+msgstr ""
+
+#: FormEditarCrear.form:58
+msgid "Compartir"
+msgstr ""
+
+#: FormularioCreador.form:21
+msgid "Elementos que componen el Bingo actual:"
+msgstr ""
+
+#: FormularioCreador.form:26
+msgid "Añadir Elemento"
+msgstr ""
+
+#: FormularioCreador.form:35
+msgid "Generar Cartones"
+msgstr ""
+
+#: FormularioCreador.form:46
+msgid "Ver Cartones"
 msgstr ""

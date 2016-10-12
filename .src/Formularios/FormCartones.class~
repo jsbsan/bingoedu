@@ -1,0 +1,21 @@
+' Gambas class file
+
+
+Public Sub Form_Open()
+
+  Me.Title = ("Cartones")
+  
+
+End
+
+Public Sub TextLabel1_MouseDown()
+
+  
+
+End
+
+Public Sub SquareButton1_Click()
+
+  Debug "Generar Grupo de Cartones"
+
+End

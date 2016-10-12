@@ -11,14 +11,14 @@
   { Label1 Label
     MoveScaled(25,3,54,7)
     Font = Font["Zero Velocity BRK,+8"]
-    Foreground = &HFF0000&
+    Foreground = &HFFBF7F&
     AutoResize = True
     Text = ("EDUCATIVO")
   }
   { Label2 Label
     MoveScaled(25,2,55,7)
     Font = Font["Zero Velocity BRK,+8"]
-    Foreground = &H778B9F&
+    Foreground = &H37B5DF&
     AutoResize = True
     Text = ("EDUCATIVO")
   }

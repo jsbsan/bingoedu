@@ -1,0 +1,10 @@
+' Gambas class file
+
+
+Public Sub ButtonGenerarCartones_Click()
+
+  Me.Hide
+  FormCartones.ShowModal()
+  Me.show
+
+End

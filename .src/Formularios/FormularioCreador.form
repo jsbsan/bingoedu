@@ -1,0 +1,33 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,80,64)
+  { ScrollViewContenedorBingo ScrollView
+    MoveScaled(4,10,69,33)
+  }
+  { Label1 Label
+    MoveScaled(1,6,45,4)
+    Text = ("Elementos que componen el Bingo actual:")
+  }
+  { Button1 Button
+    MoveScaled(9,47,20,6)
+    Text = ("Añadir Elemento")
+  }
+  { Frame1 Frame
+    MoveScaled(44,45,34,18)
+    Text = ("Cartones")
+    { ButtonGenerarCartones Button
+      MoveScaled(12,2,20,6)
+      Text = ("Generar Cartones")
+    }
+    { PictureBox1 PictureBox
+      MoveScaled(1,6,9,6)
+      Picture = Picture["carton de bingo50x32.jpg"]
+      Stretch = True
+    }
+    { ButtonGenerarCartones2 Button
+      MoveScaled(12,11,20,6)
+      Text = ("Ver Cartones")
+    }
+  }
+}

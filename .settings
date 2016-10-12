@@ -4,14 +4,25 @@ Count=0
 [DebugWindow]
 Count=0
 
+[DebugWindow/Me]
+Geometry=[38,165,234,285]
+
 [OpenFile]
-Active=1
-File[1]=".src/FMain.form"
-File[2]=".src/JS354.class:0.0"
-File[3]=".src/JSONCollection354.class:24.2"
-File[4]=".src/JSON354.module:0.0"
-File[5]=".src/FMain.class:7.57"
-Count=5
+File[1]=".src/Formularios/FMain.form"
+File[2]=".src/Clases/json/JS354.class:0.0"
+File[3]=".src/Clases/json/JSONCollection354.class:24.2"
+File[4]=".src/Clases/json/JSON354.module:265.2"
+File[5]=".src/Formularios/FMain.class:16.0"
+File[6]=".src/Formularios/FormEditarCrear.form"
+File[7]="Nota.txt:11.36"
+File[8]=".src/Formularios/FormularioCreador.form"
+File[9]=".src/Formularios/FormularioCreador.class:6.2"
+File[10]=".src/Formularios/FormCartones.form"
+File[11]=".src/Formularios/FormCartones.class:23.10"
+File[12]=".src/Formularios/FormEditarCrear.class:15.2"
+Active=13
+File[13]=".src/Clases/controles/SquareButton.class:112.0"
+Count=13
 
 [Watches]
 Count=0

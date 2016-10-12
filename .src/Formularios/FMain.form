@@ -11,14 +11,14 @@
   { Label1 Label
     MoveScaled(25,3,54,7)
     Font = Font["Zero Velocity BRK,+8"]
-    Foreground = &HFF0000&
+    Foreground = &HFFBF7F&
     AutoResize = True
     Text = ("EDUCATIVO")
   }
   { Label2 Label
     MoveScaled(25,2,55,7)
     Font = Font["Zero Velocity BRK,+8"]
-    Foreground = &H778B9F&
+    Foreground = &H37B5DF&
     AutoResize = True
     Text = ("EDUCATIVO")
   }
@@ -33,10 +33,25 @@
     Picture = Picture["icon:/32/game"]
   }
   { Label3 Label
-    MoveScaled(3,41,70,4)
+    MoveScaled(4,39,70,4)
     Text = ("Realizado en Gambas3.5.4 para la distribución MininoPicaros 2015")
+    Alignment = Align.Center
   }
   { Labelversion Label
     MoveScaled(36,11,20,3)
+  }
+  { Label4 Label
+    MoveScaled(4,42,70,4)
+    Text = ("Autores: Julio Sanchez Berro (jsbsan) y Antonio Sanchez (introlinux)")
+    Alignment = Align.Center
+  }
+  { PictureBox2 PictureBox
+    MoveScaled(5,22,9,9)
+    Picture = Picture["icon:/64/gambas"]
+  }
+  { SquareButton1 SquareButton
+    MoveScaled(67,21,10,9)
+    Text = ("hola")
+    Picture = Picture["icon:/22/pda"]
   }
 }
