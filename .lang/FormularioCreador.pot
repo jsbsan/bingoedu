@@ -14,23 +14,51 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: FormularioCreador.form:21
+#: FormularioCreador.form:27
 msgid "Elementos que componen el Bingo actual:"
 msgstr ""
 
-#: FormularioCreador.form:26
+#: FormularioCreador.form:32
 msgid "Añadir Elemento"
 msgstr ""
 
-#: FormularioCreador.form:31
+#: FormularioCreador.form:37
 msgid "Cartones"
 msgstr ""
 
-#: FormularioCreador.form:35
+#: FormularioCreador.form:41
 msgid "Generar Cartones"
 msgstr ""
 
-#: FormularioCreador.form:46
+#: FormularioCreador.form:52
 msgid "Ver Cartones"
+msgstr ""
+
+#: FormularioCreador.form:58
+msgid "aqui se define el titulo que vendrá en cada carton"
+msgstr ""
+
+#: FormularioCreador.form:59
+msgid "Titulo:"
+msgstr ""
+
+#: FormularioCreador.form:70
+msgid "Descripción:"
+msgstr ""
+
+#: FormularioCreador.form:80
+msgid "matematicas"
+msgstr ""
+
+#: FormularioCreador.form:80
+msgid "ingles"
+msgstr ""
+
+#: FormularioCreador.form:80
+msgid "lengua"
+msgstr ""
+
+#: FormularioCreador.form:86
+msgid "Categoria:"
 msgstr ""
 

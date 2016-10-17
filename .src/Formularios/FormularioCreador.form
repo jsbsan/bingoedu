@@ -1,20 +1,20 @@
 # Gambas Form File 3.0
 
 { Form Form
-  MoveScaled(0,0,80,64)
+  MoveScaled(0,0,86,75)
   { ScrollViewContenedorBingo ScrollView
-    MoveScaled(4,10,69,33)
+    MoveScaled(1,33,84,33)
   }
   { Label1 Label
-    MoveScaled(1,6,45,4)
+    MoveScaled(1,29,45,4)
     Text = ("Elementos que componen el Bingo actual:")
   }
   { Button1 Button
-    MoveScaled(9,47,20,6)
+    MoveScaled(64,68,20,6)
     Text = ("Añadir Elemento")
   }
   { Frame1 Frame
-    MoveScaled(44,45,34,18)
+    MoveScaled(50,1,34,18)
     Text = ("Cartones")
     { ButtonGenerarCartones Button
       MoveScaled(12,2,20,6)
@@ -29,5 +29,33 @@
       MoveScaled(12,11,20,6)
       Text = ("Ver Cartones")
     }
+  }
+  { Label2 Label
+    MoveScaled(1,3,11,4)
+    ToolTip = ("aqui se define el titulo que vendrá en cada carton")
+    Text = ("Titulo:")
+    Alignment = Align.Right
+  }
+  { TextBoxTituloCarton TextBox
+    MoveScaled(15,3,33,4)
+  }
+  { Label6 Label
+    MoveScaled(1,16,14,4)
+    ToolTip = ("aqui se define el titulo que vendrá en cada carton")
+    Text = ("Descripción:")
+    Alignment = Align.Right
+  }
+  { TextAreaDescripcion TextArea
+    MoveScaled(2,21,82,7)
+  }
+  { ComboBoxCategoria ComboBox
+    MoveScaled(15,10,34,4)
+    List = [("matematicas"), ("ingles"), ("lengua")]
+  }
+  { Label3 Label
+    MoveScaled(2,10,11,4)
+    ToolTip = ("aqui se define el titulo que vendrá en cada carton")
+    Text = ("Categoria:")
+    Alignment = Align.Right
   }
 }

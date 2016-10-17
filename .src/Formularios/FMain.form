@@ -33,7 +33,7 @@
     Picture = Picture["icon:/32/game"]
   }
   { Label3 Label
-    MoveScaled(4,39,70,4)
+    MoveScaled(0,39,70,4)
     Text = ("Realizado en Gambas3.5.4 para la distribución MininoPicaros 2015")
     Alignment = Align.Center
   }
@@ -41,7 +41,7 @@
     MoveScaled(36,11,20,3)
   }
   { Label4 Label
-    MoveScaled(4,42,70,4)
+    MoveScaled(0,42,70,4)
     Text = ("Autores: Julio Sanchez Berro (jsbsan) y Antonio Sanchez (introlinux)")
     Alignment = Align.Center
   }
@@ -49,9 +49,9 @@
     MoveScaled(5,22,9,9)
     Picture = Picture["icon:/64/gambas"]
   }
-  { SquareButton1 SquareButton
-    MoveScaled(67,21,10,9)
-    Text = ("hola")
-    Picture = Picture["icon:/22/pda"]
+  { ButtonSalir Button
+    MoveScaled(67,40,12,5)
+    Text = ("Salir")
+    Picture = Picture["icon:/22/quit"]
   }
 }

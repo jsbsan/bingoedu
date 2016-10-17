@@ -12,8 +12,7 @@ Me.Title = ("Bingo Educativo")
 End
 
 Public Sub ButtonCrearEditar_Click()
-Me.hide
+
   FormEditarCrear.showmodal
-  Me.show
 
 End

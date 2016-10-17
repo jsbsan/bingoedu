@@ -1,5 +1,43 @@
 # Gambas Form File 3.0
 
-{ FormEditarCrear Form
-  MoveScaled(0,0,64,64)
+{ Form Form
+  MoveScaled(0,0,83,47)
+  { Label1 Label
+    MoveScaled(25,1,34,5)
+    Text = ("Editar/Crear")
+    Alignment = Align.Center
+  }
+  { Button1 Button
+    MoveScaled(2,8,11.4286,4)
+    Text = ("Crear")
+    Picture = Picture["icon:/16/new"]
+  }
+  { Button2 Button
+    MoveScaled(2,13,11.4286,4)
+    Text = ("Editar")
+    Picture = Picture["icon:/16/edit"]
+  }
+  { Button3 Button
+    MoveScaled(2,29,11.4286,4)
+    Text = ("Borrar")
+    Picture = Picture["icon:/16/erase"]
+  }
+  { ScrollView1 ScrollView
+    MoveScaled(16,8,65,36)
+  }
+  { Button4 Button
+    MoveScaled(3,39,11.4286,4)
+    Text = ("Salir")
+    Picture = Picture["icon:/16/quit"]
+  }
+  { Button5 Button
+    MoveScaled(2,18,11.4286,4)
+    Text = ("Añadir")
+    Picture = Picture["icon:/16/add"]
+  }
+  { Button6 Button
+    MoveScaled(2,23,11.4286,4)
+    Text = ("Compartir")
+    Picture = Picture["icon:/16/people"]
+  }
 }

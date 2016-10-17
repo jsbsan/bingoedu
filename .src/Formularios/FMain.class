@@ -16,3 +16,9 @@ Public Sub ButtonCrearEditar_Click()
   FormEditarCrear.showmodal
 
 End
+
+Public Sub ButtonSalir_Click()
+
+  Me.Close()
+
+End

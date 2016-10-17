@@ -1,0 +1,84 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,106,55)
+  { Frame1 Frame
+    MoveScaled(1,11,52,33)
+    Text = ("Elemento en Bingo")
+    { RadioButton1 RadioButton
+      MoveScaled(4,3,3,6)
+      Text = ("RadioButton1")
+    }
+    { TextBoxTEXTOBINGO TextBox
+      MoveScaled(8,3,24,6)
+    }
+    { RadioButton2 RadioButton
+      MoveScaled(4,13,3,6)
+      Text = ("RadioButton1")
+    }
+    { RadioButton3 RadioButton
+      MoveScaled(4,25,3,6)
+      Text = ("RadioButton1")
+    }
+    { ButtonBoxSonidoBingo ButtonBox
+      MoveScaled(21,25,30,6)
+    }
+    { PictureBox1 PictureBox
+      MoveScaled(9,23,10,9)
+      Picture = Picture["icono sonido.png"]
+      Stretch = True
+      Border = Border.Plain
+    }
+    { !PictureBox2 PictureBox
+      MoveScaled(9,11,10,9)
+      #Public = True
+      Picture = Picture["icon:/64/image"]
+      Border = Border.Plain
+    }
+    { ButtonBoxImagenBingo ButtonBox
+      MoveScaled(21,12,30,6)
+    }
+  }
+  { Frame2 Frame
+    MoveScaled(54,11,50,33)
+    Text = ("Elemento en Cartón")
+    { RadioButton4 RadioButton
+      MoveScaled(2,3,3,6)
+      Text = ("RadioButton1")
+    }
+    { TextBoxTEXTOCARTON TextBox
+      MoveScaled(6,3,24,6)
+    }
+    { RadioButton5 RadioButton
+      MoveScaled(2,13,3,6)
+      Text = ("RadioButton1")
+    }
+    { PictureBox4 PictureBox
+      MoveScaled(7,11,10,9)
+      Picture = Picture["icon:/64/image"]
+      Stretch = True
+      Border = Border.Plain
+    }
+    { ButtonBoxImagenCarton ButtonBox
+      MoveScaled(19,13,30,6)
+    }
+  }
+  { Button1 Button
+    MoveScaled(85,47,20,6)
+    Text = ("Crear Elemento")
+  }
+  { Button2 Button
+    MoveScaled(53,47,13,6)
+    Text = ("Salir")
+    Picture = Picture["icon:/22/quit"]
+  }
+  { PictureBox3 PictureBox
+    MoveScaled(3,46,8,8)
+    Picture = Picture["microfono.png"]
+    Stretch = True
+  }
+  { Label1 Label
+    MoveScaled(12,47,20,5)
+    Text = ("grabar 2 segundos")
+  }
+}

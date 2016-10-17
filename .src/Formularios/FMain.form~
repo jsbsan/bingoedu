@@ -49,4 +49,13 @@
     MoveScaled(5,22,9,9)
     Picture = Picture["icon:/64/gambas"]
   }
+  { ButtonSalir Button
+    MoveScaled(69,34,10,4)
+    Text = ("Salir")
+  }
+  { SquareButtonSalir SquareButton
+    MoveScaled(69,21,8,7)
+    Text = ("Salir")
+    Picture = Picture["icon:/22/quit"]
+  }
 }

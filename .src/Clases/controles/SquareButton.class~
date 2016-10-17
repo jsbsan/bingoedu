@@ -112,13 +112,13 @@ End
 
 
 Public Sub da_Enter()
-
+  $bState = True
   $hDA.Refresh
 
 End
 
 Public Sub da_Leave()
-
+  $bState = False
   $hDA.Refresh
 
 End

@@ -76,7 +76,7 @@ Public Sub da_Draw()
     hImage = $hPicture.Image.Stretch(Me.W / 2, Me.H / 2)
 
 If $bState Then 
-  Paint.FillRect(0, 0, Me.w, Me.h, Color.Orange)
+  Paint.FillRect(0, 0, Me.w, Me.h, Color.green)
   Else
     Paint.FillRect(0, 0, Me.w, Me.h, Color.background)
   

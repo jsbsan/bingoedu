@@ -14,31 +14,31 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: FormEditarCrear.form:18
+#: FormEditarCrear.form:19
 msgid "Editar/Crear"
 msgstr ""
 
-#: FormEditarCrear.form:24
+#: FormEditarCrear.form:25
 msgid "Crear"
 msgstr ""
 
-#: FormEditarCrear.form:30
+#: FormEditarCrear.form:31
 msgid "Editar"
 msgstr ""
 
-#: FormEditarCrear.form:36
+#: FormEditarCrear.form:37
 msgid "Borrar"
 msgstr ""
 
-#: FormEditarCrear.form:46
+#: FormEditarCrear.form:47
 msgid "Salir"
 msgstr ""
 
-#: FormEditarCrear.form:52
+#: FormEditarCrear.form:53
 msgid "Añadir"
 msgstr ""
 
-#: FormEditarCrear.form:58
+#: FormEditarCrear.form:59
 msgid "Compartir"
 msgstr ""
 
