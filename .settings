@@ -1,5 +1,6 @@
 [Breakpoints]
-Count=0
+Breakpoint[1]="elemento.49"
+Count=1
 
 [DebugWindow]
 Count=0
@@ -7,24 +8,36 @@ Count=0
 [DebugWindow/Me]
 Geometry=[38,165,234,285]
 
+[DebugWindow/tempcole]
+Geometry=[5,21,210,210]
+
 [OpenFile]
 File[1]=".src/Formularios/FMain.form"
 File[2]=".src/Clases/json/JS354.class:0.0"
-File[3]=".src/Clases/json/JSONCollection354.class:24.2"
-File[4]=".src/Clases/json/JSON354.module:265.2"
-File[5]=".src/Formularios/FMain.class:21.12"
+File[3]=".src/Clases/json/JSONCollection354.class:24.0"
+File[4]=".src/Clases/json/JSON354.module:277.2"
+File[5]=".src/Formularios/FMain.class:21.0"
 File[6]=".src/Formularios/FormEditarCrear.form"
 File[7]="Nota.txt:11.36"
 File[8]=".src/Formularios/FormularioCreador.form"
-File[9]=".src/Formularios/FormularioCreador.class:16.0"
+File[9]=".src/Formularios/FormularioCreador.class:19.10"
 File[10]=".src/Formularios/FormCartones.form"
-File[11]=".src/Formularios/FormCartones.class:23.10"
+File[11]=".src/Formularios/FormCartones.class:23.0"
 File[12]=".src/Formularios/FormEditarCrear.class:15.2"
 File[13]=".src/Clases/controles/SquareButton.class:78.46"
-Active=14
 File[14]=".src/Formularios/FormElemento.form"
-Count=14
+Active=15
+File[15]=".src/Clases/TipoCarton.class:23.0"
+File[16]=".src/Clases/Bingo.class:9.0"
+File[17]=".src/Clases/elemento.class:51.19"
+File[18]=".src/Clases/elementoTexto.class:22.0"
+File[19]=".src/Clases/elementoImagen.class:27.3"
+File[20]=".src/Clases/elementoSonido.class:27.3"
+File[21]=".src/Formularios/FormElemento.class:5.12"
+File[22]=".src/Formularios/test.module:7.20"
+Count=22
 
 [Watches]
-Count=0
+Count=1
+Watch[1]="jsonstring"
 

@@ -73,8 +73,12 @@
     Picture = Picture["icon:/22/quit"]
   }
   { PictureBox3 PictureBox
-    MoveScaled(11,46,8,8)
-    Picture = Picture["microfono.jpg"]
+    MoveScaled(3,46,8,8)
+    Picture = Picture["microfono.png"]
     Stretch = True
+  }
+  { Label1 Label
+    MoveScaled(12,47,20,5)
+    Text = ("grabar 2 segundos")
   }
 }

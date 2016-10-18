@@ -1,0 +1,106 @@
+' Gambas class file
+
+'------------------------------------
+'API de la clase Elemento
+'------------------------------------
+Property enlace As String ''clave que enlaza con el elemento similar en el cartos del bingo
+Property id As String '' clave que identifica al elemento
+
+
+Public Sub _new()
+
+  'cuando se crea se identefica
+  Me.id = Hex(CFloat(Val(Str(Now))) * 86400000) '' se crea un identificador unico Ref: https://www.gambas-es.org/viewtopic.php?f=5&t=5837
+
+End
+
+
+'variables:
+' si es del tipo de elemento Carton -> si es igual a Bingo
+' datos a coger: texto, imagen (fichero), sonido (fichero)
+'
+
+
+Public Sub creaJson() As String
+
+  Dim c As New JSON354
+
+  Dim tvariante As New Variant[]
+
+  Dim tempcole As New Collection
+
+  Dim JsonString As String
+
+  'Dato de Identeificacion
+  tempcole.Add(Me.id, "id")
+
+  'dato de enlace
+  tempcole.Add(Me.enlace, "enlace")
+
+
+
+  'añadir datos segun tipo de elemento
+  Me.agregaDatos(ByRef tempcole) 'lo paso por referencia para modificarlo internamente y no tener que usar el valor de retorno
+
+
+
+  'lo convierto en variant.
+  tvariante.add(tempcole)
+
+  JsonString = c.Encode(tvariante)
+
+  Return JsonString
+
+End
+
+
+Public Sub agregaDatos(ByRef datos As Collection)
+
+  'en la API, no lo defino, pero si lo voy a definir en los distintos tipos de elementos.
+
+End
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'------------------------------
+'   definicion de propiedades
+'------------------------------
+
+Private $enlace As String
+Private $id As String
+
+Private Function id_Read() As String
+
+  Return $id
+
+End
+
+Private Sub id_Write(Value As String)
+
+  $id = Value
+
+End
+
+Private Function enlace_Read() As String
+
+  Return $enlace
+
+End
+
+Private Sub enlace_Write(Value As String)
+
+  $enlace = VALUE
+
+End

@@ -1,0 +1,82 @@
+' Gambas class file
+
+
+Property titulo As String ''titulo del bingo
+Property descripcion As String ''describe como es el bingo: se trata de un bingo para aprender matematica de 1º de eso. Tema Tablas de multiplicar
+Property tipo As String ''indica el tipo de bingo: para lenguaje,matematicas, ingles, etc...
+
+Public ArrayElementosBingo As New ElementoBingo[] ''donde se guarda los datos que componen el bingo
+Public ArrayElementosCarton As New ElementoCarton[] ''donde se guarda los datos que componen el carton
+
+Public Sub guardarBingo(nombre As String) ''guardar archivo tar.gz con datos del bingo actual
+  'El archirvo "nombre" debe de contener:
+  '-Fichero de texto con Estructura json con datos de
+  '1º generar estructura de datos de: titulo, descripcion, tipo,
+  '2º generar estructura de datos del Array Elementos Bingo
+  '3º generar estructura de datos del Array Elementos Carton
+  'Toda la información se pasa a una variable $contenido y se guarda
+  '-imagenes y sonidos
+  '-todo guardado en un tar.gz para facil manipulacion y compartir con otros usuarios.
+
+End
+
+
+Public Sub DescomprimeBingo(nombre As String) ''lectura de archivo tar.gz del fichero de  datos de bintoedu y descompresion del mismo en la carpeta .config
+
+  'descomprime el archivo dato (un tar.gz), en /tmp, y copia todos los archivos  en la carpeta de configuración (~/.config/BingoEdu/datos)
+
+  'A continuación, ahora el programa deberá recargar la carpeta   ~/.config/BingoEdu/datos, para encontrar los distintos bingos disponibles.
+  'y que aparezcan en el gridview inicial.
+End
+
+
+
+
+
+
+
+
+
+
+
+
+'-------------------------------------------------------------------------------------
+Private $titulo As String
+Private $descripcion As String
+Private $tipo As String
+
+Private Function titulo_Read() As String
+
+  Return $titulo
+
+End
+
+Private Sub titulo_Write(Value As String)
+
+  $titulo = value
+
+End
+
+Private Function descripcion_Read() As String
+
+  Return $descripcion
+
+End
+
+Private Sub descripcion_Write(Value As String)
+
+  $descripcion = value
+
+End
+
+Private Function tipo_Read() As String
+
+  Return $tipo
+
+End
+
+Private Sub tipo_Write(Value As String)
+
+  $tipo = value
+
+End

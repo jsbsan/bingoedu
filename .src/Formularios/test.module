@@ -1,0 +1,11 @@
+' Gambas module file
+
+Public Sub main()
+
+  Dim e As New Elemento
+
+
+  Print e.creaJson()
+
+
+End

@@ -1,0 +1,21 @@
+' Gambas class file
+
+Inherits Elemento
+
+
+Property rutasonido As String
+Private $ruta As String
+
+Private Function rutasonido_Read() As String
+
+  Return $ruta
+
+
+End
+
+Private Sub rutasonido_Write(Value As String)
+
+  $ruta = Value
+
+
+End

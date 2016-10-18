@@ -1,0 +1,13 @@
+' Gambas class file
+
+
+Public Sub Main()
+
+  Dim e As New Elemento
+
+  Print e.creaJson()
+
+
+
+
+End

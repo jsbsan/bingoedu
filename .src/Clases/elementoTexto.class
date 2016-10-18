@@ -1,0 +1,31 @@
+' Gambas class file
+
+Inherits Elemento
+
+
+
+Property texto As String
+Private $texto As String
+
+
+Private Function texto_Read() As String
+
+  Return $texto
+
+End
+
+Private Sub texto_Write(Value As String)
+
+  $texto = Value
+
+End
+
+
+
+
+Public Sub agregaDatos(ByRef datos As Collection)
+
+  datos.Add("texto", "tipo")
+  datos.Add(Me.texto, "texto")
+
+End

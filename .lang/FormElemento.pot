@@ -14,27 +14,31 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: FormElemento.form:29
+#: FormElemento.form:30
 msgid "Elemento en Bingo"
 msgstr ""
 
-#: FormElemento.form:33
-msgid "RadioButton1"
+#: FormElemento.form:34
+msgid "texto:"
 msgstr ""
 
 #: FormElemento.form:74
 msgid "Elemento en Cartón"
 msgstr ""
 
-#: FormElemento.form:104
+#: FormElemento.form:103
+msgid "Mismo elemento que en Bingo"
+msgstr ""
+
+#: FormElemento.form:110
 msgid "Crear Elemento"
 msgstr ""
 
-#: FormElemento.form:109
+#: FormElemento.form:115
 msgid "Salir"
 msgstr ""
 
-#: FormElemento.form:121
+#: FormElemento.form:127
 msgid "grabar 2 segundos"
 msgstr ""
 

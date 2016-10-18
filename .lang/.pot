@@ -39,7 +39,7 @@ msgid "Autores: Julio Sanchez Berro (jsbsan) y Antonio Sanchez (introlinux)"
 msgstr ""
 
 #: FMain.form:76 FormCartones.form:129 FormEditarCrear.form:47
-#: FormElemento.form:109
+#: FormElemento.form:115 FormularioCreador.form:112
 msgid "Salir"
 msgstr ""
 
@@ -107,7 +107,7 @@ msgstr ""
 msgid "Generar"
 msgstr ""
 
-#: FormCartones.class:6 FormularioCreador.form:37
+#: FormCartones.class:6 FormularioCreador.form:41
 msgid "Cartones"
 msgstr ""
 
@@ -135,66 +135,78 @@ msgstr ""
 msgid "Compartir"
 msgstr ""
 
-#: FormElemento.form:29
+#: FormElemento.form:30
 msgid "Elemento en Bingo"
 msgstr ""
 
-#: FormElemento.form:33
-msgid "RadioButton1"
+#: FormElemento.form:34
+msgid "texto:"
 msgstr ""
 
 #: FormElemento.form:74
 msgid "Elemento en Cartón"
 msgstr ""
 
-#: FormElemento.form:104
+#: FormElemento.form:103
+msgid "Mismo elemento que en Bingo"
+msgstr ""
+
+#: FormElemento.form:110
 msgid "Crear Elemento"
 msgstr ""
 
-#: FormElemento.form:121
+#: FormElemento.form:127
 msgid "grabar 2 segundos"
 msgstr ""
 
-#: FormularioCreador.form:27
+#: FormularioCreador.form:31
 msgid "Elementos que componen el Bingo actual:"
 msgstr ""
 
-#: FormularioCreador.form:32
+#: FormularioCreador.form:36
 msgid "Añadir Elemento"
 msgstr ""
 
-#: FormularioCreador.form:41
+#: FormularioCreador.form:45
 msgid "Generar Cartones"
 msgstr ""
 
-#: FormularioCreador.form:52
+#: FormularioCreador.form:56
 msgid "Ver Cartones"
 msgstr ""
 
-#: FormularioCreador.form:58
+#: FormularioCreador.form:62
 msgid "aqui se define el titulo que vendrá en cada carton"
 msgstr ""
 
-#: FormularioCreador.form:59
+#: FormularioCreador.form:63
 msgid "Titulo:"
 msgstr ""
 
-#: FormularioCreador.form:70
+#: FormularioCreador.form:74
 msgid "Descripción:"
 msgstr ""
 
-#: FormularioCreador.form:80
+#: FormularioCreador.form:84
 msgid "matematicas"
 msgstr ""
 
-#: FormularioCreador.form:80
+#: FormularioCreador.form:84
 msgid "ingles"
 msgstr ""
 
-#: FormularioCreador.form:80
+#: FormularioCreador.form:84
 msgid "lengua"
 msgstr ""
 
-#: FormularioCreador.form:86
+#: FormularioCreador.form:90
 msgid "Categoria:"
+msgstr ""
+
+#: FormularioCreador.form:96
+msgid "Nombre fichero:"
+msgstr ""
+
+#: FormularioCreador.form:106
+msgid ".be"
 msgstr ""

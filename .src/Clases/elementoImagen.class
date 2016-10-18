@@ -1,0 +1,28 @@
+' Gambas class file
+
+Inherits Elemento
+
+
+Property rutaimagen As String
+Private $ruta As String
+
+Private Function rutaimagen_Read() As String
+
+  Return $ruta
+
+End
+
+Private Sub rutaimagen_Write(Value As String)
+
+  $ruta = Value
+
+End
+
+
+
+Public Sub agregaDatos(ByRef datos As Collection)
+
+  datos.Add("imagen", "tipo")
+  datos.Add(Me.rutaimagen, "rutaimagen")
+
+End

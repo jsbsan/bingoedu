@@ -1,0 +1,27 @@
+' Gambas class file
+
+Inherits Elemento
+
+
+Property rutaimagen As String
+Private $ruta As String
+
+Private Function rutaimagen_Read() As String
+
+  Return $ruta
+
+End
+
+Private Sub rutaimagen_Write(Value As String)
+
+  $ruta = Value
+
+End
+
+
+
+Public Sub agregaDatos(ByRef datos As Collection)
+
+  'en la API, no lo defino, pero si lo voy a definir en los distintos tipos de elementos.
+
+End

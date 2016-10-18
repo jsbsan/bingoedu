@@ -1,0 +1,28 @@
+' Gambas class file
+
+Inherits Elemento
+
+
+Property rutasonido As String
+Private $ruta As String
+
+Private Function rutasonido_Read() As String
+
+  Return $ruta
+
+
+End
+
+Private Sub rutasonido_Write(Value As String)
+
+  $ruta = Value
+
+
+End
+
+Public Sub agregaDatos(ByRef datos As Collection)
+
+  datos.Add("sonido", "tipo")
+  datos.Add(Me.rutasonido, "rutasonido")
+
+End

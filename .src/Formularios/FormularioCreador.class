@@ -14,3 +14,9 @@ Public Sub Button1_Click()
   FormElemento.ShowModal()
 
 End
+
+Public Sub ButtonSalir_Click()
+
+  Me.close
+
+End

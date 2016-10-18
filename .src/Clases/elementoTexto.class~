@@ -1,0 +1,23 @@
+' Gambas class file
+
+Inherits Elemento
+
+
+
+Property texto As String
+Private $texto As String
+
+
+Private Function texto_Read() As String
+
+  Return $texto
+
+End
+
+Private Sub texto_Write(Value As String)
+
+  $texto = Value
+
+End
+
+'redefinir función crea informe json
