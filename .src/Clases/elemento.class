@@ -10,7 +10,8 @@ Property id As String '' clave que identifica al elemento
 Public Sub _new()
 
   'cuando se crea se identefica
-  Me.id = Hex(CFloat(Val(Str(Now))) * 86400000) '' se crea un identificador unico Ref: https://www.gambas-es.org/viewtopic.php?f=5&t=5837
+  Me.id = Hex(CFloat(Now) * 86400000) & "_" & Str$(Int(Rnd(1, 100) * 10))
+  '' se crea un identificador unico Ref: https://www.gambas-es.org/viewtopic.php?f=5&t=5837
 
 End
 
@@ -18,38 +19,32 @@ End
 'variables:
 ' si es del tipo de elemento Carton -> si es igual a Bingo
 ' datos a coger: texto, imagen (fichero), sonido (fichero)
-'
 
 
-Public Sub creaJson() As String
 
-  Dim c As New JSON354
+Public Sub creaJson() As Variant
 
-  Dim tvariante As New Variant[]
+
+
+
 
   Dim tempcole As New Collection
-
-  Dim JsonString As String
+  Dim temp2cole As New Collection
 
   'Dato de Identeificacion
   tempcole.Add(Me.id, "id")
 
   'dato de enlace
-  tempcole.Add(Me.enlace, "enlace")
+  temp2cole.Add(Me.enlace, "enlace")
 
 
 
   'añadir datos segun tipo de elemento
-  Me.agregaDatos(ByRef tempcole) 'lo paso por referencia para modificarlo internamente y no tener que usar el valor de retorno
+  Me.agregaDatos(ByRef temp2cole) 'lo paso por referencia para modificarlo internamente y no tener que usar el valor de retorno
 
+  tempcole.Add(temp2cole, "datos")
 
-
-  'lo convierto en variant.
-  tvariante.add(tempcole)
-
-  JsonString = c.Encode(tvariante)
-
-  Return JsonString
+  Return tempcole 'Replace(Replace(Replace(JsonString, "[", ""), "]", ""),"\"
 
 End
 
@@ -61,6 +56,11 @@ Public Sub agregaDatos(ByRef datos As Collection)
 End
 
 
+Public Function tipoElemento() As String ''devuelve el tipo de elemento que es el objeto
+
+  Return Object.Class(Me).name
+
+End
 
 
 

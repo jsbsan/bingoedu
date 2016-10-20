@@ -1,0 +1,31 @@
+' Gambas class file
+
+Inherits Elemento
+
+'elemento especial que indica que el elemento de carton es igual al elemento de bingo enlazado (tiene su id)
+
+Property enlace As String
+Private $texto As String
+
+
+Private Function enlace_Read() As String
+
+  Return $texto
+
+End
+
+Private Sub enlace_Write(Value As String)
+
+  $texto = Value
+
+End
+
+
+
+
+Public Sub agregaDatos(ByRef datos As Collection)
+
+  datos.Add("enlace", "tipo")
+  datos.Add(Me.enlace, "enlace")
+
+End

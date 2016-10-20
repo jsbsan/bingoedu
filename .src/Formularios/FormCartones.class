@@ -4,13 +4,14 @@
 Public Sub Form_Open()
 
   Me.Title = ("Cartones")
-  
+
+  Me.Center()
 
 End
 
 Public Sub TextLabel1_MouseDown()
 
-  
+
 
 End
 
@@ -21,6 +22,7 @@ Public Sub SquareButton1_Click()
 End
 
 Public Sub ButtonSalir_Click()
-Me.Close()
+
+  Me.Close()
 
 End

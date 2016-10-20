@@ -14,60 +14,68 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: FormCartones.form:31
+#: FormCartones.form:34
 msgid "Tamaño de la Cuadrícula del Cartón"
 msgstr ""
 
-#: FormCartones.form:35
+#: FormCartones.form:38
 msgid "4x3"
 msgstr ""
 
-#: FormCartones.form:41
+#: FormCartones.form:44
 msgid "5x4"
 msgstr ""
 
-#: FormCartones.form:46
+#: FormCartones.form:49
 msgid "5x5"
 msgstr ""
 
-#: FormCartones.form:57
+#: FormCartones.form:61
 msgid "Huecos:"
 msgstr ""
 
-#: FormCartones.form:61
+#: FormCartones.form:65
 msgid "Negros (rellenos):"
 msgstr ""
 
-#: FormCartones.form:66
+#: FormCartones.form:70
 msgid "Blancos (vacíos):"
 msgstr ""
 
-#: FormCartones.form:82
+#: FormCartones.form:86
 msgid "Número de cartones distintos a Generar:"
 msgstr ""
 
-#: FormCartones.form:87
+#: FormCartones.form:91
 msgid "<b>Nota:</b><br>\nEl número de cartones diferentes que se pueden generar, dependerá del número de elementos que tenga el Bingo. A mayor número de elementos del bingo, mayor número de cartones distintos que se podrań crear."
 msgstr ""
 
-#: FormCartones.form:96
+#: FormCartones.form:100
 msgid "Elementos que se repitirán en todos los cartones:"
 msgstr ""
 
-#: FormCartones.form:101
+#: FormCartones.form:105
 msgid "Pulse botón derecho para añadir elementos del bingo"
 msgstr ""
 
-#: FormCartones.form:111
+#: FormCartones.form:115
 msgid "Previsualizar"
 msgstr ""
 
-#: FormCartones.form:122
+#: FormCartones.form:126
 msgid "Generar"
 msgstr ""
 
-#: FormCartones.form:129
+#: FormCartones.form:133
 msgid "Salir"
+msgstr ""
+
+#: FormCartones.form:140
+msgid "Caracteristicas del Cartón:"
+msgstr ""
+
+#: FormCartones.form:150
+msgid "Titulo del cartón:"
 msgstr ""
 
 #: FormCartones.class:6

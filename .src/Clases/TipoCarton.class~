@@ -1,3 +1,23 @@
 ' Gambas class file
 
-Inherits Elemento
+Property tipo As Integer
+''tipo 0: -> contiene lo mismo que el elemnto de bingo enlazado
+''tipo 1: -> contiene una texto
+''tipo 2: -> contiene un imagen
+
+
+'-------------------------------------------------------------------
+
+Private $tipo As Integer
+
+Private Function tipo_Read() As Integer
+
+  Return $tipo
+
+End
+
+Private Sub tipo_Write(Value As Integer)
+
+  $tipo = Value
+
+End

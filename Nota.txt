@@ -5,7 +5,8 @@ Explicacion de json:
 https://es.wikipedia.org/wiki/JSON
 
 Visor de json:
-http://jsonviewer.stack.hu/
+http://www.jsoneditoronline.org/ (mejor que el siguente)
+http://jsonviewer.stack.hu/ (da problemas)
 
 
 Calculo de numero de cartones...

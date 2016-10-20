@@ -20,4 +20,12 @@ Private Sub texto_Write(Value As String)
 
 End
 
-'redefinir función crea informe json
+
+
+
+Public Sub agregaDatos(ByRef datos As Collection)
+
+  datos.Add("texto", "tipo")
+  datos.Add(Me.texto, "texto")
+
+End

@@ -6,3 +6,9 @@ Public Sub Button2_Click()
   Me.Close()
 
 End
+
+Public Sub Form_Open()
+
+  Me.Center()
+
+End

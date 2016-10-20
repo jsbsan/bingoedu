@@ -2,10 +2,68 @@
 
 Public Sub main()
 
-  Dim e As New Elemento
+  Dim idtmp As String 'variable que nos sirve para guardar los id del elemento, antes que se genere otro.
+
+  Dim b As New Bingo
+
+  Dim tempEleSonido As ElementoSonido
+  Dim tempEleImagen As ElementoImagen
+  Dim tempEleEnlace As ElementoEnlace
+  Dim tempEleNegro As ElementoNegro '' exclusivo para los cartones
+  Dim tempEleBlanco As ElementoBlanco '' excluisvo para los cartones
+  Dim tempEletexto As ElementoTexto
+
+  Print "empiezo..."
+
+  '*****************************************************************************************
+  '1º, creo el elemnto en el bingo
+
+  tempEleSonido = New ElementoSonido 'asi al instanciarse, tambien se va a crear el id
+  tempEleSonido.rutasonido = "hola.mp3"
+  b.agregarElementoBingo(tempEleSonido) '' se debe de agregar a los elemntos del bingo
+
+  idtmp = tempEleSonido.id
+  '2º, luego creo el elemento relacionado en el carton...
+  tempEletexto = New ElementoTexto
+  tempEletexto.texto = "HOLA"
+  tempEletexto.enlace = idtmp
+  b.agregarElementoCarton(tempEletexto) '' se debe de agregar a los elemntos del bingo
 
 
-  Print e.creaJson()
 
+  '*****************************************************************************************
+  '1º, creo el elemnto en el bingo
+  tempEletexto = New ElementoTexto
+  tempEletexto.texto = "4x4"
+  b.agregarElementoBingo(tempEletexto) '' se debe de agregar a los elemntos del bingo
+
+  idtmp = tempEletexto.id
+  '2º, luego creo el elemento relacionado en el carton...
+  tempEletexto = New ElementoTexto
+  tempEletexto.texto = "16"
+  tempEletexto.enlace = idtmp
+
+  b.agregarElementoCarton(tempEletexto) '' se debe de agregar a los elemntos del bingo
+
+
+
+
+  '*****************************************************************************************
+  tempEletexto = New ElementoTexto ''vuelvo a instanciar para generar el id distinto al anterior
+  tempEletexto.texto = "4x2"
+  b.agregarElementoBingo(tempEletexto) '' se debe de agregar a los elemntos del bingo
+
+  idtmp = tempEletexto.id
+  '2º, luego creo el elemento relacionado en el carton...
+  tempEletexto = New ElementoTexto
+  tempEletexto.texto = "8"
+  tempEletexto.enlace = idtmp
+  b.agregarElementoCarton(tempEletexto) '' se debe de agregar a los elemntos del bingo
+
+
+  b.guardarBingo()
+
+
+  Print "termine!!"
 
 End

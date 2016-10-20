@@ -20,3 +20,9 @@ Public Sub ButtonSalir_Click()
   Me.close
 
 End
+
+Public Sub Form_Open()
+
+  Me.Center()
+
+End

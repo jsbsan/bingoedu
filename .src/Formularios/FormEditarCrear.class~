@@ -6,9 +6,9 @@ Public Sub Button1_Click()
   'preguntar por datos del nuevo bingo...
   'nombre
   'descripcion
-Me.Minimized
+
 FormularioCreador.ShowModal
-Me.show
+
 End
 
 Public Sub Button4_Click()

@@ -1,0 +1,54 @@
+' Gambas class file
+
+'esta clase contiene los dato de un carton
+'lista de elementos
+Property ArraIdElementos As String[] 'lista de los array de los id de elementos que contiene este carton
+Private $ArraIdElementos As String[]
+Property id As String '' clave que identifica al carton
+Private $id As String
+
+
+Public Sub _new()
+
+  'cuando se crea se identefica
+  Me.id = Hex(CFloat(Now) * 86400000)
+  '' se crea un identificador unico Ref: https://www.gambas-es.org/viewtopic.php?f=5&t=5837
+
+End
+
+
+
+
+
+
+
+Public Sub agregaDatos(ByRef datos As Collection)
+
+  datos.Add(Me.id, "id")
+  datos.Add(Me.ArraIdElementos.Join("|"), "lista") 'devuelve una cadena con los id de los elementos que contiene
+
+End
+
+Private Function ArraIdElementos_Read() As String[]
+
+  $ArraIdElementos
+
+End
+
+Private Sub ArraIdElementos_Write(Value As String[])
+
+  $ArraIdElementos = value
+
+End
+
+Private Function id_Read() As String
+
+  Return $id
+
+End
+
+Private Sub id_Write(Value As String)
+
+  $id = value
+
+End

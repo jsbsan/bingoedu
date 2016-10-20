@@ -1,15 +1,35 @@
 [Breakpoints]
-Breakpoint[1]="elemento.49"
-Count=1
+Count=0
 
 [DebugWindow]
 Count=0
 
+[DebugWindow/Elemento]
+Geometry=[5,21,210,210]
+
 [DebugWindow/Me]
 Geometry=[38,165,234,285]
 
+[DebugWindow/Me.ListaElementosBingo]
+Geometry=[907,558,210,210]
+
+[DebugWindow/Me.ListaElementosCarton]
+Geometry=[650,562,210,210]
+
+[DebugWindow/Object.Class(Me)]
+Geometry=[5,21,210,210]
+
+[DebugWindow/e]
+Geometry=[90,523,400,300]
+
 [DebugWindow/tempcole]
 Geometry=[5,21,210,210]
+
+[DebugWindow/tvariante]
+Geometry=[5,21,210,210]
+
+[DebugWindow/tvariante[0]]
+Geometry=[85,390,210,210]
 
 [OpenFile]
 File[1]=".src/Formularios/FMain.form"
@@ -18,7 +38,7 @@ File[3]=".src/Clases/json/JSONCollection354.class:24.0"
 File[4]=".src/Clases/json/JSON354.module:277.2"
 File[5]=".src/Formularios/FMain.class:21.0"
 File[6]=".src/Formularios/FormEditarCrear.form"
-File[7]="Nota.txt:11.36"
+File[7]="Nota.txt:12.10"
 File[8]=".src/Formularios/FormularioCreador.form"
 File[9]=".src/Formularios/FormularioCreador.class:19.10"
 File[10]=".src/Formularios/FormCartones.form"
@@ -27,15 +47,18 @@ File[12]=".src/Formularios/FormEditarCrear.class:15.2"
 File[13]=".src/Clases/controles/SquareButton.class:78.46"
 File[14]=".src/Formularios/FormElemento.form"
 Active=15
-File[15]=".src/Clases/TipoCarton.class:23.0"
-File[16]=".src/Clases/Bingo.class:9.0"
-File[17]=".src/Clases/elemento.class:51.19"
-File[18]=".src/Clases/elementoTexto.class:22.0"
-File[19]=".src/Clases/elementoImagen.class:27.3"
-File[20]=".src/Clases/elementoSonido.class:27.3"
-File[21]=".src/Formularios/FormElemento.class:5.12"
-File[22]=".src/Formularios/test.module:7.20"
-Count=22
+File[15]=".src/Clases/Bingo.class:67.0"
+File[16]=".src/Clases/elemento.class:51.49"
+File[17]=".src/Clases/elementoTexto.class:18.0"
+File[18]=".src/Clases/elementoImagen.class:27.3"
+File[19]=".src/Clases/elementoSonido.class:27.3"
+File[20]=".src/Formularios/FormElemento.class:5.12"
+File[21]=".src/Formularios/test.module:57.32"
+File[22]=".src/Clases/elementoBlanco.class:16.28"
+File[23]=".src/Clases/elementoEnlace.class:0.19"
+File[24]=".src/Clases/elementoNegro.class:1.0"
+File[25]=".src/Clases/Carton.class:0.19"
+Count=25
 
 [Watches]
 Count=1

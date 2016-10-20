@@ -2,8 +2,6 @@
 
 Inherits Elemento
 
-
-
 Property texto As String
 Private $texto As String
 

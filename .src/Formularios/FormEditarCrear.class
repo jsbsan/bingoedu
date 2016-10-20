@@ -7,12 +7,18 @@ Public Sub Button1_Click()
   'nombre
   'descripcion
 
-FormularioCreador.ShowModal
+  FormularioCreador.ShowModal
 
 End
 
 Public Sub Button4_Click()
 
   Me.Close()
+
+End
+
+Public Sub Form_Open()
+
+  Me.Center()
 
 End

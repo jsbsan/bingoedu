@@ -1,6 +1,6 @@
 ' Gambas class file
 
-
+Property NombreFichero As String ''nombre del fichero .be para operaciones obtener el nombre de la carpeta, copiar archivos
 Property titulo As String ''titulo del bingo
 Property descripcion As String ''describe como es el bingo: se trata de un bingo para aprender matematica de 1º de eso. Tema Tablas de multiplicar
 Property tipo As String ''indica el tipo de bingo: para lenguaje,matematicas, ingles, etc...
@@ -8,15 +8,63 @@ Property tipo As String ''indica el tipo de bingo: para lenguaje,matematicas, in
 Public ArrayElementosBingo As New Elemento[] ''donde se guarda los datos que componen el bingo
 Public ArrayElementosCarton As New Elemento[] ''donde se guarda los datos que componen el carton
 
-Public Sub guardarBingo(nombre As String) ''guardar archivo tar.gz con datos del bingo actual
+Public ListaElementosBingo As New String[] 'contiene la lista de los id de los elementos de bingo
+Public ListaElementosCarton As New String[] 'contiene la lista de los id de los elementos de carton
+
+Public listaCartones As New Carton[] ' contiene la lista de cartones
+
+'propiedades del carton
+Property tituloCarton As String ''titulo de los cartones
+
+Property tamanoCuadricula As String ''tamaño de la cuadricula 4x3,5x4,5x5
+
+Property cuadrosNegros As Integer ''indica los huecos rellenos en negro
+
+Property cuadrosBlancos As Integer '' indica los huecos que quedaran en blanco
+
+Property ListaElementosRepetidos As String[] ''array que contiene los id de elementos del bingo que tienen que repetirse en cada carton
+
+Property NumeroCartones As Integer ''indica el numero de cartones existentes.
+
+Private $tituloCarton As String
+Private $tamanoCuadricula As String
+Private $cuadrosNegros As Integer
+Private $cuadrosBlancos As Integer
+Private $ListaElementosRepetidos As New String[]
+Private $NumeroCartones As Integer
+Private $nombreFichero As String = "testbingo"
+
+Public Sub _new()
+
+  'creacion de un bingo en "blanco"
+  If Not Exist(User.home & "/bingoedu") Then
+    Mkdir User.home & "/bingoedu"
+  Endif
+
+  ''NOTE: modo test para debug, creacion de directorio test de bingo
+  If Not Exist(User.home & "/bingoedu/" & $nombreFichero) Then
+    Mkdir User.home & "/bingoedu/" & $nombreFichero
+  Endif
+
+
+
+End
+
+
+
+
+Public Sub guardarBingo() ''guardar archivo tar.gz con datos del bingo actual
   'El archirvo "nombre" debe de contener:
   '-Fichero de texto con Estructura json con datos de
   '1º generar estructura de datos de: titulo, descripcion, tipo,
   '2º generar estructura de datos del Array Elementos Bingo
   '3º generar estructura de datos del Array Elementos Carton
   'Toda la información se pasa a una variable $contenido y se guarda
+
+  File.Save(User.home & "/bingoedu/" & $nombreFichero & "/pruebas.dat ", generaJson())
   '-imagenes y sonidos
   '-todo guardado en un tar.gz para facil manipulacion y compartir con otros usuarios.
+  'y con terminacion ".be"
 
 End
 
@@ -27,14 +75,76 @@ Public Sub DescomprimeBingo(nombre As String) ''lectura de archivo tar.gz del fi
 
   'A continuación, ahora el programa deberá recargar la carpeta   ~/.config/BingoEdu/datos, para encontrar los distintos bingos disponibles.
   'y que aparezcan en el gridview inicial.
+
+
+
+End
+
+Public Function generaJson() As String
+
+  Dim c As New JSON354
+
+
+
+  Dim tempcole As New Collection
+
+  Dim tmpElemento As Elemento
+
+  'Titulo
+  tempcole.Add(Me.titulo, "titulo")
+  'descripcion
+  tempcole.Add(Me.descripcion, "descripcion")
+  'tipo
+  tempcole.Add(Me.tipo, "tipo") ''tipo del bingo (ingles, matematica, lengua..)
+  'lista de elementos bingo y elementos de cartones, separados por caracter |
+  tempcole.Add(Me.ListaElementosBingo.Join("|"), "ListaElementoBingo")
+  tempcole.Add(Me.ListaElementosCarton.Join("|"), "ListaElementoCarton")
+
+  'guardar elementos....
+  For Each tmpElemento In ArrayElementosBingo
+    tempcole.Add(tmpElemento.creaJson(), tmpElemento.id)
+  Next
+
+  ''TODO: mirarlo. todos los elementos son indistintos si estan en el bingo que en el carton
+  For Each tmpElemento In ArrayElementosCarton
+    tempcole.Add(tmpElemento.creaJson(), tmpElemento.id)
+  Next
+
+
+  'tambien haria falta pasar los datos del carton: tamaño, huecos en negros, casillas vacias, elementos fijos.
+  tempcole.Add(Me.tituloCarton, "TituloCarton")
+  tempcole.Add(Me.tamanoCuadricula, "TamanoCuadricula")
+  tempcole.Add(Me.cuadrosNegros, "CuadrosNegros")
+  tempcole.Add(Me.cuadrosBlancos, "CuadrosBlancos")
+
+  tempcole.Add(Me.ListaElementosRepetidos.Join("|"), "ListaElementosRepetidos")
+
+  tempcole.Add(Me.NumeroCartones, "NumeroCartones")
+
+
+  Return c.Encode(tempcole) 'devuelve el contenido de tmpcole como estructura json
+
+
 End
 
 
 
 
 
+Public Sub agregarElementoBingo(e As Elemento)
+
+  Me.ArrayElementosBingo.Add(e)
+  Me.ListaElementosBingo.Add(e.id)
+
+End
 
 
+Public Sub agregarElementoCarton(e As Elemento)
+
+  Me.ArrayElementosCarton.Add(e)
+  Me.ListaElementosCarton.Add(e.id)
+
+End
 
 
 
@@ -78,5 +188,97 @@ End
 Private Sub tipo_Write(Value As String)
 
   $tipo = value
+
+End
+
+
+
+Private Function tituloCarton_Read() As String
+
+  Return $tituloCarton
+
+End
+
+Private Sub tituloCarton_Write(Value As String)
+
+  $tituloCarton = value
+
+End
+
+Private Function tamanoCuadricula_Read() As String
+
+  Return $tamanoCuadricula
+
+End
+
+Private Sub tamanoCuadricula_Write(Value As String)
+
+  $tamanoCuadricula = value
+
+End
+
+Private Function cuadrosNegros_Read() As Integer
+
+  Return $cuadrosNegros
+
+End
+
+Private Sub cuadrosNegros_Write(Value As Integer)
+
+  $cuadrosNegros = value
+
+
+End
+
+Private Function cuadrosBlancos_Read() As Integer
+
+  Return $cuadrosBlancos
+
+End
+
+Private Sub cuadrosBlancos_Write(Value As Integer)
+
+
+  $cuadrosBlancos = value
+
+
+End
+
+Private Function ListaElementosRepetidos_Read() As String[]
+
+  Return $ListaElementosRepetidos
+
+End
+
+Private Sub ListaElementosRepetidos_Write(Value As String[])
+
+  $ListaElementosRepetidos = value
+
+End
+
+Private Function NumeroCartones_Read() As Integer
+
+  Return $NumeroCartones
+
+End
+
+
+
+Private Sub NumeroCartones_Write(Value As Integer)
+
+
+  $NumeroCartones = value
+
+End
+
+Private Function NombreFichero_Read() As String
+
+  Return $nombreFichero
+
+End
+
+Private Sub NombreFichero_Write(Value As String)
+
+  $nombreFichero = value
 
 End

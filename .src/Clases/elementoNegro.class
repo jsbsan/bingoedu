@@ -1,0 +1,32 @@
+' Gambas class file
+
+Inherits Elemento
+
+'elemento especial que indica que el elemento de carton es igual al elemento de bingo enlazado (tiene su id)
+
+Property negro As String
+Private $texto As String
+
+
+Private Function negro_Read() As String
+
+  Return $texto
+
+End
+
+Private Sub negro_Write(Value As String)
+
+  $texto = Value
+
+End
+
+
+
+
+Public Sub agregaDatos(ByRef datos As Collection)
+
+  datos.Add("negro", "tipo")
+
+
+End
+

@@ -19,3 +19,8 @@ Public Sub SquareButton1_Click()
   Debug "Generar Grupo de Cartones"
 
 End
+
+Public Sub ButtonSalir_Click()
+Me.Close()
+
+End
