@@ -2,7 +2,8 @@
 Bingo=[]
 
 [Breakpoints]
-Count=0
+Breakpoint[1]="testCargarBingo.22"
+Count=1
 
 [DebugWindow]
 Count=0
@@ -13,8 +14,11 @@ Geometry=[46,16,210,210]
 [DebugWindow/Elemento]
 Geometry=[5,21,210,210]
 
+[DebugWindow/ListaElementosBingo]
+Geometry=[46,16,748,387]
+
 [DebugWindow/Me]
-Geometry=[38,165,234,285]
+Geometry=[714,517,234,688]
 
 [DebugWindow/Me.ListaElementosBingo]
 Geometry=[907,558,210,210]
@@ -25,8 +29,23 @@ Geometry=[650,562,210,210]
 [DebugWindow/Object.Class(Me)]
 Geometry=[5,21,210,210]
 
+[DebugWindow/V[lista[a]]]
+Geometry=[46,16,210,210]
+
+[DebugWindow/VariableDatos]
+Geometry=[104,456,990,335]
+
+[DebugWindow/VariableDatos["C3A60472092E_965"]]
+Geometry=[118,470,990,335]
+
+[DebugWindow/VariableDatos["C3A60472092E_965"]["datos"]]
+Geometry=[132,484,990,335]
+
+[DebugWindow/arraytmp]
+Geometry=[46,16,210,210]
+
 [DebugWindow/e]
-Geometry=[90,523,400,300]
+Geometry=[-245,503,400,300]
 
 [DebugWindow/tempcole]
 Geometry=[5,21,210,210]
@@ -41,7 +60,7 @@ Geometry=[85,390,210,210]
 File[1]=".src/Formularios/FMain.form"
 File[2]=".src/Clases/json/JS354.class:0.0"
 File[3]=".src/Clases/json/JSONCollection354.class:24.0"
-File[4]=".src/Clases/json/JSON354.module:277.2"
+File[4]=".src/Clases/json/JSON354.module:272.12"
 File[5]=".src/Formularios/FMain.class:21.0"
 File[6]=".src/Formularios/FormEditarCrear.form"
 File[7]="Nota.txt:12.10"
@@ -52,18 +71,18 @@ File[11]=".src/Formularios/FormCartones.class:23.0"
 File[12]=".src/Formularios/FormEditarCrear.class:15.2"
 File[13]=".src/Clases/controles/SquareButton.class:78.46"
 File[14]=".src/Formularios/FormElemento.form"
-File[15]=".src/Clases/Bingo.class:159.55"
+File[15]=".src/Clases/Bingo.class:169.44"
 File[16]=".src/Clases/elemento.class:12.73"
 File[17]=".src/Clases/elementoTexto.class:18.0"
 File[18]=".src/Clases/elementoImagen.class:27.3"
-File[19]=".src/Clases/elementoSonido.class:27.3"
-File[20]=".src/Formularios/FormElemento.class:5.12"
-Active=21
-File[21]=".src/Formularios/testGuadarBingo.module:85.0"
-File[22]=".src/Clases/elementoBlanco.class:16.28"
-File[23]=".src/Clases/elementoEnlace.class:0.19"
-File[24]=".src/Clases/elementoNegro.class:1.0"
-File[25]=".src/Clases/Carton.class:19.0"
+File[19]=".src/Formularios/FormElemento.class:5.12"
+File[20]=".src/Formularios/testGuadarBingo.module:2.17"
+File[21]=".src/Clases/elementoBlanco.class:16.28"
+File[22]=".src/Clases/elementoEnlace.class:0.19"
+File[23]=".src/Clases/elementoNegro.class:1.0"
+File[24]=".src/Clases/Carton.class:19.0"
+Active=25
+File[25]=".src/Formularios/testCargarBingo.module:22.13"
 Count=25
 
 [Watches]

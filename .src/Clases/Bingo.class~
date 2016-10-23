@@ -51,6 +51,161 @@ Public Sub _new()
 
 End
 
+Public Sub cargadatos(NombreArchivo As String) 'leo un archivo .be y lo cargo en la instancia de clase bingo.
+
+  Dim arraytmp As String[]
+  Dim e As Object
+  Dim a As Integer
+  Dim contenido As String
+  Dim VariableDatos As Variant
+  Dim clasejson As New JSON354
+  '1º, descomrpimir el archivo..
+  If Exist(User.home & "/bingoedu/" & File.BaseName(NombreArchivo) & ".tar.gz") Then
+    Kill User.home & "/bingoedu/" & File.BaseName(NombreArchivo) & ".tar.gz"
+    Wait 0.1
+  Endif
+
+  '2º creo carpeta de trabajo en User.home & "/bingoedu/"
+  If Exist(User.home & "/bingoedu/" & File.BaseName(NombreArchivo)) Then
+    Shell "cd " & User.home & "/bingoedu/;rm -Rf " & File.BaseName(NombreArchivo) Wait 'borrado comleto de un directorio con sus ficheros
+  Endif
+  'descomprimo el archivo
+  Mkdir User.home & "/bingoedu/" & File.BaseName(NombreArchivo)
+  Wait 0.1
+  Copy NombreArchivo To User.home & "/bingoedu/" & File.BaseName(NombreArchivo) & "/" & File.BaseName(NombreArchivo) & ".tar.gz"
+  Wait 0.1
+  'descomprimo
+  Shell "cd " & User.home & "/bingoedu/" & File.BaseName(NombreArchivo) & "/; tar -zxvf \"" & File.BaseName(NombreArchivo) & ".tar.gz\"" Wait
+  'borro el archivo comprimido
+  Wait 0.1
+  Kill User.home & "/bingoedu/" & File.BaseName(NombreArchivo) & "/" & File.BaseName(NombreArchivo) & ".tar.gz"
+
+
+
+  'leo fichero de datos
+  'y lo empiezo a cargar en memoria
+  contenido = File.Load(User.home & "/bingoedu/" & File.BaseName(NombreArchivo) & "/" & "pruebas.dat")
+  VariableDatos = clasejson.Decode(contenido)
+
+  'asigno datos...
+
+  Me.titulo = VariableDatos["titulo"]
+  Me.descripcion = VariableDatos["descripcion"]
+  Me.tipo = VariableDatos["tipo"]
+
+  'listas
+  'limpiar listas de elmentos anteriores
+  Me.ListaElementosBingo.Clear()
+  Me.ListaElementosCarton.Clear()
+  Me.ListaElementosRepetidos.Clear()
+  Me.listaCartones.Clear()
+  '
+  '
+
+  arraytmp = Split(VariableDatos["ListaElementoBingo"], "|")
+  For a = 0 To arraytmp.max
+    Me.ListaElementosBingo.Add(arraytmp[a])
+  Next
+
+
+  arraytmp = Split(VariableDatos["ListaElementoCarton"], "|")
+  For a = 0 To arraytmp.max
+    Me.ListaElementosCarton.Add(arraytmp[a])
+  Next
+
+  agregarListaElementos(VariableDatos, Me.ListaElementosBingo, Me.ArrayElementosBingo)
+  agregarListaElementos(VariableDatos, Me.ListaElementosCarton, Me.ArrayElementosCarton)
+
+  ''TODO: lista de cartornes y array de cartones
+
+  Me.tituloCarton = VariableDatos["TituloCarton"]
+  Me.tamanoCuadricula = VariableDatos["TamanoCuadricula"]
+  Me.cuadrosNegros = VariableDatos["CuadrosNegros"]
+  Me.cuadrosBlancos = VariableDatos["CuadrosBlancos"]
+
+  arraytmp = Split(VariableDatos["ListaElementosRepetidos"], "|")
+  For a = 0 To arraytmp.max
+    Me.ListaElementosRepetidos.Add(arraytmp[a])
+  Next
+
+  Me.NumeroCartones = VariableDatos["NumeroCartones"]
+
+  'lectura de cartones...
+  arraytmp = Split(VariableDatos["ListaCartones"], "|")
+  For a = 0 To arraytmp.max
+    Me.listaCartones.Add(arraytmp[a])
+  Next
+
+  agregarCartones(VariableDatos, Me.listaCartones, Me.ArrayCartones)
+
+
+End
+
+Public Sub agregarCartones(v As Variant, lista As String[], ArrayCar As Carton[])
+
+  Dim a, b As Integer
+
+  Dim c As Carton
+
+  Dim arraytmp As String[]
+
+  ArrayCar.Clear() 'limpio el array de cartones por si hubiera elementos anteriores.
+
+  For a = 0 To lista.Max
+    c = New Carton
+    c.id = lista[a]
+    'cargo lista de elemntos cartones que incluye el carton
+    arraytmp = Split(V[lista[a]]["lista"], "|")
+    For b = 0 To arraytmp.max
+      c.ArraIdElementos.Add(arraytmp[b])
+    Next
+    ArrayCar.Add(c)
+  Next
+
+End
+
+
+
+Public Sub agregarListaElementos(v As Variant, lista As String[], ArrayElementos As ElementoSonido[])
+  'repetir por cada lista de elemntos Bingo.
+
+  Dim a As Integer
+  Dim e As Object
+
+  ArrayElementos.Clear() 'limpio elementos anteriores del array donde voy a introducir los elementos leidos
+
+  For a = 0 To lista.Max
+    Debug V[lista[a]]["datos"]["tipo"]
+
+    Select Case V[lista[a]]["datos"]["tipo"]
+      Case "sonido"
+        e = New ElementoSonido
+        e.id = V[lista[a]]["id"]
+        e.enlace = V[lista[a]]["datos"]["enlace"]
+        e.rutasonido = V[lista[a]]["datos"]["rutasonido"]
+        ArrayElementos.Add(e)
+      Case "texto"
+        e = New ElementoTexto
+        e.id = V[lista[a]]["id"]
+        e.enlace = V[lista[a]]["datos"]["enlace"]
+        e.texto = V[lista[a]]["datos"]["texto"]
+        ArrayElementos.Add(e)
+      Case "imagen"
+        e = New ElementoImagen
+        e.id = V[lista[a]]["id"]
+        e.enlace = V[lista[a]]["datos"]["enlace"]
+        e.rutaimagen = V[lista[a]]["datos"]["rutaimagen"]
+        ArrayElementos.Add(e)
+
+    End Select
+  Next
+
+
+
+
+
+
+End
 
 
 
@@ -66,7 +221,7 @@ Public Sub guardarBingo() ''guardar archivo tar.gz con datos del bingo actual
   '3º generar estructura de datos del Array Elementos Carton
   'Toda la información se pasa a una variable $contenido y se guarda
 
-  File.Save(User.home & "/bingoedu/" & $nombreFichero & "/pruebas.dat ", generaJson())
+  File.Save(User.home & "/bingoedu/" & $nombreFichero & "/pruebas.dat", generaJson())
   '-imagenes y sonidos
   '-todo guardado en un tar.gz para facil manipulacion y compartir con otros usuarios.
   'y con terminacion ".be"
@@ -156,7 +311,7 @@ Public Function generaJson() As String
 
   tempcole.Add(Me.listaCartones.Join("|"), "ListaCartones")
 
-  For Each tmpCarton In Me.listaCartones
+  For Each tmpCarton In Me.ArrayCartones
     tempcole.Add(tmpCarton.creaVariant(), tmpCarton.id)
   Next
 
@@ -166,6 +321,9 @@ Public Function generaJson() As String
 
 
 End
+
+
+
 
 
 

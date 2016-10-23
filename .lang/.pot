@@ -18,15 +18,15 @@ msgstr ""
 msgid "Juego del bingo educativo para refrescar conocimientos."
 msgstr ""
 
-#: Bingo.class:87
+#: Bingo.class:242
 msgid "Existe un fichero con el mismo nombre, ¿desea borrarlo?"
 msgstr ""
 
-#: Bingo.class:87
+#: Bingo.class:242
 msgid "Si, borralo y continua"
 msgstr ""
 
-#: Bingo.class:87
+#: Bingo.class:242
 msgid "No, cancelar operación"
 msgstr ""
 

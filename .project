@@ -1,7 +1,7 @@
 # Gambas Project File 3.0
 # Compiled with Gambas 3.5.4
 Title=bingoedu
-Startup=testGuadarBingo
+Startup=testCargarBingo
 Icon=icon175x175.jpeg
 Version=0.0.1
 Component=gb.image
@@ -13,4 +13,5 @@ Authors="Julio Sánchez Berro & Antonio Sánchez"
 TabSize=2
 Translate=1
 Language=es
+SourcePath=/home/minino/Documentos
 Packager=1

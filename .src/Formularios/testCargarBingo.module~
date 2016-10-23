@@ -1,0 +1,31 @@
+' Gambas module file
+
+'
+Public Sub main()
+
+  'vamos a cargar un archivo de datos de bingo, en la memoria (osea en una instancia de la clase bingo
+
+  Dim contenido As String
+  Dim NombreArchivo As String = User.home & "/testbingo.be"
+
+  Dim b As New Bingo
+
+  If Exist(User.home & "/testbingo.be") Then
+    Kill User.home & "/testbingo.be"
+    Wait 0.1
+  Endif
+
+  'voy a copiar el fichero de datos test (que lo tengo dentro del proyecto)
+  Copy "testbingo.be" To User.home & "/testbingo.be"
+
+  'cargo datos
+  b.cargadatos(NombreArchivo)
+
+  'como comprobación que todo lo hace bien, vuelvo agrabarlo y comparo resultados..
+  b.guardarBingo()
+
+
+End
+
+
+
