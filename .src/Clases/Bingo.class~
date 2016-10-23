@@ -11,7 +11,8 @@ Public ArrayElementosCarton As New Elemento[] ''donde se guarda los datos que co
 Public ListaElementosBingo As New String[] 'contiene la lista de los id de los elementos de bingo
 Public ListaElementosCarton As New String[] 'contiene la lista de los id de los elementos de carton
 
-Public listaCartones As New Carton[] ' contiene la lista de cartones
+Public listaCartones As New String[] ' contiene la lista de cartones
+Public ArrayCartones As New Carton[] ' contiene los cartones que tiene el bingo
 
 'propiedades del carton
 Property tituloCarton As String ''titulo de los cartones
@@ -54,6 +55,10 @@ End
 
 
 Public Sub guardarBingo() ''guardar archivo tar.gz con datos del bingo actual
+
+  Dim comando As String ''comando que se ejecutara para crear el tae.gz
+  Dim salida As String ''salida que proporciona el comando shell
+  Dim res As Integer
   'El archirvo "nombre" debe de contener:
   '-Fichero de texto con Estructura json con datos de
   '1º generar estructura de datos de: titulo, descripcion, tipo,
@@ -64,6 +69,36 @@ Public Sub guardarBingo() ''guardar archivo tar.gz con datos del bingo actual
   File.Save(User.home & "/bingoedu/" & $nombreFichero & "/pruebas.dat ", generaJson())
   '-imagenes y sonidos
   '-todo guardado en un tar.gz para facil manipulacion y compartir con otros usuarios.
+  'y con terminacion ".be"
+  comando = "cd " & User.home & "/bingoedu/" & $nombreFichero & "/;" ''fundamental añadir el punto y coma, para continuar la orden en el shell abierto
+  comando &= "tar czvf \"" & $NombreFichero & ".tar.gz\" *" ''comprimimos lo que haya creando un fichero .tar.gz
+  Print comando
+
+  Shell comando To salida
+
+  Inc Application.busy
+  While Not Exist(User.home & "/bingoedu/" & $nombreFichero & "/" & $NombreFichero & ".tar.gz")
+    Wait 0.01
+  Wend
+
+  Dec Application.Busy
+
+  If Exist(User.home & "/" & $NombreFichero & ".be") Then
+    res = Message.Question(("Existe un fichero con el mismo nombre, ¿desea borrarlo?"), ("Si, borralo y continua"), ("No, cancelar operación"))
+    If res = 1 Then
+      Kill User.home & "/" & $NombreFichero & ".be" 'borro el fichero que existe, y continuo
+
+    Else
+      Kill User.home & "/bingoedu/" & $nombreFichero & "/" & $NombreFichero & ".tar.gz" 'Cancelo operacion, y borro el archivo comprimido que acabo de hacer.
+      Debug "Operacion cancelada"
+      Return
+
+    Endif
+  Endif
+
+  Move User.home & "/bingoedu/" & $nombreFichero & "/" & $NombreFichero & ".tar.gz" To User.home & "/" & $NombreFichero & ".be"
+
+  ''NOTE: ver este enlace http://jsbsan.blogspot.com.es/2014/12/truco-como-guardar-y-abrir-comprimidos.html, para el tema de descompresion.
 
 End
 
@@ -83,12 +118,11 @@ Public Function generaJson() As String
 
   Dim c As New JSON354
 
-
-
   Dim tempcole As New Collection
 
   Dim tmpElemento As Elemento
 
+  Dim tmpCarton As Carton
   'Titulo
   tempcole.Add(Me.titulo, "titulo")
   'descripcion
@@ -101,12 +135,12 @@ Public Function generaJson() As String
 
   'guardar elementos....
   For Each tmpElemento In ArrayElementosBingo
-    tempcole.Add(tmpElemento.creaJson(), tmpElemento.id)
+    tempcole.Add(tmpElemento.creaVariant(), tmpElemento.id)
   Next
 
   ''TODO: mirarlo. todos los elementos son indistintos si estan en el bingo que en el carton
   For Each tmpElemento In ArrayElementosCarton
-    tempcole.Add(tmpElemento.creaJson(), tmpElemento.id)
+    tempcole.Add(tmpElemento.creaVariant(), tmpElemento.id)
   Next
 
 
@@ -120,6 +154,13 @@ Public Function generaJson() As String
 
   tempcole.Add(Me.NumeroCartones, "NumeroCartones")
 
+  tempcole.Add(Me.listaCartones.Join("|"), "ListaCartones")
+
+  For Each tmpCarton In Me.listaCartones
+    tempcole.Add(tmpCarton.creaVariant(), tmpCarton.id)
+  Next
+
+
 
   Return c.Encode(tempcole) 'devuelve el contenido de tmpcole como estructura json
 
@@ -130,7 +171,7 @@ End
 
 
 
-Public Sub agregarElementoBingo(e As Elemento)
+Public Sub agregarElementoBingo(e As Elemento) 'agregas un elemento bingo a los datos del bingo.
 
   Me.ArrayElementosBingo.Add(e)
   Me.ListaElementosBingo.Add(e.id)
@@ -138,13 +179,19 @@ Public Sub agregarElementoBingo(e As Elemento)
 End
 
 
-Public Sub agregarElementoCarton(e As Elemento)
+Public Sub agregarElementoCarton(e As Elemento) 'agrega un elemento carton a los datos del bingo
 
   Me.ArrayElementosCarton.Add(e)
   Me.ListaElementosCarton.Add(e.id)
 
 End
 
+Public Sub agregarCarton(e As Carton) ''agrega un carton a los datos del bingo
+
+  Me.ArrayCartones.Add(e)
+  Me.listaCartones.Add(e.id)
+
+End
 
 
 

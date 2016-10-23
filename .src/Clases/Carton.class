@@ -3,7 +3,7 @@
 'esta clase contiene los dato de un carton
 'lista de elementos
 Property ArraIdElementos As String[] 'lista de los array de los id de elementos que contiene este carton
-Private $ArraIdElementos As String[]
+Private $ArraIdElementos As New String[]
 Property id As String '' clave que identifica al carton
 Private $id As String
 
@@ -11,23 +11,46 @@ Private $id As String
 Public Sub _new()
 
   'cuando se crea se identefica
-  Me.id = Hex(CFloat(Now) * 86400000)
+  Me.id = Hex(CFloat(Now) * 86400000) & "_" & Str$(Int(Rnd(1, 100) * 10))
   '' se crea un identificador unico Ref: https://www.gambas-es.org/viewtopic.php?f=5&t=5837
 
 End
 
 
 
-Public Sub agregaDatos(ByRef datos As Collection) 'al introducirlos por referencia no necesito devolver nada, los añado directamente.
+Private Sub agregaDatos(ByRef datos As Collection) 'al introducirlos por referencia no necesito devolver nada, los añado directamente.
 
-  datos.Add(Me.id, "id")
+  '' datos.Add(Me.id, "id")
   datos.Add(Me.ArraIdElementos.Join("|"), "lista") 'devuelve una cadena con los id de los elementos que contiene
 
 End
 
+Public Sub creaVariant() As Variant 'realmente crea una variant con todo el contenido
+
+  Dim tempcole As New Collection
+  Dim temp2cole As New Collection
+
+  ' 'Dato de Identeificacion
+  ' tempcole.Add(Me.id, "id") ''DATO REPETIDO
+
+
+  'añadir datos segun tipo de elemento
+  agregaDatos(ByRef temp2cole) 'lo paso por referencia para modificarlo internamente y no tener que usar el valor de retorno
+
+  ' tempcole.Add(temp2cole, "datos")
+
+  Return temp2cole '
+
+End
+
+
+
+
+
+
 Private Function ArraIdElementos_Read() As String[]
 
-  $ArraIdElementos
+  Return $ArraIdElementos
 
 End
 

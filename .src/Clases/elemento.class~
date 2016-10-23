@@ -26,7 +26,7 @@ Public Sub creaJson() As Variant
 
 
 
-  Dim tvariante As Variant
+
 
   Dim tempcole As New Collection
   Dim temp2cole As New Collection

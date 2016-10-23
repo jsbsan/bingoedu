@@ -1,8 +1,14 @@
+[Bookmarks]
+Bingo=[]
+
 [Breakpoints]
 Count=0
 
 [DebugWindow]
 Count=0
+
+[DebugWindow/Carton]
+Geometry=[46,16,210,210]
 
 [DebugWindow/Elemento]
 Geometry=[5,21,210,210]
@@ -46,18 +52,18 @@ File[11]=".src/Formularios/FormCartones.class:23.0"
 File[12]=".src/Formularios/FormEditarCrear.class:15.2"
 File[13]=".src/Clases/controles/SquareButton.class:78.46"
 File[14]=".src/Formularios/FormElemento.form"
-Active=15
-File[15]=".src/Clases/Bingo.class:67.0"
-File[16]=".src/Clases/elemento.class:51.49"
+File[15]=".src/Clases/Bingo.class:159.55"
+File[16]=".src/Clases/elemento.class:12.73"
 File[17]=".src/Clases/elementoTexto.class:18.0"
 File[18]=".src/Clases/elementoImagen.class:27.3"
 File[19]=".src/Clases/elementoSonido.class:27.3"
 File[20]=".src/Formularios/FormElemento.class:5.12"
-File[21]=".src/Formularios/test.module:57.32"
+Active=21
+File[21]=".src/Formularios/testGuadarBingo.module:85.0"
 File[22]=".src/Clases/elementoBlanco.class:16.28"
 File[23]=".src/Clases/elementoEnlace.class:0.19"
 File[24]=".src/Clases/elementoNegro.class:1.0"
-File[25]=".src/Clases/Carton.class:0.19"
+File[25]=".src/Clases/Carton.class:19.0"
 Count=25
 
 [Watches]

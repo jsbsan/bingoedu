@@ -13,6 +13,8 @@ Public Sub main()
   Dim tempEleBlanco As ElementoBlanco '' excluisvo para los cartones
   Dim tempEletexto As ElementoTexto
 
+  Dim tempCarton As Carton
+
   Print "empiezo..."
 
   '*****************************************************************************************
@@ -59,6 +61,28 @@ Public Sub main()
   tempEletexto.texto = "8"
   tempEletexto.enlace = idtmp
   b.agregarElementoCarton(tempEletexto) '' se debe de agregar a los elemntos del bingo
+
+
+  'voy a agregar varios cartones...
+
+  'Creo un carton de varios elementos
+  tempCarton = New Carton
+  tempCarton.ArraIdElementos.Add(b.ArrayElementosCarton[0].id)
+  tempCarton.ArraIdElementos.Add(b.ArrayElementosCarton[1].id)
+  tempCarton.ArraIdElementos.Add(b.ArrayElementosCarton[2].id)
+
+  b.agregarCarton(tempCarton)
+
+
+  'otro carton con los elementos cambiados de sitio
+
+  tempCarton = New Carton
+  tempCarton.ArraIdElementos.Add(b.ArrayElementosCarton[1].id)
+  tempCarton.ArraIdElementos.Add(b.ArrayElementosCarton[2].id)
+  tempCarton.ArraIdElementos.Add(b.ArrayElementosCarton[0].id)
+
+  b.agregarCarton(tempCarton)
+
 
 
   b.guardarBingo()

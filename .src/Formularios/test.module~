@@ -13,6 +13,8 @@ Public Sub main()
   Dim tempEleBlanco As ElementoBlanco '' excluisvo para los cartones
   Dim tempEletexto As ElementoTexto
 
+  Dim tempCarton As Carton
+
   Print "empiezo..."
 
   '*****************************************************************************************
@@ -61,7 +63,12 @@ Public Sub main()
   b.agregarElementoCarton(tempEletexto) '' se debe de agregar a los elemntos del bingo
 
 
-  b.guardarBingo("XXX")
+  'voy a agregar varios cartones...
+
+
+
+
+  b.guardarBingo()
 
 
   Print "termine!!"
