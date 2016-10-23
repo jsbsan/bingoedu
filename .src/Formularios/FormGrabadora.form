@@ -1,0 +1,24 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,43,28)
+  { PictureBoxMicro PictureBox
+    MoveScaled(5,2,16,16)
+    Picture = Picture["microfono.png"]
+    Stretch = True
+  }
+  { TextBoxFichero TextBox
+    MoveScaled(1,20,40,5)
+    Text = ("TextBox1")
+  }
+  { ButtonIniciar Button
+    MoveScaled(28,4,12,4)
+    Text = ("Iniciar")
+    Picture = Picture["icon:/16/play"]
+  }
+  { ButtonTerminar Button
+    MoveScaled(28,12,12,4)
+    Text = ("Terminar")
+    Picture = Picture["icon:/16/quit"]
+  }
+}

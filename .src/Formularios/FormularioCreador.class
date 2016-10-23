@@ -1,5 +1,7 @@
 ' Gambas class file
 
+Public bingoEditor As Bingo
+
 
 Public Sub ButtonGenerarCartones_Click()
 
@@ -22,6 +24,18 @@ Public Sub ButtonSalir_Click()
 End
 
 Public Sub Form_Open()
+
+  If IsNull(bingoEditor) Then
+    'estamos creando un bingo vacio
+    TextBoxFicheroBingo.text = "NuevoBingo" & Format$(Now, "yyyy_nn_dd")
+
+
+  Else
+    'estamos en modo edición de un bingo existente.
+
+
+
+  Endif
 
   Me.Center()
 

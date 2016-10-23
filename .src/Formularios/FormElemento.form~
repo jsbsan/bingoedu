@@ -6,22 +6,21 @@
     MoveScaled(1,11,52,33)
     Text = ("Elemento en Bingo")
     { RadioButton1 RadioButton
-      MoveScaled(4,3,3,6)
-      Text = ("RadioButton1")
+      MoveScaled(4,3,8,6)
+      Text = ("texto:")
+      Value = True
     }
     { TextBoxTEXTOBINGO TextBox
-      MoveScaled(8,3,24,6)
+      MoveScaled(13,3,37,6)
     }
     { RadioButton2 RadioButton
       MoveScaled(4,13,3,6)
-      Text = ("RadioButton1")
     }
     { RadioButton3 RadioButton
       MoveScaled(4,25,3,6)
-      Text = ("RadioButton1")
     }
     { ButtonBoxSonidoBingo ButtonBox
-      MoveScaled(21,25,30,6)
+      MoveScaled(20,25,31,6)
     }
     { PictureBox1 PictureBox
       MoveScaled(9,23,10,9)
@@ -36,39 +35,44 @@
       Border = Border.Plain
     }
     { ButtonBoxImagenBingo ButtonBox
-      MoveScaled(21,12,30,6)
+      MoveScaled(20,13,30,6)
     }
   }
   { Frame2 Frame
     MoveScaled(54,11,50,33)
     Text = ("Elemento en Cartón")
     { RadioButton4 RadioButton
-      MoveScaled(2,3,3,6)
-      Text = ("RadioButton1")
+      MoveScaled(3,11,10,6)
+      Text = ("texto:")
     }
     { TextBoxTEXTOCARTON TextBox
-      MoveScaled(6,3,24,6)
+      MoveScaled(17,11,31,6)
     }
     { RadioButton5 RadioButton
-      MoveScaled(2,13,3,6)
-      Text = ("RadioButton1")
+      MoveScaled(3,24,4,6)
     }
     { PictureBox4 PictureBox
-      MoveScaled(7,11,10,9)
+      MoveScaled(8,23,10,9)
       Picture = Picture["icon:/64/image"]
       Stretch = True
       Border = Border.Plain
     }
     { ButtonBoxImagenCarton ButtonBox
-      MoveScaled(19,13,30,6)
+      MoveScaled(19,25,30,6)
+      Alignment = Align.Right
+    }
+    { RadioButton6 RadioButton
+      MoveScaled(3,3,43,5)
+      Text = ("Mismo elemento que en Bingo")
+      Value = True
     }
   }
   { Button1 Button
-    MoveScaled(85,47,20,6)
+    MoveScaled(55,47,20,6)
     Text = ("Crear Elemento")
   }
-  { Button2 Button
-    MoveScaled(53,47,13,6)
+  { ButtonSalir Button
+    MoveScaled(94,47,13,6)
     Text = ("Salir")
     Picture = Picture["icon:/22/quit"]
   }
@@ -79,6 +83,17 @@
   }
   { Label1 Label
     MoveScaled(12,47,20,5)
-    Text = ("grabar 2 segundos")
+    Text = ("iniciar grabadora")
+  }
+  { Frame3 Frame
+    MoveScaled(43,1,21,9)
+    { PictureBoxParaBingo PictureBox
+      MoveScaled(1,1,9,7)
+      Border = Border.Plain
+    }
+    { PictureBoxParaBingo2 PictureBox
+      MoveScaled(11,1,9,7)
+      Border = Border.Plain
+    }
   }
 }

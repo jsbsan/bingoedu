@@ -14,31 +14,43 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: FormEditarCrear.form:19
-msgid "Editar/Crear"
+#: FormEditarCrear.form:50
+msgid "Utilidades...."
 msgstr ""
 
-#: FormEditarCrear.form:25
+#: FormEditarCrear.form:75
 msgid "Crear"
 msgstr ""
 
-#: FormEditarCrear.form:31
+#: FormEditarCrear.form:85
 msgid "Editar"
 msgstr ""
 
-#: FormEditarCrear.form:37
-msgid "Borrar"
-msgstr ""
-
-#: FormEditarCrear.form:47
-msgid "Salir"
-msgstr ""
-
-#: FormEditarCrear.form:53
+#: FormEditarCrear.form:95
 msgid "Añadir"
 msgstr ""
 
-#: FormEditarCrear.form:59
+#: FormEditarCrear.form:105
+msgid "Imprimir"
+msgstr ""
+
+#: FormEditarCrear.form:115
 msgid "Compartir"
+msgstr ""
+
+#: FormEditarCrear.form:145
+msgid "Borrar"
+msgstr ""
+
+#: FormEditarCrear.form:156
+msgid "Salir"
+msgstr ""
+
+#: FormEditarCrear.class:52
+msgid "Utilidades"
+msgstr ""
+
+#: FormEditarCrear.class:80
+msgid "Debe de seleccionar un archivo de bingo educativo"
 msgstr ""
 

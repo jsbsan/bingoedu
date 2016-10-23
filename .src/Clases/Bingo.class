@@ -51,7 +51,7 @@ Public Sub _new()
 
 End
 
-Public Sub cargadatos(NombreArchivo As String) 'leo un archivo .be y lo cargo en la instancia de clase bingo.
+Public Sub cargadatos(NombreArchivo As String, Optional carpeta As Boolean) 'leo un archivo .be y lo cargo en la instancia de clase bingo.
 
   Dim arraytmp As String[]
   Dim e As Object
@@ -59,27 +59,32 @@ Public Sub cargadatos(NombreArchivo As String) 'leo un archivo .be y lo cargo en
   Dim contenido As String
   Dim VariableDatos As Variant
   Dim clasejson As New JSON354
-  '1º, descomrpimir el archivo..
-  If Exist(User.home & "/bingoedu/" & File.BaseName(NombreArchivo) & ".tar.gz") Then
-    Kill User.home & "/bingoedu/" & File.BaseName(NombreArchivo) & ".tar.gz"
+
+
+  If carpeta = False Then
+
+    '1º, descomrpimir el archivo..
+    If Exist(User.home & "/bingoedu/" & File.BaseName(NombreArchivo) & ".tar.gz") Then
+      Kill User.home & "/bingoedu/" & File.BaseName(NombreArchivo) & ".tar.gz"
+      Wait 0.1
+    Endif
+
+    '2º creo carpeta de trabajo en User.home & "/bingoedu/"
+    If Exist(User.home & "/bingoedu/" & File.BaseName(NombreArchivo)) Then
+      Shell "cd " & User.home & "/bingoedu/;rm -Rf " & File.BaseName(NombreArchivo) Wait 'borrado comleto de un directorio con sus ficheros
+    Endif
+    'descomprimo el archivo
+    Mkdir User.home & "/bingoedu/" & File.BaseName(NombreArchivo)
     Wait 0.1
-  Endif
+    Copy NombreArchivo To User.home & "/bingoedu/" & File.BaseName(NombreArchivo) & "/" & File.BaseName(NombreArchivo) & ".tar.gz"
+    Wait 0.1
+    'descomprimo
+    Shell "cd " & User.home & "/bingoedu/" & File.BaseName(NombreArchivo) & "/; tar -zxvf \"" & File.BaseName(NombreArchivo) & ".tar.gz\"" Wait
+    'borro el archivo comprimido
+    Wait 0.1
+    Kill User.home & "/bingoedu/" & File.BaseName(NombreArchivo) & "/" & File.BaseName(NombreArchivo) & ".tar.gz"
 
-  '2º creo carpeta de trabajo en User.home & "/bingoedu/"
-  If Exist(User.home & "/bingoedu/" & File.BaseName(NombreArchivo)) Then
-    Shell "cd " & User.home & "/bingoedu/;rm -Rf " & File.BaseName(NombreArchivo) Wait 'borrado comleto de un directorio con sus ficheros
   Endif
-  'descomprimo el archivo
-  Mkdir User.home & "/bingoedu/" & File.BaseName(NombreArchivo)
-  Wait 0.1
-  Copy NombreArchivo To User.home & "/bingoedu/" & File.BaseName(NombreArchivo) & "/" & File.BaseName(NombreArchivo) & ".tar.gz"
-  Wait 0.1
-  'descomprimo
-  Shell "cd " & User.home & "/bingoedu/" & File.BaseName(NombreArchivo) & "/; tar -zxvf \"" & File.BaseName(NombreArchivo) & ".tar.gz\"" Wait
-  'borro el archivo comprimido
-  Wait 0.1
-  Kill User.home & "/bingoedu/" & File.BaseName(NombreArchivo) & "/" & File.BaseName(NombreArchivo) & ".tar.gz"
-
 
 
   'leo fichero de datos

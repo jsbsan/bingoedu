@@ -14,63 +14,67 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: FormularioCreador.form:31
+#: FormularioCreador.form:35
 msgid "Elementos que componen el Bingo actual:"
 msgstr ""
 
-#: FormularioCreador.form:36
+#: FormularioCreador.form:40
 msgid "Añadir Elemento"
 msgstr ""
 
-#: FormularioCreador.form:41
+#: FormularioCreador.form:46
 msgid "Cartones"
 msgstr ""
 
-#: FormularioCreador.form:45
+#: FormularioCreador.form:50
 msgid "Generar Cartones"
 msgstr ""
 
-#: FormularioCreador.form:56
+#: FormularioCreador.form:62
 msgid "Ver Cartones"
 msgstr ""
 
-#: FormularioCreador.form:62
+#: FormularioCreador.form:69
+msgid "aqui se define el tema del bingo"
+msgstr ""
+
+#: FormularioCreador.form:70
+msgid "Tema:"
+msgstr ""
+
+#: FormularioCreador.form:80
 msgid "aqui se define el titulo que vendrá en cada carton"
 msgstr ""
 
-#: FormularioCreador.form:63
-msgid "Titulo:"
-msgstr ""
-
-#: FormularioCreador.form:74
+#: FormularioCreador.form:81
 msgid "Descripción:"
 msgstr ""
 
-#: FormularioCreador.form:84
+#: FormularioCreador.form:93
 msgid "matematicas"
 msgstr ""
 
-#: FormularioCreador.form:84
+#: FormularioCreador.form:93
 msgid "ingles"
 msgstr ""
 
-#: FormularioCreador.form:84
+#: FormularioCreador.form:93
 msgid "lengua"
 msgstr ""
 
-#: FormularioCreador.form:90
+#: FormularioCreador.form:101
 msgid "Categoria:"
 msgstr ""
 
-#: FormularioCreador.form:96
+#: FormularioCreador.form:107
 msgid "Nombre fichero:"
 msgstr ""
 
-#: FormularioCreador.form:106
+#: FormularioCreador.form:113
 msgid ".be"
 msgstr ""
 
-#: FormularioCreador.form:112
+#: FormularioCreador.form:119
 msgid "Salir"
 msgstr ""
 

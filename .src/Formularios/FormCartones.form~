@@ -1,10 +1,10 @@
 # Gambas Form File 3.0
 
 { Form Form
-  MoveScaled(0,0,85,76)
+  MoveScaled(0,0,127,80)
   Icon = Picture["carton de bingo50x32.jpg"]
   { Frame1 Frame
-    MoveScaled(0,6,41,15)
+    MoveScaled(2,20,41,15)
     Text = ("Tamaño de la Cuadrícula del Cartón")
     { RadioButton1 RadioButton
       MoveScaled(5,3,26,4)
@@ -21,11 +21,12 @@
     }
   }
   { PictureBox1 PictureBox
-    MoveScaled(60,1,9,6)
+    MoveScaled(58,1,9,6)
     Picture = Picture["carton de bingo50x32.jpg"]
+    Stretch = True
   }
   { Frame2 Frame
-    MoveScaled(0,23,41,15)
+    MoveScaled(47,20,41,15)
     Text = ("Huecos:")
     { Label2 Label
       MoveScaled(5,4,20,4)
@@ -45,34 +46,34 @@
     }
   }
   { Label4 Label
-    MoveScaled(1,59,41,5)
+    MoveScaled(1,60,41,5)
     Text = ("Número de cartones distintos a Generar:")
   }
   { TextLabel1 TextLabel
-    MoveScaled(1,64,67,8)
+    MoveScaled(1,66,106,8)
     Text = ("<b>Nota:</b><br>\nEl número de cartones diferentes que se pueden generar, dependerá del número de elementos que tenga el Bingo. A mayor número de elementos del bingo, mayor número de cartones distintos que se podrań crear.")
   }
   { SpinBox1 SpinBox
-    MoveScaled(42,59,11,4)
+    MoveScaled(42,61,11,4)
   }
   { Label5 Label
     MoveScaled(0,39,58,5)
     Text = ("Elementos que se repitirán en todos los cartones:")
   }
   { ScrollView1 ScrollView
-    MoveScaled(0,43,81,14)
+    MoveScaled(1,43,125,14)
     ToolTip = ("Pulse botón derecho para añadir elementos del bingo")
   }
   { PictureBoxPrevisualizacion PictureBox
-    MoveScaled(46,8,36,27)
+    MoveScaled(90,12,36,27)
     Border = Border.Plain
   }
   { ButtonPrevisualizar Button
-    MoveScaled(58,35,15,4)
+    MoveScaled(102,7,15,4)
     Text = ("Previsualizar")
   }
   { Panel1 Panel
-    MoveScaled(72,58,11,10)
+    MoveScaled(113,59,11,10)
     Arrangement = Arrange.Fill
     Border = Border.Plain
     { SquareButton1 SquareButton
@@ -83,8 +84,22 @@
     }
   }
   { ButtonSalir Button
-    MoveScaled(70,69,13,4)
+    MoveScaled(111,72,13,4)
     Text = ("Salir")
     Picture = Picture["icon:/22/quit"]
+  }
+  { TextLabel2 TextLabel
+    MoveScaled(1,1,53,5)
+    Font = Font["Italic,+4"]
+    Text = ("Caracteristicas del Cartón:")
+    Alignment = Align.Center
+  }
+  { TextBoxTitulo TextBox
+    MoveScaled(29,9,25,5)
+  }
+  { Label1 Label
+    MoveScaled(4,10,23,4)
+    Text = ("Titulo del cartón:")
+    Alignment = Align.Right
   }
 }

@@ -2,6 +2,9 @@
 
 { Form Form
   MoveScaled(0,0,86,75)
+  { TextBoxFicheroBingo TextBox
+    MoveScaled(15,1,29,4)
+  }
   { ScrollViewContenedorBingo ScrollView
     MoveScaled(1,33,84,33)
   }
@@ -10,8 +13,9 @@
     Text = ("Elementos que componen el Bingo actual:")
   }
   { Button1 Button
-    MoveScaled(64,68,20,6)
+    MoveScaled(20,68,20,6)
     Text = ("Añadir Elemento")
+    Picture = Picture["icon:/16/add"]
   }
   { Frame1 Frame
     MoveScaled(50,1,34,18)
@@ -19,24 +23,26 @@
     { ButtonGenerarCartones Button
       MoveScaled(12,2,20,6)
       Text = ("Generar Cartones")
+      Picture = Picture["icon:/16/exec"]
     }
     { PictureBox1 PictureBox
       MoveScaled(1,6,9,6)
       Picture = Picture["carton de bingo50x32.jpg"]
       Stretch = True
     }
-    { ButtonGenerarCartones2 Button
+    { ButtonVerCartones Button
       MoveScaled(12,11,20,6)
       Text = ("Ver Cartones")
+      Picture = Picture["icon:/16/pdf"]
     }
   }
   { Label2 Label
     MoveScaled(0,6,14,4)
-    ToolTip = ("aqui se define el titulo que vendrá en cada carton")
-    Text = ("Titulo:")
+    ToolTip = ("aqui se define el tema del bingo")
+    Text = ("Tema:")
     Alignment = Align.Right
   }
-  { TextBoxTituloCarton TextBox
+  { TextBoxTemaBingo TextBox
     MoveScaled(15,6,33,4)
   }
   { Label6 Label
@@ -50,10 +56,14 @@
   }
   { ComboBoxCategoria ComboBox
     MoveScaled(15,12,34,4)
+    Visible = False
+    Enabled = False
     List = [("matematicas"), ("ingles"), ("lengua")]
   }
   { Label3 Label
     MoveScaled(1,12,13,4)
+    Visible = False
+    Enabled = False
     ToolTip = ("aqui se define el titulo que vendrá en cada carton")
     Text = ("Categoria:")
     Alignment = Align.Right
@@ -63,16 +73,13 @@
     Text = ("Nombre fichero:")
     Alignment = Align.Right
   }
-  { TextBox1 TextBox
-    MoveScaled(15,1,29,4)
-  }
   { Label5 Label
     MoveScaled(44,1,5,4)
     Text = (".be")
     Alignment = Align.Center
   }
   { ButtonSalir Button
-    MoveScaled(16,68,16,6)
+    MoveScaled(69,68,16,6)
     Text = ("Salir")
     Picture = Picture["icon:/22/quit"]
   }

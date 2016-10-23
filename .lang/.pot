@@ -18,15 +18,15 @@ msgstr ""
 msgid "Juego del bingo educativo para refrescar conocimientos."
 msgstr ""
 
-#: Bingo.class:242
+#: Bingo.class:247
 msgid "Existe un fichero con el mismo nombre, ¿desea borrarlo?"
 msgstr ""
 
-#: Bingo.class:242
+#: Bingo.class:247
 msgid "Si, borralo y continua"
 msgstr ""
 
-#: Bingo.class:242
+#: Bingo.class:247
 msgid "No, cancelar operación"
 msgstr ""
 
@@ -50,8 +50,8 @@ msgstr ""
 msgid "Autores: Julio Sanchez Berro (jsbsan) y Antonio Sanchez (introlinux)"
 msgstr ""
 
-#: FMain.form:76 FormCartones.form:133 FormEditarCrear.form:47
-#: FormElemento.form:115 FormularioCreador.form:112
+#: FMain.form:76 FormCartones.form:135 FormEditarCrear.form:156
+#: FormElemento.form:118 FormularioCreador.form:119
 msgid "Salir"
 msgstr ""
 
@@ -63,39 +63,39 @@ msgstr ""
 msgid "Bingo Educativo"
 msgstr ""
 
-#: FormCartones.form:34
+#: FormCartones.form:36
 msgid "Tamaño de la Cuadrícula del Cartón"
 msgstr ""
 
-#: FormCartones.form:38
+#: FormCartones.form:40
 msgid "4x3"
 msgstr ""
 
-#: FormCartones.form:44
+#: FormCartones.form:46
 msgid "5x4"
 msgstr ""
 
-#: FormCartones.form:49
+#: FormCartones.form:51
 msgid "5x5"
 msgstr ""
 
-#: FormCartones.form:61
+#: FormCartones.form:63
 msgid "Huecos:"
 msgstr ""
 
-#: FormCartones.form:65
+#: FormCartones.form:67
 msgid "Negros (rellenos):"
 msgstr ""
 
-#: FormCartones.form:70
+#: FormCartones.form:72
 msgid "Blancos (vacíos):"
 msgstr ""
 
-#: FormCartones.form:86
+#: FormCartones.form:88
 msgid "Número de cartones distintos a Generar:"
 msgstr ""
 
-#: FormCartones.form:91
+#: FormCartones.form:93
 msgid ""
 "<b>Nota:</b><br>\n"
 "El número de cartones diferentes que se pueden generar, dependerá del número "
@@ -103,130 +103,162 @@ msgid ""
 "mayor número de cartones distintos que se podrań crear."
 msgstr ""
 
-#: FormCartones.form:100
+#: FormCartones.form:102
 msgid "Elementos que se repitirán en todos los cartones:"
 msgstr ""
 
-#: FormCartones.form:105
+#: FormCartones.form:107
 msgid "Pulse botón derecho para añadir elementos del bingo"
 msgstr ""
 
-#: FormCartones.form:115
+#: FormCartones.form:117
 msgid "Previsualizar"
 msgstr ""
 
-#: FormCartones.form:126
+#: FormCartones.form:128
 msgid "Generar"
 msgstr ""
 
-#: FormCartones.form:140
-msgid "Caracteristicas del Cartón:"
+#: FormCartones.form:142
+msgid "Características del Cartón:"
 msgstr ""
 
-#: FormCartones.form:150
+#: FormCartones.form:152
 msgid "Titulo del cartón:"
 msgstr ""
 
-#: FormCartones.class:6 FormularioCreador.form:41
+#: FormCartones.form:164 FormEditarCrear.form:105
+msgid "Imprimir"
+msgstr ""
+
+#: FormCartones.class:6 FormularioCreador.form:46
 msgid "Cartones"
 msgstr ""
 
-#: FormEditarCrear.form:19
-msgid "Editar/Crear"
+#: FormEditarCrear.form:50
+msgid "Utilidades...."
 msgstr ""
 
-#: FormEditarCrear.form:25
+#: FormEditarCrear.form:75
 msgid "Crear"
 msgstr ""
 
-#: FormEditarCrear.form:31
+#: FormEditarCrear.form:85
 msgid "Editar"
 msgstr ""
 
-#: FormEditarCrear.form:37
-msgid "Borrar"
-msgstr ""
-
-#: FormEditarCrear.form:53
+#: FormEditarCrear.form:95
 msgid "Añadir"
 msgstr ""
 
-#: FormEditarCrear.form:59
+#: FormEditarCrear.form:115
 msgid "Compartir"
 msgstr ""
 
-#: FormElemento.form:30
+#: FormEditarCrear.form:145
+msgid "Borrar"
+msgstr ""
+
+#: FormEditarCrear.class:52
+msgid "Utilidades"
+msgstr ""
+
+#: FormEditarCrear.class:80
+msgid "Debe de seleccionar un archivo de bingo educativo"
+msgstr ""
+
+#: FormElemento.form:33
 msgid "Elemento en Bingo"
 msgstr ""
 
-#: FormElemento.form:34
+#: FormElemento.form:37
 msgid "texto:"
 msgstr ""
 
-#: FormElemento.form:74
+#: FormElemento.form:77
 msgid "Elemento en Cartón"
 msgstr ""
 
-#: FormElemento.form:103
+#: FormElemento.form:106
 msgid "Mismo elemento que en Bingo"
 msgstr ""
 
-#: FormElemento.form:110
+#: FormElemento.form:113
 msgid "Crear Elemento"
 msgstr ""
 
-#: FormElemento.form:127
-msgid "grabar 2 segundos"
+#: FormElemento.form:130
+msgid "iniciar grabadora"
 msgstr ""
 
-#: FormularioCreador.form:31
+#: FormGrabadora.form:20
+msgid "TextBox1"
+msgstr ""
+
+#: FormGrabadora.form:25
+msgid "Iniciar"
+msgstr ""
+
+#: FormGrabadora.form:31
+msgid "Terminar"
+msgstr ""
+
+#: FormGrabadora.class:6
+msgid "Grabadora de Sonido"
+msgstr ""
+
+#: FormularioCreador.form:35
 msgid "Elementos que componen el Bingo actual:"
 msgstr ""
 
-#: FormularioCreador.form:36
+#: FormularioCreador.form:40
 msgid "Añadir Elemento"
 msgstr ""
 
-#: FormularioCreador.form:45
+#: FormularioCreador.form:50
 msgid "Generar Cartones"
 msgstr ""
 
-#: FormularioCreador.form:56
+#: FormularioCreador.form:62
 msgid "Ver Cartones"
 msgstr ""
 
-#: FormularioCreador.form:62
+#: FormularioCreador.form:69
+msgid "aqui se define el tema del bingo"
+msgstr ""
+
+#: FormularioCreador.form:70
+msgid "Tema:"
+msgstr ""
+
+#: FormularioCreador.form:80
 msgid "aqui se define el titulo que vendrá en cada carton"
 msgstr ""
 
-#: FormularioCreador.form:63
-msgid "Titulo:"
-msgstr ""
-
-#: FormularioCreador.form:74
+#: FormularioCreador.form:81
 msgid "Descripción:"
 msgstr ""
 
-#: FormularioCreador.form:84
+#: FormularioCreador.form:93
 msgid "matematicas"
 msgstr ""
 
-#: FormularioCreador.form:84
+#: FormularioCreador.form:93
 msgid "ingles"
 msgstr ""
 
-#: FormularioCreador.form:84
+#: FormularioCreador.form:93
 msgid "lengua"
 msgstr ""
 
-#: FormularioCreador.form:90
+#: FormularioCreador.form:101
 msgid "Categoria:"
 msgstr ""
 
-#: FormularioCreador.form:96
+#: FormularioCreador.form:107
 msgid "Nombre fichero:"
 msgstr ""
 
-#: FormularioCreador.form:106
+#: FormularioCreador.form:113
 msgid ".be"
 msgstr ""

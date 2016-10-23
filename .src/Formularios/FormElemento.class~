@@ -1,8 +1,21 @@
 ' Gambas class file
 
+Public b As Bingo
 
-Public Sub Button2_Click()
+Public Sub ButtonSalir_Click()
 
   Me.Close()
+
+End
+
+Public Sub Form_Open()
+
+  Me.Center()
+
+End
+
+Public Sub ButtonBoxSonidoBingo_Click()
+
+
 
 End
