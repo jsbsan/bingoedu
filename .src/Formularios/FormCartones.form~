@@ -50,7 +50,7 @@
     Text = ("Número de cartones distintos a Generar:")
   }
   { TextLabel1 TextLabel
-    MoveScaled(1,66,106,8)
+    MoveScaled(0,67,96,10)
     Text = ("<b>Nota:</b><br>\nEl número de cartones diferentes que se pueden generar, dependerá del número de elementos que tenga el Bingo. A mayor número de elementos del bingo, mayor número de cartones distintos que se podrań crear.")
   }
   { SpinBox1 SpinBox
@@ -84,14 +84,14 @@
     }
   }
   { ButtonSalir Button
-    MoveScaled(111,72,13,4)
+    MoveScaled(112,76,13,4)
     Text = ("Salir")
     Picture = Picture["icon:/22/quit"]
   }
   { TextLabel2 TextLabel
     MoveScaled(1,1,53,5)
     Font = Font["Italic,+4"]
-    Text = ("Caracteristicas del Cartón:")
+    Text = ("Características del Cartón:")
     Alignment = Align.Center
   }
   { TextBoxTitulo TextBox
@@ -101,5 +101,16 @@
     MoveScaled(4,10,23,4)
     Text = ("Titulo del cartón:")
     Alignment = Align.Right
+  }
+  { Panel2 Panel
+    MoveScaled(93,59,11,10)
+    Arrangement = Arrange.Fill
+    Border = Border.Plain
+    { SquareButton2 SquareButton
+      MoveScaled(0,1,11,8)
+      Expand = True
+      Text = ("Imprimir")
+      Picture = Picture["icon:/22/print"]
+    }
   }
 }

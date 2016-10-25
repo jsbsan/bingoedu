@@ -26,8 +26,8 @@ Public Sub definirGridviewFicheros()
     .Columns[2].width = 500
     .font.name = "Times"
     .font.size = 12
-    .Background = 16777215
-    .Foreground = 0
+    .Mode = Select.single
+    .ShowCursor = True
   End With
 
 End
@@ -53,7 +53,7 @@ Public Sub Form_Open()
   definirGridviewFicheros()
 
   'cargo los datos de las carpetas de bingo en el gridview.
-  ''TODO: me he quedado aqui
+
   ardir = Dir(User.home & "/bingoedu/", "*", gb.Directory)
 
   For Each nombredir In ardir
@@ -87,3 +87,5 @@ Public Sub ButtonEditarBingo_Click()
   Endif
 
 End
+
+

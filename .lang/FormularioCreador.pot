@@ -14,67 +14,71 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: FormularioCreador.form:35
-msgid "Elementos que componen el Bingo actual:"
-msgstr ""
-
-#: FormularioCreador.form:40
-msgid "Añadir Elemento"
-msgstr ""
-
-#: FormularioCreador.form:46
+#: FormularioCreador.form:37
 msgid "Cartones"
 msgstr ""
 
-#: FormularioCreador.form:50
-msgid "Generar Cartones"
+#: FormularioCreador.form:41
+msgid "Propiedades de Cartones y Generarlos"
 msgstr ""
 
-#: FormularioCreador.form:62
+#: FormularioCreador.form:53
 msgid "Ver Cartones"
 msgstr ""
 
-#: FormularioCreador.form:69
-msgid "aqui se define el tema del bingo"
-msgstr ""
-
-#: FormularioCreador.form:70
-msgid "Tema:"
-msgstr ""
-
-#: FormularioCreador.form:80
-msgid "aqui se define el titulo que vendrá en cada carton"
-msgstr ""
-
-#: FormularioCreador.form:81
-msgid "Descripción:"
-msgstr ""
-
-#: FormularioCreador.form:93
+#: FormularioCreador.form:62
 msgid "matematicas"
 msgstr ""
 
-#: FormularioCreador.form:93
+#: FormularioCreador.form:62
 msgid "ingles"
 msgstr ""
 
-#: FormularioCreador.form:93
+#: FormularioCreador.form:62
 msgid "lengua"
 msgstr ""
 
-#: FormularioCreador.form:101
+#: FormularioCreador.form:69
+msgid "aqui se define el titulo que vendrá en cada carton"
+msgstr ""
+
+#: FormularioCreador.form:70
 msgid "Categoria:"
 msgstr ""
 
-#: FormularioCreador.form:107
+#: FormularioCreador.form:80
+msgid "aqui se define el tema del bingo"
+msgstr ""
+
+#: FormularioCreador.form:81
+msgid "Titulo:"
+msgstr ""
+
+#: FormularioCreador.form:87
 msgid "Nombre fichero:"
 msgstr ""
 
-#: FormularioCreador.form:113
+#: FormularioCreador.form:97
 msgid ".be"
 msgstr ""
 
-#: FormularioCreador.form:119
+#: FormularioCreador.form:109
+msgid "Descripción:"
+msgstr ""
+
+#: FormularioCreador.form:115
+msgid "Elementos que componen el Bingo actual:"
+msgstr ""
+
+#: FormularioCreador.form:120
+msgid "Visualizar imagenes"
+msgstr ""
+
+#: FormularioCreador.form:140
+msgid "Añadir Elemento"
+msgstr ""
+
+#: FormularioCreador.form:151
 msgid "Salir"
 msgstr ""
 

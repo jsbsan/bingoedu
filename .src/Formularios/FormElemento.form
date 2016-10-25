@@ -1,11 +1,11 @@
 # Gambas Form File 3.0
 
 { Form Form
-  MoveScaled(0,0,106,55)
+  MoveScaled(0,0,106,44)
   { Frame1 Frame
-    MoveScaled(1,11,52,33)
+    MoveScaled(1,1,52,33)
     Text = ("Elemento en Bingo")
-    { RadioButton1 RadioButton
+    { RadioButtonBingoTexto RadioButton
       MoveScaled(4,3,8,6)
       Text = ("texto:")
       Value = True
@@ -13,10 +13,10 @@
     { TextBoxTEXTOBINGO TextBox
       MoveScaled(13,3,37,6)
     }
-    { RadioButton2 RadioButton
+    { RadioButtonBingoImagen RadioButton
       MoveScaled(4,13,3,6)
     }
-    { RadioButton3 RadioButton
+    { RadioButtonBingoSonido RadioButton
       MoveScaled(4,25,3,6)
     }
     { ButtonBoxSonidoBingo ButtonBox
@@ -28,10 +28,11 @@
       Stretch = True
       Border = Border.Plain
     }
-    { !PictureBox2 PictureBox
+    { !PictureBoxBingo PictureBox
       MoveScaled(9,11,10,9)
       #Public = True
       Picture = Picture["icon:/64/image"]
+      Stretch = True
       Border = Border.Plain
     }
     { ButtonBoxImagenBingo ButtonBox
@@ -39,61 +40,50 @@
     }
   }
   { Frame2 Frame
-    MoveScaled(54,11,50,33)
+    MoveScaled(54,1,50,33)
     Text = ("Elemento en Cartón")
-    { RadioButton4 RadioButton
+    { RadioButtonCartonTexto RadioButton
       MoveScaled(3,11,10,6)
       Text = ("texto:")
     }
     { TextBoxTEXTOCARTON TextBox
       MoveScaled(17,11,31,6)
     }
-    { RadioButton5 RadioButton
+    { RadioButtonCartonImagen RadioButton
       MoveScaled(3,24,4,6)
     }
-    { PictureBox4 PictureBox
-      MoveScaled(8,23,10,9)
+    { PictureBoxCarton PictureBox
+      MoveScaled(7,23,10,9)
       Picture = Picture["icon:/64/image"]
       Stretch = True
       Border = Border.Plain
     }
     { ButtonBoxImagenCarton ButtonBox
-      MoveScaled(19,25,30,6)
+      MoveScaled(18,24,30,6)
       Alignment = Align.Right
     }
-    { RadioButton6 RadioButton
+    { RadioButtonCartonIgual RadioButton
       MoveScaled(3,3,43,5)
       Text = ("Mismo elemento que en Bingo")
       Value = True
     }
   }
-  { Button1 Button
-    MoveScaled(55,47,20,6)
+  { ButtonGeneraElemento Button
+    MoveScaled(55,37,20,6)
     Text = ("Crear Elemento")
   }
   { ButtonSalir Button
-    MoveScaled(92,47,13,6)
+    MoveScaled(92,37,13,6)
     Text = ("Salir")
     Picture = Picture["icon:/22/quit"]
   }
-  { PictureBox3 PictureBox
-    MoveScaled(3,46,8,8)
+  { PictureBoxIniciarGrabadora PictureBox
+    MoveScaled(3,36,8,8)
     Picture = Picture["microfono.png"]
     Stretch = True
   }
-  { Label1 Label
-    MoveScaled(12,47,20,5)
+  { LabelIniciarGrabadora Label
+    MoveScaled(12,37,20,5)
     Text = ("iniciar grabadora")
-  }
-  { Frame3 Frame
-    MoveScaled(43,1,21,9)
-    { PictureBoxParaBingo PictureBox
-      MoveScaled(1,1,9,7)
-      Border = Border.Plain
-    }
-    { PictureBoxParaBingo2 PictureBox
-      MoveScaled(11,1,9,7)
-      Border = Border.Plain
-    }
   }
 }

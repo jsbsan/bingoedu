@@ -24,7 +24,7 @@ Public Sub ButtonTerminar_Click()
   Dim arrayprocesos As String[]
 
   Shell "ps -ef | grep \"arecord\" | awk '{print $2}'" To texto
-  Debug "Proceso arecord a matar: ", texto
+  '  Debug "Proceso arecord a matar: ", texto
 
   arrayprocesos = Split(texto, "\n")
   For a = 0 To arrayprocesos.MAX

@@ -3,7 +3,7 @@
 '------------------------------------
 'API de la clase Elemento
 '------------------------------------
-Property enlace As String ''clave que enlaza con el elemento similar en el cartos del bingo
+Property enlace As String ''clave que relaciones elemnto bingo-elemento carton
 Property id As String '' clave que identifica al elemento
 
 

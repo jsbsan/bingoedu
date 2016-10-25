@@ -27,7 +27,7 @@ End
 
 Public Sub creaVariant() As Variant 'realmente crea una variant con todo el contenido
 
-  Dim tempcole As New Collection
+
   Dim temp2cole As New Collection
 
   ' 'Dato de Identeificacion

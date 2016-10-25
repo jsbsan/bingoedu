@@ -20,7 +20,7 @@ End
 
 Private Sub agregaDatos(ByRef datos As Collection) 'al introducirlos por referencia no necesito devolver nada, los añado directamente.
 
-  datos.Add(Me.id, "id")
+  '' datos.Add(Me.id, "id")
   datos.Add(Me.ArraIdElementos.Join("|"), "lista") 'devuelve una cadena con los id de los elementos que contiene
 
 End
@@ -37,9 +37,9 @@ Public Sub creaVariant() As Variant 'realmente crea una variant con todo el cont
   'añadir datos segun tipo de elemento
   agregaDatos(ByRef temp2cole) 'lo paso por referencia para modificarlo internamente y no tener que usar el valor de retorno
 
-  tempcole.Add(temp2cole, "datos")
+  ' tempcole.Add(temp2cole, "datos")
 
-  Return tempcole '
+  Return temp2cole '
 
 End
 

@@ -26,3 +26,7 @@ msgstr ""
 msgid "No, cancelar operación"
 msgstr ""
 
+#: Bingo.class:597
+msgid "Existe un fichero con el mismo nombre"
+msgstr ""
+

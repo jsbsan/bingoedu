@@ -50,14 +50,14 @@
     Text = ("Número de cartones distintos a Generar:")
   }
   { TextLabel1 TextLabel
-    MoveScaled(0,67,96,10)
+    MoveScaled(1,72,106,7)
     Text = ("<b>Nota:</b><br>\nEl número de cartones diferentes que se pueden generar, dependerá del número de elementos que tenga el Bingo. A mayor número de elementos del bingo, mayor número de cartones distintos que se podrań crear.")
   }
   { SpinBox1 SpinBox
     MoveScaled(42,61,11,4)
   }
   { Label5 Label
-    MoveScaled(0,39,58,5)
+    MoveScaled(1,38,58,5)
     Text = ("Elementos que se repitirán en todos los cartones:")
   }
   { ScrollView1 ScrollView
@@ -103,7 +103,7 @@
     Alignment = Align.Right
   }
   { Panel2 Panel
-    MoveScaled(93,59,11,10)
+    MoveScaled(93,61,11,10)
     Arrangement = Arrange.Fill
     Border = Border.Plain
     { SquareButton2 SquareButton

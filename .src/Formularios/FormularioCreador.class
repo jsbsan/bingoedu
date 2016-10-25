@@ -1,9 +1,11 @@
 ' Gambas class file
 
-Public bingoEditor As Bingo
+Public bingoEditor As Bingo 'estoy editando un bingo existente
+Private bingoNuevo As Bingo 'voy a crear un bingo nuevo
+Private bingotmp As Bingo 'bingo temporal, el cual es el que trabajo
 
 
-Public Sub ButtonGenerarCartones_Click()
+Public Sub ButtonPropiedadesCartones_Click()
 
 
   FormCartones.ShowModal()
@@ -13,9 +15,26 @@ End
 
 Public Sub Button1_Click()
 
+  FormElemento.BingoTemporalDatos = bingotmp
+
   FormElemento.ShowModal()
+  'debemos actualizar los datos del gridbingo
+  actualizarDatosGridview()
+  '
 
 End
+
+Private Sub actualizarDatosGridview()
+
+  'cargar datos en el gridview
+  bingotmp.CargarDatosBingoCartonesGridview(GridViewDatosBingo)
+
+
+End
+
+
+
+
 
 Public Sub ButtonSalir_Click()
 
@@ -25,18 +44,60 @@ End
 
 Public Sub Form_Open()
 
+  definirGridViewDatosBingo()
   If IsNull(bingoEditor) Then
     'estamos creando un bingo vacio
     TextBoxFicheroBingo.text = "NuevoBingo" & Format$(Now, "yyyy_nn_dd")
-
-
+    bingotmp = New Bingo
+    bingotmp.NombreFichero = TextBoxFicheroBingo.text
   Else
     'estamos en modo edición de un bingo existente.
-
-
+    bingotmp = bingoEditor
+    TextBoxFicheroBingo.text = bingotmp.NombreFichero
 
   Endif
+
+  'cargar los datos del bingo
+  TextBoxTituloBingo.Text = bingotmp.titulo
+  TextAreaDescripcion.Text = bingotmp.descripcion
+  ComboBoxCategoria.Text = bingotmp.tipo
+
+  'cargar datos en el gridview
+  actualizarDatosGridview()
+
 
   Me.Center()
 
 End
+
+
+
+'Definir.................
+'GridViewDatosBingo
+
+
+
+Public Sub definirGridViewDatosBingo()
+
+  With GridViewDatosBingo
+    .header = 3
+    .rows.count = 0
+    .columns.count = 4
+    .Columns[0].title = "Tipo"
+    .Columns[1].title = "Dato Bingo"
+    .Columns[2].title = "Tipo"
+    .Columns[3].title = "Dato Carton"
+
+    .Columns[0].width = 65
+    .Columns[1].width = 250
+    .Columns[2].width = 65
+    .Columns[3].width = 250
+    .font.name = "Times"
+    .font.size = 12
+    .Mode = Select.single
+    .ShowCursor = True
+
+  End With
+
+End
+

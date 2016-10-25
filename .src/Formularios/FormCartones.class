@@ -17,7 +17,7 @@ End
 
 Public Sub SquareButton1_Click()
 
-  Debug "Generar Grupo de Cartones"
+  '  Debug "Generar Grupo de Cartones"
 
 End
 

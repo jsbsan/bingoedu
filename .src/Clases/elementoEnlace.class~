@@ -26,6 +26,6 @@ End
 Public Sub agregaDatos(ByRef datos As Collection)
 
   datos.Add("enlace", "tipo")
-  datos.Add(Me.enlace, "texto")
+  datos.Add(Me.enlace, "enlace")
 
 End

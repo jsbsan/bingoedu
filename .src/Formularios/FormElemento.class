@@ -1,6 +1,11 @@
 ' Gambas class file
 
-Public b As Bingo
+' Gambas class file
+
+Property BingoTemporalDatos As Bingo
+Private btmp As Bingo ''bingo donde voy trabajar con los datos
+
+
 
 Public Sub ButtonSalir_Click()
 
@@ -10,6 +15,10 @@ End
 
 Public Sub Form_Open()
 
+  If IsNull(btmp) Then
+    btmp = New Bingo 'estamos en modo crear elementos (no edicion)
+  Endif
+  Me.Title = ("Elementos")
   Me.Center()
 
 End
@@ -17,11 +26,160 @@ End
 Public Sub ButtonBoxSonidoBingo_Click()
 
 
+  Dialog.Filter = ["*.mp3", ("Ficheros de sonido mp3")]
+  If Dialog.Openfile() Then
+    Return 'se ha cancelado la eleccion de un fichero
+  Endif
+
+  ButtonBoxSonidoBingo.text = File.Name(Dialog.path)
+  ButtonBoxSonidoBingo.tag = Dialog.Path
+  'activar el radiobutton
+  RadioButtonBingoSonido.value = True
 
 End
 
-Public Sub PictureBox3_MouseDown()
+Public Sub PictureBoxIniciarGrabadora_MouseDown()
 
   FormGrabadora.Show()
+
+End
+
+Public Sub LabelIniciarGrabadora_MouseDown()
+
+  PictureBoxIniciarGrabadora_MouseDown()
+
+End
+
+
+
+Public Sub ButtonGeneraElemento_Click()
+
+  Dim eB As Variant 'cualquier tipo de elemnto , para el Bingo
+  Dim eC As Variant  'cualquier tipo de elemnto, para el carton
+  '1º crea el elemnto bingo
+  'Compruebo las 3 opciones que tenemos de crear un elemento Bingo
+  If RadioButtonBingoTexto.value = True Then
+    eb = New ElementoTexto
+    eb.texto = TextBoxTEXTOBINGO.Text
+  Else
+    If RadioButtonBingoImagen.Value = True Then
+      eb = New ElementoImagen
+      eb.rutaimagen = ButtonBoxImagenBingo.Text
+      'copiar el fichero al directorio del bingo...
+      btmp.copiaFichero(ButtonBoxImagenBingo.Tag)
+    Else
+      If RadioButtonBingoSonido.value = True Then
+        eb = New ElementoSonido
+        eb.rutasonido = ButtonBoxSonidoBingo.Text
+        btmp.copiaFichero(ButtonBoxSonidoBingo.Tag)
+      Endif
+    Endif
+  Endif
+
+  '2º crea el elemento carton
+  'Compruebo las 3 opciones que tenemos de crear un elemento Elemento
+  If RadioButtonCartonImagen.value = True Then
+    eC = New ElementoImagen
+    eC.rutaimagen = ButtonBoxImagenCarton.Text
+    'copiar el fichero al directorio del bingo...
+    btmp.copiaFichero(ButtonBoxImagenCarton.Tag)
+  Else
+    If RadioButtonCartonTexto.value = True Then
+      eC = New ElementoTexto
+      eC.texto = TextBoxTEXTOCARTON.Text
+    Else
+      'caso en que lo que hacemos en igualar a las propiedades del elemento bingo
+      Select Case eb.tipoElemento()
+        Case "ElementoImagen"
+          eC = New ElementoImagen
+          eC.rutaimagen = eb.rutaimagen
+        Case "ElementoTexto"
+          ec = New ElementoTexto
+          ec.texto = eb.texto
+        Case "ElementoSonido"
+          ''aviso al usuario que hay un error y no puedo continuar.
+          Message.Info(("Error El Carton no puede tener elementos de Sonido"))
+          Return 'no puedo continuar
+      End Select
+    Endif
+  Endif
+
+  '3º enlaza a los dos elementos!!!
+  eC.enlace = eb.id
+  eB.enlace = eC.id
+
+  '4º  guardo los nuevo elementos creados...
+  '4.1. añado a la lista de elemntoes Bingo y Carton
+  btmp.ListaElementosBingo.Add(eb.id) 'añado a una array de cadenas, el dato del id
+  btmp.ListaElementosCarton.Add(ec.id)
+  '4.2 añado a la lsita de array de elementos
+  btmp.ArrayElementosBingo.Add(eb) 'añado a un array de elemento, el elemento en si
+  btmp.ArrayElementosCarton.Add(ec)
+
+  'todo Ok, elementos añadidos !!!
+  Me.close()
+
+End
+
+
+Public Sub ButtonBoxImagenBingo_Click()
+
+  Dialog.Filter = ["*.png;*.jpg;*.jpeg;*.bmp", ("Ficheros de Imagen")]
+  If Dialog.OpenFile() Then
+    Return 'se ha cancelado la eleccion de un fichero
+  Endif
+
+  ButtonBoxImagenBingo.text = File.Name(Dialog.path)
+  ButtonBoxImagenBingo.tag = Dialog.Path
+
+  PictureBoxBingo.Picture = Picture[ButtonBoxImagenBingo.tag]
+
+  RadioButtonBingoImagen.value = True
+
+End
+
+
+
+
+
+Private Function BingoTemporalDatos_Read() As Bingo
+
+  Return btmp
+
+End
+
+Private Sub BingoTemporalDatos_Write(Value As Bingo)
+
+
+  btmp = value
+
+End
+
+Public Sub ButtonBoxImagenCarton_Click()
+
+  Dialog.Filter = ["*.png;*.jpg;*.jpeg;*.bmp", ("Ficheros de Imagen")]
+  If Dialog.Openfile() Then
+    Return 'se ha cancelado la eleccion de un fichero
+  Endif
+
+  ButtonBoxImagenCarton.text = File.Name(Dialog.path)
+  ButtonBoxImagenCarton.tag = Dialog.Path
+  PictureBoxCarton.Picture = Picture[ButtonBoxImagenCarton.tag]
+
+  RadioButtonCartonImagen.value = True
+
+End
+
+Public Sub TextBoxTEXTOCARTON_KeyPress()
+
+  RadioButtonCartonTexto.Value = True 'activo el radiobuton automaticamente
+
+End
+
+
+
+Public Sub TextBoxTEXTOBINGO_KeyPress()
+
+  RadioButtonBingoTexto.value = True 'activo el radiobuton de forma automatica cuando escribo algo.
 
 End

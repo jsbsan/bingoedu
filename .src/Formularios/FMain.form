@@ -3,6 +3,7 @@
 { Form Form
   MoveScaled(0,0,80,46)
   Icon = Picture["icon175x175.jpeg"]
+  Resizable = False
   { PictureBox1 PictureBox
     MoveScaled(1,0,17,17)
     Picture = Picture["icon175x175.png"]
@@ -29,6 +30,7 @@
   }
   { ButtonJugar Button
     MoveScaled(29,29,32,9)
+    Enabled = False
     Text = ("Jugar")
     Picture = Picture["icon:/32/game"]
   }

@@ -21,7 +21,7 @@ Public Sub ButtonTerminar_Click()
 
   Dim texto As String
   Dim a As Integer
-  Dim arrayprocesos As String
+  Dim arrayprocesos As String[]
 
   Shell "ps -ef | grep \"arecord\" | awk '{print $2}'" To texto
   Debug "Proceso arecord a matar: ", texto

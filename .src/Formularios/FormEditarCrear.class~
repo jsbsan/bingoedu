@@ -7,8 +7,6 @@ Public Sub ButtonCrearBingo_Click()
   'nombre
   'descripcion
 
-  definirGridviewFicheros()
-
 
   FormularioCreador.ShowModal
 
@@ -37,7 +35,7 @@ End
 
 
 
-Public Sub Button4_Click()
+Public Sub ButtonSalir_Click()
 
   Me.Close()
 
@@ -55,7 +53,7 @@ Public Sub Form_Open()
   definirGridviewFicheros()
 
   'cargo los datos de las carpetas de bingo en el gridview.
-  ''TODO: me he quedado aqui
+
   ardir = Dir(User.home & "/bingoedu/", "*", gb.Directory)
 
   For Each nombredir In ardir

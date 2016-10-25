@@ -1,21 +1,32 @@
 [Breakpoints]
-Breakpoint[1]="testCargarBingo.22"
-Count=1
+Count=0
 
 [DebugWindow]
 Count=0
+
+[DebugWindow/ArrayElementosCarton]
+Geometry=[-4,16,210,210]
+
+[DebugWindow/ArrayElementosCarton[0]]
+Geometry=[10,30,210,210]
 
 [DebugWindow/Carton]
 Geometry=[46,16,210,210]
 
 [DebugWindow/Elemento]
-Geometry=[5,21,210,210]
+Geometry=[774,580,210,210]
 
 [DebugWindow/ListaElementosBingo]
 Geometry=[46,16,748,387]
 
 [DebugWindow/Me]
 Geometry=[714,517,234,688]
+
+[DebugWindow/Me.ArrayElementosBingo]
+Geometry=[-4,16,210,210]
+
+[DebugWindow/Me.ArrayElementosBingo[0]]
+Geometry=[0,279,210,210]
 
 [DebugWindow/Me.ListaElementosBingo]
 Geometry=[907,558,210,210]
@@ -48,7 +59,10 @@ Geometry=[46,16,210,210]
 Geometry=[-4,16,210,210]
 
 [DebugWindow/e]
-Geometry=[-245,503,400,300]
+Geometry=[-76,498,400,300]
+
+[DebugWindow/eb]
+Geometry=[-4,16,210,210]
 
 [DebugWindow/tempcole]
 Geometry=[5,21,210,210]
@@ -68,27 +82,27 @@ File[5]=".src/Formularios/FMain.class:21.0"
 File[6]=".src/Formularios/FormEditarCrear.form"
 File[7]="Nota.txt:12.10"
 File[8]=".src/Formularios/FormularioCreador.form"
-File[9]=".src/Formularios/FormularioCreador.class:29.72"
+File[9]=".src/Formularios/FormularioCreador.class:10.26"
+Active=10
 File[10]=".src/Formularios/FormCartones.form"
-File[11]=".src/Formularios/FormCartones.class:23.0"
-File[12]=".src/Formularios/FormEditarCrear.class:9.0"
+File[11]=".src/Formularios/FormCartones.class:19.38"
+File[12]=".src/Formularios/FormEditarCrear.class:36.0"
 File[13]=".src/Clases/controles/SquareButton.class:78.46"
 File[14]=".src/Formularios/FormElemento.form"
-File[15]=".src/Clases/Bingo.class:63.8"
-File[16]=".src/Clases/elemento.class:12.73"
+File[15]=".src/Clases/Bingo.class:300.29"
+File[16]=".src/Clases/elemento.class:54.0"
 File[17]=".src/Clases/elementoTexto.class:18.0"
 File[18]=".src/Clases/elementoImagen.class:27.3"
-File[19]=".src/Formularios/FormElemento.class:23.0"
-File[20]=".src/Formularios/testGuadarBingo.module:2.17"
+File[19]=".src/Formularios/FormElemento.class:174.75"
+File[20]=".src/Formularios/testGuadarBingo.module:9.0"
 File[21]=".src/Clases/elementoBlanco.class:16.28"
-File[22]=".src/Clases/elementoEnlace.class:0.19"
-File[23]=".src/Clases/elementoNegro.class:1.0"
-File[24]=".src/Clases/Carton.class:19.0"
-File[25]=".src/Formularios/testCargarBingo.module:22.10"
-File[26]=".src/Formularios/FormGrabadora.form"
-Active=27
-File[27]=".src/Formularios/FormGrabadora.class:23.31"
-File[28]="grabar.sh:0.36"
+File[22]=".src/Clases/elementoNegro.class:1.0"
+File[23]=".src/Clases/Carton.class:29.0"
+File[24]=".src/Formularios/testCargarBingo.module:7.0"
+File[25]=".src/Formularios/FormGrabadora.form"
+File[26]=".src/Formularios/FormGrabadora.class:26.45"
+File[27]="grabar.sh:0.36"
+File[28]=".src/Clases/elementoSonido.class:15.45"
 Count=28
 
 [Watches]

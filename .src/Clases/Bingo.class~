@@ -54,14 +54,14 @@ End
 Public Sub cargadatos(NombreArchivo As String, Optional carpeta As Boolean) 'leo un archivo .be y lo cargo en la instancia de clase bingo.
 
   Dim arraytmp As String[]
-  Dim e As Object
+
   Dim a As Integer
   Dim contenido As String
   Dim VariableDatos As Variant
   Dim clasejson As New JSON354
 
 
-  If IsNull(carpeta) Then
+  If carpeta = False Then
 
     '1º, descomrpimir el archivo..
     If Exist(User.home & "/bingoedu/" & File.BaseName(NombreArchivo) & ".tar.gz") Then
@@ -121,7 +121,7 @@ Public Sub cargadatos(NombreArchivo As String, Optional carpeta As Boolean) 'leo
   agregarListaElementos(VariableDatos, Me.ListaElementosBingo, Me.ArrayElementosBingo)
   agregarListaElementos(VariableDatos, Me.ListaElementosCarton, Me.ArrayElementosCarton)
 
-  ''TODO: lista de cartornes y array de cartones
+  ''NOTE: lista de cartornes y array de cartones
 
   Me.tituloCarton = VariableDatos["TituloCarton"]
   Me.tamanoCuadricula = VariableDatos["TamanoCuadricula"]
@@ -180,7 +180,7 @@ Public Sub agregarListaElementos(v As Variant, lista As String[], ArrayElementos
   ArrayElementos.Clear() 'limpio elementos anteriores del array donde voy a introducir los elementos leidos
 
   For a = 0 To lista.Max
-    Debug V[lista[a]]["datos"]["tipo"]
+    '  Debug V[lista[a]]["datos"]["tipo"]
 
     Select Case V[lista[a]]["datos"]["tipo"]
       Case "sonido"
@@ -250,7 +250,7 @@ Public Sub guardarBingo() ''guardar archivo tar.gz con datos del bingo actual
 
     Else
       Kill User.home & "/bingoedu/" & $nombreFichero & "/" & $NombreFichero & ".tar.gz" 'Cancelo operacion, y borro el archivo comprimido que acabo de hacer.
-      Debug "Operacion cancelada"
+      '  Debug "Operacion cancelada"
       Return
 
     Endif
@@ -491,3 +491,117 @@ Private Sub NombreFichero_Write(Value As String)
   $nombreFichero = value
 
 End
+
+
+
+'------------------------------------------------------------------------
+'Zona de Carga de datos en Controles Gridview
+'------------------------------------------------------------------------
+
+Public Sub CargarDatosBingoCartonesGridview(g As GridView) '' Carga los datos de los elementos del bingo y cartones
+
+  Dim e As Elemento
+  Dim ecarton As Elemento
+
+  'La carga la realizamos usando el listado de elementos de bingo
+  g.Rows.count = 0 'eliminados todas las filas existentes
+
+  For Each e In Me.ArrayElementosBingo
+
+
+    'añado una fila al gridview..
+    g.Rows.count += 1
+    'datos del elemento Bingo
+    g[g.Rows.Max, 0].Picture = ImagenTipoElemento(e) 'devuelve un icono que representa
+    g[g.Rows.Max, 1].text = TextoElemento(e) ''escribira el texto, o el nombre de la imagen o sonido
+    'datos del elemnto carton relacionado con el elmento bingo
+    ecarton = buscaElemento(e.enlace, ArrayElementosCarton)
+    'escribimos datos del elemnto carton relacinado con el elemento bingo.
+    g[g.Rows.Max, 2].Picture = ImagenTipoElemento(ecarton) 'devuelve un icono que representa
+    g[g.Rows.Max, 3].text = TextoElemento(ecarton) ''escribira el texto, o el nombre de la imagen o sonido
+
+
+  Next
+
+End
+
+Public Function buscaElemento(id As String, arrayElem As Elemento[]) As Elemento
+
+  Dim ebuscado As Elemento
+
+  For Each ebuscado In arrayElem
+    If ebuscado.id = id Then
+      Return ebuscado
+
+    Endif
+  Next
+
+  'Si llegamos a este punto, no ha encontrado el elemento enlazado...hay un error
+  'poner mensaje de error o devolver null
+  Return Null
+
+
+
+End
+
+
+'-----------------------
+Public Function ImagenTipoElemento(e As Elemento) As Picture
+
+  Dim rutaicono As String ''icono que representa imagen, texto, o sonido
+
+  Select Case e.tipoElemento()
+    Case "ElementoImagen"
+      rutaIcono = "iconoimagen32.png"
+    Case "ElementoTexto"
+      rutaIcono = "iconoletra32.png"
+    Case "ElementoSonido"
+      rutaIcono = "iconosonido32.png"
+  End Select
+  Return Picture[rutaicono]
+
+End
+'---------------------------
+
+Public Function TextoElemento(e As Variant) As String
+
+  'nota de programacion:
+  'En principo deberia ser la definicion de la funcion:
+  '(e As elemento) en vez de (e As Variant)
+  'pero cuando intento acceder a propiedades de las clases heredades ElementoTexto, ElementoImagen, me da error
+  'por eso lo he tenido que dejar como Variant, y asi no me da problemas.
+  '
+
+  Dim contenido As String
+
+  Select Case e.tipoElemento()
+    Case "ElementoImagen"
+      contenido = File.Name(e.rutaimagen)
+    Case "ElementoTexto"
+      contenido = e.texto
+    Case "ElementoSonido"
+      contenido = File.name(e.rutasonido)
+  End Select
+
+  Return contenido
+
+End
+
+
+
+Public Function copiaFichero(ruta As String) ''Me encargo de copia un fichero de su origen al directorio del bingo
+
+  If Exist(User.home & "/bingoedu/" & $nombreFichero & "/" & File.Name(ruta)) Then
+    'existe el fichero no lo copio
+    Message.Info(("Existe un fichero con el mismo nombre"))
+    Return
+  Endif
+
+  Try Copy ruta To User.home & "/bingoedu/" & $nombreFichero & "/" & File.Name(ruta)
+
+  If Error Then
+    Print "Error al intentar copiar fichero "
+  Endif
+
+End
+

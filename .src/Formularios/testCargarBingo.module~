@@ -20,7 +20,7 @@ Public Sub main()
 
   'cargo datos
   b.cargadatos(NombreArchivo)
-
+  ' Debug "espera"
   'como comprobación que todo lo hace bien, vuelvo agrabarlo y comparo resultados..
   b.guardarBingo()
 

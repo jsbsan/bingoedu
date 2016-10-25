@@ -30,28 +30,32 @@ msgstr ""
 msgid "No, cancelar operación"
 msgstr ""
 
-#: FMain.form:30
+#: Bingo.class:597
+msgid "Existe un fichero con el mismo nombre"
+msgstr ""
+
+#: FMain.form:31
 msgid "EDUCATIVO"
 msgstr ""
 
-#: FMain.form:43
+#: FMain.form:44
 msgid "Crear o Editar"
 msgstr ""
 
-#: FMain.form:49
+#: FMain.form:51
 msgid "Jugar"
 msgstr ""
 
-#: FMain.form:55
+#: FMain.form:57
 msgid "Realizado en Gambas3.5.4 para la distribución MininoPicaros 2015"
 msgstr ""
 
-#: FMain.form:65
+#: FMain.form:67
 msgid "Autores: Julio Sanchez Berro (jsbsan) y Antonio Sanchez (introlinux)"
 msgstr ""
 
-#: FMain.form:76 FormCartones.form:135 FormEditarCrear.form:156
-#: FormElemento.form:118 FormularioCreador.form:119
+#: FMain.form:78 FormCartones.form:135 FormEditarCrear.form:156
+#: FormElemento.form:116 FormularioCreador.form:151
 msgid "Salir"
 msgstr ""
 
@@ -131,7 +135,7 @@ msgstr ""
 msgid "Imprimir"
 msgstr ""
 
-#: FormCartones.class:6 FormularioCreador.form:46
+#: FormCartones.class:6 FormularioCreador.form:37
 msgid "Cartones"
 msgstr ""
 
@@ -167,28 +171,44 @@ msgstr ""
 msgid "Debe de seleccionar un archivo de bingo educativo"
 msgstr ""
 
-#: FormElemento.form:33
+#: FormElemento.form:30
 msgid "Elemento en Bingo"
 msgstr ""
 
-#: FormElemento.form:37
+#: FormElemento.form:34
 msgid "texto:"
 msgstr ""
 
-#: FormElemento.form:77
+#: FormElemento.form:75
 msgid "Elemento en Cartón"
 msgstr ""
 
-#: FormElemento.form:106
+#: FormElemento.form:104
 msgid "Mismo elemento que en Bingo"
 msgstr ""
 
-#: FormElemento.form:113
+#: FormElemento.form:111
 msgid "Crear Elemento"
 msgstr ""
 
-#: FormElemento.form:130
+#: FormElemento.form:128
 msgid "iniciar grabadora"
+msgstr ""
+
+#: FormElemento.class:21
+msgid "Elementos"
+msgstr ""
+
+#: FormElemento.class:29
+msgid "Ficheros de sonido mp3"
+msgstr ""
+
+#: FormElemento.class:101
+msgid "Error El Carton no puede tener elementos de Sonido"
+msgstr ""
+
+#: FormElemento.class:127
+msgid "Ficheros de Imagen"
 msgstr ""
 
 #: FormGrabadora.form:20
@@ -207,58 +227,62 @@ msgstr ""
 msgid "Grabadora de Sonido"
 msgstr ""
 
-#: FormularioCreador.form:35
-msgid "Elementos que componen el Bingo actual:"
+#: FormularioCreador.form:41
+msgid "Propiedades de Cartones y Generarlos"
 msgstr ""
 
-#: FormularioCreador.form:40
-msgid "Añadir Elemento"
-msgstr ""
-
-#: FormularioCreador.form:50
-msgid "Generar Cartones"
-msgstr ""
-
-#: FormularioCreador.form:62
+#: FormularioCreador.form:53
 msgid "Ver Cartones"
 msgstr ""
 
-#: FormularioCreador.form:69
-msgid "aqui se define el tema del bingo"
-msgstr ""
-
-#: FormularioCreador.form:70
-msgid "Tema:"
-msgstr ""
-
-#: FormularioCreador.form:80
-msgid "aqui se define el titulo que vendrá en cada carton"
-msgstr ""
-
-#: FormularioCreador.form:81
-msgid "Descripción:"
-msgstr ""
-
-#: FormularioCreador.form:93
+#: FormularioCreador.form:62
 msgid "matematicas"
 msgstr ""
 
-#: FormularioCreador.form:93
+#: FormularioCreador.form:62
 msgid "ingles"
 msgstr ""
 
-#: FormularioCreador.form:93
+#: FormularioCreador.form:62
 msgid "lengua"
 msgstr ""
 
-#: FormularioCreador.form:101
+#: FormularioCreador.form:69
+msgid "aqui se define el titulo que vendrá en cada carton"
+msgstr ""
+
+#: FormularioCreador.form:70
 msgid "Categoria:"
 msgstr ""
 
-#: FormularioCreador.form:107
+#: FormularioCreador.form:80
+msgid "aqui se define el tema del bingo"
+msgstr ""
+
+#: FormularioCreador.form:81
+msgid "Titulo:"
+msgstr ""
+
+#: FormularioCreador.form:87
 msgid "Nombre fichero:"
 msgstr ""
 
-#: FormularioCreador.form:113
+#: FormularioCreador.form:97
 msgid ".be"
+msgstr ""
+
+#: FormularioCreador.form:109
+msgid "Descripción:"
+msgstr ""
+
+#: FormularioCreador.form:115
+msgid "Elementos que componen el Bingo actual:"
+msgstr ""
+
+#: FormularioCreador.form:120
+msgid "Visualizar imagenes"
+msgstr ""
+
+#: FormularioCreador.form:140
+msgid "Añadir Elemento"
 msgstr ""

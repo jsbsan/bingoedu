@@ -14,27 +14,27 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: FMain.form:30
+#: FMain.form:31
 msgid "EDUCATIVO"
 msgstr ""
 
-#: FMain.form:43
+#: FMain.form:44
 msgid "Crear o Editar"
 msgstr ""
 
-#: FMain.form:49
+#: FMain.form:51
 msgid "Jugar"
 msgstr ""
 
-#: FMain.form:55
+#: FMain.form:57
 msgid "Realizado en Gambas3.5.4 para la distribución MininoPicaros 2015"
 msgstr ""
 
-#: FMain.form:65
+#: FMain.form:67
 msgid "Autores: Julio Sanchez Berro (jsbsan) y Antonio Sanchez (introlinux)"
 msgstr ""
 
-#: FMain.form:76
+#: FMain.form:78
 msgid "Salir"
 msgstr ""
 
