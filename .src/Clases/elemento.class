@@ -58,7 +58,7 @@ End
 
 Public Function tipoElemento() As String ''devuelve el tipo de elemento que es el objeto
 
-  Return Object.Class(Me).name
+  Return Upper(Object.Class(Me).name)
 
 End
 

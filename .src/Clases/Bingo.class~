@@ -265,7 +265,7 @@ End
 
 Public Sub DescomprimeBingo(nombre As String) ''lectura de archivo tar.gz del fichero de  datos de bintoedu y descompresion del mismo en la carpeta .config
 
-  'descomprime el archivo dato (un tar.gz), en /tmp, y copia todos los archivos  en la carpeta de configuración (~/.config/BingoEdu/datos)
+  ''TODO: descomprime el archivo dato (un tar.gz), en /tmp, y copia todos los archivos  en la carpeta de configuración (~/.config/BingoEdu/datos)
 
   'A continuación, ahora el programa deberá recargar la carpeta   ~/.config/BingoEdu/datos, para encontrar los distintos bingos disponibles.
   'y que aparezcan en el gridview inicial.
@@ -505,12 +505,13 @@ Public Sub CargarDatosBingoCartonesGridview(g As GridView) '' Carga los datos de
 
   'La carga la realizamos usando el listado de elementos de bingo
   g.Rows.count = 0 'eliminados todas las filas existentes
-
+  g.Clear()
   For Each e In Me.ArrayElementosBingo
 
 
     'añado una fila al gridview..
     g.Rows.count += 1
+    g.Rows.Height = 45
     'datos del elemento Bingo
     g[g.Rows.Max, 0].Picture = ImagenTipoElemento(e) 'devuelve un icono que representa
     g[g.Rows.Max, 1].text = TextoElemento(e) ''escribira el texto, o el nombre de la imagen o sonido
@@ -522,6 +523,9 @@ Public Sub CargarDatosBingoCartonesGridview(g As GridView) '' Carga los datos de
 
 
   Next
+
+  G.TAG = Me.ArrayElementosBingo
+
 
 End
 
@@ -551,11 +555,11 @@ Public Function ImagenTipoElemento(e As Elemento) As Picture
   Dim rutaicono As String ''icono que representa imagen, texto, o sonido
 
   Select Case e.tipoElemento()
-    Case "ElementoImagen"
+    Case Upper$("ElementoImagen")
       rutaIcono = "iconoimagen32.png"
-    Case "ElementoTexto"
+    Case Upper$("ElementoTexto")
       rutaIcono = "iconoletra32.png"
-    Case "ElementoSonido"
+    Case Upper$("ElementoSonido")
       rutaIcono = "iconosonido32.png"
   End Select
   Return Picture[rutaicono]
@@ -575,11 +579,11 @@ Public Function TextoElemento(e As Variant) As String
   Dim contenido As String
 
   Select Case e.tipoElemento()
-    Case "ElementoImagen"
+    Case Upper$("ElementoImagen")
       contenido = File.Name(e.rutaimagen)
-    Case "ElementoTexto"
+    Case Upper$("ElementoTexto")
       contenido = e.texto
-    Case "ElementoSonido"
+    Case Upper$("ElementoSonido")
       contenido = File.name(e.rutasonido)
   End Select
 

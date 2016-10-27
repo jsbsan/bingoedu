@@ -1,0 +1,115 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,113,75)
+  Arrangement = Arrange.Vertical
+  { Panel1 Panel
+    MoveScaled(1,1,111,34)
+    { Frame1 Frame
+      MoveScaled(51,1,58,18)
+      Text = ("Cartones")
+      { ButtonPropiedadesCartones Button
+        MoveScaled(12,3,44,6)
+        Text = ("Propiedades de Cartones y Generarlos")
+        Picture = Picture["propiedades.png"]
+      }
+      { PictureBox1 PictureBox
+        MoveScaled(1,6,9,6)
+        Picture = Picture["carton de bingo50x32.jpg"]
+        Stretch = True
+      }
+      { ButtonVerCartones Button
+        MoveScaled(12,10,43,6)
+        Text = ("Ver Cartones")
+        Picture = Picture["icon:/16/pdf"]
+      }
+    }
+    { ComboBoxCategoria ComboBox
+      MoveScaled(16,14,34,4)
+      Visible = False
+      Enabled = False
+      List = [("matematicas"), ("ingles"), ("lengua")]
+    }
+    { Label3 Label
+      MoveScaled(2,14,13,4)
+      Visible = False
+      Enabled = False
+      ToolTip = ("aqui se define el titulo que vendrá en cada carton")
+      Text = ("Categoria:")
+      Alignment = Align.Right
+    }
+    { TextBoxTituloBingo TextBox
+      MoveScaled(16,8,33,4)
+    }
+    { Label2 Label
+      MoveScaled(2,8,14,4)
+      ToolTip = ("aqui se define el tema del bingo")
+      Text = ("Titulo:")
+      Alignment = Align.Right
+    }
+    { Label4 Label
+      MoveScaled(0,3,16,4)
+      Text = ("Nombre fichero:")
+      Alignment = Align.Right
+    }
+    { TextBoxFicheroBingo TextBox
+      MoveScaled(16,3,29,4)
+    }
+    { Label5 Label
+      MoveScaled(46,3,5,4)
+      Text = (".be")
+      Alignment = Align.Center
+    }
+    { TextAreaDescripcion TextArea
+      MoveScaled(3,22,104,7)
+      Wrap = True
+    }
+    { Label6 Label
+      MoveScaled(1,18,14,4)
+      ToolTip = ("aqui se define el titulo que vendrá en cada carton")
+      Text = ("Descripción:")
+      Alignment = Align.Right
+    }
+    { Label1 Label
+      MoveScaled(2,30,45,4)
+      Text = ("Elementos que componen el Bingo actual:")
+    }
+    { CheckBoxVisualizar CheckBox
+      MoveScaled(54,30,27,4)
+      Text = ("Visualizar imagenes")
+    }
+    { ButtonRefrescar Button
+      MoveScaled(91,29,7,5)
+      Picture = Picture["icon:/22/refresh"]
+    }
+  }
+  { GridViewDatosBingo GridView
+    MoveScaled(8,37,74,28)
+    Expand = True
+    Mode = Select.Single
+    ShowCursor = True
+  }
+  { HBox1 HBox
+    MoveScaled(3,68,103,6)
+    { Panel2 Panel
+      MoveScaled(0,0,4,6)
+    }
+    { ButtonAgregarElemento Button
+      MoveScaled(6,1,20,6)
+      Text = ("Añadir Elemento")
+      Picture = Picture["icon:/16/add"]
+    }
+    { HBox2 HBox
+      MoveScaled(41,1,14,6)
+      Expand = True
+    }
+    { ButtonSalir Button
+      MoveScaled(74,0,16,6)
+      Text = ("Salir")
+      Picture = Picture["icon:/22/quit"]
+    }
+    { Panel3 Panel
+      MoveScaled(96,0,4,6)
+    }
+  }
+}

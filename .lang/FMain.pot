@@ -14,35 +14,35 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: FMain.form:31
+#: FMain.form:32
 msgid "EDUCATIVO"
 msgstr ""
 
-#: FMain.form:44
+#: FMain.form:45
 msgid "Crear o Editar"
 msgstr ""
 
-#: FMain.form:51
+#: FMain.form:52
 msgid "Jugar"
 msgstr ""
 
-#: FMain.form:57
+#: FMain.form:58
 msgid "Realizado en Gambas3.5.4 para la distribución MininoPicaros 2015"
 msgstr ""
 
-#: FMain.form:67
+#: FMain.form:68
 msgid "Autores: Julio Sanchez Berro (jsbsan) y Antonio Sanchez (introlinux)"
 msgstr ""
 
-#: FMain.form:78
+#: FMain.form:80
 msgid "Salir"
 msgstr ""
 
-#: FMain.class:8
+#: FMain.class:9
 msgid "Version"
 msgstr ""
 
-#: FMain.class:10
+#: FMain.class:11
 msgid "Bingo Educativo"
 msgstr ""
 

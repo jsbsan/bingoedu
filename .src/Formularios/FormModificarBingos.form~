@@ -78,9 +78,13 @@
       MoveScaled(54,30,27,4)
       Text = ("Visualizar imagenes")
     }
+    { CheckBoxdEBUG CheckBox
+      MoveScaled(24,18,24,4)
+      Text = ("CheckBoxDEBUG")
+    }
   }
   { GridViewDatosBingo GridView
-    MoveScaled(12,37,74,28)
+    MoveScaled(8,37,74,28)
     Expand = True
     Mode = Select.Single
     ShowCursor = True
@@ -90,7 +94,7 @@
     { Panel2 Panel
       MoveScaled(0,0,4,6)
     }
-    { Button1 Button
+    { ButtonAgregarElemento Button
       MoveScaled(6,0,20,6)
       Text = ("Añadir Elemento")
       Picture = Picture["icon:/16/add"]

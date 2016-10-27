@@ -4,11 +4,14 @@ Count=0
 [DebugWindow]
 Count=0
 
+[DebugWindow/$elementoImagen]
+Geometry=[0,16,230,210]
+
 [DebugWindow/ArrayElementosCarton]
-Geometry=[-4,16,210,210]
+Geometry=[16,388,412,210]
 
 [DebugWindow/ArrayElementosCarton[0]]
-Geometry=[10,30,210,210]
+Geometry=[16,620,412,210]
 
 [DebugWindow/Carton]
 Geometry=[46,16,210,210]
@@ -37,6 +40,9 @@ Geometry=[650,562,210,210]
 [DebugWindow/Object.Class(Me)]
 Geometry=[5,21,210,210]
 
+[DebugWindow/RadioButtonCartonImagen]
+Geometry=[0,16,210,210]
+
 [DebugWindow/TextBoxFichero]
 Geometry=[-4,16,210,210]
 
@@ -59,10 +65,13 @@ Geometry=[46,16,210,210]
 Geometry=[-4,16,210,210]
 
 [DebugWindow/e]
-Geometry=[-76,498,400,300]
+Geometry=[872,202,400,300]
 
 [DebugWindow/eb]
 Geometry=[-4,16,210,210]
+
+[DebugWindow/ec]
+Geometry=[0,16,210,210]
 
 [DebugWindow/tempcole]
 Geometry=[5,21,210,210]
@@ -78,22 +87,22 @@ File[1]=".src/Formularios/FMain.form"
 File[2]=".src/Clases/json/JS354.class:0.0"
 File[3]=".src/Clases/json/JSONCollection354.class:24.0"
 File[4]=".src/Clases/json/JSON354.module:272.12"
-File[5]=".src/Formularios/FMain.class:21.0"
-File[6]=".src/Formularios/FormEditarCrear.form"
+File[5]=".src/Formularios/FMain.class:25.0"
+File[6]=".src/Formularios/FormFicherosBingos.form"
 File[7]="Nota.txt:12.10"
-File[8]=".src/Formularios/FormularioCreador.form"
-File[9]=".src/Formularios/FormularioCreador.class:10.26"
-Active=10
-File[10]=".src/Formularios/FormCartones.form"
-File[11]=".src/Formularios/FormCartones.class:19.38"
-File[12]=".src/Formularios/FormEditarCrear.class:36.0"
+File[8]=".src/Formularios/FormModificarBingos.form"
+Active=9
+File[9]=".src/Formularios/FormModificarBingos.class:23.0"
+File[10]=".src/Formularios/FormModificarCartones.form"
+File[11]=".src/Formularios/FormModificarCartones.class:19.38"
+File[12]=".src/Formularios/FormFicherosBingos.class:11.0"
 File[13]=".src/Clases/controles/SquareButton.class:78.46"
-File[14]=".src/Formularios/FormElemento.form"
-File[15]=".src/Clases/Bingo.class:300.29"
-File[16]=".src/Clases/elemento.class:54.0"
+File[14]=".src/Formularios/FormModificarElementos.form"
+File[15]=".src/Clases/Bingo.class:518.3"
+File[16]=".src/Clases/elemento.class:60.3"
 File[17]=".src/Clases/elementoTexto.class:18.0"
 File[18]=".src/Clases/elementoImagen.class:27.3"
-File[19]=".src/Formularios/FormElemento.class:174.75"
+File[19]=".src/Formularios/FormModificarElementos.class:209.7"
 File[20]=".src/Formularios/testGuadarBingo.module:9.0"
 File[21]=".src/Clases/elementoBlanco.class:16.28"
 File[22]=".src/Clases/elementoNegro.class:1.0"

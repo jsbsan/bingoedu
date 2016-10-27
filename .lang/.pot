@@ -30,185 +30,77 @@ msgstr ""
 msgid "No, cancelar operación"
 msgstr ""
 
-#: Bingo.class:597
+#: Bingo.class:604
 msgid "Existe un fichero con el mismo nombre"
 msgstr ""
 
-#: FMain.form:31
+#: FMain.form:32
 msgid "EDUCATIVO"
 msgstr ""
 
-#: FMain.form:44
+#: FMain.form:45
 msgid "Crear o Editar"
 msgstr ""
 
-#: FMain.form:51
+#: FMain.form:52
 msgid "Jugar"
 msgstr ""
 
-#: FMain.form:57
+#: FMain.form:58
 msgid "Realizado en Gambas3.5.4 para la distribución MininoPicaros 2015"
 msgstr ""
 
-#: FMain.form:67
+#: FMain.form:68
 msgid "Autores: Julio Sanchez Berro (jsbsan) y Antonio Sanchez (introlinux)"
 msgstr ""
 
-#: FMain.form:78 FormCartones.form:135 FormEditarCrear.form:156
-#: FormElemento.form:116 FormularioCreador.form:151
+#: FMain.form:80 FormFicherosBingos.form:156 FormModificarBingos.form:157
+#: FormModificarCartones.form:135 FormModificarElementos.form:117
 msgid "Salir"
 msgstr ""
 
-#: FMain.class:8
+#: FMain.class:9
 msgid "Version"
 msgstr ""
 
-#: FMain.class:10
+#: FMain.class:11
 msgid "Bingo Educativo"
 msgstr ""
 
-#: FormCartones.form:36
-msgid "Tamaño de la Cuadrícula del Cartón"
-msgstr ""
-
-#: FormCartones.form:40
-msgid "4x3"
-msgstr ""
-
-#: FormCartones.form:46
-msgid "5x4"
-msgstr ""
-
-#: FormCartones.form:51
-msgid "5x5"
-msgstr ""
-
-#: FormCartones.form:63
-msgid "Huecos:"
-msgstr ""
-
-#: FormCartones.form:67
-msgid "Negros (rellenos):"
-msgstr ""
-
-#: FormCartones.form:72
-msgid "Blancos (vacíos):"
-msgstr ""
-
-#: FormCartones.form:88
-msgid "Número de cartones distintos a Generar:"
-msgstr ""
-
-#: FormCartones.form:93
-msgid ""
-"<b>Nota:</b><br>\n"
-"El número de cartones diferentes que se pueden generar, dependerá del número "
-"de elementos que tenga el Bingo. A mayor número de elementos del bingo, "
-"mayor número de cartones distintos que se podrań crear."
-msgstr ""
-
-#: FormCartones.form:102
-msgid "Elementos que se repitirán en todos los cartones:"
-msgstr ""
-
-#: FormCartones.form:107
-msgid "Pulse botón derecho para añadir elementos del bingo"
-msgstr ""
-
-#: FormCartones.form:117
-msgid "Previsualizar"
-msgstr ""
-
-#: FormCartones.form:128
-msgid "Generar"
-msgstr ""
-
-#: FormCartones.form:142
-msgid "Características del Cartón:"
-msgstr ""
-
-#: FormCartones.form:152
-msgid "Titulo del cartón:"
-msgstr ""
-
-#: FormCartones.form:164 FormEditarCrear.form:105
-msgid "Imprimir"
-msgstr ""
-
-#: FormCartones.class:6 FormularioCreador.form:37
-msgid "Cartones"
-msgstr ""
-
-#: FormEditarCrear.form:50
+#: FormFicherosBingos.form:50
 msgid "Utilidades...."
 msgstr ""
 
-#: FormEditarCrear.form:75
+#: FormFicherosBingos.form:75
 msgid "Crear"
 msgstr ""
 
-#: FormEditarCrear.form:85
+#: FormFicherosBingos.form:85
 msgid "Editar"
 msgstr ""
 
-#: FormEditarCrear.form:95
+#: FormFicherosBingos.form:95
 msgid "Añadir"
 msgstr ""
 
-#: FormEditarCrear.form:115
+#: FormFicherosBingos.form:105 FormModificarCartones.form:164
+msgid "Imprimir"
+msgstr ""
+
+#: FormFicherosBingos.form:115
 msgid "Compartir"
 msgstr ""
 
-#: FormEditarCrear.form:145
+#: FormFicherosBingos.form:145
 msgid "Borrar"
 msgstr ""
 
-#: FormEditarCrear.class:52
+#: FormFicherosBingos.class:52
 msgid "Utilidades"
 msgstr ""
 
-#: FormEditarCrear.class:80
+#: FormFicherosBingos.class:80
 msgid "Debe de seleccionar un archivo de bingo educativo"
-msgstr ""
-
-#: FormElemento.form:30
-msgid "Elemento en Bingo"
-msgstr ""
-
-#: FormElemento.form:34
-msgid "texto:"
-msgstr ""
-
-#: FormElemento.form:75
-msgid "Elemento en Cartón"
-msgstr ""
-
-#: FormElemento.form:104
-msgid "Mismo elemento que en Bingo"
-msgstr ""
-
-#: FormElemento.form:111
-msgid "Crear Elemento"
-msgstr ""
-
-#: FormElemento.form:128
-msgid "iniciar grabadora"
-msgstr ""
-
-#: FormElemento.class:21
-msgid "Elementos"
-msgstr ""
-
-#: FormElemento.class:29
-msgid "Ficheros de sonido mp3"
-msgstr ""
-
-#: FormElemento.class:101
-msgid "Error El Carton no puede tener elementos de Sonido"
-msgstr ""
-
-#: FormElemento.class:127
-msgid "Ficheros de Imagen"
 msgstr ""
 
 #: FormGrabadora.form:20
@@ -227,62 +119,178 @@ msgstr ""
 msgid "Grabadora de Sonido"
 msgstr ""
 
-#: FormularioCreador.form:41
+#: FormModificarBingos.form:38 FormModificarCartones.class:6
+msgid "Cartones"
+msgstr ""
+
+#: FormModificarBingos.form:42
 msgid "Propiedades de Cartones y Generarlos"
 msgstr ""
 
-#: FormularioCreador.form:53
+#: FormModificarBingos.form:54
 msgid "Ver Cartones"
 msgstr ""
 
-#: FormularioCreador.form:62
+#: FormModificarBingos.form:63
 msgid "matematicas"
 msgstr ""
 
-#: FormularioCreador.form:62
+#: FormModificarBingos.form:63
 msgid "ingles"
 msgstr ""
 
-#: FormularioCreador.form:62
+#: FormModificarBingos.form:63
 msgid "lengua"
 msgstr ""
 
-#: FormularioCreador.form:69
+#: FormModificarBingos.form:70
 msgid "aqui se define el titulo que vendrá en cada carton"
 msgstr ""
 
-#: FormularioCreador.form:70
+#: FormModificarBingos.form:71
 msgid "Categoria:"
 msgstr ""
 
-#: FormularioCreador.form:80
+#: FormModificarBingos.form:81
 msgid "aqui se define el tema del bingo"
 msgstr ""
 
-#: FormularioCreador.form:81
+#: FormModificarBingos.form:82
 msgid "Titulo:"
 msgstr ""
 
-#: FormularioCreador.form:87
+#: FormModificarBingos.form:88
 msgid "Nombre fichero:"
 msgstr ""
 
-#: FormularioCreador.form:97
+#: FormModificarBingos.form:98
 msgid ".be"
 msgstr ""
 
-#: FormularioCreador.form:109
+#: FormModificarBingos.form:110
 msgid "Descripción:"
 msgstr ""
 
-#: FormularioCreador.form:115
+#: FormModificarBingos.form:116
 msgid "Elementos que componen el Bingo actual:"
 msgstr ""
 
-#: FormularioCreador.form:120
+#: FormModificarBingos.form:121
 msgid "Visualizar imagenes"
 msgstr ""
 
-#: FormularioCreador.form:140
+#: FormModificarBingos.form:146
 msgid "Añadir Elemento"
+msgstr ""
+
+#: FormModificarCartones.form:36
+msgid "Tamaño de la Cuadrícula del Cartón"
+msgstr ""
+
+#: FormModificarCartones.form:40
+msgid "4x3"
+msgstr ""
+
+#: FormModificarCartones.form:46
+msgid "5x4"
+msgstr ""
+
+#: FormModificarCartones.form:51
+msgid "5x5"
+msgstr ""
+
+#: FormModificarCartones.form:63
+msgid "Huecos:"
+msgstr ""
+
+#: FormModificarCartones.form:67
+msgid "Negros (rellenos):"
+msgstr ""
+
+#: FormModificarCartones.form:72
+msgid "Blancos (vacíos):"
+msgstr ""
+
+#: FormModificarCartones.form:88
+msgid "Número de cartones distintos a Generar:"
+msgstr ""
+
+#: FormModificarCartones.form:93
+msgid ""
+"<b>Nota:</b><br>\n"
+"El número de cartones diferentes que se pueden generar, dependerá del número "
+"de elementos que tenga el Bingo. A mayor número de elementos del bingo, "
+"mayor número de cartones distintos que se podrań crear."
+msgstr ""
+
+#: FormModificarCartones.form:102
+msgid "Elementos que se repitirán en todos los cartones:"
+msgstr ""
+
+#: FormModificarCartones.form:107
+msgid "Pulse botón derecho para añadir elementos del bingo"
+msgstr ""
+
+#: FormModificarCartones.form:117
+msgid "Previsualizar"
+msgstr ""
+
+#: FormModificarCartones.form:128
+msgid "Generar"
+msgstr ""
+
+#: FormModificarCartones.form:142
+msgid "Características del Cartón:"
+msgstr ""
+
+#: FormModificarCartones.form:152
+msgid "Titulo del cartón:"
+msgstr ""
+
+#: FormModificarElementos.form:30
+msgid "Elemento en Bingo"
+msgstr ""
+
+#: FormModificarElementos.form:34
+msgid "texto:"
+msgstr ""
+
+#: FormModificarElementos.form:75
+msgid "Elemento en Cartón"
+msgstr ""
+
+#: FormModificarElementos.form:104
+msgid "Mismo elemento que en Bingo"
+msgstr ""
+
+#: FormModificarElementos.form:111
+msgid "Crear Elemento"
+msgstr ""
+
+#: FormModificarElementos.form:129
+msgid "iniciar grabadora"
+msgstr ""
+
+#: FormModificarElementos.class:26
+msgid "Guadar Elemento Editado"
+msgstr ""
+
+#: FormModificarElementos.class:29
+msgid "Editando Elemento"
+msgstr ""
+
+#: FormModificarElementos.class:37
+msgid "Nuevo Elemento"
+msgstr ""
+
+#: FormModificarElementos.class:47
+msgid "Ficheros de sonido mp3"
+msgstr ""
+
+#: FormModificarElementos.class:128
+msgid "Error El Carton no puede tener elementos de Sonido"
+msgstr ""
+
+#: FormModificarElementos.class:217
+msgid "Ficheros de Imagen"
 msgstr ""

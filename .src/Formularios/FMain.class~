@@ -5,14 +5,21 @@ Public Sub _new()
 End
 
 Public Sub Form_Open()
-Labelversion.text = ("Version") & ": " & Application.Version
-Me.Center
-Me.Title = ("Bingo Educativo")
+
+  Labelversion.text = ("Version") & ": " & Application.Version
+  Me.Center
+  Me.Title = ("Bingo Educativo")
 
 End
 
 Public Sub ButtonCrearEditar_Click()
 
-  FormEditarCrear.showmodal
+  FormFicherosBingos.showmodal()
+
+End
+
+Public Sub ButtonSalir_Click()
+
+  Me.Close()
 
 End

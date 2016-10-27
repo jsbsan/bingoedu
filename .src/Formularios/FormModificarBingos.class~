@@ -1,26 +1,26 @@
 ' Gambas class file
 
-Public bingoEditor As Bingo 'estoy editando un bingo existente
-Private bingoNuevo As Bingo 'voy a crear un bingo nuevo
-Private bingotmp As Bingo 'bingo temporal, el cual es el que trabajo
+Public bingoEditor As Bingo ''estoy editando un bingo existente
+Private bingoNuevo As Bingo ''voy a crear un bingo nuevo
+Private bingotmp As Bingo '' bingo temporal, el cual es el que trabajo en este formulario
 
 
 Public Sub ButtonPropiedadesCartones_Click()
 
 
-  FormCartones.ShowModal()
+  FormModificarCartones.ShowModal()
 
 
 End
 
-Public Sub Button1_Click()
+Public Sub ButtonAgregarElemento_Click()
 
-  FormElemento.BingoTemporalDatos = bingotmp
+  FormModificarElementos.BingoTemporalDatos = bingotmp ''le informo con que bingo tiene que trabajar.
 
-  FormElemento.ShowModal()
+  FormModificarElementos.ShowModal()
   'debemos actualizar los datos del gridbingo
-  actualizarDatosGridview()
-  '
+
+  ButtonRefrescar_Click()
 
 End
 
@@ -101,3 +101,29 @@ Public Sub definirGridViewDatosBingo()
 
 End
 
+
+Public Sub GridViewDatosBingo_DblClick()
+
+  'EDITAR REGISTRO SELECCIONADO
+  '
+  FormModificarElementos.BingoTemporalDatos = bingotmp
+  'decirle que elemento estoy editando del bingo/carton...
+
+  'Print GridViewDatosBingo.Row <-edito los elementos de la linea seleccionada.
+
+  FormModificarElementos.ElementoBingoEditado = GridViewDatosBingo.tag[GridViewDatosBingo.Row] ''Le paso el elemento del bingo que quiero editar
+  FormModificarElementos.ShowModal()
+
+  'como bingo se ha pasado por referencias, las modificaciones se deben de realizar en el FormModificarElementos
+  '
+
+
+End
+
+Public Sub ButtonRefrescar_Click()
+
+  definirGridViewDatosBingo()
+
+  actualizarDatosGridview()
+
+End
