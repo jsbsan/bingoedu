@@ -37,15 +37,15 @@ Private $nombreFichero As String = "testbingo"
 
 Public Sub _new()
 
-  'creacion de un bingo en "blanco"
-  If Not Exist(User.home & "/bingoedu") Then
-    Mkdir User.home & "/bingoedu"
-  Endif
-
-  ''NOTE: modo test para debug, creacion de directorio test de bingo
-  If Not Exist(User.home & "/bingoedu/" & $nombreFichero) Then
-    Mkdir User.home & "/bingoedu/" & $nombreFichero
-  Endif
+  ' 'creacion de un bingo en "blanco"
+  ' If Not Exist(User.home & "/bingoedu") Then
+  '   Mkdir User.home & "/bingoedu"
+  ' Endif
+  '
+  ' ''NOTE: modo test para debug, creacion de directorio test de bingo
+  ' If Not Exist(User.home & "/bingoedu/" & $nombreFichero) Then
+  '   Mkdir User.home & "/bingoedu/" & $nombreFichero
+  ' Endif
 
 
 
@@ -59,10 +59,12 @@ Public Sub cargadatos(NombreArchivo As String, Optional carpeta As Boolean) 'leo
   Dim contenido As String
   Dim VariableDatos As Variant
   Dim clasejson As New JSON354
-
+  Dim res As Integer
 
   If carpeta = False Then
-
+    '------------------------------------------------------------
+    'se trata de un archivo comprimido que se esta leyendo
+    '------------------------------------------------------------
     '1º, descomrpimir el archivo..
     If Exist(User.home & "/bingoedu/" & File.BaseName(NombreArchivo) & ".tar.gz") Then
       Kill User.home & "/bingoedu/" & File.BaseName(NombreArchivo) & ".tar.gz"
@@ -71,7 +73,14 @@ Public Sub cargadatos(NombreArchivo As String, Optional carpeta As Boolean) 'leo
 
     '2º creo carpeta de trabajo en User.home & "/bingoedu/"
     If Exist(User.home & "/bingoedu/" & File.BaseName(NombreArchivo)) Then
-      Shell "cd " & User.home & "/bingoedu/;rm -Rf " & File.BaseName(NombreArchivo) Wait 'borrado comleto de un directorio con sus ficheros
+      res = Message.Question(("Existe un bingo con el mismo nombre, ¿que desea hacer?"), ("Borra y continua"), ("Cancelar Operacion"))
+      If res = 1 Then
+        Shell "cd " & User.home & "/bingoedu/;rm -Rf " & File.BaseName(NombreArchivo) Wait 'borrado comleto de un directorio con sus ficheros
+      Else
+        'se ha cancelado la opercion
+        '
+        Return
+      Endif
     Endif
     'descomprimo el archivo
     Mkdir User.home & "/bingoedu/" & File.BaseName(NombreArchivo)
@@ -89,7 +98,15 @@ Public Sub cargadatos(NombreArchivo As String, Optional carpeta As Boolean) 'leo
 
   'leo fichero de datos
   'y lo empiezo a cargar en memoria
+  '
+  If Not Exist(User.home & "/bingoedu/" & File.BaseName(NombreArchivo) & "/" & "pruebas.dat") Then
+    'no existe el fichero de datos... lo creo vacio
+    File.Save(User.home & "/bingoedu/" & File.BaseName(NombreArchivo) & "/" & "pruebas.dat", creoContenidoVacio())
+  Endif
+
+
   contenido = File.Load(User.home & "/bingoedu/" & File.BaseName(NombreArchivo) & "/" & "pruebas.dat")
+
   VariableDatos = clasejson.Decode(contenido)
 
   'asigno datos...
@@ -97,7 +114,7 @@ Public Sub cargadatos(NombreArchivo As String, Optional carpeta As Boolean) 'leo
   Me.titulo = VariableDatos["titulo"]
   Me.descripcion = VariableDatos["descripcion"]
   Me.tipo = VariableDatos["tipo"]
-
+  Me.NombreFichero = NombreArchivo
   'listas
   'limpiar listas de elmentos anteriores
   Me.ListaElementosBingo.Clear()
@@ -205,16 +222,11 @@ Public Sub agregarListaElementos(v As Variant, lista As String[], ArrayElementos
     End Select
   Next
 
-
-
-
-
-
 End
 
 
 
-Public Sub guardarBingo() ''guardar archivo tar.gz con datos del bingo actual
+Public Sub guardarBingo(CARPETA As Boolean) ''True: guarda los datos en carpeta  directorio /home/usuario/bingoedu/<br> FALSE guardar archivo tar.gz con datos del bingo actual ".be"
 
   Dim comando As String ''comando que se ejecutara para crear el tae.gz
   Dim salida As String ''salida que proporciona el comando shell
@@ -229,34 +241,42 @@ Public Sub guardarBingo() ''guardar archivo tar.gz con datos del bingo actual
   File.Save(User.home & "/bingoedu/" & $nombreFichero & "/pruebas.dat", generaJson())
   '-imagenes y sonidos
   '-todo guardado en un tar.gz para facil manipulacion y compartir con otros usuarios.
-  'y con terminacion ".be"
-  comando = "cd " & User.home & "/bingoedu/" & $nombreFichero & "/;" ''fundamental añadir el punto y coma, para continuar la orden en el shell abierto
-  comando &= "tar czvf \"" & $NombreFichero & ".tar.gz\" *" ''comprimimos lo que haya creando un fichero .tar.gz
-  Print comando
 
-  Shell comando To salida
+  If CARPETA = False Then
 
-  Inc Application.busy
-  While Not Exist(User.home & "/bingoedu/" & $nombreFichero & "/" & $NombreFichero & ".tar.gz")
-    Wait 0.01
-  Wend
+    'en el caso de que la variable CARPETA sea false, procedemos a comprimir y crear el fichero .be, en la carpeta /home/usuario/
 
-  Dec Application.Busy
+    'y con terminacion ".be"
+    comando = "cd " & User.home & "/bingoedu/" & $nombreFichero & "/;" ''fundamental añadir el punto y coma, para continuar la orden en el shell abierto
+    comando &= "tar czvf \"" & $NombreFichero & ".tar.gz\" *" ''comprimimos lo que haya creando un fichero .tar.gz
+    Print comando
 
-  If Exist(User.home & "/" & $NombreFichero & ".be") Then
-    res = Message.Question(("Existe un fichero con el mismo nombre, ¿desea borrarlo?"), ("Si, borralo y continua"), ("No, cancelar operación"))
-    If res = 1 Then
-      Kill User.home & "/" & $NombreFichero & ".be" 'borro el fichero que existe, y continuo
+    Shell comando To salida
 
-    Else
-      Kill User.home & "/bingoedu/" & $nombreFichero & "/" & $NombreFichero & ".tar.gz" 'Cancelo operacion, y borro el archivo comprimido que acabo de hacer.
-      '  Debug "Operacion cancelada"
-      Return
+    Inc Application.busy
+    While Not Exist(User.home & "/bingoedu/" & $nombreFichero & "/" & $NombreFichero & ".tar.gz")
+      Wait 0.01
+    Wend
 
+    Dec Application.Busy
+
+    If Exist(User.home & "/" & $NombreFichero & ".be") Then
+      res = Message.Question(("Existe un fichero con el mismo nombre, ¿desea borrarlo?"), ("Si, borralo y continua"), ("No, cancelar operación"))
+      If res = 1 Then
+        Kill User.home & "/" & $NombreFichero & ".be" 'borro el fichero que existe, y continuo
+
+      Else
+        Kill User.home & "/bingoedu/" & $nombreFichero & "/" & $NombreFichero & ".tar.gz" 'Cancelo operacion, y borro el archivo comprimido que acabo de hacer.
+        '  Debug "Operacion cancelada"
+        Return
+
+      Endif
     Endif
-  Endif
 
-  Move User.home & "/bingoedu/" & $nombreFichero & "/" & $NombreFichero & ".tar.gz" To User.home & "/" & $NombreFichero & ".be"
+    Move User.home & "/bingoedu/" & $nombreFichero & "/" & $NombreFichero & ".tar.gz" To User.home & "/" & $NombreFichero & ".be"
+
+
+  Endif
 
   ''NOTE: ver este enlace http://jsbsan.blogspot.com.es/2014/12/truco-como-guardar-y-abrir-comprimidos.html, para el tema de descompresion.
 
@@ -490,6 +510,16 @@ Private Sub NombreFichero_Write(Value As String)
 
   $nombreFichero = value
 
+  'creacion de un bingo en "blanco"
+  If Not Exist(User.home & "/bingoedu") Then
+    Mkdir User.home & "/bingoedu"
+  Endif
+
+  ''NOTE: modo test para debug, creacion de directorio test de bingo
+  If Not Exist(User.home & "/bingoedu/" & File.Name($nombreFichero)) Then
+    Mkdir User.home & "/bingoedu/" & file.name($nombreFichero)
+  Endif
+
 End
 
 
@@ -521,6 +551,10 @@ Public Sub CargarDatosBingoCartonesGridview(g As GridView) '' Carga los datos de
     g[g.Rows.Max, 2].Picture = ImagenTipoElemento(ecarton) 'devuelve un icono que representa
     g[g.Rows.Max, 3].text = TextoElemento(ecarton) ''escribira el texto, o el nombre de la imagen o sonido
 
+    g[g.Rows.Max, 0].Refresh()
+    g[g.Rows.Max, 1].Refresh()
+    g[g.Rows.Max, 2].Refresh()
+    g[g.Rows.Max, 3].Refresh()
 
   Next
 
@@ -597,9 +631,11 @@ Public Function copiaFichero(ruta As String) ''Me encargo de copia un fichero de
 
   If Exist(User.home & "/bingoedu/" & $nombreFichero & "/" & File.Name(ruta)) Then
     'existe el fichero no lo copio
-    Message.Info(("Existe un fichero con el mismo nombre"))
+    ''FIXME:Message.Info(("Existe un fichero con el mismo nombre"))
+    'no copio el fichero...
     Return
   Endif
+
 
   Try Copy ruta To User.home & "/bingoedu/" & $nombreFichero & "/" & File.Name(ruta)
 
@@ -609,3 +645,10 @@ Public Function copiaFichero(ruta As String) ''Me encargo de copia un fichero de
 
 End
 
+
+Public Function creoContenidoVacio() As String
+  'generar una estructura de datos vacia
+
+  Return generaJson()
+
+End

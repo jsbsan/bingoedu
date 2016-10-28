@@ -296,15 +296,15 @@ Public Sub rellenarDatosFormulario(e As Variant)
       textboxTEXTOBINGO.text = e.texto
       RadioButtonBingoTexto.Value = True
     Case Upper$("elementoImagen")
-      ButtonBoxImagenBingo.text = e.rutasonido
-      ButtonBoxImagenCarton.tag = User.home & "/" & Me.BingoTemporalDatos.NombreFichero & "/" & e.rutaimagen
+      ButtonBoxImagenBingo.text = e.rutaimagen
+      ButtonBoxImagenCarton.tag = User.home & "/bingoedu/" & Me.BingoTemporalDatos.NombreFichero & "/" & e.rutaimagen
       RadioButtonBingoImagen.Value = True
-      PictureBoxBingo.Picture = Picture[User.home & "/" & Me.BingoTemporalDatos.NombreFichero & "/" & e.rutaimagen]
+      PictureBoxBingo.Picture = Picture[User.home & "/bingoedu/" & Me.BingoTemporalDatos.NombreFichero & "/" & e.rutaimagen]
     Case Upper$("elementoSonido")
 
       RadioButtonBingoSonido.value = True
       ButtonBoxSonidoBingo.text = e.rutasonido
-      ButtonBoxSonidoBingo.tag = User.home & "/" & Me.BingoTemporalDatos.NombreFichero & "/" & e.rutasonido
+      ButtonBoxSonidoBingo.tag = User.home & "/bingoedu/" & Me.BingoTemporalDatos.NombreFichero & "/" & e.rutasonido
   End Select
 
   ''TODO: escribir datos el elemento enlazado...
@@ -317,7 +317,7 @@ Public Sub rellenarDatosFormulario(e As Variant)
       RadioButtonCartonTexto.value = True
     Case Upper$("elementoImagen")
       ButtonBoxImagenCarton.text = ec.rutaimagen
-      ButtonBoxImagenCarton.tag = User.home & "/" & Me.BingoTemporalDatos.NombreFichero & "/" & ec.rutaimagen
+      ButtonBoxImagenCarton.tag = User.home & "/bingoedu/" & Me.BingoTemporalDatos.NombreFichero & "/" & ec.rutaimagen
       PictureBoxCarton.Picture = Picture[ButtonBoxImagenCarton.tag]
       RadioButtonCartonImagen.Value = True
   End Select

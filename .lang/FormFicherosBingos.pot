@@ -14,43 +14,67 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: FormFicherosBingos.form:50
+#: FormFicherosBingos.form:51
 msgid "Utilidades...."
 msgstr ""
 
-#: FormFicherosBingos.form:75
+#: FormFicherosBingos.form:76
 msgid "Crear"
 msgstr ""
 
-#: FormFicherosBingos.form:85
+#: FormFicherosBingos.form:86
 msgid "Editar"
 msgstr ""
 
-#: FormFicherosBingos.form:95
-msgid "Añadir"
+#: FormFicherosBingos.form:96
+msgid "importa un fichero .be para usarlo en este ordenador"
 msgstr ""
 
-#: FormFicherosBingos.form:105
+#: FormFicherosBingos.form:97
+msgid "Importar"
+msgstr ""
+
+#: FormFicherosBingos.form:107
 msgid "Imprimir"
 msgstr ""
 
-#: FormFicherosBingos.form:115
-msgid "Compartir"
+#: FormFicherosBingos.form:117
+msgid "exporta para compartir el fichero con otros profesores"
 msgstr ""
 
-#: FormFicherosBingos.form:145
+#: FormFicherosBingos.form:118
+msgid "Exportar"
+msgstr ""
+
+#: FormFicherosBingos.form:153
 msgid "Borrar"
 msgstr ""
 
-#: FormFicherosBingos.form:156
+#: FormFicherosBingos.form:164
 msgid "Salir"
 msgstr ""
 
-#: FormFicherosBingos.class:52
+#: FormFicherosBingos.class:46
 msgid "Utilidades"
 msgstr ""
 
-#: FormFicherosBingos.class:80
-msgid "Debe de seleccionar un archivo de bingo educativo"
+#: FormFicherosBingos.class:86
+msgid "Debe de seleccionar un  bingo educativo"
+msgstr ""
+
+#: FormFicherosBingos.class:130
+msgid "Si, borrar"
+msgstr ""
+
+#: FormFicherosBingos.class:130
+msgid "No, cancelar"
+msgstr ""
+
+#: FormFicherosBingos.class:172
+msgid "Se ha guardado en "
+msgstr ""
+
+#: FormFicherosBingos.class:181
+msgid "Archivos Bingo Educativo"
 msgstr ""
 

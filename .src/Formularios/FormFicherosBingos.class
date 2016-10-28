@@ -21,10 +21,10 @@ Public Sub definirGridviewFicheros()
     .Columns[0].title = "Archivo Bingo"
     .Columns[1].title = "Tema"
     .Columns[2].title = "Descripción"
-    .Columns[0].width = 125
-    .Columns[1].width = 150
+    .Columns[0].width = 200
+    .Columns[1].width = 200
     .Columns[2].width = 500
-    .font.name = "Times"
+
     .font.size = 12
     .Mode = Select.single
     .ShowCursor = True
@@ -43,15 +43,21 @@ End
 
 Public Sub Form_Open()
 
+  Me.Title = ("Utilidades")
+  definirGridviewFicheros()
+  recargarGridview()
+  Me.Center()
+
+End
+
+
+Public Sub recargarGridview()
+
   Dim arDir As String[]
   Dim nombredir As String
   Dim b As Bingo
   Dim contador As Integer
   Dim BingosDisponibles As New Bingo[]
-
-  Me.Title = ("Utilidades")
-  definirGridviewFicheros()
-
   'cargo los datos de las carpetas de bingo en el gridview.
 
   ardir = Dir(User.home & "/bingoedu/", "*", gb.Directory)
@@ -61,31 +67,125 @@ Public Sub Form_Open()
     b.cargadatos(User.home & "/bingoedu/" & nombredir, True)
     GridViewFicherosDatos.Rows.count += 1
     GridViewFicherosDatos[contador, 0].text = nombredir
-    GridViewFicherosDatos[contador, 1].text = b.tipo
-    GridViewFicherosDatos[contador, 1].text = b.descripcion
+    GridViewFicherosDatos[contador, 1].text = b.titulo
+    GridViewFicherosDatos[contador, 2].text = b.descripcion
     contador += 1
     BingosDisponibles.add(b)
     GridViewFicherosDatos.Tag = BingosDisponibles
   Next
 
 
-
-  Me.Center()
-
 End
+
 
 Public Sub ButtonEditarBingo_Click()
 
+  Dim bingotmp As Bingo
+
   If GridViewFicherosDatos.Row = -1 Then
-    Message.Info(("Debe de seleccionar un archivo de bingo educativo"))
+    Message.Info(("Debe de seleccionar un  bingo educativo"))
     Return
+  Else
+
+    bingotmp = New Bingo
+
+    bingotmp.NombreFichero = GridViewFicherosDatos[GridViewFicherosDatos.Row, 0].Text
+    bingotmp.cargadatos(bingotmp.NombreFichero, True) 'TRUE: los datos vienen de una carpeta en el disco duro,y no de un ".be"
 
 
+    FormModificarBingos.bingoEditor = bingotmp
 
-
+    FormModificarBingos.ShowModal()
 
   Endif
 
 End
 
 
+
+Public Sub ButtonRefrescarGridview_Click()
+
+  GridViewFicherosDatos.Rows.count = 0
+
+  recargarGridview()
+
+End
+
+Public Sub ButtonBorrado_Click()
+  'borrar una carpeta de datos
+
+  Dim nombre As String
+  Dim res As Integer
+  Dim arfile As String[]
+  Dim NombreFichero As String
+
+  If GridViewFicherosDatos.Row = -1 Then
+    Message.Info(("Debe de seleccionar un  bingo educativo"))
+    Return
+  Else
+
+
+    nombre = GridViewFicherosDatos[GridViewFicherosDatos.Row, 0].Text
+
+    res = Message.Question(("Se va a borrar el bingo educativo " & nombre), ("Si, borrar"), ("No, cancelar"))
+
+    If res = 1 Then
+      'procedo a borrar archivos
+      arfile = Dir(User.Home & "/bingoedu/" & nombre, "*", gb.file)
+      For Each nombrefichero In arfile
+        Kill User.Home & "/bingoedu/" & nombre & "/" & NombreFichero
+      Next
+
+      'procedo a borrar el directorio
+      Rmdir User.Home & "/bingoedu/" & nombre
+
+      'refresco datos del gridviews
+      ButtonRefrescarGridview_Click()
+
+
+    Endif
+
+
+  Endif
+
+End
+
+Public Sub ButtonCrearCopia_Click()
+
+  Dim bingotmp As Bingo
+
+
+  If GridViewFicherosDatos.Row = -1 Then
+    Message.Info(("Debe de seleccionar un  bingo educativo"))
+    Return
+  Else
+
+    'creo bingo temporal, para cargar los datos, que estan en la carpeta
+
+    bingotmp = New Bingo
+
+    bingotmp.NombreFichero = GridViewFicherosDatos[GridViewFicherosDatos.Row, 0].Text
+    bingotmp.cargadatos(bingotmp.NombreFichero, True) 'TRUE: los datos vienen de una c
+
+    'guardo los datos de la carpeta en un archivo .be
+    bingotmp.guardarBingo(False)
+    Message.Info(("Se ha guardado en ") & "\n" & User.Home & bingotmp.NombreFichero & ".be")
+  Endif
+
+End
+
+Public Sub ButtonAgregarBingo_Click()
+
+  Dim bingotmp As Bingo
+
+  Dialog.Filter = ["*.be", ("Archivos Bingo Educativo")]
+  If Not Dialog.OpenFile() Then
+    bingotmp = New Bingo
+
+    bingotmp.cargadatos(Dialog.Path, False)
+
+    ButtonRefrescarGridview_Click()
+
+  Endif
+
+End

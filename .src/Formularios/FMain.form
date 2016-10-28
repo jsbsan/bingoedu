@@ -25,7 +25,7 @@
   }
   { ButtonCrearEditar Button
     MoveScaled(29,17,32,8)
-    Text = ("Crear o Editar")
+    Text = ("Gestión de Bingos")
     Picture = Picture["icon:/32/new"]
   }
   { ButtonJugar Button

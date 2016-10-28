@@ -8,7 +8,7 @@ Public Sub main()
 
   Dim tempEleSonido As ElementoSonido
   Dim tempEleImagen As ElementoImagen
-  Dim tempEleEnlace As ElementoEnlace
+
   Dim tempEleNegro As ElementoNegro '' exclusivo para los cartones
   Dim tempEleBlanco As ElementoBlanco '' excluisvo para los cartones
   Dim tempEletexto As ElementoTexto

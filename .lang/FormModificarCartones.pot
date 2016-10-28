@@ -50,36 +50,32 @@ msgstr ""
 msgid "<b>Nota:</b><br>\nEl número de cartones diferentes que se pueden generar, dependerá del número de elementos que tenga el Bingo. A mayor número de elementos del bingo, mayor número de cartones distintos que se podrań crear."
 msgstr ""
 
-#: FormModificarCartones.form:102
-msgid "Elementos que se repitirán en todos los cartones:"
-msgstr ""
-
 #: FormModificarCartones.form:107
-msgid "Pulse botón derecho para añadir elementos del bingo"
-msgstr ""
-
-#: FormModificarCartones.form:117
 msgid "Previsualizar"
 msgstr ""
 
-#: FormModificarCartones.form:128
+#: FormModificarCartones.form:118
 msgid "Generar"
 msgstr ""
 
-#: FormModificarCartones.form:135
+#: FormModificarCartones.form:125
 msgid "Salir"
 msgstr ""
 
-#: FormModificarCartones.form:142
+#: FormModificarCartones.form:132
 msgid "Características del Cartón:"
 msgstr ""
 
-#: FormModificarCartones.form:152
+#: FormModificarCartones.form:142
 msgid "Titulo del cartón:"
 msgstr ""
 
-#: FormModificarCartones.form:164
+#: FormModificarCartones.form:154
 msgid "Imprimir"
+msgstr ""
+
+#: FormModificarCartones.form:161
+msgid "Elementos que se repitirán en todos los cartones:"
 msgstr ""
 
 #: FormModificarCartones.class:6

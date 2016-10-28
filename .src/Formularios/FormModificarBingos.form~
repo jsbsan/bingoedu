@@ -4,7 +4,7 @@
   MoveScaled(0,0,113,75)
   Arrangement = Arrange.Vertical
   { Panel1 Panel
-    MoveScaled(2,1,111,34)
+    MoveScaled(1,1,111,34)
     { Frame1 Frame
       MoveScaled(51,1,58,18)
       Text = ("Cartones")
@@ -54,6 +54,7 @@
     }
     { TextBoxFicheroBingo TextBox
       MoveScaled(16,3,29,4)
+      ReadOnly = True
     }
     { Label5 Label
       MoveScaled(46,3,5,4)
@@ -78,9 +79,9 @@
       MoveScaled(54,30,27,4)
       Text = ("Visualizar imagenes")
     }
-    { CheckBoxdEBUG CheckBox
-      MoveScaled(24,18,24,4)
-      Text = ("CheckBoxDEBUG")
+    { ButtonRefrescar Button
+      MoveScaled(91,29,7,5)
+      Picture = Picture["icon:/22/refresh"]
     }
   }
   { GridViewDatosBingo GridView
@@ -95,12 +96,21 @@
       MoveScaled(0,0,4,6)
     }
     { ButtonAgregarElemento Button
-      MoveScaled(6,0,20,6)
+      MoveScaled(6,1,20,6)
       Text = ("Añadir Elemento")
       Picture = Picture["icon:/16/add"]
     }
     { HBox2 HBox
-      MoveScaled(41,1,14,6)
+      MoveScaled(28,0,14,6)
+      Expand = True
+    }
+    { ButtonGuadarModificaciones Button
+      MoveScaled(44,0,14,6)
+      Text = ("Guardar")
+      Picture = Picture["icon:/22/save"]
+    }
+    { HBox3 HBox
+      MoveScaled(60,1,14,5)
       Expand = True
     }
     { ButtonSalir Button

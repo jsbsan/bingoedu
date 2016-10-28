@@ -58,6 +58,9 @@ Geometry=[118,470,990,335]
 [DebugWindow/VariableDatos["C3A60472092E_965"]["datos"]]
 Geometry=[132,484,990,335]
 
+[DebugWindow/arfile]
+Geometry=[41,114,210,210]
+
 [DebugWindow/arraytmp]
 Geometry=[46,16,210,210]
 
@@ -86,24 +89,24 @@ Geometry=[85,390,210,210]
 File[1]=".src/Formularios/FMain.form"
 File[2]=".src/Clases/json/JS354.class:0.0"
 File[3]=".src/Clases/json/JSONCollection354.class:24.0"
-File[4]=".src/Clases/json/JSON354.module:272.12"
-File[5]=".src/Formularios/FMain.class:25.0"
+File[4]=".src/Clases/json/JSON354.module:273.11"
+File[5]=".src/Formularios/FMain.class:16.0"
 File[6]=".src/Formularios/FormFicherosBingos.form"
 File[7]="Nota.txt:12.10"
 File[8]=".src/Formularios/FormModificarBingos.form"
-Active=9
-File[9]=".src/Formularios/FormModificarBingos.class:23.0"
+File[9]=".src/Formularios/FormModificarBingos.class:3.0"
 File[10]=".src/Formularios/FormModificarCartones.form"
 File[11]=".src/Formularios/FormModificarCartones.class:19.38"
-File[12]=".src/Formularios/FormFicherosBingos.class:11.0"
+File[12]=".src/Formularios/FormFicherosBingos.class:180.8"
 File[13]=".src/Clases/controles/SquareButton.class:78.46"
 File[14]=".src/Formularios/FormModificarElementos.form"
-File[15]=".src/Clases/Bingo.class:518.3"
-File[16]=".src/Clases/elemento.class:60.3"
+File[15]=".src/Clases/Bingo.class:285.35"
+File[16]=".src/Clases/elemento.class:51.3"
 File[17]=".src/Clases/elementoTexto.class:18.0"
-File[18]=".src/Clases/elementoImagen.class:27.3"
-File[19]=".src/Formularios/FormModificarElementos.class:209.7"
-File[20]=".src/Formularios/testGuadarBingo.module:9.0"
+File[18]=".src/Clases/elementoImagen.class:10.3"
+File[19]=".src/Formularios/FormModificarElementos.class:318.12"
+Active=20
+File[20]=".src/Formularios/testGuadarBingo.module:10.0"
 File[21]=".src/Clases/elementoBlanco.class:16.28"
 File[22]=".src/Clases/elementoNegro.class:1.0"
 File[23]=".src/Clases/Carton.class:29.0"

@@ -20,7 +20,7 @@ Public Sub ButtonAgregarElemento_Click()
   FormModificarElementos.ShowModal()
   'debemos actualizar los datos del gridbingo
 
-  ButtonRefrescar_Click()
+  'Hago la llamada desde el formulario FormModificarElementos al  ButtonRefrescar_Click()
 
 End
 
@@ -38,7 +38,9 @@ End
 
 Public Sub ButtonSalir_Click()
 
-  Me.close
+  bingotmp.guardarBingo(True)
+  FormFicherosBingos.ButtonRefrescarGridview_click()
+  Me.close()
 
 End
 
@@ -47,7 +49,12 @@ Public Sub Form_Open()
   definirGridViewDatosBingo()
   If IsNull(bingoEditor) Then
     'estamos creando un bingo vacio
-    TextBoxFicheroBingo.text = "NuevoBingo" & Format$(Now, "yyyy_nn_dd")
+    '' Comprobar que el impo
+    TextBoxFicheroBingo.text = InputBox(("Nombre:"), ("Nuevo Bingo"), ("NuevoBingo") & Format$(Now, "yyyy_mm_dd"))
+    If TextBoxFicheroBingo.text = "" Then
+      'se ha cancelado la creacion del bincoedicion del nombre
+      Return
+    Endif
     bingotmp = New Bingo
     bingotmp.NombreFichero = TextBoxFicheroBingo.text
   Else
@@ -125,5 +132,27 @@ Public Sub ButtonRefrescar_Click()
   definirGridViewDatosBingo()
 
   actualizarDatosGridview()
+
+End
+
+Public Sub ButtonGuadarModificaciones_Click()
+
+  If bingotmp.NombreFichero = TextBoxFicheroBingo.text Then
+    'no hacer nada, permacene con el mismo nombre..
+  Else
+    ''TODO: comprobar si se ha cambiado el nombre del fichero, si es asi
+    ''hay que crear nuevo directorio, guardar los datos en él y borrar el directorio antiguo.
+
+  Endif
+  bingotmp.titulo = TextBoxTituloBingo.Text
+  bingotmp.descripcion = TextAreaDescripcion.Text
+  bingotmp.tipo = ComboBoxCategoria.Text
+
+  bingotmp.guardarBingo(True)
+
+End
+
+Public Sub TextBoxFicheroBingo_LostFocus()
+
 
 End

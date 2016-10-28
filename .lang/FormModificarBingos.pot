@@ -14,71 +14,87 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: FormModificarBingos.form:38
+#: FormModificarBingos.form:40
 msgid "Cartones"
 msgstr ""
 
-#: FormModificarBingos.form:42
+#: FormModificarBingos.form:44
 msgid "Propiedades de Cartones y Generarlos"
 msgstr ""
 
-#: FormModificarBingos.form:54
+#: FormModificarBingos.form:56
 msgid "Ver Cartones"
 msgstr ""
 
-#: FormModificarBingos.form:63
+#: FormModificarBingos.form:65
 msgid "matematicas"
 msgstr ""
 
-#: FormModificarBingos.form:63
+#: FormModificarBingos.form:65
 msgid "ingles"
 msgstr ""
 
-#: FormModificarBingos.form:63
+#: FormModificarBingos.form:65
 msgid "lengua"
 msgstr ""
 
-#: FormModificarBingos.form:70
+#: FormModificarBingos.form:72
 msgid "aqui se define el titulo que vendrá en cada carton"
 msgstr ""
 
-#: FormModificarBingos.form:71
+#: FormModificarBingos.form:73
 msgid "Categoria:"
 msgstr ""
 
-#: FormModificarBingos.form:81
+#: FormModificarBingos.form:83
 msgid "aqui se define el tema del bingo"
 msgstr ""
 
-#: FormModificarBingos.form:82
+#: FormModificarBingos.form:84
 msgid "Titulo:"
 msgstr ""
 
-#: FormModificarBingos.form:88
+#: FormModificarBingos.form:90
 msgid "Nombre fichero:"
 msgstr ""
 
-#: FormModificarBingos.form:98
+#: FormModificarBingos.form:102
 msgid ".be"
 msgstr ""
 
-#: FormModificarBingos.form:110
+#: FormModificarBingos.form:114
 msgid "Descripción:"
 msgstr ""
 
-#: FormModificarBingos.form:116
+#: FormModificarBingos.form:120
 msgid "Elementos que componen el Bingo actual:"
 msgstr ""
 
-#: FormModificarBingos.form:121
+#: FormModificarBingos.form:125
 msgid "Visualizar imagenes"
 msgstr ""
 
-#: FormModificarBingos.form:146
+#: FormModificarBingos.form:150
 msgid "Añadir Elemento"
 msgstr ""
 
-#: FormModificarBingos.form:157
+#: FormModificarBingos.form:161
+msgid "Guardar"
+msgstr ""
+
+#: FormModificarBingos.form:172
 msgid "Salir"
+msgstr ""
+
+#: FormModificarBingos.class:53
+msgid "Nombre:"
+msgstr ""
+
+#: FormModificarBingos.class:53
+msgid "Nuevo Bingo"
+msgstr ""
+
+#: FormModificarBingos.class:53
+msgid "NuevoBingo"
 msgstr ""
 

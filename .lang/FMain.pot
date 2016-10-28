@@ -19,7 +19,7 @@ msgid "EDUCATIVO"
 msgstr ""
 
 #: FMain.form:45
-msgid "Crear o Editar"
+msgid "Gestión de Bingos"
 msgstr ""
 
 #: FMain.form:52

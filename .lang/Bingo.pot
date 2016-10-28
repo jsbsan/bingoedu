@@ -14,19 +14,27 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: Bingo.class:247
+#: Bingo.class:76
+msgid "Existe un bingo con el mismo nombre, ¿que desea hacer?"
+msgstr ""
+
+#: Bingo.class:76
+msgid "Borra y continua"
+msgstr ""
+
+#: Bingo.class:76
+msgid "Cancelar Operacion"
+msgstr ""
+
+#: Bingo.class:264
 msgid "Existe un fichero con el mismo nombre, ¿desea borrarlo?"
 msgstr ""
 
-#: Bingo.class:247
+#: Bingo.class:264
 msgid "Si, borralo y continua"
 msgstr ""
 
-#: Bingo.class:247
+#: Bingo.class:264
 msgid "No, cancelar operación"
-msgstr ""
-
-#: Bingo.class:604
-msgid "Existe un fichero con el mismo nombre"
 msgstr ""
 

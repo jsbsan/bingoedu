@@ -54,6 +54,8 @@
     }
     { TextBoxFicheroBingo TextBox
       MoveScaled(16,3,29,4)
+      Expand = True
+      ReadOnly = True
     }
     { Label5 Label
       MoveScaled(46,3,5,4)
@@ -100,7 +102,16 @@
       Picture = Picture["icon:/16/add"]
     }
     { HBox2 HBox
-      MoveScaled(41,1,14,6)
+      MoveScaled(28,0,14,6)
+      Expand = True
+    }
+    { ButtonGuadarModificaciones Button
+      MoveScaled(44,0,14,6)
+      Text = ("Guardar")
+      Picture = Picture["icon:/22/save"]
+    }
+    { HBox3 HBox
+      MoveScaled(60,1,14,5)
       Expand = True
     }
     { ButtonSalir Button

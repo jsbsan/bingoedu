@@ -1,7 +1,7 @@
 # Gambas Form File 3.0
 
 { Form Form
-  MoveScaled(0,0,135,80)
+  MoveScaled(0,0,127,80)
   Icon = Picture["carton de bingo50x32.jpg"]
   { Frame1 Frame
     MoveScaled(2,20,41,15)
@@ -46,7 +46,7 @@
     }
   }
   { Label4 Label
-    MoveScaled(3,37,41,5)
+    MoveScaled(1,60,41,5)
     Text = ("Número de cartones distintos a Generar:")
   }
   { TextLabel1 TextLabel
@@ -54,18 +54,26 @@
     Text = ("<b>Nota:</b><br>\nEl número de cartones diferentes que se pueden generar, dependerá del número de elementos que tenga el Bingo. A mayor número de elementos del bingo, mayor número de cartones distintos que se podrań crear.")
   }
   { SpinBox1 SpinBox
-    MoveScaled(44,38,11,4)
+    MoveScaled(42,61,11,4)
+  }
+  { Label5 Label
+    MoveScaled(1,38,58,5)
+    Text = ("Elementos que se repitirán en todos los cartones:")
+  }
+  { ScrollView1 ScrollView
+    MoveScaled(1,43,125,14)
+    ToolTip = ("Pulse botón derecho para añadir elementos del bingo")
   }
   { PictureBoxPrevisualizacion PictureBox
-    MoveScaled(22,43,36,27)
+    MoveScaled(90,12,36,27)
     Border = Border.Plain
   }
   { ButtonPrevisualizar Button
-    MoveScaled(2,55,15,4)
+    MoveScaled(102,7,15,4)
     Text = ("Previsualizar")
   }
   { Panel1 Panel
-    MoveScaled(82,58,11,10)
+    MoveScaled(113,59,11,10)
     Arrangement = Arrange.Fill
     Border = Border.Plain
     { SquareButton1 SquareButton
@@ -95,7 +103,7 @@
     Alignment = Align.Right
   }
   { Panel2 Panel
-    MoveScaled(65,58,11,10)
+    MoveScaled(93,61,11,10)
     Arrangement = Arrange.Fill
     Border = Border.Plain
     { SquareButton2 SquareButton
@@ -104,12 +112,5 @@
       Text = ("Imprimir")
       Picture = Picture["icon:/22/print"]
     }
-  }
-  { TextLabel3 TextLabel
-    MoveScaled(92,9,37,5)
-    Text = ("Elementos que se repitirán en todos los cartones:")
-  }
-  { GridView1 GridView
-    MoveScaled(90,15,43,36)
   }
 }
