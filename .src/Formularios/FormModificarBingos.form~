@@ -54,6 +54,7 @@
     }
     { TextBoxFicheroBingo TextBox
       MoveScaled(16,3,29,4)
+      Expand = True
       ReadOnly = True
     }
     { Label5 Label

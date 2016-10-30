@@ -53,7 +53,8 @@
       }
       { ButtonAgregarBingo Button
         MoveScaled(0,16,13.5714,4)
-        Text = ("Añadir")
+        ToolTip = ("importa un fichero .be para usarlo en este ordenador")
+        Text = ("Importar")
         Picture = Picture["icon:/16/add"]
       }
       { VBox6 VBox
@@ -69,7 +70,8 @@
       }
       { ButtonCrearCopia Button
         MoveScaled(0,29,13.5714,4)
-        Text = ("Compartir")
+        ToolTip = ("exporta para compartir el fichero con otros profesores")
+        Text = ("Exportar")
         Picture = Picture["icon:/16/people"]
       }
       { VBox4 VBox

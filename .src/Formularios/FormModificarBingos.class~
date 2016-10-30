@@ -1,7 +1,7 @@
 ' Gambas class file
 
 Public bingoEditor As Bingo ''estoy editando un bingo existente
-Private bingoNuevo As Bingo ''voy a crear un bingo nuevo
+
 Private bingotmp As Bingo '' bingo temporal, el cual es el que trabajo en este formulario
 
 

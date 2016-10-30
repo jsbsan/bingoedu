@@ -169,7 +169,7 @@ Public Sub ButtonCrearCopia_Click()
 
     'guardo los datos de la carpeta en un archivo .be
     bingotmp.guardarBingo(False)
-    Message.Info(("Se ha guarddo en ") & "\n" & User.Home & bingotmp.NombreFichero & ".be")
+    Message.Info(("Se ha guardado en ") & "\n" & User.Home & bingotmp.NombreFichero & ".be")
   Endif
 
 End

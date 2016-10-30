@@ -23,9 +23,12 @@ Property cuadrosNegros As Integer ''indica los huecos rellenos en negro
 
 Property cuadrosBlancos As Integer '' indica los huecos que quedaran en blanco
 
-Property ListaElementosRepetidos As String[] ''array que contiene los id de elementos del bingo que tienen que repetirse en cada carton
+Property ListaElementosRepetidos As String[] ''array que contiene los id de elementos del bingo (listaElementoBingo) que tienen que repetirse en cada carton
 
 Property NumeroCartones As Integer ''indica el numero de cartones existentes.
+
+
+Property ArrayElementosRepetidos As Elemento[] '' array de elementos repetidos del bingo que se repiten en cada carton.
 
 Private $tituloCarton As String
 Private $tamanoCuadricula As String
@@ -34,6 +37,8 @@ Private $cuadrosBlancos As Integer
 Private $ListaElementosRepetidos As New String[]
 Private $NumeroCartones As Integer
 Private $nombreFichero As String = "testbingo"
+Private $ArrayElementosRepetidos As New Elemento[]
+
 
 Public Sub _new()
 
@@ -60,6 +65,8 @@ Public Sub cargadatos(NombreArchivo As String, Optional carpeta As Boolean) 'leo
   Dim VariableDatos As Variant
   Dim clasejson As New JSON354
   Dim res As Integer
+
+  Dim elementoRepetido As Object
 
   If carpeta = False Then
     '------------------------------------------------------------
@@ -148,6 +155,9 @@ Public Sub cargadatos(NombreArchivo As String, Optional carpeta As Boolean) 'leo
   arraytmp = Split(VariableDatos["ListaElementosRepetidos"], "|")
   For a = 0 To arraytmp.max
     Me.ListaElementosRepetidos.Add(arraytmp[a])
+    'añado al Array de elemento repetido el elemnto indicado por la lista
+    elementoRepetido = buscaElemento(arraytmp[a], Me.ArrayElementosBingo)
+    Me.ArrayElementosRepetidos.add(elementoRepetido)
   Next
 
   Me.NumeroCartones = VariableDatos["NumeroCartones"]
@@ -237,6 +247,11 @@ Public Sub guardarBingo(CARPETA As Boolean) ''True: guarda los datos en carpeta 
   '2º generar estructura de datos del Array Elementos Bingo
   '3º generar estructura de datos del Array Elementos Carton
   'Toda la información se pasa a una variable $contenido y se guarda
+
+  If Not Exist(User.home & "/bingoedu/" & $nombreFichero) Then
+    Mkdir User.home & "/bingoedu/" & $nombreFichero
+  Endif
+
 
   File.Save(User.home & "/bingoedu/" & $nombreFichero & "/pruebas.dat", generaJson())
   '-imagenes y sonidos
@@ -563,6 +578,45 @@ Public Sub CargarDatosBingoCartonesGridview(g As GridView) '' Carga los datos de
 
 End
 
+
+Public Sub CargaDatosGridviewDatosRepetidos(G As GridView)
+
+  Dim ArrayEle As Elemento[]
+  Dim e As Elemento
+  Dim ecarton As Elemento
+
+  'La carga la realizamos usando el listado de elementos de bingo
+  g.Rows.count = 0 'eliminados todas las filas existentes
+  g.Clear()
+
+  For Each e In Me.ArrayElementosRepetidos
+
+    'añado una fila al gridview..
+    g.Rows.count += 1
+    g.Rows.Height = 45
+    'datos del elemento Bingo
+    g[g.Rows.Max, 0].Picture = ImagenTipoElemento(e) 'devuelve un icono que representa
+    g[g.Rows.Max, 1].text = TextoElemento(e) ''escribira el texto, o el nombre de la imagen o sonido
+    'datos del elemnto carton relacionado con el elmento bingo
+    ecarton = buscaElemento(e.enlace, ArrayElementosCarton)
+    'escribimos datos del elemnto carton relacinado con el elemento bingo.
+    g[g.Rows.Max, 2].Picture = ImagenTipoElemento(ecarton) 'devuelve un icono que representa
+    g[g.Rows.Max, 3].text = TextoElemento(ecarton) ''escribira el texto, o el nombre de la imagen o sonido
+
+    g[g.Rows.Max, 0].Refresh()
+    g[g.Rows.Max, 1].Refresh()
+    g[g.Rows.Max, 2].Refresh()
+    g[g.Rows.Max, 3].Refresh()
+
+  Next
+
+  G.TAG = Me.ArrayElementosBingo
+
+End
+
+
+
+
 Public Function buscaElemento(id As String, arrayElem As Elemento[]) As Elemento
 
   Dim ebuscado As Elemento
@@ -650,5 +704,17 @@ Public Function creoContenidoVacio() As String
   'generar una estructura de datos vacia
 
   Return generaJson()
+
+End
+
+Private Function ArrayElementosRepetidos_Read() As Elemento[]
+
+  Return $ArrayElementosRepetidos
+
+End
+
+Private Sub ArrayElementosRepetidos_Write(Value As Elemento[])
+
+  $ArrayElementosRepetidos = value
 
 End

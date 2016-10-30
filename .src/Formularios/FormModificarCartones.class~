@@ -178,7 +178,7 @@ End
 Public Sub Form_Close()
 
   Dim res As Integer
-  ''NOTE: Parar cerrar la ventana, usando STOP EVENT
+
   If okguardado = False Then
 
     res = Message.Question(("Los datos se han modificado, pero no guardado ¿desea salir?"), ("Si, salir sin guardar"), ("No"))

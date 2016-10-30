@@ -34,23 +34,23 @@ msgstr ""
 msgid "Importar"
 msgstr ""
 
-#: FormFicherosBingos.form:107
+#: FormFicherosBingos.form:108
 msgid "Imprimir"
 msgstr ""
 
-#: FormFicherosBingos.form:117
+#: FormFicherosBingos.form:118
 msgid "exporta para compartir el fichero con otros profesores"
 msgstr ""
 
-#: FormFicherosBingos.form:118
+#: FormFicherosBingos.form:119
 msgid "Exportar"
 msgstr ""
 
-#: FormFicherosBingos.form:153
+#: FormFicherosBingos.form:154
 msgid "Borrar"
 msgstr ""
 
-#: FormFicherosBingos.form:164
+#: FormFicherosBingos.form:165
 msgid "Salir"
 msgstr ""
 

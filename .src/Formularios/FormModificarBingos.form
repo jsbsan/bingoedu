@@ -87,6 +87,7 @@
   }
   { GridViewDatosBingo GridView
     MoveScaled(8,37,74,28)
+    ToolTip = ("Para editar un elemento, seleccionalo y haga DobleClick")
     Expand = True
     Mode = Select.Single
     ShowCursor = True

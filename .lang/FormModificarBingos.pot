@@ -74,27 +74,31 @@ msgstr ""
 msgid "Visualizar imagenes"
 msgstr ""
 
-#: FormModificarBingos.form:150
+#: FormModificarBingos.form:136
+msgid "Para editar un elemento, seleccionalo y haga DobleClick"
+msgstr ""
+
+#: FormModificarBingos.form:151
 msgid "Añadir Elemento"
 msgstr ""
 
-#: FormModificarBingos.form:161
+#: FormModificarBingos.form:162
 msgid "Guardar"
 msgstr ""
 
-#: FormModificarBingos.form:172
+#: FormModificarBingos.form:173
 msgid "Salir"
 msgstr ""
 
-#: FormModificarBingos.class:53
+#: FormModificarBingos.class:54
 msgid "Nombre:"
 msgstr ""
 
-#: FormModificarBingos.class:53
+#: FormModificarBingos.class:54
 msgid "Nuevo Bingo"
 msgstr ""
 
-#: FormModificarBingos.class:53
+#: FormModificarBingos.class:54
 msgid "NuevoBingo"
 msgstr ""
 
