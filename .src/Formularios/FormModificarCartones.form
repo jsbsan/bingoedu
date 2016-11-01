@@ -1,8 +1,9 @@
 # Gambas Form File 3.0
 
 { Form Form
-  MoveScaled(0,0,135,78)
+  MoveScaled(0,0,141,88)
   Icon = Picture["carton de bingo50x32.jpg"]
+  Arrangement = Arrange.Vertical
   { MenuGridview Menu
     Text = ("MenuGridview")
     { AgregarElementoGridview Menu
@@ -14,123 +15,178 @@
       Picture = Picture["icon:/22/delete"]
     }
   }
-  { Frame1 Frame
-    MoveScaled(1,17,41,15)
-    Text = ("Tamaño de la Cuadrícula del Cartón")
-    { RadioButton4x3 RadioButton
-      MoveScaled(5,3,26,4)
-      Text = ("4x3")
-      Value = True
+  { Panel4 Panel
+    MoveScaled(0,0,121,13)
+    { TextLabel2 TextLabel
+      MoveScaled(0.4286,0,53,5)
+      Font = Font["Italic,+4"]
+      Text = ("Características del Cartón:")
+      Alignment = Align.Center
     }
-    { RadioButton5x4 RadioButton
-      MoveScaled(5,7,26,4)
-      Text = ("5x4")
+    { Label1 Label
+      MoveScaled(0,7.8571,17,4)
+      Text = ("Titulo del cartón:")
+      Alignment = Align.Right
     }
-    { RadioButton5x5 RadioButton
-      MoveScaled(5,11,26,4)
-      Text = ("5x5")
+    { TextBoxTitulo TextBox
+      MoveScaled(17.4286,8,25,4)
     }
-  }
-  { PictureBox1 PictureBox
-    MoveScaled(58,1,9,6)
-    Picture = Picture["carton de bingo50x32.jpg"]
-    Stretch = True
-  }
-  { Frame2 Frame
-    MoveScaled(1,35,41,15)
-    Text = ("Huecos:")
-    { Label2 Label
-      MoveScaled(5,4,20,4)
-      Text = ("Negros (rellenos):")
+    { PictureBox1 PictureBox
+      MoveScaled(58.1429,0,9,6)
+      Picture = Picture["carton de bingo50x32.jpg"]
+      Stretch = True
     }
-    { Label3 Label
-      MoveScaled(5,9,20,4)
-      Text = ("Blancos (vacíos):")
-    }
-    { SpinBoxBlancos SpinBox
-      MoveScaled(27,9,8,4)
-      Value = 2
-    }
-    { SpinBoxNegros SpinBox
-      MoveScaled(27,4,8,4)
-      Value = 3
+    { TextLabel3 TextLabel
+      MoveScaled(45.4286,8,47,5)
+      Text = ("Elementos que se repitirán en todos los cartones:")
+      Alignment = Align.Center
     }
   }
-  { Label4 Label
-    MoveScaled(1,52,41,5)
-    Text = ("Número de cartones distintos a Generar:")
-  }
-  { TextLabel1 TextLabel
-    MoveScaled(2,64,88,11)
-    Text = ("<b>Nota:</b><br>\nEl número de cartones diferentes que se pueden generar, dependerá del número de elementos que tenga el Bingo. A mayor número de elementos del bingo, mayor número de cartones distintos que se podrań crear.")
-  }
-  { SpinBoxNumeroCarton SpinBox
-    MoveScaled(12,57,11,4)
-  }
-  { Panel1 Panel
-    MoveScaled(122,57,11,10)
-    Arrangement = Arrange.Fill
-    Border = Border.Plain
-    { SquareButton1 SquareButton
-      MoveScaled(0,1,11,8)
+  { HBox2 HBox
+    MoveScaled(2,14,138,54)
+    Expand = True
+    AutoResize = True
+    Spacing = True
+    { VBox2 HBox
+      MoveScaled(2,5,50,48)
+      AutoResize = True
+      { Panel5 Panel
+        MoveScaled(2,-6,48,44)
+        AutoResize = True
+        Border = Border.Plain
+        { Frame1 Frame
+          MoveScaled(2,2,41,15)
+          Text = ("Tamaño de la Cuadrícula del Cartón")
+          { RadioButton4x3 RadioButton
+            MoveScaled(5,3,26,4)
+            Text = ("4x3")
+            Value = True
+          }
+          { RadioButton5x4 RadioButton
+            MoveScaled(5,7,26,4)
+            Text = ("5x4")
+          }
+          { RadioButton5x5 RadioButton
+            MoveScaled(5,11,26,4)
+            Text = ("5x5")
+          }
+        }
+        { Frame2 Frame
+          MoveScaled(2,19,41,15)
+          Text = ("Huecos:")
+          { Label2 Label
+            MoveScaled(5,4,20,4)
+            Text = ("Negros (rellenos):")
+          }
+          { Label3 Label
+            MoveScaled(5,9,20,4)
+            Text = ("Blancos (vacíos):")
+          }
+          { SpinBoxBlancos SpinBox
+            MoveScaled(27,9,8,4)
+            Value = 2
+          }
+          { SpinBoxNegros SpinBox
+            MoveScaled(27,4,8,4)
+            Value = 3
+          }
+        }
+        { Label4 Label
+          MoveScaled(2,34,41,5)
+          Text = ("Número de cartones distintos a Generar:")
+        }
+        { SpinBoxNumeroCarton SpinBox
+          MoveScaled(19,38,11,4)
+        }
+      }
+    }
+    { HBox1 Panel
+      MoveScaled(53,0,79,52)
       Expand = True
-      Text = ("Generar")
-      Picture = Picture["icon:/22/exec"]
+      Arrangement = Arrange.Horizontal
+      AutoResize = True
+      Spacing = True
+      Padding = 1
+      Border = Border.Plain
+      { GridViewElementosRepetidos GridView
+        MoveScaled(1,1,29,47)
+        Expand = True
+        PopupMenu = "MenuGridview"
+      }
+      { Panel7 Panel
+        MoveScaled(31,2,11,45)
+        { ButtonQuitar Button
+          MoveScaled(1,16,8,6)
+          Picture = Picture["FechaVerdeDer.png"]
+        }
+        { ButtonPasar Button
+          MoveScaled(1,7,8,6)
+          Picture = Picture["FechaVerdeIzq.png"]
+        }
+      }
+      { GridViewElementosBingo GridView
+        MoveScaled(44,2,27,46)
+        Expand = True
+      }
     }
   }
-  { ButtonSalir Button
-    MoveScaled(120,70,13,4)
-    Text = ("Salir")
-    Picture = Picture["icon:/22/quit"]
-  }
-  { TextLabel2 TextLabel
-    MoveScaled(0,1,53,5)
-    Font = Font["Italic,+4"]
-    Text = ("Características del Cartón:")
-    Alignment = Align.Center
-  }
-  { TextBoxTitulo TextBox
-    MoveScaled(17,9,25,4)
-  }
-  { Label1 Label
-    MoveScaled(-1,9,17,4)
-    Text = ("Titulo del cartón:")
-    Alignment = Align.Right
-  }
-  { Panel2 Panel
-    MoveScaled(108,57,11,10)
-    Arrangement = Arrange.Fill
-    Border = Border.Plain
-    { SquareButton2 SquareButton
-      MoveScaled(0,1,11,8)
+  { Panel6 HBox
+    MoveScaled(1,71,136,21)
+    Spacing = True
+    { TextLabel1 TextLabel
+      MoveScaled(2,4,78,11)
+      Text = ("    <b>Nota:</b><br>\n   El número de cartones diferentes que se pueden generar, dependerá del número de elementos que tenga el Bingo. A mayor número de elementos del bingo, mayor número de cartones distintos que se podrań crear.")
+    }
+    { Panel9 Panel
+      MoveScaled(81,2,5,15)
       Expand = True
-      Text = ("Imprimir")
-      Picture = Picture["icon:/22/print"]
+      AutoResize = True
     }
-  }
-  { TextLabel3 TextLabel
-    MoveScaled(45,9,47,5)
-    Text = ("Elementos que se repitirán en todos los cartones:")
-    Alignment = Align.Center
-  }
-  { GridViewElementosRepetidos GridView
-    MoveScaled(43,14,91,39)
-    PopupMenu = "MenuGridview"
-  }
-  { Panel3 Panel
-    MoveScaled(94,57,11,10)
-    Arrangement = Arrange.Fill
-    Border = Border.Plain
-    { SquareButton3 SquareButton
-      MoveScaled(0,1,11,8)
-      Expand = True
-      Text = ("Previsualizar")
-      Picture = Picture["icon:/22/wizard"]
+    { Panel8 Panel
+      MoveScaled(88,2,44,17)
+      { Panel3 Panel
+        MoveScaled(1,0,11,10)
+        Arrangement = Arrange.Fill
+        Border = Border.Plain
+        { SquareButton3 SquareButton
+          MoveScaled(0,1,11,8)
+          Expand = True
+          Text = ("Previsualizar")
+          Picture = Picture["icon:/22/wizard"]
+        }
+      }
+      { Panel2 Panel
+        MoveScaled(15,0,11,10)
+        Arrangement = Arrange.Fill
+        Border = Border.Plain
+        { SquareButton2 SquareButton
+          MoveScaled(0,1,11,8)
+          Expand = True
+          Text = ("Imprimir")
+          Picture = Picture["icon:/22/print"]
+        }
+      }
+      { Panel1 Panel
+        MoveScaled(29,0,11,10)
+        Arrangement = Arrange.Fill
+        Border = Border.Plain
+        { SquareButton1 SquareButton
+          MoveScaled(0,1,11,8)
+          Expand = True
+          Text = ("Generar")
+          Picture = Picture["icon:/22/exec"]
+        }
+      }
+      { ButtonSalir Button
+        MoveScaled(27,13,13,4)
+        Text = ("Salir")
+        Picture = Picture["icon:/22/quit"]
+      }
+      { ButtonGuardar Button
+        MoveScaled(0,13,13,4)
+        Text = ("Guardar")
+        Picture = Picture["icon:/22/save"]
+      }
     }
-  }
-  { ButtonGuardar Button
-    MoveScaled(93,70,13,4)
-    Text = ("Guardar")
-    Picture = Picture["icon:/22/save"]
   }
 }

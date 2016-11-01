@@ -14,99 +14,103 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: FormModificarCartones.form:39
+#: FormModificarCartones.form:52
 msgid "MenuGridview"
 msgstr ""
 
-#: FormModificarCartones.form:42
+#: FormModificarCartones.form:55
 msgid "Agregar"
 msgstr ""
 
-#: FormModificarCartones.form:47
+#: FormModificarCartones.form:60
 msgid "Borrar"
 msgstr ""
 
-#: FormModificarCartones.form:54
-msgid "Tamaño de la Cuadrícula del Cartón"
-msgstr ""
-
-#: FormModificarCartones.form:58
-msgid "4x3"
-msgstr ""
-
-#: FormModificarCartones.form:64
-msgid "5x4"
-msgstr ""
-
-#: FormModificarCartones.form:69
-msgid "5x5"
-msgstr ""
-
-#: FormModificarCartones.form:81
-msgid "Huecos:"
-msgstr ""
-
-#: FormModificarCartones.form:85
-msgid "Negros (rellenos):"
-msgstr ""
-
-#: FormModificarCartones.form:90
-msgid "Blancos (vacíos):"
-msgstr ""
-
-#: FormModificarCartones.form:106
-msgid "Número de cartones distintos a Generar:"
-msgstr ""
-
-#: FormModificarCartones.form:111
-msgid "<b>Nota:</b><br>\nEl número de cartones diferentes que se pueden generar, dependerá del número de elementos que tenga el Bingo. A mayor número de elementos del bingo, mayor número de cartones distintos que se podrań crear."
-msgstr ""
-
-#: FormModificarCartones.form:126
-msgid "Generar"
-msgstr ""
-
-#: FormModificarCartones.form:133
-msgid "Salir"
-msgstr ""
-
-#: FormModificarCartones.form:140
+#: FormModificarCartones.form:71
 msgid "Características del Cartón:"
 msgstr ""
 
-#: FormModificarCartones.form:150
+#: FormModificarCartones.form:77
 msgid "Titulo del cartón:"
 msgstr ""
 
-#: FormModificarCartones.form:162
-msgid "Imprimir"
-msgstr ""
-
-#: FormModificarCartones.form:169
+#: FormModificarCartones.form:93
 msgid "Elementos que se repitirán en todos los cartones:"
 msgstr ""
 
-#: FormModificarCartones.form:186
+#: FormModificarCartones.form:115
+msgid "Tamaño de la Cuadrícula del Cartón"
+msgstr ""
+
+#: FormModificarCartones.form:119
+msgid "4x3"
+msgstr ""
+
+#: FormModificarCartones.form:125
+msgid "5x4"
+msgstr ""
+
+#: FormModificarCartones.form:130
+msgid "5x5"
+msgstr ""
+
+#: FormModificarCartones.form:136
+msgid "Huecos:"
+msgstr ""
+
+#: FormModificarCartones.form:140
+msgid "Negros (rellenos):"
+msgstr ""
+
+#: FormModificarCartones.form:145
+msgid "Blancos (vacíos):"
+msgstr ""
+
+#: FormModificarCartones.form:161
+msgid "Número de cartones distintos a Generar:"
+msgstr ""
+
+#: FormModificarCartones.form:212
+msgid "    <b>Nota:</b><br>\n   El número de cartones diferentes que se pueden generar, dependerá del número de elementos que tenga el Bingo. A mayor número de elementos del bingo, mayor número de cartones distintos que se podrań crear."
+msgstr ""
+
+#: FormModificarCartones.form:232
 msgid "Previsualizar"
 msgstr ""
 
-#: FormModificarCartones.form:193
+#: FormModificarCartones.form:245
+msgid "Imprimir"
+msgstr ""
+
+#: FormModificarCartones.form:258
+msgid "Generar"
+msgstr ""
+
+#: FormModificarCartones.form:265
+msgid "Salir"
+msgstr ""
+
+#: FormModificarCartones.form:271
 msgid "Guardar"
 msgstr ""
 
-#: FormModificarCartones.class:15
+#: FormModificarCartones.class:20
 msgid "Cartones"
 msgstr ""
 
-#: FormModificarCartones.class:184
+#: FormModificarCartones.class:216
 msgid "Los datos se han modificado, pero no guardado ¿desea salir?"
 msgstr ""
 
-#: FormModificarCartones.class:184
+#: FormModificarCartones.class:216
 msgid "Si, salir sin guardar"
 msgstr ""
 
-#: FormModificarCartones.class:184
+#: FormModificarCartones.class:216
 msgid "No"
+msgstr ""
+
+#: FormModificarCartones.class:237
+msgid "Debe seleccionar un elemento"
 msgstr ""
 

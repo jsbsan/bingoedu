@@ -8,7 +8,12 @@ Private okguardado As Boolean = True ''True: indica que los datos se han guardad
 Public Sub Form_Open()
 
   definirGridViewElementosRepetidos()
+  definirGridViewBingo()
+
   rellenadatos()
+
+
+
 
   okguardado = True
 
@@ -37,6 +42,31 @@ Public Sub rellenadatos()
 
   rellenaGridviewDatosRepetidos
 
+
+
+End
+
+Public Sub definirGridViewBingo()
+
+  With GridViewElementosBingo
+    .header = 3
+    .rows.count = 0
+    .columns.count = 4
+    .Columns[0].title = "Tipo"
+    .Columns[1].title = "Dato Bingo"
+    .Columns[2].title = "Tipo"
+    .Columns[3].title = "Dato Carton"
+
+    .Columns[0].width = 65
+    .Columns[1].width = 250
+    .Columns[2].width = 65
+    .Columns[3].width = 250
+    .font.name = "Times"
+    .font.size = 12
+    .Mode = Select.single
+    .ShowCursor = True
+
+  End With
 
 
 End
@@ -71,6 +101,8 @@ Public Sub rellenaGridviewDatosRepetidos()
 
 
   btmp.CargaDatosGridviewDatosRepetidos(GridViewElementosRepetidos)
+  btmp.CargarDatosBingoCartonesGridview(GridViewElementosBingo)
+
 
 End
 
@@ -196,4 +228,20 @@ Public Sub Form_Close()
   'continua con el evento
   '
   '
+End
+
+Public Sub ButtonPasar_Click()
+
+  'el elemento seleccionado en el Grid de DAtos del bingo, se pasa al otro grid de Repetidos
+  If GridViewElementosBingo.row = -1 Then
+    Message.Info(("Debe seleccionar un elemento"))
+    Return
+  Endif
+
+End
+
+Public Sub HBox2_MouseDown()
+
+
+
 End
