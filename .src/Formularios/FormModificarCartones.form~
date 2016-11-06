@@ -48,11 +48,9 @@
     AutoResize = True
     Spacing = True
     { VBox2 HBox
-      MoveScaled(2,5,50,48)
-      AutoResize = True
+      MoveScaled(6,3,50,48)
       { Panel5 Panel
         MoveScaled(2,-6,48,44)
-        AutoResize = True
         Border = Border.Plain
         { Frame1 Frame
           MoveScaled(2,2,41,15)
@@ -101,7 +99,7 @@
       }
     }
     { HBox1 Panel
-      MoveScaled(53,0,79,49)
+      MoveScaled(60,2,79,52)
       Expand = True
       Arrangement = Arrange.Horizontal
       AutoResize = True
@@ -109,12 +107,12 @@
       Padding = 1
       Border = Border.Plain
       { GridViewElementosRepetidos GridView
-        MoveScaled(1,1,29,47)
+        MoveScaled(2,3,29,47)
         Expand = True
         PopupMenu = "MenuGridview"
       }
       { Panel7 Panel
-        MoveScaled(31,2,11,45)
+        MoveScaled(31,2,11,48)
         { ButtonQuitar Button
           MoveScaled(1,16,8,6)
           Picture = Picture["FechaVerdeDer.png"]
@@ -131,7 +129,7 @@
     }
   }
   { Panel6 HBox
-    MoveScaled(2,66,136,21)
+    MoveScaled(1,71,136,21)
     Spacing = True
     { TextLabel1 TextLabel
       MoveScaled(2,4,78,11)

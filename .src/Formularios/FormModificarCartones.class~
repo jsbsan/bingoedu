@@ -232,10 +232,74 @@ End
 
 Public Sub ButtonPasar_Click()
 
+  Dim elementoElegido As Variant
+  Dim fila As Integer
+
+
   'el elemento seleccionado en el Grid de DAtos del bingo, se pasa al otro grid de Repetidos
   If GridViewElementosBingo.row = -1 Then
     Message.Info(("Debe seleccionar un elemento"))
     Return
   Endif
+  fila = GridViewElementosBingo.row
+
+
+  elementoElegido = btmp.buscaElemento(GridViewElementosBingo.Tag[fila].id, btmp.ArrayElementosBingo)
+  'comprobar si ese elemento ya esta incluido
+  If btmp.ListaElementosRepetidos.Find(elementoElegido.id) <> 0 Then
+    Message.Info(("Ese elemento ya esta incluido"))
+    Return
+
+
+  Endif
+
+
+  'añadir elemento a bingo..
+  btmp.ArrayElementosRepetidos.Add(elementoElegido)
+
+  btmp.ListaElementosRepetidos.Add(elementoElegido.id)
+
+  'recargo el gridview de elemntos repetidos
+  '
+  btmp.CargaDatosGridviewDatosRepetidos(GridViewElementosRepetidos)
+
+
+
+End
+
+
+Public Sub ButtonQuitar_Click()
+
+  'eliminar
+  Dim elementoElegido As Variant
+  Dim fila As Integer
+
+
+  'el elemento seleccionado en el Grid de DAtos del bingo, se pasa al otro grid de Repetidos
+  If GridViewElementosRepetidos.row = -1 Then
+    Message.Info(("Debe seleccionar un elemento"))
+    Return
+  Endif
+  fila = GridViewElementosRepetidos.row
+
+  'busca el elemnto elegido
+
+  elementoElegido = btmp.buscaElemento(GridViewElementosRepetidos.Tag[fila].id, btmp.ArrayElementosRepetidos)
+
+  indiceListaRepetido = btmp.listaElementosRepetidos.Find(elementoElegido.id)
+  indiceArrayRepetido = btmp.ArrayElementosRepetidos.Find(elementoElegido)
+
+  'borrado de elemento
+  btmp.ArrayElementosRepetidos.Delete(indiceArrayRepetido)
+
+  btmp.ListaElementosRepetidos.Delete(indiceListaRepetido)
+
+  'recargo el gridview de elemntos repetidos
+  '
+  btmp.CargaDatosGridviewDatosRepetidos(GridViewElementosRepetidos)
+
+
+
+
 
 End

@@ -14,83 +14,83 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: FormModificarCartones.form:52
+#: FormModificarCartones.form:53
 msgid "MenuGridview"
 msgstr ""
 
-#: FormModificarCartones.form:55
+#: FormModificarCartones.form:56
 msgid "Agregar"
 msgstr ""
 
-#: FormModificarCartones.form:60
+#: FormModificarCartones.form:61
 msgid "Borrar"
 msgstr ""
 
-#: FormModificarCartones.form:71
+#: FormModificarCartones.form:72
 msgid "Características del Cartón:"
 msgstr ""
 
-#: FormModificarCartones.form:77
+#: FormModificarCartones.form:78
 msgid "Titulo del cartón:"
 msgstr ""
 
-#: FormModificarCartones.form:93
+#: FormModificarCartones.form:94
 msgid "Elementos que se repitirán en todos los cartones:"
 msgstr ""
 
-#: FormModificarCartones.form:115
+#: FormModificarCartones.form:114
 msgid "Tamaño de la Cuadrícula del Cartón"
 msgstr ""
 
-#: FormModificarCartones.form:119
+#: FormModificarCartones.form:118
 msgid "4x3"
 msgstr ""
 
-#: FormModificarCartones.form:125
+#: FormModificarCartones.form:124
 msgid "5x4"
 msgstr ""
 
-#: FormModificarCartones.form:130
+#: FormModificarCartones.form:129
 msgid "5x5"
 msgstr ""
 
-#: FormModificarCartones.form:136
+#: FormModificarCartones.form:135
 msgid "Huecos:"
 msgstr ""
 
-#: FormModificarCartones.form:140
+#: FormModificarCartones.form:139
 msgid "Negros (rellenos):"
 msgstr ""
 
-#: FormModificarCartones.form:145
+#: FormModificarCartones.form:144
 msgid "Blancos (vacíos):"
 msgstr ""
 
-#: FormModificarCartones.form:161
+#: FormModificarCartones.form:160
 msgid "Número de cartones distintos a Generar:"
 msgstr ""
 
-#: FormModificarCartones.form:212
+#: FormModificarCartones.form:211
 msgid "    <b>Nota:</b><br>\n   El número de cartones diferentes que se pueden generar, dependerá del número de elementos que tenga el Bingo. A mayor número de elementos del bingo, mayor número de cartones distintos que se podrań crear."
 msgstr ""
 
-#: FormModificarCartones.form:232
+#: FormModificarCartones.form:231
 msgid "Previsualizar"
 msgstr ""
 
-#: FormModificarCartones.form:245
+#: FormModificarCartones.form:244
 msgid "Imprimir"
 msgstr ""
 
-#: FormModificarCartones.form:258
+#: FormModificarCartones.form:257
 msgid "Generar"
 msgstr ""
 
-#: FormModificarCartones.form:265
+#: FormModificarCartones.form:264
 msgid "Salir"
 msgstr ""
 
-#: FormModificarCartones.form:271
+#: FormModificarCartones.form:270
 msgid "Guardar"
 msgstr ""
 
@@ -110,7 +110,11 @@ msgstr ""
 msgid "No"
 msgstr ""
 
-#: FormModificarCartones.class:237
+#: FormModificarCartones.class:241
 msgid "Debe seleccionar un elemento"
+msgstr ""
+
+#: FormModificarCartones.class:250
+msgid "Ese elemento ya esta incluido"
 msgstr ""
 

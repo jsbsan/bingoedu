@@ -96,11 +96,11 @@ File[7]="Nota.txt:12.10"
 File[8]=".src/Formularios/FormModificarBingos.form"
 File[9]=".src/Formularios/FormModificarBingos.class:41.2"
 File[10]=".src/Formularios/FormModificarCartones.form"
-Active=11
 File[11]=".src/Formularios/FormFicherosBingos.class:194.27"
 File[12]=".src/Clases/controles/SquareButton.class:78.46"
 File[13]=".src/Formularios/FormModificarElementos.form"
-File[14]=".src/Clases/Bingo.class:593.33"
+Active=14
+File[14]=".src/Clases/Bingo.class:613.36"
 File[15]=".src/Clases/elemento.class:51.3"
 File[16]=".src/Clases/elementoTexto.class:18.0"
 File[17]=".src/Clases/elementoImagen.class:10.3"
@@ -114,7 +114,7 @@ File[24]=".src/Formularios/FormGrabadora.form"
 File[25]=".src/Formularios/FormGrabadora.class:26.45"
 File[26]="grabar.sh:0.36"
 File[27]=".src/Clases/elementoSonido.class:15.45"
-File[28]=".src/Formularios/FormModificarCartones.class:219.8"
+File[28]=".src/Formularios/FormModificarCartones.class:283.39"
 Count=28
 
 [Watches]

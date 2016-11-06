@@ -24,11 +24,12 @@ Property cuadrosNegros As Integer ''indica los huecos rellenos en negro
 Property cuadrosBlancos As Integer '' indica los huecos que quedaran en blanco
 
 Property ListaElementosRepetidos As String[] ''array que contiene los id de elementos del bingo (listaElementoBingo) que tienen que repetirse en cada carton
+Property ArrayElementosRepetidos As Elemento[] '' array de elementos repetidos del bingo que se repiten en cada carton.
 
 Property NumeroCartones As Integer ''indica el numero de cartones existentes.
 
 
-Property ArrayElementosRepetidos As Elemento[] '' array de elementos repetidos del bingo que se repiten en cada carton.
+
 
 Private $tituloCarton As String
 Private $tamanoCuadricula As String
@@ -610,7 +611,7 @@ Public Sub CargaDatosGridviewDatosRepetidos(G As GridView)
 
   Next
 
-  G.TAG = Me.ArrayElementosBingo
+  G.TAG = Me.ArrayElementosRepetidos
 
 End
 
