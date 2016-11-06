@@ -1,0 +1,31 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,87,54)
+  { ButtonSimple Button
+    MoveScaled(2,42,23,4)
+    Text = ("Previsualizar Simple")
+  }
+  { ButtonCompleta Button
+    MoveScaled(2,48,23,4)
+    Text = ("Previsualizar Con datos")
+  }
+  { PictureBox1 PictureBox
+    MoveScaled(15,1,60,39)
+    Stretch = True
+    Border = Border.Plain
+  }
+  { ButtonAtras Button
+    MoveScaled(31,48,11,4)
+    Picture = Picture["icon:/22/previous"]
+  }
+  { ButtonSiguiente Button
+    MoveScaled(43,48,11,4)
+    Picture = Picture["icon:/22/next"]
+  }
+  { ButtonSalir Button
+    MoveScaled(73,47,12,5)
+    Text = ("Salir")
+    Picture = Picture["icon:/22/quit"]
+  }
+}

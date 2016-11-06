@@ -4,6 +4,7 @@
   MoveScaled(0,0,141,88)
   Icon = Picture["carton de bingo50x32.jpg"]
   Arrangement = Arrange.Vertical
+  Margin = True
   { MenuGridview Menu
     Text = ("MenuGridview")
     { AgregarElementoGridview Menu

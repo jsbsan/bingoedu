@@ -1,0 +1,94 @@
+' Gambas class file
+
+Property btmp As Bingo
+Private $btmp As Bingo
+
+
+Public Sub ButtonSalir_Click()
+
+  Me.Close()
+
+End
+
+Private Function btmp_Read() As Bingo
+
+  Return $btmp
+
+End
+
+Private Sub btmp_Write(Value As Bingo)
+
+  $btmp = Value
+
+End
+
+
+
+Public Sub Form_Show()
+
+  'carga el dibujo de bingo segun los datos
+
+  'Segun las dimensiones
+  'elige la plantilla
+
+
+
+  'pone aleatoriamente los huecos negros y blanco
+  '
+  'rellena los datos aleatoriamente
+
+
+End
+
+Public Sub Form_Open()
+
+
+
+End
+
+Public Sub dibujando()
+
+  Dim NombreArchivo As String
+  Dim hSvgImage As SvgImage
+
+  Select Case $btmp.tamanoCuadricula
+    Case "4x3"
+      NombreArchivo = "modelos carton/bingotablas4x3.svg"
+    Case "5x4"
+      NombreArchivo = "modelos carton/bingotablas5x4.svg"
+    Case "5x5"
+      NombreArchivo = "modelos carton/bingotablas5x5.svg"
+  End Select
+
+  hSvgImage = SvgImage.Load(NombreArchivo)
+
+  Try Kill "/tmp/cartontemporal.svg"
+
+  Paint.Begin(hSvgImage)
+  'aqui dibujamos huecos negros, blancos, imagenes, textos...
+
+
+  Paint.Stroke()
+
+  Paint.End
+
+  hSvgImage.Save("/tmp/cartontemporal.svg")
+
+  'espera mientras que se crea
+  '
+  Do
+    Wait 0.05
+  Loop Until Exist("/tmp/cartontemporal.svg")
+
+  PictureBox1.Picture = Picture.Load("/tmp/cartontemporal.svg")
+
+
+End
+
+
+
+Public Sub ButtonSimple_Click()
+
+  dibujando()
+
+End

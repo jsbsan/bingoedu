@@ -304,3 +304,11 @@ Public Sub ButtonQuitar_Click()
 
 
 End
+
+Public Sub SquareButtonPrevisualizar_Click()
+
+  FormPrevisualizar.btmp = btmp
+
+  FormPrevisualizar.Show()
+
+End

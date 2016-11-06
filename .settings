@@ -99,7 +99,6 @@ File[10]=".src/Formularios/FormModificarCartones.form"
 File[11]=".src/Formularios/FormFicherosBingos.class:194.27"
 File[12]=".src/Clases/controles/SquareButton.class:78.46"
 File[13]=".src/Formularios/FormModificarElementos.form"
-Active=14
 File[14]=".src/Clases/Bingo.class:613.36"
 File[15]=".src/Clases/elemento.class:51.3"
 File[16]=".src/Clases/elementoTexto.class:18.0"
@@ -114,8 +113,14 @@ File[24]=".src/Formularios/FormGrabadora.form"
 File[25]=".src/Formularios/FormGrabadora.class:26.45"
 File[26]="grabar.sh:0.36"
 File[27]=".src/Clases/elementoSonido.class:15.45"
-File[28]=".src/Formularios/FormModificarCartones.class:283.39"
-Count=28
+File[28]=".src/Formularios/FormModificarCartones.class:311.26"
+File[29]=".src/Formularios/FormPrevisualizar.form"
+Active=30
+File[30]=".src/Formularios/FormPrevisualizar.class:68.0"
+File[31]="modelos carton/bingotablas4x3.svg:0.0"
+File[32]="modelos carton/bingotablas5x4.svg:0.0"
+File[33]="modelos carton/bingotablas5x5.svg:0.0"
+Count=33
 
 [Watches]
 Count=1

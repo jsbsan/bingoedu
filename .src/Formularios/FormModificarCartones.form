@@ -49,9 +49,9 @@
     AutoResize = True
     Spacing = True
     { VBox2 HBox
-      MoveScaled(6,3,50,48)
+      MoveScaled(0,2,50,48)
       { Panel5 Panel
-        MoveScaled(2,-6,48,44)
+        MoveScaled(1,4,48,44)
         Border = Border.Plain
         { Frame1 Frame
           MoveScaled(2,2,41,15)
@@ -147,7 +147,7 @@
         MoveScaled(1,0,11,10)
         Arrangement = Arrange.Fill
         Border = Border.Plain
-        { SquareButton3 SquareButton
+        { SquareButtonPrevisualizar SquareButton
           MoveScaled(0,1,11,8)
           Expand = True
           Text = ("Previsualizar")
@@ -158,7 +158,7 @@
         MoveScaled(15,0,11,10)
         Arrangement = Arrange.Fill
         Border = Border.Plain
-        { SquareButton2 SquareButton
+        { SquareButtonImprimir SquareButton
           MoveScaled(0,1,11,8)
           Expand = True
           Text = ("Imprimir")
@@ -169,7 +169,7 @@
         MoveScaled(29,0,11,10)
         Arrangement = Arrange.Fill
         Border = Border.Plain
-        { SquareButton1 SquareButton
+        { SquareButtonGenerar SquareButton
           MoveScaled(0,1,11,8)
           Expand = True
           Text = ("Generar")

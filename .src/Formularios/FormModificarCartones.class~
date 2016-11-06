@@ -273,7 +273,8 @@ Public Sub ButtonQuitar_Click()
   'eliminar
   Dim elementoElegido As Variant
   Dim fila As Integer
-
+  Dim indiceListaRepetido As Integer
+  Dim indiceArrayRepetido As Integer
 
   'el elemento seleccionado en el Grid de DAtos del bingo, se pasa al otro grid de Repetidos
   If GridViewElementosRepetidos.row = -1 Then
