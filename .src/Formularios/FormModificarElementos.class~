@@ -296,7 +296,7 @@ Public Sub rellenarDatosFormulario(e As Variant)
       textboxTEXTOBINGO.text = e.texto
       RadioButtonBingoTexto.Value = True
     Case Upper$("elementoImagen")
-      ButtonBoxImagenBingo.text = e.rutasonido
+      ButtonBoxImagenBingo.text = e.rutaimagen
       ButtonBoxImagenCarton.tag = User.home & "/bingoedu/" & Me.BingoTemporalDatos.NombreFichero & "/" & e.rutaimagen
       RadioButtonBingoImagen.Value = True
       PictureBoxBingo.Picture = Picture[User.home & "/bingoedu/" & Me.BingoTemporalDatos.NombreFichero & "/" & e.rutaimagen]

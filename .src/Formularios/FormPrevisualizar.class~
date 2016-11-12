@@ -38,13 +38,10 @@ Public Sub Form_Show()
   'rellena los datos aleatoriamente
 
 
-End
-
-Public Sub Form_Open()
-
-
+  dibujando()
 
 End
+
 
 Public Sub dibujando()
 
@@ -53,33 +50,26 @@ Public Sub dibujando()
 
   Select Case $btmp.tamanoCuadricula
     Case "4x3"
-      NombreArchivo = "modelos carton/bingotablas4x3.svg"
+      NombreArchivo = User.Home & "/bingoedu/" & "bingotablas4x3.svg"
     Case "5x4"
-      NombreArchivo = "modelos carton/bingotablas5x4.svg"
+      NombreArchivo = User.Home & "/bingoedu/" & "bingotablas5x4.svg"
     Case "5x5"
-      NombreArchivo = "modelos carton/bingotablas5x5.svg"
+      NombreArchivo = User.Home & "/bingoedu/" & "bingotablas5x5.svg"
   End Select
 
-  hSvgImage = SvgImage.Load(NombreArchivo)
+  Inc Application.busy
+  Wait 0.05
+  Exec ["inkscape", "--export-dpi=20", NombreArchivo, "--export-png=" & "/tmp/cartontemporal.png"] Wait
+  Dec Application.Busy
 
-  Paint.Begin(hSvgImage)
-  'aqui dibujamos huecos negros, blancos, imagenes, textos...
 
+  'con los datos iniciaels (tamaño, numero de cuadros negros y numero de cuadros blancos
+  'rellenar los datos...
 
-  Paint.Stroke()
+  PictureBox1.Picture = Picture.Load("/tmp/cartontemporal.png")
 
-  Paint.End
-
-  hSvgImage.Save("/tmp/cartontemporal.svg")
-
-  'espera mientras que se crea
-  '
-  Do
-    Wait 0.05
-  Loop Until Exist("/tmp/cartontemporal.svg")
-
-  PictureBox1.Picture = Picture.Load("/tmp/cartontemporal.svg")
-
+  'actualizar la imagen... por si acaso..
+  PictureBox1.Refresh()
 
 End
 

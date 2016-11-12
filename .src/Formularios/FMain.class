@@ -15,7 +15,30 @@ Public Sub Form_Open()
     Mkdir User.home & "/bingoedu"
   Endif
 
+  'copiar ficheros de plantilla:
+  copiarficheroplantilla()
+
 End
+
+Private Sub copiarficheroplantilla()
+
+  Dim ListaFichero As New String[]
+  Dim l As String
+
+  ListaFichero.Add("bingotablas4x3.svg")
+  ListaFichero.Add("bingotablas5x4.svg")
+  ListaFichero.Add("bingotablas5x5.svg")
+
+  For Each l In ListaFichero
+    Try Copy Application.Path & "/ModelosCarton/" & l To User.home & "/bingoedu/" & l
+  Next
+
+
+End
+
+
+
+
 
 Public Sub ButtonCrearEditar_Click()
 

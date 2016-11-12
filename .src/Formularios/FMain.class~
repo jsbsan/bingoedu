@@ -10,6 +10,11 @@ Public Sub Form_Open()
   Me.Center
   Me.Title = ("Bingo Educativo")
 
+  'si no existe directorio de bingoedu crearlo
+  If Not Exist(User.home & "/bingoedu") Then
+    Mkdir User.home & "/bingoedu"
+  Endif
+
 End
 
 Public Sub ButtonCrearEditar_Click()
