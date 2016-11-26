@@ -53,8 +53,6 @@ Public Sub _new()
   '   Mkdir User.home & "/bingoedu/" & $nombreFichero
   ' Endif
 
-
-
 End
 
 Public Sub cargadatos(NombreArchivo As String, Optional carpeta As Boolean) 'leo un archivo .be y lo cargo en la instancia de clase bingo.
@@ -299,17 +297,6 @@ Public Sub guardarBingo(CARPETA As Boolean) ''True: guarda los datos en carpeta 
 End
 
 
-Public Sub DescomprimeBingo(nombre As String) ''lectura de archivo tar.gz del fichero de  datos de bintoedu y descompresion del mismo en la carpeta .config
-
-  ''TODO: descomprime el archivo dato (un tar.gz), en /tmp, y copia todos los archivos  en la carpeta de configuración (~/.config/BingoEdu/datos)
-
-  'A continuación, ahora el programa deberá recargar la carpeta   ~/.config/BingoEdu/datos, para encontrar los distintos bingos disponibles.
-  'y que aparezcan en el gridview inicial.
-
-
-
-End
-
 Public Function generaJson() As String
 
   Dim c As New JSON354
@@ -538,8 +525,6 @@ Private Sub NombreFichero_Write(Value As String)
 
 End
 
-
-
 '------------------------------------------------------------------------
 'Zona de Carga de datos en Controles Gridview
 '------------------------------------------------------------------------
@@ -575,7 +560,6 @@ Public Sub CargarDatosBingoCartonesGridview(g As GridView) '' Carga los datos de
   Next
 
   G.TAG = Me.ArrayElementosBingo
-
 
 End
 
@@ -621,6 +605,7 @@ End
 Public Function buscaElemento(id As String, arrayElem As Elemento[]) As Elemento
 
   Dim ebuscado As Elemento
+'dado un id, y una lista de elementos[], nos devuelve el elemento que tenga ese id.
 
   For Each ebuscado In arrayElem
     If ebuscado.id = id Then
@@ -632,8 +617,6 @@ Public Function buscaElemento(id As String, arrayElem As Elemento[]) As Elemento
   'Si llegamos a este punto, no ha encontrado el elemento enlazado...hay un error
   'poner mensaje de error o devolver null
   Return Null
-
-
 
 End
 

@@ -352,7 +352,6 @@ Public Function comprobarElemento(e As Variant, tipo As String, ArrayElementos A
 
     Select Case Lower$(tipo)
       Case Lower$("elementotexto")
-        ''TODO: Habria que sustituir la lista de donde esta guardado en el bingo
         '1º buca el elemento actual en la lista
         eEliminar = Me.BingoTemporalDatos.buscaElemento($elementoTexto.id, ArrayElementos)
 
@@ -364,9 +363,7 @@ Public Function comprobarElemento(e As Variant, tipo As String, ArrayElementos A
 
         Return $elementoTexto
       Case Lower$("elementoimagen")
-        ''TODO: Habria que sustituir la lista de donde esta guardado en el bingo
-
-        '1º buca el elemento actual en la lista
+         '1º buca el elemento actual en la lista
         eEliminar = Me.BingoTemporalDatos.buscaElemento($elementoImagen.id, ArrayElementos)
         '2º lo elimina,
         numero = ArrayElementos.Find(eEliminar)
@@ -377,9 +374,7 @@ Public Function comprobarElemento(e As Variant, tipo As String, ArrayElementos A
 
         Return $elementoImagen
       Case Lower$("elementosonido")
-        ''TODO: Habria que sustituir la lista de donde esta guardado en el bingo
-        ''TODO: Habria que sustituir la lista de donde esta guardado en el bingo
-        '1º buca el elemento actual en la lista
+ '1º buca el elemento actual en la lista
         eEliminar = Me.BingoTemporalDatos.buscaElemento($elementoSonido.id, ArrayElementos)
 
         '2º lo elimina,

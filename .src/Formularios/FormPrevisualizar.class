@@ -25,7 +25,7 @@ End
 
 
 Public Sub Form_Show()
-
+Me.Center()
   dibujando()
 
 End
@@ -37,6 +37,11 @@ Public Sub dibujando()
   Dim NombreArchivo As String
   Dim hSvgImage As SvgImage
   'Segun las dimensiones
+  If $btmp.tamanoCuadricula = "" Then 
+    $btmp.tamanoCuadricula = "4x3"
+  Endif
+  
+  '
   'elige la plantilla
   Select Case $btmp.tamanoCuadricula
     Case "4x3"
@@ -64,8 +69,18 @@ Public Sub dibujando()
 
 
   Inc Application.busy
-  Wait 0.05
+  Try Kill "/tmp/cartontemporal.png" 'probar a borrar el fichero antes de crear uno nuevo
+  Wait 0.05 
   Exec ["inkscape", "--export-dpi=20", NombreArchivo, "--export-png=" & "/tmp/cartontemporal.png"] Wait
+  
+
+While Not (Exist("/tmp/cartontemporal.png"))
+  Wait 0.05 'espero a que exista el fichero
+Wend
+
+
+
+
   Dec Application.Busy
 
 

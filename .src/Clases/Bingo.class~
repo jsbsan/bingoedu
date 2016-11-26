@@ -611,7 +611,7 @@ Public Sub CargaDatosGridviewDatosRepetidos(G As GridView)
 
   Next
 
-  G.TAG = Me.ArrayElementosBingo
+  G.TAG = Me.ArrayElementosRepetidos
 
 End
 
@@ -621,6 +621,7 @@ End
 Public Function buscaElemento(id As String, arrayElem As Elemento[]) As Elemento
 
   Dim ebuscado As Elemento
+'dado un id, y una lista de elementos[], nos devuelve el elemento que tenga ese id.
 
   For Each ebuscado In arrayElem
     If ebuscado.id = id Then
