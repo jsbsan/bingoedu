@@ -1,0 +1,88 @@
+' Gambas class file
+
+Public bingotmp As Bingo
+
+Private CaracterSeparador As String = "\t"
+
+Public Sub ButtonSalir_Click()
+  
+  Me.Close()
+  
+End
+
+Public Sub ButtonProcesar_Click()
+  
+  Dim a As Integer
+  ''linea por linea procesamos los datos del textarea
+  
+  Dim ArrayCadenas As String[]
+  Dim linea As String[]
+  
+  ArrayCadenas = Split(TextAreaMultipleElementos.text, "\n") 'retorno de linea
+  
+  For a = 0 To ArrayCadenas.Max
+    
+    linea = Split(ArrayCadenas[a], CaracterSeparador)
+    
+    If linea.count = 0 Then Continue
+    
+    If linea.count = 1 Then 
+      'ha escrito una solo la parte del bingo, entoneces la parte del carton es igual
+      linea.Add(linea[0])
+    Endif
+    
+    If linea[1] = "=" Or linea[1] = "" Then
+      linea[1] = linea[0]
+      
+    Endif
+    
+    creaElementos(linea)
+    
+  Next
+  
+  'salimos del formulario
+  ButtonSalir_Click()
+  
+End
+
+Public Sub creaElementos(linea As String[])
+  
+  Dim ec As ElementoTexto
+  Dim eb As ElementoTexto
+  
+  'creo elemento bingo
+  eb = New ElementoTexto
+  eb.texto = linea[0]
+  
+  'creo elmento carton
+  eC = New ElementoTexto
+  eC.texto = linea[1]
+  
+  'enlazamos los elementos creados
+  eC.enlace = eb.id
+  eB.enlace = eC.id
+  
+  'agrego los elemento a las listas y arrays del bingo
+  bingotmp.ListaElementosBingo(eb.id)
+  bingotmp.ListaElementosCarton(ec.id)
+  
+  bingotmp.ArrayElementosBingo(eb)
+  bingotmp.ArrayElementosCarton(ec)
+  
+End
+
+Public Sub Form_Show()
+  
+  Me.Center()
+  
+End
+
+Public Sub Form_Open()
+  
+  Me.Title = ("Multiples Elementos de Texto")
+  TextLabel1.text = " En cada reglon escriba un texto,luego pulse la tecla TAB, y luego escriba otro texto.<br>"
+  TextLabel1.text &= " El primer texto es el que se añade al bingo, el segundo es el que se añade al carton.<br>"
+  TextLabel1.text &= " Si solo escribe texto, sin pulsar la tecla TAB, el mismo texto sera asignado tanto al bingo como al carton.<br>"
+  TextLabel1.text &= " Puede escribir en varios renglones (pulsando la tecla RETURN o INTRO), para asignar tantos elementos del bingo y carton que necesite."
+  
+End

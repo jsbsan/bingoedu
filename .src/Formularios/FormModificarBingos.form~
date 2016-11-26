@@ -87,6 +87,7 @@
   }
   { GridViewDatosBingo GridView
     MoveScaled(8,37,74,28)
+    ToolTip = ("Para editar un elemento, seleccionalo y haga DobleClick")
     Expand = True
     Mode = Select.Single
     ShowCursor = True
@@ -97,12 +98,21 @@
       MoveScaled(0,0,4,6)
     }
     { ButtonAgregarElemento Button
-      MoveScaled(6,1,20,6)
+      MoveScaled(1,0,20,6)
       Text = ("Añadir Elemento")
       Picture = Picture["icon:/16/add"]
     }
+    { HBox4 HBox
+      MoveScaled(21,-1,5,6)
+      Expand = True
+    }
+    { Button1 Button
+      MoveScaled(25,0,26,5)
+      Text = ("Multiple Elementos de Texto")
+      Picture = Picture["iconoletra16.png"]
+    }
     { HBox2 HBox
-      MoveScaled(28,0,14,6)
+      MoveScaled(37,0,5,6)
       Expand = True
     }
     { ButtonGuadarModificaciones Button

@@ -101,3 +101,9 @@ Public Sub ButtonSimple_Click()
   dibujando()
 
 End
+
+Public Sub Form_Open()
+
+  
+
+End

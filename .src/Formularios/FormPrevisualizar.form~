@@ -12,6 +12,7 @@
   }
   { PictureBox1 PictureBox
     MoveScaled(15,1,60,39)
+    Stretch = True
     Border = Border.Plain
   }
   { ButtonAtras Button

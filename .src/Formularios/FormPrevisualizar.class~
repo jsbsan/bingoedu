@@ -25,7 +25,7 @@ End
 
 
 Public Sub Form_Show()
-
+Me.Center()
   dibujando()
 
 End

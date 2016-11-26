@@ -1,0 +1,42 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,64,64)
+  Arrangement = Arrange.Vertical
+  Spacing = True
+  Padding = 1
+  { TextLabel1 TextLabel
+    MoveScaled(6,1,50,18)
+    Expand = True
+    Text = ("TextLabel1")
+  }
+  { TextAreaMultipleElementos TextArea
+    MoveScaled(5,22,49,14)
+    Expand = True
+  }
+  { HBox1 HBox
+    MoveScaled(3,54,58,6)
+    { HBox3 HBox
+      MoveScaled(0,0,9,3)
+      Expand = True
+    }
+    { ButtonProcesar Button
+      MoveScaled(11,1,13,4)
+      Text = ("Procesar")
+      Picture = Picture["icon:/16/exec"]
+    }
+    { HBox6 HBox
+      MoveScaled(24,1,5,4)
+      Expand = True
+    }
+    { ButtonSalir Button
+      MoveScaled(36,0,12,6)
+      Text = ("Salir")
+      Picture = Picture["icon:/32/quit"]
+    }
+    { HBox7 HBox
+      MoveScaled(50,1,5,4)
+      Expand = True
+    }
+  }
+}
