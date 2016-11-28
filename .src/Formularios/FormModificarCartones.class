@@ -6,27 +6,24 @@ Private btmp As Bingo ''bingo donde voy trabajar con los datos
 Private okguardado As Boolean = True ''True: indica que los datos se han guardado, FAlse, que se han modificado y no guardado.
 
 Public Sub Form_Open()
-
+  
   definirGridViewElementosRepetidos()
   definirGridViewBingo()
-
+  
   rellenadatos()
-
-
-
-
+  
   okguardado = True
-
+  
   Me.Title = ("Cartones")
-
+  
   Me.Center()
-
+  
 End
 
 Public Sub rellenadatos()
-
+  
   TextBoxTitulo.text = btmp.tituloCarton
-
+  
   Select Case btmp.tamanoCuadricula
     Case "4x3"
       RadioButton4x3.value = True
@@ -35,19 +32,17 @@ Public Sub rellenadatos()
     Case "5x5"
       RadioButton5x5.value = True
   End Select
-
+  
   spinboxBlancos.value = btmp.cuadrosBlancos
   spinboxNegros.value = btmp.cuadrosNegros
   SpinBoxNumeroCarton.value = btmp.NumeroCartones
-
+  
   rellenaGridviewDatosRepetidos
-
-
-
+  
 End
 
 Public Sub definirGridViewBingo()
-
+  
   With GridViewElementosBingo
     .header = 3
     .rows.count = 0
@@ -56,7 +51,7 @@ Public Sub definirGridViewBingo()
     .Columns[1].title = "Dato Bingo"
     .Columns[2].title = "Tipo"
     .Columns[3].title = "Dato Carton"
-
+    
     .Columns[0].width = 65
     .Columns[1].width = 250
     .Columns[2].width = 65
@@ -65,16 +60,13 @@ Public Sub definirGridViewBingo()
     .font.size = 12
     .Mode = Select.single
     .ShowCursor = True
-
+    
   End With
-
-
+  
 End
 
-
-
 Public Sub definirGridViewElementosRepetidos()
-
+  
   With GridViewElementosRepetidos
     .header = 3
     .rows.count = 0
@@ -83,7 +75,7 @@ Public Sub definirGridViewElementosRepetidos()
     .Columns[1].title = "Dato Bingo"
     .Columns[2].title = "Tipo"
     .Columns[3].title = "Dato Carton"
-
+    
     .Columns[0].width = 65
     .Columns[1].width = 250
     .Columns[2].width = 65
@@ -92,223 +84,224 @@ Public Sub definirGridViewElementosRepetidos()
     .font.size = 12
     .Mode = Select.single
     .ShowCursor = True
-
+    
   End With
-
+  
 End
 
 Public Sub rellenaGridviewDatosRepetidos()
-
-
+  
   btmp.CargaDatosGridviewDatosRepetidos(GridViewElementosRepetidos)
   btmp.CargarDatosBingoCartonesGridview(GridViewElementosBingo)
-
-
+  
 End
-
-
-
-
 
 Public Sub ButtonSalir_Click()
   'salvar datos...
   ''TODO: al salir del formulario hay que salvar los datos del carton
-
-
+  
   Me.Close()
-
-
+  
 End
 
 Private Function BingoTemporalDatos_Read() As Bingo
-
+  
   Return btmp
-
+  
 End
 
 Private Sub BingoTemporalDatos_Write(Value As Bingo)
-
+  
   btmp = Value
-
+  
 End
 
 Public Sub ButtonGuardar_Click()
-
+  
   'guarda todos los datos de
-
+  
   btmp.tituloCarton = TextBoxTitulo.text
-
+  
   btmp.cuadrosBlancos = spinboxBlancos.value
   btmp.cuadrosNegros = spinboxNegros.value
   btmp.NumeroCartones = SpinBoxNumeroCarton.value
-
-
+  
   If RadioButton4x3.value = True Then
     btmp.tamanoCuadricula = "4x3"
   Endif
-
+  
   If RadioButton5x4.value = True Then
     btmp.tamanoCuadricula = "5x4"
   Endif
-
+  
   If RadioButton5x5.value = True Then
     btmp.tamanoCuadricula = "5x5"
   Endif
-
+  
   'recarga los datos del gridview ->  rellenaGridviewDatosRepetidos  g.tag !!
-
+  
   btmp.guardarBingo(True)
-
+  
   okguardado = True
-
-
-
+  
 End
 
 Public Sub SpinBoxBlancos_Change()
-
+  
   okguardado = False
-
+  
 End
 
 Public Sub SpinBoxNegros_Change()
-
+  
   okguardado = False
-
+  
 End
 
 Public Sub SpinBoxNumeroCarton_Change()
-
+  
   okguardado = False
-
+  
 End
 
 Public Sub RadioButton4x3_Click()
-
+  
   okguardado = False
-
+  
 End
 
 Public Sub RadioButton5x4_Click()
-
+  
   okguardado = False
-
+  
 End
 
 Public Sub RadioButton5x5_Click()
-
+  
   okguardado = False
-
+  
 End
 
 Public Sub TextBoxTitulo_KeyPress()
-
+  
   okguardado = False
-
+  
 End
 
 Public Sub Form_Close()
-
+  
   Dim res As Integer
   ''NOTE: Parar cerrar la ventana, usando STOP EVENT
   If okguardado = False Then
-
+    
     res = Message.Question(("Los datos se han modificado, pero no guardado ¿desea salir?"), ("Si, salir sin guardar"), ("No"))
     If res <> 1 Then
       Stop Event
       Return
     Else
       '      Me.Close()
-
+      
     Endif
   Else
     '   Me.Close()
   Endif
-
+  
   'continua con el evento
   '
   '
 End
 
 Public Sub ButtonPasar_Click()
-
+  
   Dim elementoElegido As Variant
   Dim fila As Integer
-
-
+  
   'el elemento seleccionado en el Grid de DAtos del bingo, se pasa al otro grid de Repetidos
   If GridViewElementosBingo.row = -1 Then
     Message.Info(("Debe seleccionar un elemento"))
     Return
   Endif
   fila = GridViewElementosBingo.row
-
-
+  
   elementoElegido = btmp.buscaElemento(GridViewElementosBingo.Tag[fila].id, btmp.ArrayElementosBingo)
   'comprobar si ese elemento ya esta incluido
-  If btmp.ListaElementosRepetidos.Find(elementoElegido.id) <> 0 Then
+  If btmp.ListaElementosRepetidos.Find(elementoElegido.id) <> -1 Then
     Message.Info(("Ese elemento ya esta incluido"))
     Return
-
-
+    
   Endif
-
-
+  
   'añadir elemento a bingo..
   btmp.ArrayElementosRepetidos.Add(elementoElegido)
-
+  
   btmp.ListaElementosRepetidos.Add(elementoElegido.id)
-
+  
   'recargo el gridview de elemntos repetidos
   '
   btmp.CargaDatosGridviewDatosRepetidos(GridViewElementosRepetidos)
-
-
-
+  
 End
 
-
 Public Sub ButtonQuitar_Click()
-
+  
   'eliminar
   Dim elementoElegido As Variant
   Dim fila As Integer
   Dim indiceListaRepetido As Integer
   Dim indiceArrayRepetido As Integer
-
+  
   'el elemento seleccionado en el Grid de DAtos del bingo, se pasa al otro grid de Repetidos
   If GridViewElementosRepetidos.row = -1 Then
     Message.Info(("Debe seleccionar un elemento"))
     Return
   Endif
   fila = GridViewElementosRepetidos.row
-
+  
   'busca el elemnto elegido
-
+  
   elementoElegido = btmp.buscaElemento(GridViewElementosRepetidos.Tag[fila].id, btmp.ArrayElementosRepetidos)
-
+  
   indiceListaRepetido = btmp.listaElementosRepetidos.Find(elementoElegido.id)
   indiceArrayRepetido = btmp.ArrayElementosRepetidos.Find(elementoElegido)
-
+  
   'borrado de elemento
   btmp.ArrayElementosRepetidos.Delete(indiceArrayRepetido)
-
+  
   btmp.ListaElementosRepetidos.Delete(indiceListaRepetido)
-
+  
   'recargo el gridview de elemntos repetidos
   '
   btmp.CargaDatosGridviewDatosRepetidos(GridViewElementosRepetidos)
-
-
-
-
-
+  
 End
 
 Public Sub SquareButtonPrevisualizar_Click()
-
+  
   FormPrevisualizar.btmp = btmp
-
+  
   FormPrevisualizar.Show()
+  
+End
 
+Public Sub SquareButtonGenerar_Click()
+  
+  Dim a As Integer
+  Dim c As New Carton
+  
+  'guardar todos los cambios realizados...
+  ButtonGuardar_Click()
+  
+  ''TODO: Prueba de generación de cartones...
+  'generar tantos cartones como indique   SpinBoxNumeroCarton
+  '
+  'para teste text hacemo uno
+  
+  For a = 1 To 50
+    c.generarCarton(btmp.tamanoCuadricula, btmp.cuadrosNegros, btmp.cuadrosBlancos, btmp.ListaElementosRepetidos, btmp.ListaElementosCarton)
+    
+    Print "carton generado"
+    Print c.ArraIdElementos.Join(" ")
+    c = New Carton
+  Next 
+  
 End

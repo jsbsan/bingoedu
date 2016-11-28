@@ -14,15 +14,15 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: Bingo.class:82
+#: Bingo.class:91
 msgid "Existe un bingo con el mismo nombre, ¿que desea hacer?"
 msgstr ""
 
-#: Bingo.class:82
+#: Bingo.class:91
 msgid "Borra y continua"
 msgstr ""
 
-#: Bingo.class:82
+#: Bingo.class:91
 msgid "Cancelar Operacion"
 msgstr ""
 

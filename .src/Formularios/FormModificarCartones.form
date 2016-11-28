@@ -1,7 +1,7 @@
 # Gambas Form File 3.0
 
 { Form Form
-  MoveScaled(0,0,141,88)
+  MoveScaled(0,0,143,101)
   Icon = Picture["carton de bingo50x32.jpg"]
   Arrangement = Arrange.Vertical
   Margin = True
@@ -25,12 +25,12 @@
       Alignment = Align.Center
     }
     { Label1 Label
-      MoveScaled(0,7.8571,17,4)
+      MoveScaled(1,5,17,4)
       Text = ("Titulo del cartón:")
       Alignment = Align.Right
     }
     { TextBoxTitulo TextBox
-      MoveScaled(17.4286,8,25,4)
+      MoveScaled(19,5,25,4)
     }
     { PictureBox1 PictureBox
       MoveScaled(58.1429,0,9,6)
@@ -38,69 +38,18 @@
       Stretch = True
     }
     { TextLabel3 TextLabel
-      MoveScaled(45.4286,8,47,5)
+      MoveScaled(45,5,47,5)
       Text = ("Elementos que se repitirán en todos los cartones:")
       Alignment = Align.Center
     }
   }
   { HBox2 HBox
-    MoveScaled(2,14,138,54)
+    MoveScaled(1,14,136,40)
     Expand = True
     AutoResize = True
     Spacing = True
-    { VBox2 HBox
-      MoveScaled(0,2,50,48)
-      { Panel5 Panel
-        MoveScaled(1,4,48,44)
-        Border = Border.Plain
-        { Frame1 Frame
-          MoveScaled(2,2,41,15)
-          Text = ("Tamaño de la Cuadrícula del Cartón")
-          { RadioButton4x3 RadioButton
-            MoveScaled(5,3,26,4)
-            Text = ("4x3")
-            Value = True
-          }
-          { RadioButton5x4 RadioButton
-            MoveScaled(5,7,26,4)
-            Text = ("5x4")
-          }
-          { RadioButton5x5 RadioButton
-            MoveScaled(5,11,26,4)
-            Text = ("5x5")
-          }
-        }
-        { Frame2 Frame
-          MoveScaled(2,19,41,15)
-          Text = ("Huecos:")
-          { Label2 Label
-            MoveScaled(5,4,20,4)
-            Text = ("Negros (rellenos):")
-          }
-          { Label3 Label
-            MoveScaled(5,9,20,4)
-            Text = ("Blancos (vacíos):")
-          }
-          { SpinBoxBlancos SpinBox
-            MoveScaled(27,9,8,4)
-            Value = 2
-          }
-          { SpinBoxNegros SpinBox
-            MoveScaled(27,4,8,4)
-            Value = 3
-          }
-        }
-        { Label4 Label
-          MoveScaled(2,34,41,5)
-          Text = ("Número de cartones distintos a Generar:")
-        }
-        { SpinBoxNumeroCarton SpinBox
-          MoveScaled(19,38,11,4)
-        }
-      }
-    }
     { HBox1 Panel
-      MoveScaled(60,2,79,52)
+      MoveScaled(27,2,79,52)
       Expand = True
       Arrangement = Arrange.Horizontal
       AutoResize = True
@@ -130,19 +79,67 @@
     }
   }
   { Panel6 HBox
-    MoveScaled(1,71,136,21)
+    MoveScaled(2,57,137,38)
     Spacing = True
+    { Panel5 Panel
+      MoveScaled(0,0,47,37)
+      Border = Border.Plain
+      { Frame1 Frame
+        MoveScaled(2,2,41,8)
+        Text = ("Tamaño de la Cuadrícula del Cartón")
+        { RadioButton4x3 RadioButton
+          MoveScaled(5,3,10,4)
+          Text = ("4x3")
+          Value = True
+        }
+        { RadioButton5x4 RadioButton
+          MoveScaled(17,3,9,4)
+          Text = ("5x4")
+        }
+        { RadioButton5x5 RadioButton
+          MoveScaled(29,3,7,4)
+          Text = ("5x5")
+        }
+      }
+      { Frame2 Frame
+        MoveScaled(2,11,41,15)
+        Text = ("Huecos:")
+        { Label2 Label
+          MoveScaled(5,4,20,4)
+          Text = ("Negros (rellenos):")
+        }
+        { Label3 Label
+          MoveScaled(5,9,20,4)
+          Text = ("Blancos (vacíos):")
+        }
+        { SpinBoxBlancos SpinBox
+          MoveScaled(27,9,8,4)
+          Value = 2
+        }
+        { SpinBoxNegros SpinBox
+          MoveScaled(27,4,8,4)
+          Value = 3
+        }
+      }
+      { Label4 Label
+        MoveScaled(2,27,41,5)
+        Text = ("Número de cartones distintos a Generar:")
+      }
+      { SpinBoxNumeroCarton SpinBox
+        MoveScaled(22,32,11,4)
+      }
+    }
     { TextLabel1 TextLabel
-      MoveScaled(2,4,78,11)
+      MoveScaled(50,1,31,36)
       Text = ("    <b>Nota:</b><br>\n   El número de cartones diferentes que se pueden generar, dependerá del número de elementos que tenga el Bingo. A mayor número de elementos del bingo, mayor número de cartones distintos que se podrań crear.")
     }
     { Panel9 Panel
-      MoveScaled(81,2,5,15)
+      MoveScaled(82,19,5,15)
       Expand = True
       AutoResize = True
     }
     { Panel8 Panel
-      MoveScaled(88,2,44,17)
+      MoveScaled(91,7,44,29)
       { Panel3 Panel
         MoveScaled(1,0,11,10)
         Arrangement = Arrange.Fill
@@ -177,12 +174,12 @@
         }
       }
       { ButtonSalir Button
-        MoveScaled(27,13,13,4)
+        MoveScaled(29,22,13,4)
         Text = ("Salir")
         Picture = Picture["icon:/22/quit"]
       }
       { ButtonGuardar Button
-        MoveScaled(0,13,13,4)
+        MoveScaled(0,21,13,4)
         Text = ("Guardar")
         Picture = Picture["icon:/22/save"]
       }

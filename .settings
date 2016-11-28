@@ -67,6 +67,15 @@ Geometry=[46,16,210,210]
 [DebugWindow/b]
 Geometry=[-4,16,210,210]
 
+[DebugWindow/btmp.ListaElementosRepetidos]
+Geometry=[0,24,210,210]
+
+[DebugWindow/c]
+Geometry=[0,24,210,210]
+
+[DebugWindow/c.ArraIdElementos]
+Geometry=[39,264,210,640]
+
 [DebugWindow/e]
 Geometry=[872,202,400,300]
 
@@ -75,6 +84,15 @@ Geometry=[-4,16,210,210]
 
 [DebugWindow/ec]
 Geometry=[0,16,210,210]
+
+[DebugWindow/elementos]
+Geometry=[189,278,210,561]
+
+[DebugWindow/l]
+Geometry=[-3,24,210,792]
+
+[DebugWindow/listaRepetida]
+Geometry=[0,24,210,210]
 
 [DebugWindow/tempcole]
 Geometry=[5,21,210,210]
@@ -92,29 +110,29 @@ File[3]=".src/Clases/json/JSONCollection354.class:24.0"
 File[4]=".src/Clases/json/JSON354.module:273.0"
 File[5]=".src/Formularios/FMain.class:33.6"
 File[6]=".src/Formularios/FormFicherosBingos.form"
-File[7]="Nota.txt:12.10"
+File[7]="Nota.txt:7.0"
 File[8]=".src/Formularios/FormModificarBingos.form"
-Active=9
 File[9]=".src/Formularios/FormModificarBingos.class:150.2"
+Active=10
 File[10]=".src/Formularios/FormModificarCartones.form"
 File[11]=".src/Formularios/FormFicherosBingos.class:182.0"
 File[12]=".src/Clases/controles/SquareButton.class:78.8"
 File[13]=".src/Formularios/FormModificarElementos.form"
-File[14]=".src/Clases/Bingo.class:613.33"
-File[15]=".src/Clases/elemento.class:51.0"
+File[14]=".src/Clases/Bingo.class:446.6"
+File[15]=".src/Clases/elemento.class:60.0"
 File[16]=".src/Clases/elementoTexto.class:18.0"
 File[17]=".src/Clases/elementoImagen.class:10.2"
 File[18]=".src/Formularios/FormModificarElementos.class:367.0"
 File[19]=".src/Formularios/testGuadarBingo.module:10.0"
 File[20]=".src/Clases/elementoBlanco.class:16.2"
 File[21]=".src/Clases/elementoNegro.class:1.0"
-File[22]=".src/Clases/Carton.class:29.0"
+File[22]=".src/Clases/Carton.class:143.25"
 File[23]=".src/Formularios/testCargarBingo.module:7.0"
 File[24]=".src/Formularios/FormGrabadora.form"
 File[25]=".src/Formularios/FormGrabadora.class:26.2"
 File[26]="grabar.sh:0.36"
 File[27]=".src/Clases/elementoSonido.class:15.15"
-File[28]=".src/Formularios/FormModificarCartones.class:284.0"
+File[28]=".src/Formularios/FormModificarCartones.class:275.3"
 File[29]=".src/Formularios/FormPrevisualizar.form"
 File[30]=".src/Formularios/FormPrevisualizar.class:61.3"
 File[31]="ModelosCarton/bingotablas4x3.svg:0.0"

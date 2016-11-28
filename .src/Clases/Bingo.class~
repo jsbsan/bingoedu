@@ -28,9 +28,6 @@ Property ArrayElementosRepetidos As Elemento[] '' array de elementos repetidos d
 
 Property NumeroCartones As Integer ''indica el numero de cartones existentes.
 
-
-
-
 Private $tituloCarton As String
 Private $tamanoCuadricula As String
 Private $cuadrosNegros As Integer
@@ -40,9 +37,8 @@ Private $NumeroCartones As Integer
 Private $nombreFichero As String = "testbingo"
 Private $ArrayElementosRepetidos As New Elemento[]
 
-
 Public Sub _new()
-
+  
   ' 'creacion de un bingo en "blanco"
   ' If Not Exist(User.home & "/bingoedu") Then
   '   Mkdir User.home & "/bingoedu"
@@ -52,23 +48,31 @@ Public Sub _new()
   ' If Not Exist(User.home & "/bingoedu/" & $nombreFichero) Then
   '   Mkdir User.home & "/bingoedu/" & $nombreFichero
   ' Endif
-
-
-
+  Dim elementoNegro As New ElementoImagen
+  Dim elementoBlanco As New ElementoImagen
+  
+  elementoNegro.id = "idnegro"
+  elementoNegro.rutaimagen = "cuadroNegro.jpg"
+  elementoBlanco.id = "idblanco"
+  elementoBlanco.rutaimagen = "cuadroBlanco.jpg"
+  
+  ArrayElementosCarton.Add(elementoNegro)
+  ArrayElementosCarton.Add(elementoBlanco)
+  
 End
 
 Public Sub cargadatos(NombreArchivo As String, Optional carpeta As Boolean) 'leo un archivo .be y lo cargo en la instancia de clase bingo.
-
+  
   Dim arraytmp As String[]
-
+  
   Dim a As Integer
   Dim contenido As String
   Dim VariableDatos As Variant
   Dim clasejson As New JSON354
   Dim res As Integer
-
+  
   Dim elementoRepetido As Object
-
+  
   If carpeta = False Then
     '------------------------------------------------------------
     'se trata de un archivo comprimido que se esta leyendo
@@ -78,7 +82,7 @@ Public Sub cargadatos(NombreArchivo As String, Optional carpeta As Boolean) 'leo
       Kill User.home & "/bingoedu/" & File.BaseName(NombreArchivo) & ".tar.gz"
       Wait 0.1
     Endif
-
+    
     '2º creo carpeta de trabajo en User.home & "/bingoedu/"
     If Exist(User.home & "/bingoedu/" & File.BaseName(NombreArchivo)) Then
       res = Message.Question(("Existe un bingo con el mismo nombre, ¿que desea hacer?"), ("Borra y continua"), ("Cancelar Operacion"))
@@ -100,10 +104,9 @@ Public Sub cargadatos(NombreArchivo As String, Optional carpeta As Boolean) 'leo
     'borro el archivo comprimido
     Wait 0.1
     Kill User.home & "/bingoedu/" & File.BaseName(NombreArchivo) & "/" & File.BaseName(NombreArchivo) & ".tar.gz"
-
+    
   Endif
-
-
+  
   'leo fichero de datos
   'y lo empiezo a cargar en memoria
   '
@@ -111,14 +114,13 @@ Public Sub cargadatos(NombreArchivo As String, Optional carpeta As Boolean) 'leo
     'no existe el fichero de datos... lo creo vacio
     File.Save(User.home & "/bingoedu/" & File.BaseName(NombreArchivo) & "/" & "pruebas.dat", creoContenidoVacio())
   Endif
-
-
+  
   contenido = File.Load(User.home & "/bingoedu/" & File.BaseName(NombreArchivo) & "/" & "pruebas.dat")
-
+  
   VariableDatos = clasejson.Decode(contenido)
-
+  
   'asigno datos...
-
+  
   Me.titulo = VariableDatos["titulo"]
   Me.descripcion = VariableDatos["descripcion"]
   Me.tipo = VariableDatos["tipo"]
@@ -131,28 +133,27 @@ Public Sub cargadatos(NombreArchivo As String, Optional carpeta As Boolean) 'leo
   Me.listaCartones.Clear()
   '
   '
-
+  
   arraytmp = Split(VariableDatos["ListaElementoBingo"], "|")
   For a = 0 To arraytmp.max
     Me.ListaElementosBingo.Add(arraytmp[a])
   Next
-
-
+  
   arraytmp = Split(VariableDatos["ListaElementoCarton"], "|")
   For a = 0 To arraytmp.max
     Me.ListaElementosCarton.Add(arraytmp[a])
   Next
-
+  
   agregarListaElementos(VariableDatos, Me.ListaElementosBingo, Me.ArrayElementosBingo)
   agregarListaElementos(VariableDatos, Me.ListaElementosCarton, Me.ArrayElementosCarton)
-
+  
   ''NOTE: lista de cartornes y array de cartones
-
+  
   Me.tituloCarton = VariableDatos["TituloCarton"]
   Me.tamanoCuadricula = VariableDatos["TamanoCuadricula"]
   Me.cuadrosNegros = VariableDatos["CuadrosNegros"]
   Me.cuadrosBlancos = VariableDatos["CuadrosBlancos"]
-
+  
   arraytmp = Split(VariableDatos["ListaElementosRepetidos"], "|")
   For a = 0 To arraytmp.max
     Me.ListaElementosRepetidos.Add(arraytmp[a])
@@ -160,30 +161,29 @@ Public Sub cargadatos(NombreArchivo As String, Optional carpeta As Boolean) 'leo
     elementoRepetido = buscaElemento(arraytmp[a], Me.ArrayElementosBingo)
     Me.ArrayElementosRepetidos.add(elementoRepetido)
   Next
-
+  
   Me.NumeroCartones = VariableDatos["NumeroCartones"]
-
+  
   'lectura de cartones...
   arraytmp = Split(VariableDatos["ListaCartones"], "|")
   For a = 0 To arraytmp.max
     Me.listaCartones.Add(arraytmp[a])
   Next
-
+  
   agregarCartones(VariableDatos, Me.listaCartones, Me.ArrayCartones)
-
-
+  
 End
 
 Public Sub agregarCartones(v As Variant, lista As String[], ArrayCar As Carton[])
-
+  
   Dim a, b As Integer
-
+  
   Dim c As Carton
-
+  
   Dim arraytmp As String[]
-
+  
   ArrayCar.Clear() 'limpio el array de cartones por si hubiera elementos anteriores.
-
+  
   For a = 0 To lista.Max
     c = New Carton
     c.id = lista[a]
@@ -194,22 +194,20 @@ Public Sub agregarCartones(v As Variant, lista As String[], ArrayCar As Carton[]
     Next
     ArrayCar.Add(c)
   Next
-
+  
 End
-
-
 
 Public Sub agregarListaElementos(v As Variant, lista As String[], ArrayElementos As Elemento[])
   'repetir por cada lista de elemntos Bingo.
-
+  
   Dim a As Integer
   Dim e As Object
-
+  
   ArrayElementos.Clear() 'limpio elementos anteriores del array donde voy a introducir los elementos leidos
-
+  
   For a = 0 To lista.Max
     '  Debug V[lista[a]]["datos"]["tipo"]
-
+    
     Select Case V[lista[a]]["datos"]["tipo"]
       Case "sonido"
         e = New ElementoSonido
@@ -229,16 +227,14 @@ Public Sub agregarListaElementos(v As Variant, lista As String[], ArrayElementos
         e.enlace = V[lista[a]]["datos"]["enlace"]
         e.rutaimagen = V[lista[a]]["datos"]["rutaimagen"]
         ArrayElementos.Add(e)
-
+        
     End Select
   Next
-
+  
 End
 
-
-
 Public Sub guardarBingo(CARPETA As Boolean) ''True: guarda los datos en carpeta  directorio /home/usuario/bingoedu/<br> FALSE guardar archivo tar.gz con datos del bingo actual ".be"
-
+  
   Dim comando As String ''comando que se ejecutara para crear el tae.gz
   Dim salida As String ''salida que proporciona el comando shell
   Dim res As Integer
@@ -248,76 +244,62 @@ Public Sub guardarBingo(CARPETA As Boolean) ''True: guarda los datos en carpeta 
   '2º generar estructura de datos del Array Elementos Bingo
   '3º generar estructura de datos del Array Elementos Carton
   'Toda la información se pasa a una variable $contenido y se guarda
-
+  
   If Not Exist(User.home & "/bingoedu/" & $nombreFichero) Then
     Mkdir User.home & "/bingoedu/" & $nombreFichero
   Endif
-
-
+  
   File.Save(User.home & "/bingoedu/" & $nombreFichero & "/pruebas.dat", generaJson())
   '-imagenes y sonidos
   '-todo guardado en un tar.gz para facil manipulacion y compartir con otros usuarios.
-
+  
   If CARPETA = False Then
-
+    
     'en el caso de que la variable CARPETA sea false, procedemos a comprimir y crear el fichero .be, en la carpeta /home/usuario/
-
+    
     'y con terminacion ".be"
     comando = "cd " & User.home & "/bingoedu/" & $nombreFichero & "/;" ''fundamental añadir el punto y coma, para continuar la orden en el shell abierto
     comando &= "tar czvf \"" & $NombreFichero & ".tar.gz\" *" ''comprimimos lo que haya creando un fichero .tar.gz
     Print comando
-
+    
     Shell comando To salida
-
+    
     Inc Application.busy
     While Not Exist(User.home & "/bingoedu/" & $nombreFichero & "/" & $NombreFichero & ".tar.gz")
       Wait 0.01
     Wend
-
+    
     Dec Application.Busy
-
+    
     If Exist(User.home & "/" & $NombreFichero & ".be") Then
       res = Message.Question(("Existe un fichero con el mismo nombre, ¿desea borrarlo?"), ("Si, borralo y continua"), ("No, cancelar operación"))
       If res = 1 Then
         Kill User.home & "/" & $NombreFichero & ".be" 'borro el fichero que existe, y continuo
-
+        
       Else
         Kill User.home & "/bingoedu/" & $nombreFichero & "/" & $NombreFichero & ".tar.gz" 'Cancelo operacion, y borro el archivo comprimido que acabo de hacer.
         '  Debug "Operacion cancelada"
         Return
-
+        
       Endif
     Endif
-
+    
     Move User.home & "/bingoedu/" & $nombreFichero & "/" & $NombreFichero & ".tar.gz" To User.home & "/" & $NombreFichero & ".be"
-
-
+    
   Endif
-
+  
   ''NOTE: ver este enlace http://jsbsan.blogspot.com.es/2014/12/truco-como-guardar-y-abrir-comprimidos.html, para el tema de descompresion.
-
-End
-
-
-Public Sub DescomprimeBingo(nombre As String) ''lectura de archivo tar.gz del fichero de  datos de bintoedu y descompresion del mismo en la carpeta .config
-
-  ''TODO: descomprime el archivo dato (un tar.gz), en /tmp, y copia todos los archivos  en la carpeta de configuración (~/.config/BingoEdu/datos)
-
-  'A continuación, ahora el programa deberá recargar la carpeta   ~/.config/BingoEdu/datos, para encontrar los distintos bingos disponibles.
-  'y que aparezcan en el gridview inicial.
-
-
-
+  
 End
 
 Public Function generaJson() As String
-
+  
   Dim c As New JSON354
-
+  
   Dim tempcole As New Collection
-
+  
   Dim tmpElemento As Elemento
-
+  
   Dim tmpCarton As Carton
   'Titulo
   tempcole.Add(Me.titulo, "titulo")
@@ -328,72 +310,57 @@ Public Function generaJson() As String
   'lista de elementos bingo y elementos de cartones, separados por caracter |
   tempcole.Add(Me.ListaElementosBingo.Join("|"), "ListaElementoBingo")
   tempcole.Add(Me.ListaElementosCarton.Join("|"), "ListaElementoCarton")
-
+  
   'guardar elementos....
   For Each tmpElemento In ArrayElementosBingo
     tempcole.Add(tmpElemento.creaVariant(), tmpElemento.id)
   Next
-
+  
   ''TODO: mirarlo. todos los elementos son indistintos si estan en el bingo que en el carton
   For Each tmpElemento In ArrayElementosCarton
     tempcole.Add(tmpElemento.creaVariant(), tmpElemento.id)
   Next
-
-
+  
   'tambien haria falta pasar los datos del carton: tamaño, huecos en negros, casillas vacias, elementos fijos.
   tempcole.Add(Me.tituloCarton, "TituloCarton")
   tempcole.Add(Me.tamanoCuadricula, "TamanoCuadricula")
   tempcole.Add(Me.cuadrosNegros, "CuadrosNegros")
   tempcole.Add(Me.cuadrosBlancos, "CuadrosBlancos")
-
+  
   tempcole.Add(Me.ListaElementosRepetidos.Join("|"), "ListaElementosRepetidos")
-
+  
   tempcole.Add(Me.NumeroCartones, "NumeroCartones")
-
+  
   tempcole.Add(Me.listaCartones.Join("|"), "ListaCartones")
-
+  
   For Each tmpCarton In Me.ArrayCartones
     tempcole.Add(tmpCarton.creaVariant(), tmpCarton.id)
   Next
-
-
-
+  
   Return c.Encode(tempcole) 'devuelve el contenido de tmpcole como estructura json
-
-
+  
 End
-
-
-
-
-
-
-
 
 Public Sub agregarElementoBingo(e As Elemento) 'agregas un elemento bingo a los datos del bingo.
-
+  
   Me.ArrayElementosBingo.Add(e)
   Me.ListaElementosBingo.Add(e.id)
-
+  
 End
 
-
 Public Sub agregarElementoCarton(e As Elemento) 'agrega un elemento carton a los datos del bingo
-
+  
   Me.ArrayElementosCarton.Add(e)
   Me.ListaElementosCarton.Add(e.id)
-
+  
 End
 
 Public Sub agregarCarton(e As Carton) ''agrega un carton a los datos del bingo
-
+  
   Me.ArrayCartones.Add(e)
   Me.listaCartones.Add(e.id)
-
+  
 End
-
-
-
 
 '-------------------------------------------------------------------------------------
 Private $titulo As String
@@ -401,160 +368,149 @@ Private $descripcion As String
 Private $tipo As String
 
 Private Function titulo_Read() As String
-
+  
   Return $titulo
-
+  
 End
 
 Private Sub titulo_Write(Value As String)
-
+  
   $titulo = value
-
+  
 End
 
 Private Function descripcion_Read() As String
-
+  
   Return $descripcion
-
+  
 End
 
 Private Sub descripcion_Write(Value As String)
-
+  
   $descripcion = value
-
+  
 End
 
 Private Function tipo_Read() As String
-
+  
   Return $tipo
-
+  
 End
 
 Private Sub tipo_Write(Value As String)
-
+  
   $tipo = value
-
+  
 End
 
-
-
 Private Function tituloCarton_Read() As String
-
+  
   Return $tituloCarton
-
+  
 End
 
 Private Sub tituloCarton_Write(Value As String)
-
+  
   $tituloCarton = value
-
+  
 End
 
 Private Function tamanoCuadricula_Read() As String
-
+  
   Return $tamanoCuadricula
-
+  
 End
 
 Private Sub tamanoCuadricula_Write(Value As String)
-
+  
   $tamanoCuadricula = value
-
+  
 End
 
 Private Function cuadrosNegros_Read() As Integer
-
+  
   Return $cuadrosNegros
-
+  
 End
 
 Private Sub cuadrosNegros_Write(Value As Integer)
-
+  
   $cuadrosNegros = value
-
-
+  
 End
 
 Private Function cuadrosBlancos_Read() As Integer
-
+  
   Return $cuadrosBlancos
-
+  
 End
 
 Private Sub cuadrosBlancos_Write(Value As Integer)
-
-
+  
   $cuadrosBlancos = value
-
-
+  
 End
 
 Private Function ListaElementosRepetidos_Read() As String[]
-
+  
   Return $ListaElementosRepetidos
-
+  
 End
 
 Private Sub ListaElementosRepetidos_Write(Value As String[])
-
+  
   $ListaElementosRepetidos = value
-
+  
 End
 
 Private Function NumeroCartones_Read() As Integer
-
+  
   Return $NumeroCartones
-
+  
 End
 
-
-
 Private Sub NumeroCartones_Write(Value As Integer)
-
-
+  
   $NumeroCartones = value
-
+  
 End
 
 Private Function NombreFichero_Read() As String
-
+  
   Return $nombreFichero
-
+  
 End
 
 Private Sub NombreFichero_Write(Value As String)
-
+  
   $nombreFichero = value
-
+  
   'creacion de un bingo en "blanco"
   If Not Exist(User.home & "/bingoedu") Then
     Mkdir User.home & "/bingoedu"
   Endif
-
+  
   ''NOTE: modo test para debug, creacion de directorio test de bingo
   ' If Not Exist(User.home & "/bingoedu/" & File.Name($nombreFichero)) Then
   '   Mkdir User.home & "/bingoedu/" & file.name($nombreFichero)
   ' Endif
-
+  
 End
-
-
 
 '------------------------------------------------------------------------
 'Zona de Carga de datos en Controles Gridview
 '------------------------------------------------------------------------
 
 Public Sub CargarDatosBingoCartonesGridview(g As GridView) '' Carga los datos de los elementos del bingo y cartones
-
+  
   Dim e As Elemento
   Dim ecarton As Elemento
-
+  
   'La carga la realizamos usando el listado de elementos de bingo
   g.Rows.count = 0 'eliminados todas las filas existentes
   g.Clear()
   For Each e In Me.ArrayElementosBingo
-
-
+    
     'añado una fila al gridview..
     g.Rows.count += 1
     g.Rows.Height = 45
@@ -566,32 +522,30 @@ Public Sub CargarDatosBingoCartonesGridview(g As GridView) '' Carga los datos de
     'escribimos datos del elemnto carton relacinado con el elemento bingo.
     g[g.Rows.Max, 2].Picture = ImagenTipoElemento(ecarton) 'devuelve un icono que representa
     g[g.Rows.Max, 3].text = TextoElemento(ecarton) ''escribira el texto, o el nombre de la imagen o sonido
-
+    
     g[g.Rows.Max, 0].Refresh()
     g[g.Rows.Max, 1].Refresh()
     g[g.Rows.Max, 2].Refresh()
     g[g.Rows.Max, 3].Refresh()
-
+    
   Next
-
+  
   G.TAG = Me.ArrayElementosBingo
-
-
+  
 End
 
-
 Public Sub CargaDatosGridviewDatosRepetidos(G As GridView)
-
+  
   Dim ArrayEle As Elemento[]
   Dim e As Elemento
   Dim ecarton As Elemento
-
+  
   'La carga la realizamos usando el listado de elementos de bingo
   g.Rows.count = 0 'eliminados todas las filas existentes
   g.Clear()
-
+  
   For Each e In Me.ArrayElementosRepetidos
-
+    
     'añado una fila al gridview..
     g.Rows.count += 1
     g.Rows.Height = 45
@@ -603,47 +557,41 @@ Public Sub CargaDatosGridviewDatosRepetidos(G As GridView)
     'escribimos datos del elemnto carton relacinado con el elemento bingo.
     g[g.Rows.Max, 2].Picture = ImagenTipoElemento(ecarton) 'devuelve un icono que representa
     g[g.Rows.Max, 3].text = TextoElemento(ecarton) ''escribira el texto, o el nombre de la imagen o sonido
-
+    
     g[g.Rows.Max, 0].Refresh()
     g[g.Rows.Max, 1].Refresh()
     g[g.Rows.Max, 2].Refresh()
     g[g.Rows.Max, 3].Refresh()
-
+    
   Next
-
+  
   G.TAG = Me.ArrayElementosRepetidos
-
+  
 End
 
-
-
-
 Public Function buscaElemento(id As String, arrayElem As Elemento[]) As Elemento
-
+  
   Dim ebuscado As Elemento
-'dado un id, y una lista de elementos[], nos devuelve el elemento que tenga ese id.
-
+  'dado un id, y una lista de elementos[], nos devuelve el elemento que tenga ese id.
+  
   For Each ebuscado In arrayElem
     If ebuscado.id = id Then
       Return ebuscado
-
+      
     Endif
   Next
-
+  
   'Si llegamos a este punto, no ha encontrado el elemento enlazado...hay un error
   'poner mensaje de error o devolver null
   Return Null
-
-
-
+  
 End
-
 
 '-----------------------
 Public Function ImagenTipoElemento(e As Elemento) As Picture
-
+  
   Dim rutaicono As String ''icono que representa imagen, texto, o sonido
-
+  
   Select Case e.tipoElemento()
     Case Upper$("ElementoImagen")
       rutaIcono = "iconoimagen32.png"
@@ -653,21 +601,21 @@ Public Function ImagenTipoElemento(e As Elemento) As Picture
       rutaIcono = "iconosonido32.png"
   End Select
   Return Picture[rutaicono]
-
+  
 End
 '---------------------------
 
 Public Function TextoElemento(e As Variant) As String
-
+  
   'nota de programacion:
   'En principo deberia ser la definicion de la funcion:
   '(e As elemento) en vez de (e As Variant)
   'pero cuando intento acceder a propiedades de las clases heredades ElementoTexto, ElementoImagen, me da error
   'por eso lo he tenido que dejar como Variant, y asi no me da problemas.
   '
-
+  
   Dim contenido As String
-
+  
   Select Case e.tipoElemento()
     Case Upper$("ElementoImagen")
       contenido = File.Name(e.rutaimagen)
@@ -676,47 +624,43 @@ Public Function TextoElemento(e As Variant) As String
     Case Upper$("ElementoSonido")
       contenido = File.name(e.rutasonido)
   End Select
-
+  
   Return contenido
-
+  
 End
 
-
-
 Public Function copiaFichero(ruta As String) ''Me encargo de copia un fichero de su origen al directorio del bingo
-
+  
   If Exist(User.home & "/bingoedu/" & $nombreFichero & "/" & File.Name(ruta)) Then
     'existe el fichero no lo copio
     ''FIXME:Message.Info(("Existe un fichero con el mismo nombre"))
     'no copio el fichero...
     Return
   Endif
-
-
+  
   Try Copy ruta To User.home & "/bingoedu/" & $nombreFichero & "/" & File.Name(ruta)
-
+  
   If Error Then
     Print "Error al intentar copiar fichero "
   Endif
-
+  
 End
-
 
 Public Function creoContenidoVacio() As String
   'generar una estructura de datos vacia
-
+  
   Return generaJson()
-
+  
 End
 
 Private Function ArrayElementosRepetidos_Read() As Elemento[]
-
+  
   Return $ArrayElementosRepetidos
-
+  
 End
 
 Private Sub ArrayElementosRepetidos_Write(Value As Elemento[])
-
+  
   $ArrayElementosRepetidos = value
-
+  
 End

@@ -7,67 +7,158 @@ Private $ArraIdElementos As New String[]
 Property id As String '' clave que identifica al carton
 Private $id As String
 
-
 Public Sub _new()
-
+  
   'cuando se crea se identefica
   Me.id = Hex(CFloat(Now) * 86400000) & "_" & Str$(Int(Rnd(1, 100) * 10))
   '' se crea un identificador unico Ref: https://www.gambas-es.org/viewtopic.php?f=5&t=5837
-
+  
 End
 
-
-
 Private Sub agregaDatos(ByRef datos As Collection) 'al introducirlos por referencia no necesito devolver nada, los añado directamente.
-
+  
   '' datos.Add(Me.id, "id")
   datos.Add(Me.ArraIdElementos.Join("|"), "lista") 'devuelve una cadena con los id de los elementos que contiene
-
+  
 End
 
 Public Sub creaVariant() As Variant 'realmente crea una variant con todo el contenido
-
-  Dim tempcole As New Collection
+  
   Dim temp2cole As New Collection
-
+  
   ' 'Dato de Identeificacion
   ' tempcole.Add(Me.id, "id") ''DATO REPETIDO
-
-
+  
   'añadir datos segun tipo de elemento
   agregaDatos(ByRef temp2cole) 'lo paso por referencia para modificarlo internamente y no tener que usar el valor de retorno
-
+  
   ' tempcole.Add(temp2cole, "datos")
-
+  
   Return temp2cole '
-
+  
 End
 
+'-------------------------------------
+'generar un carton: datos que se le pasan
+'cuadricula
+'cuadros negros
+'cuadros blancos
+'listaelementosrepetidos
+'listade elementos -> serán elegidos al azar
+'auxiliar:
+'comprobar si el carton es diferente a los ya creados
+'-------------------------------------
+'
+Public Sub generarCarton(TamanoCuadricula As String, numeroCuadrosNegros As Integer, numeroCuadrosBlancos As Integer, listaRepetido As String[], listaelementos As String[])
+  
+  Dim a As Integer
+  Dim elementos As New String[]
+  'Dim indice As Integer[] -> para futura mejora
+  
+  'crea la lista de elementos...
+  
+  Select Case TamanoCuadricula
+    Case "4x3" 
+      For a = 1 To 12
+        elementos.Add("") 'longitud 12 veces
+        'indice.Add(a) -> para futura mejora
+      Next
+      'coloco cuadros negros
+      colocarCuadros(12, numeroCuadrosNegros, "idnegro", ByRef elementos)
+      'coloco cuadros blancos
+      colocarCuadros(12, numeroCuadrosBlancos, "idblanco", ByRef elementos)
+      'colocar elementos de la lista  de repetidos...
+      colocarElementosRepetidos(12, listaRepetido, ByRef elementos)
+      'colocar elementos...
+      colocarElementos(12, listaelementos, ByRef elementos)
+      
+  End Select
+  
+  $ArraIdElementos = elementos.Copy()
+  
+End
 
+Private Sub colocarElementos(longitud As Integer, lista As String[], ByRef elemento As String[])
+  
+  Dim l As String[]
+  Dim a As Integer
+  Dim aleatorio As Integer
+  
+  l = lista.Copy()
+  
+  For a = 0 To longitud - 1
+    If elemento[a] = "" Then 
+      aleatorio = Int(Rnd(0, l.count))
+      elemento[a] = l[aleatorio]
+      l.Delete(aleatorio)
+      'borro de la lista para no repetirlo
+    Endif
+    
+  Next
+  
+End
 
+Private Sub colocarElementosRepetidos(longitud As Integer, listaRepetida As String[], ByRef elementos As String[])
+  
+  Dim aleatorio As Integer
+  Dim a As Integer
+  
+  For a = 1 To listaRepetida.Count
+    Do
+      aleatorio = Int(Rnd(0, longitud))
+      If elementos[aleatorio] = "" Then
+        elementos[aleatorio] = listaRepetida[a - 1]
+        Break
+      Endif
+      
+    Loop 
+    
+  Next
+  
+End
 
-
+Private Sub colocarCuadros(longitud As Integer, numero As Integer, texto As String, ByRef elementos As String[])
+  
+  Dim aleatorio As Integer
+  Dim a As Integer
+  
+  For a = 1 To numero
+    Do
+      aleatorio = Int(Rnd(0, longitud)
+      If elementos[aleatorio] = "" Then
+        elementos[aleatorio] = texto
+        Break
+      Endif
+      
+    Loop 
+    
+  Next
+  
+  ''TODO: Este algoritmo se puede mejorar, creando una lista enumerada, y extrayendo aleatoriamente uno de los elemento
+  ''ese elemnto tiene el numero de indice que ocupará el elemento 
+  
+End
 
 Private Function ArraIdElementos_Read() As String[]
-
+  
   Return $ArraIdElementos
-
+  
 End
 
 Private Sub ArraIdElementos_Write(Value As String[])
-
+  
   $ArraIdElementos = value
-
+  
 End
 
 Private Function id_Read() As String
-
+  
   Return $id
-
+  
 End
 
 Private Sub id_Write(Value As String)
-
+  
   $id = value
-
+  
 End
