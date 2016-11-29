@@ -17,7 +17,7 @@
     }
   }
   { Panel4 Panel
-    MoveScaled(0,0,121,13)
+    MoveScaled(0,0,121,10)
     { TextLabel2 TextLabel
       MoveScaled(0.4286,0,53,5)
       Font = Font["Italic,+4"]
@@ -43,49 +43,43 @@
       Alignment = Align.Center
     }
   }
-  { HBox2 HBox
-    MoveScaled(1,14,136,40)
+  { HsplitGridView HSplit
+    MoveScaled(1,9,142,61)
     Expand = True
-    AutoResize = True
     Spacing = True
-    { HBox1 Panel
-      MoveScaled(27,2,79,52)
-      Expand = True
-      Arrangement = Arrange.Horizontal
-      AutoResize = True
-      Spacing = True
-      Padding = 1
-      Border = Border.Plain
+    { HBox1 HBox
+      MoveScaled(7,5,57,52)
       { GridViewElementosRepetidos GridView
-        MoveScaled(2,3,29,47)
+        MoveScaled(-5,1,33,47)
         Expand = True
         PopupMenu = "MenuGridview"
       }
       { Panel7 Panel
-        MoveScaled(31,2,11,48)
+        MoveScaled(45,3,9,28)
+        AutoResize = True
         { ButtonQuitar Button
-          MoveScaled(1,16,8,6)
+          MoveScaled(0,16,8,6)
           Picture = Picture["FechaVerdeDer.png"]
         }
         { ButtonPasar Button
-          MoveScaled(1,7,8,6)
+          MoveScaled(0,7,8,6)
           Picture = Picture["FechaVerdeIzq.png"]
         }
       }
-      { GridViewElementosBingo GridView
-        MoveScaled(44,2,27,46)
-        Expand = True
-      }
+    }
+    { GridViewElementosBingo GridView
+      MoveScaled(89,1,27,59)
+      Expand = True
     }
   }
   { Panel6 HBox
-    MoveScaled(2,57,137,38)
+    MoveScaled(1,70,137,28)
     Spacing = True
     { Panel5 Panel
-      MoveScaled(0,0,47,37)
+      MoveScaled(0,0,45,26)
       Border = Border.Plain
       { Frame1 Frame
-        MoveScaled(2,2,41,8)
+        MoveScaled(2,1,41,8)
         Text = ("Tamaño de la Cuadrícula del Cartón")
         { RadioButton4x3 RadioButton
           MoveScaled(5,3,10,4)
@@ -102,7 +96,7 @@
         }
       }
       { Frame2 Frame
-        MoveScaled(2,11,41,15)
+        MoveScaled(2,10,41,15)
         Text = ("Huecos:")
         { Label2 Label
           MoveScaled(5,4,20,4)
@@ -121,38 +115,43 @@
           Value = 3
         }
       }
+    }
+    { VBox1 VBox
+      MoveScaled(46,1,38,26)
       { Label4 Label
-        MoveScaled(2,27,41,5)
+        MoveScaled(0,0,41,5)
         Text = ("Número de cartones distintos a Generar:")
       }
       { SpinBoxNumeroCarton SpinBox
-        MoveScaled(22,32,11,4)
+        MoveScaled(9,5,11,4)
+        MinValue = 1
+        MaxValue = 10000
+      }
+      { TextLabel1 TextLabel
+        MoveScaled(1,9,36,17)
+        Text = ("    <b>Nota:</b><br>\n   El número de cartones diferentes que se pueden generar, dependerá del número de elementos que tenga el Bingo. A mayor número de elementos del bingo, mayor número de cartones distintos que se podrań crear.")
       }
     }
-    { TextLabel1 TextLabel
-      MoveScaled(50,1,31,36)
-      Text = ("    <b>Nota:</b><br>\n   El número de cartones diferentes que se pueden generar, dependerá del número de elementos que tenga el Bingo. A mayor número de elementos del bingo, mayor número de cartones distintos que se podrań crear.")
-    }
     { Panel9 Panel
-      MoveScaled(82,19,5,15)
+      MoveScaled(85,7,5,15)
       Expand = True
       AutoResize = True
     }
     { Panel8 Panel
-      MoveScaled(91,7,44,29)
+      MoveScaled(91,0,44,27)
       { Panel3 Panel
-        MoveScaled(1,0,11,10)
+        MoveScaled(2,6,11,10)
         Arrangement = Arrange.Fill
         Border = Border.Plain
         { SquareButtonPrevisualizar SquareButton
-          MoveScaled(0,1,11,8)
+          MoveScaled(0,0,11,8)
           Expand = True
           Text = ("Previsualizar")
           Picture = Picture["icon:/22/wizard"]
         }
       }
       { Panel2 Panel
-        MoveScaled(15,0,11,10)
+        MoveScaled(16,6,11,10)
         Arrangement = Arrange.Fill
         Border = Border.Plain
         { SquareButtonImprimir SquareButton
@@ -163,7 +162,7 @@
         }
       }
       { Panel1 Panel
-        MoveScaled(29,0,11,10)
+        MoveScaled(30,6,11,10)
         Arrangement = Arrange.Fill
         Border = Border.Plain
         { SquareButtonGenerar SquareButton
@@ -174,12 +173,12 @@
         }
       }
       { ButtonSalir Button
-        MoveScaled(29,22,13,4)
+        MoveScaled(29,21,13,4)
         Text = ("Salir")
         Picture = Picture["icon:/22/quit"]
       }
       { ButtonGuardar Button
-        MoveScaled(0,21,13,4)
+        MoveScaled(2,21,13,4)
         Text = ("Guardar")
         Picture = Picture["icon:/22/save"]
       }

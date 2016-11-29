@@ -9,7 +9,7 @@ Public Sub Form_Open()
   
   definirGridViewElementosRepetidos()
   definirGridViewBingo()
-  
+  HsplitGridView.Layout = [5, 5]
   rellenadatos()
   
   okguardado = True

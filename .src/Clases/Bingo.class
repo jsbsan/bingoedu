@@ -667,3 +667,54 @@ Private Sub ArrayElementosRepetidos_Write(Value As Elemento[])
   $ArrayElementosRepetidos = value
   
 End
+
+''**********************************************
+''GENERAR CARTONES DEL BINGO....
+''**********************************************
+
+'Proceso de generar cartones
+'Consultar el numero de cartones a generar
+'repetir proceso 
+'crea carton
+'compara con los que hay, si es dintinto lo añade
+'repite tantas veces como cartones haya que crear
+' como medida de seguridad, si el numero de repeticiones es excesivo... se informa de que o son pocos elementos, o muchos cartones
+'
+Public Sub generarCartones() As Boolean 'si devuelve FALSE, hay un problema al crear los cartones
+  
+  Dim a As Integer
+  Dim contador As Integer 'nos sirve para comprobar el nuemro fallido de creacion de cartones que son iguales a los existentes
+  Dim ctmp As Carton
+  Dim ctmp2 As Carton
+  Dim agregar As Boolean 'bandera que nos sirve para añadir carton o no a la lista de cartones
+  Dim cuadrosCuadricula As Integer
+  
+  'borro los cartones anteriores...
+  Me.ArrayCartones.Clear()
+  Me.listaCartones.Clear()
+  
+  While (Me.ArrayCartones.count < Me.NumeroCartones)
+    ctmp = New Carton
+    ctmp.generarCarton(Me.tamanoCuadricula, Me.cuadrosNegros, Me.cuadrosBlancos, Me.ListaElementosRepetidos, Me.ListaElementosCarton)
+    agregar = True
+    For Each ctmp2 In ArrayCartones
+      If ctmp.CompararCarton(ctmp2) Then 
+        'carton generado es igual a uno existente... 
+        agregar = False
+        contador += 1
+        If contador > Me.NumeroCartones * 10 Then 
+          'hay problemas es posible de que haya unproblema al generar los cartones
+          Return False 
+        Endif
+      Endif
+    Next
+    If agregar = True Then
+      'se debe de incluir
+      listaCartones.Add(ctmp.id)
+      ArrayCartones.Add(ctmp)
+    Endif    
+  Wend
+  
+  Return True 'se han creado los cartones bien
+  
+End

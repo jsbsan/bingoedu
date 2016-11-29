@@ -7,6 +7,9 @@ Count=0
 [DebugWindow/$elementoImagen]
 Geometry=[0,16,230,210]
 
+[DebugWindow/ArrayCartones]
+Geometry=[0,24,210,210]
+
 [DebugWindow/ArrayElementosCarton]
 Geometry=[16,388,412,210]
 
@@ -24,6 +27,21 @@ Geometry=[46,16,748,387]
 
 [DebugWindow/Me]
 Geometry=[714,517,234,688]
+
+[DebugWindow/Me.ArrayCartones]
+Geometry=[0,24,210,828]
+
+[DebugWindow/Me.ArrayCartones[821]]
+Geometry=[319,107,210,828]
+
+[DebugWindow/Me.ArrayCartones[821].ArraIdElementos]
+Geometry=[583,78,210,828]
+
+[DebugWindow/Me.ArrayCartones[850]]
+Geometry=[14,24,210,828]
+
+[DebugWindow/Me.ArrayCartones[850].ArraIdElementos]
+Geometry=[806,60,210,828]
 
 [DebugWindow/Me.ArrayElementosBingo]
 Geometry=[-4,16,210,210]
@@ -76,6 +94,12 @@ Geometry=[0,24,210,210]
 [DebugWindow/c.ArraIdElementos]
 Geometry=[39,264,210,640]
 
+[DebugWindow/ctmp]
+Geometry=[706,475,610,463]
+
+[DebugWindow/ctmp.ArraIdElementos]
+Geometry=[40,476,234,370]
+
 [DebugWindow/e]
 Geometry=[872,202,400,300]
 
@@ -86,13 +110,19 @@ Geometry=[-4,16,210,210]
 Geometry=[0,16,210,210]
 
 [DebugWindow/elementos]
-Geometry=[189,278,210,561]
+Geometry=[987,124,210,561]
 
 [DebugWindow/l]
 Geometry=[-3,24,210,792]
 
 [DebugWindow/listaRepetida]
 Geometry=[0,24,210,210]
+
+[DebugWindow/listaRepetido]
+Geometry=[0,24,210,210]
+
+[DebugWindow/listaelementos]
+Geometry=[0,24,210,605]
 
 [DebugWindow/tempcole]
 Geometry=[5,21,210,210]
@@ -110,15 +140,15 @@ File[3]=".src/Clases/json/JSONCollection354.class:24.0"
 File[4]=".src/Clases/json/JSON354.module:273.0"
 File[5]=".src/Formularios/FMain.class:33.6"
 File[6]=".src/Formularios/FormFicherosBingos.form"
+Active=7
 File[7]="Nota.txt:7.0"
 File[8]=".src/Formularios/FormModificarBingos.form"
-File[9]=".src/Formularios/FormModificarBingos.class:150.2"
-Active=10
+File[9]=".src/Formularios/FormModificarBingos.class:175.3"
 File[10]=".src/Formularios/FormModificarCartones.form"
 File[11]=".src/Formularios/FormFicherosBingos.class:182.0"
 File[12]=".src/Clases/controles/SquareButton.class:78.8"
 File[13]=".src/Formularios/FormModificarElementos.form"
-File[14]=".src/Clases/Bingo.class:446.6"
+File[14]=".src/Clases/Bingo.class:702.21"
 File[15]=".src/Clases/elemento.class:60.0"
 File[16]=".src/Clases/elementoTexto.class:18.0"
 File[17]=".src/Clases/elementoImagen.class:10.2"
@@ -126,13 +156,13 @@ File[18]=".src/Formularios/FormModificarElementos.class:367.0"
 File[19]=".src/Formularios/testGuadarBingo.module:10.0"
 File[20]=".src/Clases/elementoBlanco.class:16.2"
 File[21]=".src/Clases/elementoNegro.class:1.0"
-File[22]=".src/Clases/Carton.class:143.25"
+File[22]=".src/Clases/Carton.class:12.3"
 File[23]=".src/Formularios/testCargarBingo.module:7.0"
 File[24]=".src/Formularios/FormGrabadora.form"
 File[25]=".src/Formularios/FormGrabadora.class:26.2"
 File[26]="grabar.sh:0.36"
 File[27]=".src/Clases/elementoSonido.class:15.15"
-File[28]=".src/Formularios/FormModificarCartones.class:275.3"
+File[28]=".src/Formularios/FormModificarCartones.class:9.2"
 File[29]=".src/Formularios/FormPrevisualizar.form"
 File[30]=".src/Formularios/FormPrevisualizar.class:61.3"
 File[31]="ModelosCarton/bingotablas4x3.svg:0.0"

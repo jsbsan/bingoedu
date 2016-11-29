@@ -98,7 +98,8 @@
       MoveScaled(0,0,4,6)
     }
     { ButtonAgregarElemento Button
-      MoveScaled(1,0,20,6)
+      MoveScaled(1,0,17,6)
+      Font = Font["-1"]
       Text = ("Añadir Elemento")
       Picture = Picture["icon:/16/add"]
     }
@@ -108,6 +109,7 @@
     }
     { Button1 Button
       MoveScaled(25,0,26,5)
+      Font = Font["-1"]
       Text = ("Multiple Elementos de Texto")
       Picture = Picture["iconoletra16.png"]
     }
@@ -116,7 +118,7 @@
       Expand = True
     }
     { ButtonGuadarModificaciones Button
-      MoveScaled(44,0,14,6)
+      MoveScaled(45,0,13,6)
       Text = ("Guardar")
       Picture = Picture["icon:/22/save"]
     }
@@ -125,7 +127,7 @@
       Expand = True
     }
     { ButtonSalir Button
-      MoveScaled(74,0,16,6)
+      MoveScaled(74,0,10,6)
       Text = ("Salir")
       Picture = Picture["icon:/22/quit"]
     }

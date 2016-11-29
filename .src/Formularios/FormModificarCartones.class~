@@ -9,7 +9,7 @@ Public Sub Form_Open()
   
   definirGridViewElementosRepetidos()
   definirGridViewBingo()
-  
+  HsplitGridView.Layout = [5, 1, 5]
   rellenadatos()
   
   okguardado = True
@@ -284,7 +284,7 @@ Public Sub SquareButtonPrevisualizar_Click()
 End
 
 Public Sub SquareButtonGenerar_Click()
-
+  
   Dim a As Integer
   Dim c As New Carton
   
@@ -296,7 +296,7 @@ Public Sub SquareButtonGenerar_Click()
   '
   'para teste text hacemo uno
   
-  For a = 1 To 5
+  For a = 1 To 50
     c.generarCarton(btmp.tamanoCuadricula, btmp.cuadrosNegros, btmp.cuadrosBlancos, btmp.ListaElementosRepetidos, btmp.ListaElementosCarton)
     
     Print "carton generado"

@@ -48,8 +48,43 @@ End
 'auxiliar:
 'comprobar si el carton es diferente a los ya creados
 '-------------------------------------
-'
+
+Public Function CompararCarton(c As Carton) As Boolean
+  
+  Dim cadenaID As String
+  
+  For Each cadenaID In c.ArraIdElementos
+    If $ArraIdElementos.Find(cadenaID) = -1 Then 
+      'al menos, no contiene un elemento, por lo tanto son distintos
+      Return False
+      
+    Endif
+    
+  Next
+  Return True 'son iguales, he procesado toda la lista, y todos los he encontrado en el carton.
+  
+End
+
 Public Sub generarCarton(TamanoCuadricula As String, numeroCuadrosNegros As Integer, numeroCuadrosBlancos As Integer, listaRepetido As String[], listaelementos As String[])
+  
+  'crea la lista de elementos...
+  
+  Select Case TamanoCuadricula
+    Case "4x3" 
+      rellenaCarton(12, numeroCuadrosNegros, numeroCuadrosBlancos, listaRepetido, listaelementos)
+    Case "5x4"
+      rellenaCarton(20, numeroCuadrosNegros, numeroCuadrosBlancos, listaRepetido, listaelementos)
+    Case "5x5"
+      rellenaCarton(25, numeroCuadrosNegros, numeroCuadrosBlancos, listaRepetido, listaelementos)
+    Case Else
+      Message.Info(("Error, desconocido tamaño de cuadricula"))
+      Return 
+      
+  End Select
+  
+End
+
+Private Sub rellenaCarton(numero As Integer, numeroCuadrosNegros As Integer, numeroCuadrosBlancos As Integer, listaRepetido As String[], listaelementos As String[])
   
   Dim a As Integer
   Dim elementos As New String[]
@@ -57,22 +92,18 @@ Public Sub generarCarton(TamanoCuadricula As String, numeroCuadrosNegros As Inte
   
   'crea la lista de elementos...
   
-  Select Case TamanoCuadricula
-    Case "4x3" 
-      For a = 1 To 12
-        elementos.Add("") 'longitud 12 veces
-        'indice.Add(a) -> para futura mejora
-      Next
-      'coloco cuadros negros
-      colocarCuadros(12, numeroCuadrosNegros, "idnegro", ByRef elementos)
-      'coloco cuadros blancos
-      colocarCuadros(12, numeroCuadrosBlancos, "idblanco", ByRef elementos)
-      'colocar elementos de la lista  de repetidos...
-      colocarElementosRepetidos(12, listaRepetido, ByRef elementos)
-      'colocar elementos...
-      colocarElementos(12, listaelementos, ByRef elementos)
-      
-  End Select
+  For a = 1 To numero
+    elementos.Add("") 'longitud 12 veces
+    'indice.Add(a) -> para futura mejora
+  Next
+  'coloco cuadros negros
+  colocarCuadros(numero, numeroCuadrosNegros, "idnegro", ByRef elementos)
+  'coloco cuadros blancos
+  colocarCuadros(numero, numeroCuadrosBlancos, "idblanco", ByRef elementos)
+  'colocar elementos de la lista  de repetidos...
+  colocarElementosRepetidos(numero, listaRepetido, ByRef elementos)
+  'colocar elementos...
+  colocarElementos(numero, listaelementos, ByRef elementos)
   
   $ArraIdElementos = elementos.Copy()
   

@@ -144,8 +144,38 @@ Public Sub TextBoxFicheroBingo_LostFocus()
 End
 
 Public Sub Button1_Click()
-
+  
   FormMultipleElementosDeTexto.bingotmp = bingotmp 'le paso el bingo para que lo modifique si es necesario...
   FormMultipleElementosDeTexto.ShowModal()
+  ButtonRefrescar_Click()
+  
+End
+
+Public Sub ButtonGenerarCartones_Click()
+  
+  Dim res As Integer
+  Dim textoMensaje As String
+  
+  res = Message.Question(("Generar cartones, borra los anteriores, ¿quiere continuar?"), ("Si, continua"), ("No, cancelar"))
+  
+  If res <> 1 Then Return 'no, ha cancelado el usuario
+  
+  If bingotmp.generarCartones() = False Then 
+    textoMensaje = ("Problemas al crear los cartones, causas:") 
+    textoMensaje &= "\n" & ("     Hay pocos elementos") 
+    textoMensaje &= "\n" & ("     Hay muchos cartones para crear") 
+    textoMensaje &= "\n" & ("no es posible crear el numero de cartones solicitado")
+    Message.Error(textoMensaje)
+    
+  Endif
+  
+  'Proceso de generar cartones
+  'Consultar el numero de cartones a generar
+  'repetir proceso 
+  'crea carton
+  'compara con los que hay, si es dintinto lo añade
+  'repite tantas veces como cartones haya que crear
+  ' como medida de seguridad, si el numero de repeticiones es excesivo... se informa de que o son pocos elementos, o muchos cartones
+  '
   
 End

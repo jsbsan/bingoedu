@@ -14,83 +14,87 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: FormModificarBingos.form:42
+#: FormModificarBingos.form:43
 msgid "Cartones"
 msgstr ""
 
-#: FormModificarBingos.form:46
-msgid "Propiedades de Cartones y Generarlos"
+#: FormModificarBingos.form:47
+msgid "Propiedades de los Cartones"
 msgstr ""
 
-#: FormModificarBingos.form:58
+#: FormModificarBingos.form:59
 msgid "Ver Cartones"
 msgstr ""
 
-#: FormModificarBingos.form:67
-msgid "matematicas"
-msgstr ""
-
-#: FormModificarBingos.form:67
-msgid "ingles"
-msgstr ""
-
-#: FormModificarBingos.form:67
-msgid "lengua"
+#: FormModificarBingos.form:65
+msgid "Generar Cartones"
 msgstr ""
 
 #: FormModificarBingos.form:74
+msgid "matematicas"
+msgstr ""
+
+#: FormModificarBingos.form:74
+msgid "ingles"
+msgstr ""
+
+#: FormModificarBingos.form:74
+msgid "lengua"
+msgstr ""
+
+#: FormModificarBingos.form:81
 msgid "aqui se define el titulo que vendrá en cada carton"
 msgstr ""
 
-#: FormModificarBingos.form:75
+#: FormModificarBingos.form:82
 msgid "Categoria:"
 msgstr ""
 
-#: FormModificarBingos.form:85
+#: FormModificarBingos.form:92
 msgid "aqui se define el tema del bingo"
 msgstr ""
 
-#: FormModificarBingos.form:86
+#: FormModificarBingos.form:93
 msgid "Titulo:"
 msgstr ""
 
-#: FormModificarBingos.form:92
+#: FormModificarBingos.form:99
 msgid "Nombre fichero:"
 msgstr ""
 
-#: FormModificarBingos.form:104
+#: FormModificarBingos.form:111
 msgid ".be"
 msgstr ""
 
-#: FormModificarBingos.form:116
+#: FormModificarBingos.form:123
 msgid "Descripción:"
 msgstr ""
 
-#: FormModificarBingos.form:122
+#: FormModificarBingos.form:129
 msgid "Elementos que componen el Bingo actual:"
 msgstr ""
 
-#: FormModificarBingos.form:127
+#: FormModificarBingos.form:134
 msgid "Visualizar imagenes"
 msgstr ""
 
-#: FormModificarBingos.form:138
+#: FormModificarBingos.form:145
 msgid "Para editar un elemento, seleccionalo y haga DobleClick"
 msgstr ""
 
-#: FormModificarBingos.form:154
+#: FormModificarBingos.form:161
 msgid "Añadir Elemento"
 msgstr ""
 
-#: FormModificarBingos.form:166
+#: FormModificarBingos.form:173
 msgid "Multiple Elementos de Texto"
 msgstr ""
 
-#: FormModificarBingos.form:177
+#: FormModificarBingos.form:184
 msgid "Guardar"
 msgstr ""
 
-#: FormModificarBingos.form:188
+#: FormModificarBingos.form:195
 msgid "Salir"
 msgstr ""
 
@@ -104,5 +108,37 @@ msgstr ""
 
 #: FormModificarBingos.class:47
 msgid "NuevoBingo"
+msgstr ""
+
+#: FormModificarBingos.class:159
+msgid "Generar cartones, borra los anteriores, ¿quiere continuar?"
+msgstr ""
+
+#: FormModificarBingos.class:159
+msgid "Si, continua"
+msgstr ""
+
+#: FormModificarBingos.class:159
+msgid "No, cancelar"
+msgstr ""
+
+#: FormModificarBingos.class:164
+msgid "Problemas al crear los cartones, causas:"
+msgstr ""
+
+#: FormModificarBingos.class:165
+msgid "     Hay pocos elementos"
+msgstr ""
+
+#: FormModificarBingos.class:166
+msgid "     Hay muchos cartones para crear"
+msgstr ""
+
+#: FormModificarBingos.class:167
+msgid "no es posible crear el numero de cartones solicitado"
+msgstr ""
+
+#: FormModificarBingos.class:170
+msgid "Cartones Generados !!!"
 msgstr ""
 
