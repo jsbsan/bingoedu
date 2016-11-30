@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: Carton.class:80
+#: Carton.class:85
 msgid "Error, desconocido tamaño de cuadricula"
 msgstr ""
 

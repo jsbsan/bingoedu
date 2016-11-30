@@ -688,12 +688,28 @@ Public Sub generarCartones() As Boolean 'si devuelve FALSE, hay un problema al c
   Dim ctmp2 As Carton
   Dim agregar As Boolean 'bandera que nos sirve para añadir carton o no a la lista de cartones
   Dim cuadrosCuadricula As Integer
-  
+  Dim valorminimo As Integer
   'borro los cartones anteriores...
   Me.ArrayCartones.Clear()
   Me.listaCartones.Clear()
   
-  While (Me.ArrayCartones.max < Me.NumeroCartones)
+  'comprobar el numero de elementos minino
+  Select Case Me.tamanoCuadricula
+    Case "4x3"
+      valorminimo = 12 'para un carton
+    Case "5x4"
+      valorminimo = 20 'para un carton
+    Case "5x5"
+      valorminimo = 25 'para un carton
+      
+  End Select
+  
+  If Me.ListaElementosCarton.count < valorminimo Then 
+    'hay problemas, el numero de elemntos es menos al numero de tamanocuadricula
+    Return False
+  Endif
+  
+  While (Me.ArrayCartones.count < Me.NumeroCartones)
     ctmp = New Carton
     ctmp.generarCarton(Me.tamanoCuadricula, Me.cuadrosNegros, Me.cuadrosBlancos, Me.ListaElementosRepetidos, Me.ListaElementosCarton)
     agregar = True

@@ -116,36 +116,6 @@ Private Sub BingoTemporalDatos_Write(Value As Bingo)
   
 End
 
-Public Sub ButtonGuardar_Click()
-  
-  'guarda todos los datos de
-  
-  btmp.tituloCarton = TextBoxTitulo.text
-  
-  btmp.cuadrosBlancos = spinboxBlancos.value
-  btmp.cuadrosNegros = spinboxNegros.value
-  btmp.NumeroCartones = SpinBoxNumeroCarton.value
-  
-  If RadioButton4x3.value = True Then
-    btmp.tamanoCuadricula = "4x3"
-  Endif
-  
-  If RadioButton5x4.value = True Then
-    btmp.tamanoCuadricula = "5x4"
-  Endif
-  
-  If RadioButton5x5.value = True Then
-    btmp.tamanoCuadricula = "5x5"
-  Endif
-  
-  'recarga los datos del gridview ->  rellenaGridviewDatosRepetidos  g.tag !!
-  
-  btmp.guardarBingo(True)
-  
-  okguardado = True
-  
-End
-
 Public Sub SpinBoxBlancos_Change()
   
   okguardado = False
@@ -283,25 +253,55 @@ Public Sub SquareButtonPrevisualizar_Click()
   
 End
 
-Public Sub SquareButtonGenerar_Click()
+' 'PRUEBAS PARA GENERAR CARTONES
+' Public Sub SquareButtonGenerar_Click()
+'   
+'   Dim a As Integer
+'   Dim c As New Carton
+'   
+'   'guardar todos los cambios realizados...
+'   ButtonGuardar_Click()
+'   
+'   ''TODO: Prueba de generación de cartones...
+'   'generar tantos cartones como indique   SpinBoxNumeroCarton
+'   '
+'   'para teste text hacemo uno
+'   
+'   For a = 1 To 50
+'     c.generarCarton(btmp.tamanoCuadricula, btmp.cuadrosNegros, btmp.cuadrosBlancos, btmp.ListaElementosRepetidos, btmp.ListaElementosCarton)
+'     
+'     Print "carton generado"
+'     Print c.ArraIdElementos.Join(" ")
+'     c = New Carton
+'   Next 
+'   
+' End
+
+Public Sub SquareButtonGuardar_Click()
+  'guarda todos los datos de
   
-  Dim a As Integer
-  Dim c As New Carton
+  btmp.tituloCarton = TextBoxTitulo.text
   
-  'guardar todos los cambios realizados...
-  ButtonGuardar_Click()
+  btmp.cuadrosBlancos = spinboxBlancos.value
+  btmp.cuadrosNegros = spinboxNegros.value
+  btmp.NumeroCartones = SpinBoxNumeroCarton.value
   
-  ''TODO: Prueba de generación de cartones...
-  'generar tantos cartones como indique   SpinBoxNumeroCarton
-  '
-  'para teste text hacemo uno
+  If RadioButton4x3.value = True Then
+    btmp.tamanoCuadricula = "4x3"
+  Endif
   
-  For a = 1 To 50
-    c.generarCarton(btmp.tamanoCuadricula, btmp.cuadrosNegros, btmp.cuadrosBlancos, btmp.ListaElementosRepetidos, btmp.ListaElementosCarton)
-    
-    Print "carton generado"
-    Print c.ArraIdElementos.Join(" ")
-    c = New Carton
-  Next 
+  If RadioButton5x4.value = True Then
+    btmp.tamanoCuadricula = "5x4"
+  Endif
+  
+  If RadioButton5x5.value = True Then
+    btmp.tamanoCuadricula = "5x5"
+  Endif
+  
+  'recarga los datos del gridview ->  rellenaGridviewDatosRepetidos  g.tag !!
+  
+  btmp.guardarBingo(True)
+  
+  okguardado = True
   
 End

@@ -9,7 +9,7 @@ Public Sub Form_Open()
   
   definirGridViewElementosRepetidos()
   definirGridViewBingo()
-  HsplitGridView.Layout = [5, 1, 5]
+  HsplitGridView.Layout = [5, 5]
   rellenadatos()
   
   okguardado = True
@@ -283,25 +283,26 @@ Public Sub SquareButtonPrevisualizar_Click()
   
 End
 
-Public Sub SquareButtonGenerar_Click()
-  
-  Dim a As Integer
-  Dim c As New Carton
-  
-  'guardar todos los cambios realizados...
-  ButtonGuardar_Click()
-  
-  ''TODO: Prueba de generación de cartones...
-  'generar tantos cartones como indique   SpinBoxNumeroCarton
-  '
-  'para teste text hacemo uno
-  
-  For a = 1 To 50
-    c.generarCarton(btmp.tamanoCuadricula, btmp.cuadrosNegros, btmp.cuadrosBlancos, btmp.ListaElementosRepetidos, btmp.ListaElementosCarton)
-    
-    Print "carton generado"
-    Print c.ArraIdElementos.Join(" ")
-    c = New Carton
-  Next 
-  
-End
+' 'PRUEBAS PARA GENERAR CARTONES
+' Public Sub SquareButtonGenerar_Click()
+'   
+'   Dim a As Integer
+'   Dim c As New Carton
+'   
+'   'guardar todos los cambios realizados...
+'   ButtonGuardar_Click()
+'   
+'   ''TODO: Prueba de generación de cartones...
+'   'generar tantos cartones como indique   SpinBoxNumeroCarton
+'   '
+'   'para teste text hacemo uno
+'   
+'   For a = 1 To 50
+'     c.generarCarton(btmp.tamanoCuadricula, btmp.cuadrosNegros, btmp.cuadrosBlancos, btmp.ListaElementosRepetidos, btmp.ListaElementosCarton)
+'     
+'     Print "carton generado"
+'     Print c.ArraIdElementos.Join(" ")
+'     c = New Carton
+'   Next 
+'   
+' End

@@ -166,7 +166,8 @@ Public Sub ButtonGenerarCartones_Click()
     textoMensaje &= "\n" & ("     Hay muchos cartones para crear") 
     textoMensaje &= "\n" & ("no es posible crear el numero de cartones solicitado")
     Message.Error(textoMensaje)
-    
+  Else
+    Message.Info(("Cartones Generados !!!"))
   Endif
   
   'Proceso de generar cartones

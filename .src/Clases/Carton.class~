@@ -7,6 +7,8 @@ Private $ArraIdElementos As New String[]
 Property id As String '' clave que identifica al carton
 Private $id As String
 
+Private tipotabla As String 'almacena el tipo de bingo de salida 4x3,5x4,5x5
+
 Public Sub _new()
   
   'cuando se crea se identefica
@@ -50,7 +52,7 @@ End
 '-------------------------------------
 
 Public Function CompararCarton(c As Carton) As Boolean
-
+  
   Dim cadenaID As String
   
   For Each cadenaID In c.ArraIdElementos
@@ -71,11 +73,18 @@ Public Sub generarCarton(TamanoCuadricula As String, numeroCuadrosNegros As Inte
   
   Select Case TamanoCuadricula
     Case "4x3" 
+      tipotabla = "4x3"
       rellenaCarton(12, numeroCuadrosNegros, numeroCuadrosBlancos, listaRepetido, listaelementos)
     Case "5x4"
+      tipotabla = "5x4"
       rellenaCarton(20, numeroCuadrosNegros, numeroCuadrosBlancos, listaRepetido, listaelementos)
     Case "5x5"
+      tipotabla = "5x5"
       rellenaCarton(25, numeroCuadrosNegros, numeroCuadrosBlancos, listaRepetido, listaelementos)
+    Case Else
+      Message.Info(("Error, desconocido tamaño de cuadricula"))
+      Return 
+      
   End Select
   
 End
@@ -92,6 +101,7 @@ Private Sub rellenaCarton(numero As Integer, numeroCuadrosNegros As Integer, num
     elementos.Add("") 'longitud 12 veces
     'indice.Add(a) -> para futura mejora
   Next
+  
   'coloco cuadros negros
   colocarCuadros(numero, numeroCuadrosNegros, "idnegro", ByRef elementos)
   'coloco cuadros blancos
@@ -187,5 +197,118 @@ End
 Private Sub id_Write(Value As String)
   
   $id = value
+  
+End
+
+Public Sub generarDibujo(arrayElementosCarton As Object[]) ' ElementoTexto[])
+  
+  Dim contenido As String
+  Dim tabla As String
+  Dim contador As Integer = -1
+  Dim ele As Object 'ElementoTexto
+  
+  Dim a, b As Integer
+  
+  Select Case tipotabla
+    Case "4x3"
+      tabla = "bingotablas4x3.svg"
+    Case "5x4"
+      tabla = "bingotablas5x4.svg"
+    Case "5x5"
+      tabla = "bingotablas5x5.svg"
+  End Select
+  
+  'generar archivo txt
+  'cabecera:
+  contenido = "[origen]\t/tmp/" & tabla & "\n" 'la plantilla que usará
+  contenido &= "[destino]\t/tmp/" & Me.id & "\n" 'el carton tendrá el nombre de id
+  
+  For a = 1 To 3   'filas
+    For b = 1 To 4 'columna
+      contador += 1
+      
+      ele = buscaElemento(Me.ArraIdElementos[contador], arrayElementosCarton)
+      
+      Select Case ele.tipoElemento()
+        Case Upper$("ElementoTexto")
+          contenido &= "#" & Str$(a) & Str$(b) & "#\t" & ele.texto & "\n"
+        Case Upper$("ElementoNegro")
+          contenido &= "#" & Str$(a) & Str$(b) & "#\t \n" 'borro el contenido
+          contenido &= "[imagen]" & "\t" & "/tmp/cuadroNegro.jpg" & "\n"  'incluir el gráfico de 
+          ''TODO: ASIGNAR COORDENADAS A CUADROS
+          contenido &= "[x]" & "\t" & buscaCoordX(b, tipotabla) & "\n"
+          contenido &= "[y]" & "\t" & buscaCoordy(a, tipotabla) & "\n"
+          contenido &= "[fw]" & "\t" & "223.27" & "\n" 'siempre es el mismo aunque cambie el carton
+          contenido &= "[fh]" & "\t" & "191.9" & "\n" 'siempre es el mismo aunque cambie el carton
+        Case Upper$("ElementoBlanco")
+          contenido &= "#" & Str$(a) & Str$(b) & "#\t \n" 'borro el contenido
+          contenido &= "[imagen]" & "\t" & "/tmp/cuadroBlanco.jpg" & "\n"  'incluir el gráfico de 
+          contenido &= "[x]" & "\t" & buscaCoordX(b, tipotabla) & "\n"
+          contenido &= "[y]" & "\t" & buscaCoordy(a, tipotabla) & "\n"
+          contenido &= "[fw]" & "\t" & "223.27" & "\n" 'siempre es el mismo aunque cambie el carton
+          contenido &= "[fh]" & "\t" & "191.9" & "\n" 'siempre es el mismo aunque cambie el carton
+        Case Upper$("ElementoImagen")
+          contenido &= "#" & Str$(a) & Str$(b) & "#\t \n" 'borro el contenido
+          contenido &= "[imagen]" & "\t" & "/tmp/" & ele.rutaimagen & "\n"  'incluir el gráfico de 
+          contenido &= "[x]" & "\t" & buscaCoordX(b, tipotabla) & "\n"
+          contenido &= "[y]" & "\t" & buscaCoordy(a, tipotabla) & "\n"
+          contenido &= "[fw]" & "\t" & "223.27" & "\n" 'siempre es el mismo aunque cambie el carton
+          contenido &= "[fh]" & "\t" & "191.9" & "\n" 'siempre es el mismo aunque cambie el carton
+      End Select
+    Next
+  Next
+  
+  File.Save("/tmp/carton.txt", contenido)
+  
+  While (Not Exist("/tmp/carton.txt"))
+    Wait 0.01
+  Wend
+  Shell("cd /tmp;SisRePlatillas /tmp/carton.txt")
+  
+End
+
+Public Function buscaCoordX(valor As Integer, tipotabla As String) As String
+  
+  Select Case tipotabla
+    Case "4x3"
+      Return Choose(valor, "73.63", "308", "542", "776")
+    Case "5x4"
+      Return Choose(valor, "81.8", "315.7", "549.7", "784", "1018.66")
+    Case "5x5"
+      Return Choose(valor, "80.2", "314.11", "548.16", "782.48", "1017")
+  End Select
+  
+End
+
+Public Function buscaCoordY(valor As Integer, tipotabla As String) As String
+  
+  Select Case tipotabla
+    Case "4x3"
+      Return Choose(valor, "479", "276.5", "73.80")
+    Case "5x4"
+      Return Choose(valor, "80.82", "283.54", "486,2", "688.65")
+    Case "5x5"
+      Return Choose(valor, "78", "285.36", "488", "690", "892.62")
+  End Select
+  
+End  
+
+'---------------------------------------------------------
+'codigo de la clase binco, que dado un id, busca el elemento que lo tenga.
+Public Function buscaElemento(id As String, arrayElem As Elemento[]) As Elemento
+  
+  Dim ebuscado As Elemento
+  'dado un id, y una lista de elementos[], nos devuelve el elemento que tenga ese id.
+  
+  For Each ebuscado In arrayElem
+    If ebuscado.id = id Then
+      Return ebuscado
+      
+    Endif
+  Next
+  
+  'Si llegamos a este punto, no ha encontrado el elemento enlazado...hay un error
+  'poner mensaje de error o devolver null
+  Return Null
   
 End

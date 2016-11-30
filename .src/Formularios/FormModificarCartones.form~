@@ -124,6 +124,8 @@
       }
       { SpinBoxNumeroCarton SpinBox
         MoveScaled(9,5,11,4)
+        MinValue = 1
+        MaxValue = 10000
       }
       { TextLabel1 TextLabel
         MoveScaled(1,9,36,17)
@@ -138,7 +140,7 @@
     { Panel8 Panel
       MoveScaled(91,0,44,27)
       { Panel3 Panel
-        MoveScaled(2,6,11,10)
+        MoveScaled(17,6,11,10)
         Arrangement = Arrange.Fill
         Border = Border.Plain
         { SquareButtonPrevisualizar SquareButton
@@ -149,7 +151,7 @@
         }
       }
       { Panel2 Panel
-        MoveScaled(16,6,11,10)
+        MoveScaled(31,6,11,10)
         Arrangement = Arrange.Fill
         Border = Border.Plain
         { SquareButtonImprimir SquareButton
@@ -159,26 +161,27 @@
           Picture = Picture["icon:/22/print"]
         }
       }
-      { Panel1 Panel
-        MoveScaled(30,6,11,10)
-        Arrangement = Arrange.Fill
-        Border = Border.Plain
-        { SquareButtonGenerar SquareButton
-          MoveScaled(0,1,11,8)
-          Expand = True
-          Text = ("Generar")
-          Picture = Picture["icon:/22/exec"]
-        }
-      }
       { ButtonSalir Button
         MoveScaled(29,21,13,4)
         Text = ("Salir")
         Picture = Picture["icon:/22/quit"]
       }
       { ButtonGuardar Button
-        MoveScaled(2,21,13,4)
+        MoveScaled(3,20,13,4)
+        Visible = False
         Text = ("Guardar")
         Picture = Picture["icon:/22/save"]
+      }
+      { Panel1 Panel
+        MoveScaled(3,6,11,10)
+        Arrangement = Arrange.Fill
+        Border = Border.Plain
+        { SquareButtonGuardar SquareButton
+          MoveScaled(0,0,11,8)
+          Expand = True
+          Text = ("Guardar")
+          Picture = Picture["icon:/22/save"]
+        }
       }
     }
   }

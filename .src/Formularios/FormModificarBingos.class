@@ -180,3 +180,9 @@ Public Sub ButtonGenerarCartones_Click()
   '
   
 End
+
+Public Sub ButtonVerCartones_Click()
+  
+  'ver cartones...
+  
+End

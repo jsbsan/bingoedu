@@ -82,15 +82,11 @@ msgstr ""
 msgid "Imprimir"
 msgstr ""
 
-#: FormModificarCartones.form:253
-msgid "Generar"
-msgstr ""
-
-#: FormModificarCartones.form:260
+#: FormModificarCartones.form:247
 msgid "Salir"
 msgstr ""
 
-#: FormModificarCartones.form:266
+#: FormModificarCartones.form:254
 msgid "Guardar"
 msgstr ""
 
@@ -98,23 +94,23 @@ msgstr ""
 msgid "Cartones"
 msgstr ""
 
-#: FormModificarCartones.class:197
+#: FormModificarCartones.class:167
 msgid "Los datos se han modificado, pero no guardado ¿desea salir?"
 msgstr ""
 
-#: FormModificarCartones.class:197
+#: FormModificarCartones.class:167
 msgid "Si, salir sin guardar"
 msgstr ""
 
-#: FormModificarCartones.class:197
+#: FormModificarCartones.class:167
 msgid "No"
 msgstr ""
 
-#: FormModificarCartones.class:221
+#: FormModificarCartones.class:191
 msgid "Debe seleccionar un elemento"
 msgstr ""
 
-#: FormModificarCartones.class:229
+#: FormModificarCartones.class:199
 msgid "Ese elemento ya esta incluido"
 msgstr ""
 

@@ -10,7 +10,7 @@
       Text = ("Cartones")
       { ButtonPropiedadesCartones Button
         MoveScaled(12,3,44,6)
-        Text = ("Propiedades de Cartones y Generarlos")
+        Text = ("Propiedades de los Cartones")
         Picture = Picture["propiedades.png"]
       }
       { PictureBox1 PictureBox
@@ -19,9 +19,14 @@
         Stretch = True
       }
       { ButtonVerCartones Button
-        MoveScaled(12,10,43,6)
+        MoveScaled(12,10,19,6)
         Text = ("Ver Cartones")
         Picture = Picture["icon:/16/pdf"]
+      }
+      { ButtonGenerarCartones Button
+        MoveScaled(34,10,22,6)
+        Text = ("Generar Cartones")
+        Picture = Picture["icon:/16/exec"]
       }
     }
     { ComboBoxCategoria ComboBox
