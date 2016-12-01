@@ -693,6 +693,8 @@ Public Sub generarCartones() As Boolean 'si devuelve FALSE, hay un problema al c
   Me.ArrayCartones.Clear()
   Me.listaCartones.Clear()
   
+Inc Application.Busy
+  Shell ("cd /tmp;rm carton*")
   'comprobar el numero de elementos minino
   Select Case Me.tamanoCuadricula
     Case "4x3"
@@ -709,7 +711,7 @@ Public Sub generarCartones() As Boolean 'si devuelve FALSE, hay un problema al c
     Return False
   Endif
   
-  While (Me.ArrayCartones.count < Me.NumeroCartones)
+  While (Me.ArrayCartones.count < (Me.NumeroCartones + 1))
     ctmp = New Carton
     ctmp.generarCarton(Me.tamanoCuadricula, Me.cuadrosNegros, Me.cuadrosBlancos, Me.ListaElementosRepetidos, Me.ListaElementosCarton)
     agregar = True
@@ -728,10 +730,10 @@ Public Sub generarCartones() As Boolean 'si devuelve FALSE, hay un problema al c
       'se debe de incluir
       listaCartones.Add(ctmp.id)
       ArrayCartones.Add(ctmp)
-      ctmp.generarDibujo(ArrayElementosCarton)
+      ctmp.generarDibujo(ArrayElementosCarton, Me.tituloCarton)
     Endif    
   Wend
-  
+  Dec Application.Busy 
   Return True 'se han creado los cartones bien
   
 End

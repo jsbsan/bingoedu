@@ -163,10 +163,19 @@ Private Sub colocarCuadros(longitud As Integer, numero As Integer, texto As Stri
     Do
       aleatorio = Int(Rnd(0, longitud))
       If elementos[aleatorio] = "" Then
-        elementos[aleatorio] = texto
-        Break
+        If texto = "idnegro" Or texto = "idblanco" Then
+          elementos[aleatorio] = texto
+          Break
+        Else
+          'se trata de un nuemro
+          If elementos.Find(texto) = -1 Then 
+            elementos[aleatorio] = texto
+            Break
+            
+          Endif
+          
+        Endif
       Endif
-      
     Loop 
     
   Next
@@ -200,8 +209,10 @@ Private Sub id_Write(Value As String)
   
 End
 
-Public Sub generarDibujo(arrayElementosCarton As Object[]) ' ElementoTexto[])
-  
+Public Sub generarDibujo(arrayElementosCarton As Object[], titulo As String) ' ElementoTexto[])
+
+  Dim salida As String
+  Dim comando As String
   Dim contenido As String
   Dim tabla As String
   Dim contador As Integer = -1
@@ -220,8 +231,9 @@ Public Sub generarDibujo(arrayElementosCarton As Object[]) ' ElementoTexto[])
   
   'generar archivo txt
   'cabecera:
-  contenido = "[origen]\t/tmp/" & tabla & "\n" 'la plantilla que usará
-  contenido &= "[destino]\t/tmp/" & Me.id & "\n" 'el carton tendrá el nombre de id
+  contenido = "[origen]\t" & tabla & "\n" 'la plantilla que usará
+  contenido &= "[destino]\t&nombre\n" 'el carton tendrá el nombre de id
+  contenido &= "#titulo#\t" & titulo & "\n"
   
   For a = 1 To 3   'filas
     For b = 1 To 4 'columna
@@ -231,39 +243,44 @@ Public Sub generarDibujo(arrayElementosCarton As Object[]) ' ElementoTexto[])
       
       Select Case ele.tipoElemento()
         Case Upper$("ElementoTexto")
-          contenido &= "#" & Str$(a) & Str$(b) & "#\t" & ele.texto & "\n"
-        Case Upper$("ElementoNegro")
-          contenido &= "#" & Str$(a) & Str$(b) & "#\t \n" 'borro el contenido
-          contenido &= "[imagen]" & "\t" & "/tmp/cuadroNegro.jpg" & "\n"  'incluir el gráfico de 
-          ''TODO: ASIGNAR COORDENADAS A CUADROS
-          contenido &= "[x]" & "\t" & buscaCoordX(b, tipotabla) & "\n"
-          contenido &= "[y]" & "\t" & buscaCoordy(a, tipotabla) & "\n"
-          contenido &= "[fw]" & "\t" & "223.27" & "\n" 'siempre es el mismo aunque cambie el carton
-          contenido &= "[fh]" & "\t" & "191.9" & "\n" 'siempre es el mismo aunque cambie el carton
-        Case Upper$("ElementoBlanco")
-          contenido &= "#" & Str$(a) & Str$(b) & "#\t \n" 'borro el contenido
-          contenido &= "[imagen]" & "\t" & "/tmp/cuadroBlanco.jpg" & "\n"  'incluir el gráfico de 
-          contenido &= "[x]" & "\t" & buscaCoordX(b, tipotabla) & "\n"
-          contenido &= "[y]" & "\t" & buscaCoordy(a, tipotabla) & "\n"
-          contenido &= "[fw]" & "\t" & "223.27" & "\n" 'siempre es el mismo aunque cambie el carton
-          contenido &= "[fh]" & "\t" & "191.9" & "\n" 'siempre es el mismo aunque cambie el carton
+          contenido &= "#" & Str$(b) & Str$(a) & "#\t" & ele.texto & "\n"
+          ' Case Upper$("ElementoNegro")
+          '   contenido &= "#" & Str$(a) & Str$(b) & "#\t \n" 'borro el contenido
+          '   contenido &= "[imagen]" & "\t" & "/tmp/cuadroNegro.jpg" & "\n"  'incluir el gráfico de 
+          '   ''TODO: ASIGNAR COORDENADAS A CUADROS
+          '   contenido &= "[x]" & "\t" & buscaCoordX(b, tipotabla) & "\n"
+          '   contenido &= "[y]" & "\t" & buscaCoordy(a, tipotabla) & "\n"
+          '   contenido &= "[fw]" & "\t" & "223.27" & "\n" 'siempre es el mismo aunque cambie el carton
+          '   contenido &= "[fh]" & "\t" & "191.9" & "\n" 'siempre es el mismo aunque cambie el carton
+          ' Case Upper$("ElementoBlanco")
+          '   contenido &= "#" & Str$(a) & Str$(b) & "#\t \n" 'borro el contenido
+          '   contenido &= "[imagen]" & "\t" & "/tmp/cuadroBlanco.jpg" & "\n"  'incluir el gráfico de 
+          '   contenido &= "[x]" & "\t" & buscaCoordX(b, tipotabla) & "\n"
+          '   contenido &= "[y]" & "\t" & buscaCoordy(a, tipotabla) & "\n"
+          '   contenido &= "[fw]" & "\t" & "223.27" & "\n" 'siempre es el mismo aunque cambie el carton
+          '   contenido &= "[fh]" & "\t" & "191.9" & "\n" 'siempre es el mismo aunque cambie el carton
         Case Upper$("ElementoImagen")
-          contenido &= "#" & Str$(a) & Str$(b) & "#\t \n" 'borro el contenido
+          contenido &= "#" & Str$(b) & Str$(a) & "#\t.\n" 'borro el contenido
           contenido &= "[imagen]" & "\t" & "/tmp/" & ele.rutaimagen & "\n"  'incluir el gráfico de 
+          
           contenido &= "[x]" & "\t" & buscaCoordX(b, tipotabla) & "\n"
-          contenido &= "[y]" & "\t" & buscaCoordy(a, tipotabla) & "\n"
+          contenido &= "[y]" & "\t" & buscaCoordY(a, tipotabla) & "\n"
           contenido &= "[fw]" & "\t" & "223.27" & "\n" 'siempre es el mismo aunque cambie el carton
           contenido &= "[fh]" & "\t" & "191.9" & "\n" 'siempre es el mismo aunque cambie el carton
+          
       End Select
     Next
   Next
   
-  File.Save("/tmp/carton.txt", contenido)
+  File.Save("/tmp/" & "carton" & Me.id & ".txt", contenido)
   
-  While (Not Exist("/tmp/carton.txt"))
+  While (Not Exist("/tmp/" & "carton" & Me.id & ".txt"))
     Wait 0.01
   Wend
-  Shell("cd /tmp;SisRePlantillas /tmp/carton.txt")
+  comando = "cd /tmp;SisRePlantillas " & "/tmp/" & "carton" & Me.id & ".txt"
+  Debug "Comando uso SisRePlantillas:"; comando
+  Shell comando To salida
+  Debug salida
   
 End
 
@@ -284,7 +301,7 @@ Public Function buscaCoordY(valor As Integer, tipotabla As String) As String
   
   Select Case tipotabla
     Case "4x3"
-      Return Choose(valor, "479", "276.5", "73.80")
+      Return Choose(valor, "73.80", "276.5", "479")
     Case "5x4"
       Return Choose(valor, "80.82", "283.54", "486,2", "688.65")
     Case "5x5"

@@ -1,6 +1,5 @@
 [Breakpoints]
-Breakpoint[1]="Carton.265"
-Count=1
+Count=0
 
 [DebugWindow]
 Count=0
@@ -81,7 +80,16 @@ Geometry=[132,484,990,335]
 Geometry=[41,114,210,210]
 
 [DebugWindow/arrayElementosCarton]
-Geometry=[0,24,272,789]
+Geometry=[0,24,272,756]
+
+[DebugWindow/arrayElementosCarton[0]]
+Geometry=[669,64,272,756]
+
+[DebugWindow/arrayElementosCarton[1]]
+Geometry=[896,24,272,756]
+
+[DebugWindow/arrayElementosCarton[2]]
+Geometry=[14,24,272,756]
 
 [DebugWindow/arraytmp]
 Geometry=[46,16,210,210]
@@ -157,16 +165,16 @@ File[10]=".src/Formularios/FormModificarCartones.form"
 File[11]=".src/Formularios/FormFicherosBingos.class:182.0"
 File[12]=".src/Clases/controles/SquareButton.class:78.8"
 File[13]=".src/Formularios/FormModificarElementos.form"
-File[14]=".src/Clases/Bingo.class:730.46"
-File[15]=".src/Clases/elemento.class:60.0"
-File[16]=".src/Clases/elementoTexto.class:18.0"
+File[14]=".src/Clases/Bingo.class:716.18"
+File[15]=".src/Clases/elemento.class:85.0"
+File[16]=".src/Clases/elementoTexto.class:10.0"
 File[17]=".src/Clases/elementoImagen.class:10.2"
 File[18]=".src/Formularios/FormModificarElementos.class:367.0"
 File[19]=".src/Formularios/testGuadarBingo.module:10.0"
 File[20]=".src/Clases/elementoBlanco.class:16.2"
 File[21]=".src/Clases/elementoNegro.class:1.0"
 Active=22
-File[22]=".src/Clases/Carton.class:265.50"
+File[22]=".src/Clases/Carton.class:303.51"
 File[23]=".src/Formularios/testCargarBingo.module:7.0"
 File[24]=".src/Formularios/FormGrabadora.form"
 File[25]=".src/Formularios/FormGrabadora.class:26.2"
