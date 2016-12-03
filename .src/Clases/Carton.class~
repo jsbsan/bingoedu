@@ -9,6 +9,9 @@ Private $id As String
 
 Private tipotabla As String 'almacena el tipo de bingo de salida 4x3,5x4,5x5
 
+Public ArrayElmentosCarton As Elemento[]
+Public ArrayElmentosBingo As Elemento[]
+
 Public Sub _new()
   
   'cuando se crea se identefica
@@ -109,13 +112,17 @@ Private Sub rellenaCarton(numero As Integer, numeroCuadrosNegros As Integer, num
   'colocar elementos de la lista  de repetidos...
   colocarElementosRepetidos(numero, listaRepetido, ByRef elementos)
   'colocar elementos...
-  colocarElementos(numero, listaelementos, ByRef elementos)
+  colocarElementos(numero, listaelementos, ByRef elementos, numeroCuadrosBlancos, numeroCuadrosNegros)
   
   $ArraIdElementos = elementos.Copy()
   
 End
 
-Private Sub colocarElementos(longitud As Integer, lista As String[], ByRef elemento As String[])
+Private Sub colocarElementos(longitud As Integer, lista As String[], ByRef elementos As String[], numeroCuadrosBlancos As Integer, numeroCuadrosNegros As Integer)
+  
+  Dim textoscarton As New String[]
+  Dim ele As Object 'elemento
+  Dim ele2 As Object
   
   Dim l As String[]
   Dim a As Integer
@@ -123,13 +130,25 @@ Private Sub colocarElementos(longitud As Integer, lista As String[], ByRef eleme
   
   l = lista.Copy()
   
-  For a = 0 To longitud - 1
-    If elemento[a] = "" Then 
+  For a = 0 To longitud - 1 
+    
+    While elementos[a] = "" 
+      
       aleatorio = Int(Rnd(0, l.count))
-      elemento[a] = l[aleatorio]
-      l.Delete(aleatorio)
+      
+      ele = buscaElemento(l[aleatorio], Me.ArrayElmentosCarton)
+      If ele.id = "idnegro" Or ele.id = "idblanco" Then 
+        Continue
+      Endif
+      If textoscarton.Find(ele.texto) = -1 Then 
+        'se añade elemento ya que es distinto el contenido de las celda
+        elementos[a] = l[aleatorio]
+        l.Delete(aleatorio)
+        textoscarton.Add(ele.texto)
+      Endif
+      
       'borro de la lista para no repetirlo
-    Endif
+    Wend
     
   Next
   
@@ -137,14 +156,20 @@ End
 
 Private Sub colocarElementosRepetidos(longitud As Integer, listaRepetida As String[], ByRef elementos As String[])
   
+  Dim eleBingo As Variant
+  Dim eleCarton As Variant
+  
   Dim aleatorio As Integer
   Dim a As Integer
   
   For a = 1 To listaRepetida.Count
     Do
-      aleatorio = Int(Rnd(0, longitud))
+      aleatorio = Int(Rnd(2, longitud))
       If elementos[aleatorio] = "" Then
-        elementos[aleatorio] = listaRepetida[a - 1]
+        
+        eleBingo = buscaElemento(listaRepetida[a - 1], Me.ArrayElmentosBingo)
+        
+        elementos[aleatorio] = eleBingo.enlace
         Break
       Endif
       
@@ -156,6 +181,7 @@ End
 
 Private Sub colocarCuadros(longitud As Integer, numero As Integer, texto As String, ByRef elementos As String[])
   
+  Dim textotmp As String
   Dim aleatorio As Integer
   Dim a As Integer
   
@@ -164,17 +190,29 @@ Private Sub colocarCuadros(longitud As Integer, numero As Integer, texto As Stri
       aleatorio = Int(Rnd(0, longitud))
       If elementos[aleatorio] = "" Then
         If texto = "idnegro" Or texto = "idblanco" Then
-        elementos[aleatorio] = texto
-        Break
-        Else
-        'se trata de un nuemro
-        If elementos.Find(texto) = -1 Then 
-        elementos[aleatorio] = texto
-        Break
-         
+          elementos[aleatorio] = texto
+          Break
+          ' Else
+          '   'se trata de un texto
+          '   If elementos.Find(texto) = -1 Then 
+          '     'no encuentra el texto en los elemento, entonces, en principio se puede añadir.
+          '     'comparar contenido del carton, si tiene el texto
+          '     bandera = True 
+          '     For Each textotmp In textoscarton
+          '       If textotmp = texto Then 
+          '         bandera = False
+          '         
+          '       Endif
+          '       
+          '     Next
+          '     If bandera = True Then 
+          '       elementos[aleatorio] = texto
+          '       textoscarton.Add(texto)
+          '       Break
+          '     Endif
+          '   Endif
+          
         Endif
-        
-      Endif
       Endif
     Loop 
     
@@ -210,6 +248,7 @@ Private Sub id_Write(Value As String)
 End
 
 Public Sub generarDibujo(arrayElementosCarton As Object[], titulo As String) ' ElementoTexto[])
+  
   Dim salida As String
   Dim comando As String
   Dim contenido As String
@@ -232,42 +271,41 @@ Public Sub generarDibujo(arrayElementosCarton As Object[], titulo As String) ' E
   'cabecera:
   contenido = "[origen]\t" & tabla & "\n" 'la plantilla que usará
   contenido &= "[destino]\t&nombre\n" 'el carton tendrá el nombre de id
-    contenido &= "#titulo#\t" & titulo & "\n"
-    
+  contenido &= "#titulo#\t" & titulo & "\n"
+  
   For a = 1 To 3   'filas
     For b = 1 To 4 'columna
       contador += 1
       
       ele = buscaElemento(Me.ArraIdElementos[contador], arrayElementosCarton)
       
-      
       Select Case ele.tipoElemento()
         Case Upper$("ElementoTexto")
           contenido &= "#" & Str$(b) & Str$(a) & "#\t" & ele.texto & "\n"
-        ' Case Upper$("ElementoNegro")
-        '   contenido &= "#" & Str$(a) & Str$(b) & "#\t \n" 'borro el contenido
-        '   contenido &= "[imagen]" & "\t" & "/tmp/cuadroNegro.jpg" & "\n"  'incluir el gráfico de 
-        '   ''TODO: ASIGNAR COORDENADAS A CUADROS
-        '   contenido &= "[x]" & "\t" & buscaCoordX(b, tipotabla) & "\n"
-        '   contenido &= "[y]" & "\t" & buscaCoordy(a, tipotabla) & "\n"
-        '   contenido &= "[fw]" & "\t" & "223.27" & "\n" 'siempre es el mismo aunque cambie el carton
-        '   contenido &= "[fh]" & "\t" & "191.9" & "\n" 'siempre es el mismo aunque cambie el carton
-        ' Case Upper$("ElementoBlanco")
-        '   contenido &= "#" & Str$(a) & Str$(b) & "#\t \n" 'borro el contenido
-        '   contenido &= "[imagen]" & "\t" & "/tmp/cuadroBlanco.jpg" & "\n"  'incluir el gráfico de 
-        '   contenido &= "[x]" & "\t" & buscaCoordX(b, tipotabla) & "\n"
-        '   contenido &= "[y]" & "\t" & buscaCoordy(a, tipotabla) & "\n"
-        '   contenido &= "[fw]" & "\t" & "223.27" & "\n" 'siempre es el mismo aunque cambie el carton
-        '   contenido &= "[fh]" & "\t" & "191.9" & "\n" 'siempre es el mismo aunque cambie el carton
+          ' Case Upper$("ElementoNegro")
+          '   contenido &= "#" & Str$(a) & Str$(b) & "#\t \n" 'borro el contenido
+          '   contenido &= "[imagen]" & "\t" & "/tmp/cuadroNegro.jpg" & "\n"  'incluir el gráfico de 
+          '   ''TODO: ASIGNAR COORDENADAS A CUADROS
+          '   contenido &= "[x]" & "\t" & buscaCoordX(b, tipotabla) & "\n"
+          '   contenido &= "[y]" & "\t" & buscaCoordy(a, tipotabla) & "\n"
+          '   contenido &= "[fw]" & "\t" & "223.27" & "\n" 'siempre es el mismo aunque cambie el carton
+          '   contenido &= "[fh]" & "\t" & "191.9" & "\n" 'siempre es el mismo aunque cambie el carton
+          ' Case Upper$("ElementoBlanco")
+          '   contenido &= "#" & Str$(a) & Str$(b) & "#\t \n" 'borro el contenido
+          '   contenido &= "[imagen]" & "\t" & "/tmp/cuadroBlanco.jpg" & "\n"  'incluir el gráfico de 
+          '   contenido &= "[x]" & "\t" & buscaCoordX(b, tipotabla) & "\n"
+          '   contenido &= "[y]" & "\t" & buscaCoordy(a, tipotabla) & "\n"
+          '   contenido &= "[fw]" & "\t" & "223.27" & "\n" 'siempre es el mismo aunque cambie el carton
+          '   contenido &= "[fh]" & "\t" & "191.9" & "\n" 'siempre es el mismo aunque cambie el carton
         Case Upper$("ElementoImagen")
           contenido &= "#" & Str$(b) & Str$(a) & "#\t.\n" 'borro el contenido
           contenido &= "[imagen]" & "\t" & "/tmp/" & ele.rutaimagen & "\n"  'incluir el gráfico de 
-       
+          
           contenido &= "[x]" & "\t" & buscaCoordX(b, tipotabla) & "\n"
           contenido &= "[y]" & "\t" & buscaCoordY(a, tipotabla) & "\n"
-          contenido &= "[fw]" & "\t" & "223.27" & "\n" 'siempre es el mismo aunque cambie el carton
-          contenido &= "[fh]" & "\t" & "191.9" & "\n" 'siempre es el mismo aunque cambie el carton
-       
+          contenido &= "[fw]" & "\t" & "225" & "\n" 'siempre es el mismo aunque cambie el carton
+          contenido &= "[fh]" & "\t" & "199" & "\n" 'siempre es el mismo aunque cambie el carton
+          
       End Select
     Next
   Next
@@ -301,7 +339,7 @@ Public Function buscaCoordY(valor As Integer, tipotabla As String) As String
   
   Select Case tipotabla
     Case "4x3"
-      Return Choose(valor, "73.80", "276.5", "4790")
+      Return Choose(valor, "70", "270", "475")
     Case "5x4"
       Return Choose(valor, "80.82", "283.54", "486,2", "688.65")
     Case "5x5"

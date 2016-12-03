@@ -46,7 +46,7 @@ msgstr ""
 msgid "cd /tmp;rm carton*"
 msgstr ""
 
-#: Carton.class:85
+#: Carton.class:90
 msgid "Error, desconocido tamaño de cuadricula"
 msgstr ""
 
@@ -76,11 +76,11 @@ msgstr ""
 msgid "Salir"
 msgstr ""
 
-#: FMain.class:9
+#: FMain.class:10
 msgid "Version"
 msgstr ""
 
-#: FMain.class:11
+#: FMain.class:12
 msgid "Bingo Educativo"
 msgstr ""
 
@@ -356,11 +356,11 @@ msgstr ""
 msgid "No"
 msgstr ""
 
-#: FormModificarCartones.class:191
+#: FormModificarCartones.class:192
 msgid "Debe seleccionar un elemento"
 msgstr ""
 
-#: FormModificarCartones.class:199
+#: FormModificarCartones.class:200
 msgid "Ese elemento ya esta incluido"
 msgstr ""
 

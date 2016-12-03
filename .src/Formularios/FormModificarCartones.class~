@@ -116,36 +116,6 @@ Private Sub BingoTemporalDatos_Write(Value As Bingo)
   
 End
 
-Public Sub ButtonGuardar_Click()
-  
-  'guarda todos los datos de
-  
-  btmp.tituloCarton = TextBoxTitulo.text
-  
-  btmp.cuadrosBlancos = spinboxBlancos.value
-  btmp.cuadrosNegros = spinboxNegros.value
-  btmp.NumeroCartones = SpinBoxNumeroCarton.value
-  
-  If RadioButton4x3.value = True Then
-    btmp.tamanoCuadricula = "4x3"
-  Endif
-  
-  If RadioButton5x4.value = True Then
-    btmp.tamanoCuadricula = "5x4"
-  Endif
-  
-  If RadioButton5x5.value = True Then
-    btmp.tamanoCuadricula = "5x5"
-  Endif
-  
-  'recarga los datos del gridview ->  rellenaGridviewDatosRepetidos  g.tag !!
-  
-  btmp.guardarBingo(True)
-  
-  okguardado = True
-  
-End
-
 Public Sub SpinBoxBlancos_Change()
   
   okguardado = False
@@ -213,6 +183,7 @@ End
 
 Public Sub ButtonPasar_Click()
   
+  Dim elementoElegidoCarton As Variant
   Dim elementoElegido As Variant
   Dim fila As Integer
   
@@ -231,10 +202,13 @@ Public Sub ButtonPasar_Click()
     
   Endif
   
-  'añadir elemento a bingo..
-  btmp.ArrayElementosRepetidos.Add(elementoElegido)
+  'almaceno el elemento de Carton,no el del bingo
+  elementoElegidoCarton = btmp.buscaElemento(elementoElegido.enlace, btmp.ArrayElementosCarton)
   
-  btmp.ListaElementosRepetidos.Add(elementoElegido.id)
+  'añadir elemento a bingo..
+  btmp.ArrayElementosRepetidos.Add(elementoElegidoCarton)
+  
+  btmp.ListaElementosRepetidos.Add(elementoElegidoCarton.id)
   
   'recargo el gridview de elemntos repetidos
   '
@@ -306,3 +280,32 @@ End
 '   Next 
 '   
 ' End
+
+Public Sub SquareButtonGuardar_Click()
+  'guarda todos los datos de
+  
+  btmp.tituloCarton = TextBoxTitulo.text
+  
+  btmp.cuadrosBlancos = spinboxBlancos.value
+  btmp.cuadrosNegros = spinboxNegros.value
+  btmp.NumeroCartones = SpinBoxNumeroCarton.value
+  
+  If RadioButton4x3.value = True Then
+    btmp.tamanoCuadricula = "4x3"
+  Endif
+  
+  If RadioButton5x4.value = True Then
+    btmp.tamanoCuadricula = "5x4"
+  Endif
+  
+  If RadioButton5x5.value = True Then
+    btmp.tamanoCuadricula = "5x5"
+  Endif
+  
+  'recarga los datos del gridview ->  rellenaGridviewDatosRepetidos  g.tag !!
+  
+  btmp.guardarBingo(True)
+  
+  okguardado = True
+  
+End

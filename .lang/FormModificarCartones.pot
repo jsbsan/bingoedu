@@ -106,11 +106,11 @@ msgstr ""
 msgid "No"
 msgstr ""
 
-#: FormModificarCartones.class:191
+#: FormModificarCartones.class:192
 msgid "Debe seleccionar un elemento"
 msgstr ""
 
-#: FormModificarCartones.class:199
+#: FormModificarCartones.class:200
 msgid "Ese elemento ya esta incluido"
 msgstr ""
 

@@ -38,11 +38,11 @@ msgstr ""
 msgid "Salir"
 msgstr ""
 
-#: FMain.class:9
+#: FMain.class:10
 msgid "Version"
 msgstr ""
 
-#: FMain.class:11
+#: FMain.class:12
 msgid "Bingo Educativo"
 msgstr ""
 

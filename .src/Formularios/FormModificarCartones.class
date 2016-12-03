@@ -183,6 +183,7 @@ End
 
 Public Sub ButtonPasar_Click()
   
+  ' Dim elementoElegidoCarton As Variant
   Dim elementoElegido As Variant
   Dim fila As Integer
   
@@ -201,9 +202,12 @@ Public Sub ButtonPasar_Click()
     
   Endif
   
-  'añadir elemento a bingo..
+  ' 'almaceno el elemento de Carton,no el del bingo
+  ' elementoElegidoCarton = btmp.buscaElemento(elementoElegido.enlace, btmp.ArrayElementosCarton)
+  ' 
+  ' 'añadir elemento a bingo..
   btmp.ArrayElementosRepetidos.Add(elementoElegido)
-  
+  ' 
   btmp.ListaElementosRepetidos.Add(elementoElegido.id)
   
   'recargo el gridview de elemntos repetidos

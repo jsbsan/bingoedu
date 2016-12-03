@@ -23,7 +23,7 @@ Property cuadrosNegros As Integer ''indica los huecos rellenos en negro
 
 Property cuadrosBlancos As Integer '' indica los huecos que quedaran en blanco
 
-Property ListaElementosRepetidos As String[] ''array que contiene los id de elementos del bingo (listaElementoBingo) que tienen que repetirse en cada carton
+Property ListaElementosRepetidos As String[] ''array que contiene los id de elementos del bingo (listaElementoCARTON) que tienen que repetirse en cada carton
 Property ArrayElementosRepetidos As Elemento[] '' array de elementos repetidos del bingo que se repiten en cada carton.
 
 Property NumeroCartones As Integer ''indica el numero de cartones existentes.
@@ -693,7 +693,7 @@ Public Sub generarCartones() As Boolean 'si devuelve FALSE, hay un problema al c
   Me.ArrayCartones.Clear()
   Me.listaCartones.Clear()
   
-Inc Application.Busy
+  Inc Application.Busy
   Shell ("cd /tmp;rm carton*")
   'comprobar el numero de elementos minino
   Select Case Me.tamanoCuadricula
@@ -713,6 +713,8 @@ Inc Application.Busy
   
   While (Me.ArrayCartones.count < (Me.NumeroCartones + 1))
     ctmp = New Carton
+    ctmp.ArrayElmentosCarton = Me.ArrayElementosCarton
+    ctmp.ArrayElmentosBingo = Me.ArrayElementosBingo
     ctmp.generarCarton(Me.tamanoCuadricula, Me.cuadrosNegros, Me.cuadrosBlancos, Me.ListaElementosRepetidos, Me.ListaElementosCarton)
     agregar = True
     For Each ctmp2 In ArrayCartones
