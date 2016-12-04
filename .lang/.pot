@@ -18,31 +18,31 @@ msgstr ""
 msgid "Juego del bingo educativo para refrescar conocimientos."
 msgstr ""
 
-#: Bingo.class:91
+#: Bingo.class:98
 msgid "Existe un bingo con el mismo nombre, ¿que desea hacer?"
 msgstr ""
 
-#: Bingo.class:91
+#: Bingo.class:98
 msgid "Borra y continua"
 msgstr ""
 
-#: Bingo.class:91
+#: Bingo.class:98
 msgid "Cancelar Operacion"
 msgstr ""
 
-#: Bingo.class:278
+#: Bingo.class:285
 msgid "Existe un fichero con el mismo nombre, ¿desea borrarlo?"
 msgstr ""
 
-#: Bingo.class:278
+#: Bingo.class:285
 msgid "Si, borralo y continua"
 msgstr ""
 
-#: Bingo.class:278
+#: Bingo.class:285
 msgid "No, cancelar operación"
 msgstr ""
 
-#: Bingo.class:697
+#: Bingo.class:707
 msgid "cd /tmp;rm carton*"
 msgstr ""
 
@@ -73,6 +73,7 @@ msgstr ""
 #: FMain.form:80 FormFicherosBingos.form:165 FormModificarBingos.form:195
 #: FormModificarCartones.form:247 FormModificarElementos.form:117
 #: FormMultipleElementosDeTexto.form:51 FormPrevisualizar.form:42
+#: FormVerCartones.form:98
 msgid "Salir"
 msgstr ""
 
@@ -82,6 +83,10 @@ msgstr ""
 
 #: FMain.class:12
 msgid "Bingo Educativo"
+msgstr ""
+
+#: FormAvanceCreacionCartones.form:18
+msgid "Creando Cartones....."
 msgstr ""
 
 #: FormFicherosBingos.form:51
@@ -132,7 +137,7 @@ msgstr ""
 msgid "Si, borrar"
 msgstr ""
 
-#: FormFicherosBingos.class:130 FormModificarBingos.class:159
+#: FormFicherosBingos.class:130 FormModificarBingos.class:160
 msgid "No, cancelar"
 msgstr ""
 
@@ -252,31 +257,31 @@ msgstr ""
 msgid "NuevoBingo"
 msgstr ""
 
-#: FormModificarBingos.class:159
+#: FormModificarBingos.class:160
 msgid "Generar cartones, borra los anteriores, ¿quiere continuar?"
 msgstr ""
 
-#: FormModificarBingos.class:159
+#: FormModificarBingos.class:160
 msgid "Si, continua"
 msgstr ""
 
-#: FormModificarBingos.class:164
+#: FormModificarBingos.class:168
 msgid "Problemas al crear los cartones, causas:"
 msgstr ""
 
-#: FormModificarBingos.class:165
+#: FormModificarBingos.class:169
 msgid "     Hay pocos elementos"
 msgstr ""
 
-#: FormModificarBingos.class:166
+#: FormModificarBingos.class:170
 msgid "     Hay muchos cartones para crear"
 msgstr ""
 
-#: FormModificarBingos.class:167
+#: FormModificarBingos.class:171
 msgid "no es posible crear el numero de cartones solicitado"
 msgstr ""
 
-#: FormModificarBingos.class:170
+#: FormModificarBingos.class:174
 msgid "Cartones Generados !!!"
 msgstr ""
 
@@ -430,4 +435,20 @@ msgstr ""
 
 #: FormPrevisualizar.form:21
 msgid "Previsualizar con datos"
+msgstr ""
+
+#: FormVerCartones.form:34
+msgid "Anterior"
+msgstr ""
+
+#: FormVerCartones.form:59
+msgid "Siguiente"
+msgstr ""
+
+#: FormVerCartones.form:87
+msgid "Lista de Cartones...."
+msgstr ""
+
+#: FormVerCartones.form:92
+msgid "Editar con inkscape"
 msgstr ""

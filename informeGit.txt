@@ -1,0 +1,168 @@
+commit 5e888ca9f8409b78bed30ef8c0f29ef4c12837d9
+Author: jsbsan <jusabejusabe@hotmail.com>
+Date:   Sat Dec 3 01:12:34 2016 +0100
+
+    [Beta]: creacion de cartones de texto
+
+commit e3622e1380d587b205342af65591c1088d069abf
+Author: jsbsan <jusabejusabe@hotmail.com>
+Date:   Thu Dec 1 22:12:20 2016 +0100
+
+    [pruebas] creacion de imagen carton 2
+
+commit 3c8e537c65cbe14955a9237781eb7c69a8ded59a
+Author: jsbsan <jusabejusabe@hotmail.com>
+Date:   Wed Nov 30 21:56:27 2016 +0100
+
+    [pruebas] creacion de imagen carton
+
+commit 1de0078022f96b8fa49d53f9b760654b3cb7c57e
+Author: jsbsan <jusabejusabe@hotmail.com>
+Date:   Tue Nov 29 21:59:24 2016 +0100
+
+    creacion de cartones aleatoriamente[pruebas]
+
+commit ca1b9fd4b33461f48abe6a00e0f418e7f2b5d13a
+Author: jsbsan <jusabejusabe@hotmail.com>
+Date:   Mon Nov 28 22:06:31 2016 +0100
+
+    test de creacion de cartones aleatoriamente
+
+commit 3c745154ef582836ec1a9c8e571fc200a4da97d5
+Author: jsbsan <jusabejusabe@hotmail.com>
+Date:   Sat Nov 26 20:24:36 2016 +0100
+
+    mejora en introduccion de multiples elementos de tipo texto
+
+commit a2617089d6ccc9873fba236f304cf03b6b4e752c
+Author: jsbsan <jusabejusabe@hotmail.com>
+Date:   Sat Nov 26 19:15:53 2016 +0100
+
+    reviso previsualizacion basica
+
+commit c46d94200988c730f1d7bad0cbcd741882e5a4fb
+Author: jsbsan <jusabejusabe@hotmail.com>
+Date:   Sat Nov 12 21:19:36 2016 +0100
+
+    vista preliminar (trabjando en ella)
+
+commit 72e40e4839ca095ff128c209063d0e58378b1928
+Author: jsbsan <jusabejusabe@hotmail.com>
+Date:   Sat Nov 12 19:28:38 2016 +0100
+
+    datos plantilla hoja de calculo
+
+commit 981c1e332acd7b44a654db3d1e45daaf4d1846a3
+Author: jsbsan <jusabejusabe@hotmail.com>
+Date:   Sun Nov 6 13:16:32 2016 +0100
+
+    previsualizar cartones estado Alpha
+
+commit 46095dda4240aad855320a427c12572e3e645d19
+Author: jsbsan <jusabejusabe@hotmail.com>
+Date:   Sun Nov 6 12:43:25 2016 +0100
+
+    añadir o quitar elementos repetidos en cartones
+
+commit bc5a54383fb20dcfd9779c353e9499febf907d88
+Author: jsbsan <jusabejusabe@hotmail.com>
+Date:   Tue Nov 1 20:49:29 2016 +0100
+
+    Formulario de introduccion elementos que se repiten en los carton
+
+commit a6be85cfcc4c4fd164353af16cf138774e1dc7aa
+Author: jsbsan <jusabejusabe@hotmail.com>
+Date:   Sun Oct 30 20:37:29 2016 +0100
+
+    plantillas bingo
+
+commit 764328315f1de848d01fc9634d0015c20c0df76d
+Author: jsbsan <jusabejusabe@hotmail.com>
+Date:   Fri Oct 28 20:34:35 2016 +0200
+
+    Formulario de Gestion Bingo terminado
+
+commit 9510b7074221d72bda5089c1c1b597115990446d
+Author: jsbsan <jusabejusabe@hotmail.com>
+Date:   Thu Oct 27 14:47:41 2016 +0200
+
+    edicicion de elementos bingo. Textos
+
+commit a1bfe544b279ad4c3ae06d74fa5cfa16ba40b528
+Author: jsbsan <jusabejusabe@hotmail.com>
+Date:   Tue Oct 25 14:41:38 2016 +0200
+
+    agregar elementos mediante formulario
+
+commit 0133625dca358d80339e45fd338758d896db1cf2
+Author: jsbsan <jusabejusabe@hotmail.com>
+Date:   Sun Oct 23 14:37:38 2016 +0200
+
+    pruebas grabadora y mejoras de formularios
+
+commit d34233f948e0e1fe75b693c712c69a62348a84f7
+Author: jsbsan <jusabejusabe@hotmail.com>
+Date:   Sun Oct 23 10:11:01 2016 +0200
+
+    test de carga de datos
+
+commit 13dcab8404931599652db7c3d016551afac0ef49
+Author: jsbsan <jusabejusabe@hotmail.com>
+Date:   Sun Oct 23 07:29:55 2016 +0200
+
+    test guardar datos de bingo
+
+commit d11b8f5cb965687699192be3cde6f9f4fa3f5e08
+Author: jsbsan <jusabejusabe@hotmail.com>
+Date:   Thu Oct 20 19:44:46 2016 +0200
+
+    test estructura de datos fichero json
+
+commit 6d7d08e06224cf727041f2e709ef06037c4f6c4c
+Author: jsbsan <jusabejusabe@hotmail.com>
+Date:   Tue Oct 18 21:03:05 2016 +0200
+
+    inicio elementos
+
+commit b713173e13de6de9c7983327b456f11d38c38832
+Author: jsbsan <jusabejusabe@hotmail.com>
+Date:   Mon Oct 17 21:53:47 2016 +0200
+
+    formulario vacio de elementos bingo
+
+commit 08bf86ca30a5058314031457bca88a38e9310734
+Author: jsbsan <jusabejusabe@hotmail.com>
+Date:   Wed Oct 12 21:29:47 2016 +0200
+
+    fest hisp
+
+commit 7705aef9e8c2cd3ee7d318e5702030c033e9acc2
+Author: jsbsan <jusabejusabe@hotmail.com>
+Date:   Wed Oct 12 13:04:08 2016 +0200
+
+    inicial presentacion
+
+commit 7eadd17d06c88bf96bc2492344b9c14d079a48c2
+Merge: 1ed7636 bfac33d
+Author: jsbsan <jusabejusabe@hotmail.com>
+Date:   Wed Oct 12 12:45:01 2016 +0200
+
+    Merge branch 'master' of https://github.com/jsbsan/bingoedu
+
+commit 1ed76363d4db01edb00b86b89004be97f30e287e
+Author: jsbsan <jusabejusabe@hotmail.com>
+Date:   Wed Oct 12 12:44:02 2016 +0200
+
+    dia hispanidad
+
+commit bfac33d9090ddb16b5e980676bd08df87b61a87d
+Author: jsbsan <jusabejusabe@hotmail.com>
+Date:   Wed Oct 12 12:38:57 2016 +0200
+
+    act
+
+commit 1a9a033dd43f3a70fcdd575e537c705bbf39a2dc
+Author: Julio Sanchez Berro <jusabejusabe@gmail.com>
+Date:   Mon Oct 10 22:43:29 2016 +0200
+
+    Create README.md

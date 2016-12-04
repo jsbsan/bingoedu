@@ -1,2 +1,50 @@
 ' Gambas class file
 
+Property bingoActual As Bingo
+Private $bingoActual As Bingo
+
+Private ObservadorBingo As Observer
+Private numeroactual As Integer = 1
+
+Public Sub Form_Open()
+  
+End
+
+Private Function bingoActual_Read() As Bingo
+  
+  Return $bingoActual
+  
+End
+
+Private Sub bingoActual_Write(Value As Bingo)
+  
+  $bingoActual = Value
+  
+  ObservadorBingo = New Observer($bingoActual) As "Observador"
+  
+End
+
+Public Sub Observador_inicio()
+  
+  Me.Title = ("Cartones" & " " & Str$(numeroactual) & " de " & Str(Me.bingoActual.NumeroCartones))
+  Me.Center()
+  Me.Show()
+  Observador_creadoCarton(0)
+  
+End
+
+Public Sub Observador_FinCarton()
+  
+  Me.Close()
+  
+End
+
+Public Sub Observador_creadoCarton(n As Integer)
+  
+  numeroactual = n
+  Me.Title = ("Cartones" & " " & Str$(numeroactual + 1) & " de " & Str(Me.bingoActual.NumeroCartones))
+  
+  ProgressBar1.Value = (numeroactual + 1) / Me.bingoActual.NumeroCartones
+  Wait 0.01
+  
+End

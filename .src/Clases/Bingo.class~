@@ -1,5 +1,12 @@
 ' Gambas class file
 
+'eventos
+
+Event inicio() 'Inicia la generacion de cartones. Utilizado para mostrar formulario FormAvanceCreacionCartones
+Event creadoCarton(n As Integer) 'crea evento de que se ha terminado de crear un carton
+Event FinCarton() 'final de creación de carton. Sirve para cerrar el formulario  FormAvanceCreacionCartones
+
+'variables y propiedades
 Property NombreFichero As String ''nombre del fichero .be para operaciones obtener el nombre de la carpeta, copiar archivos
 Property titulo As String ''titulo del bingo
 Property descripcion As String ''describe como es el bingo: se trata de un bingo para aprender matematica de 1º de eso. Tema Tablas de multiplicar
@@ -23,7 +30,7 @@ Property cuadrosNegros As Integer ''indica los huecos rellenos en negro
 
 Property cuadrosBlancos As Integer '' indica los huecos que quedaran en blanco
 
-Property ListaElementosRepetidos As String[] ''array que contiene los id de elementos del bingo (listaElementoBingo) que tienen que repetirse en cada carton
+Property ListaElementosRepetidos As String[] ''array que contiene los id de elementos del bingo (listaElementoCARTON) que tienen que repetirse en cada carton
 Property ArrayElementosRepetidos As Elemento[] '' array de elementos repetidos del bingo que se repiten en cada carton.
 
 Property NumeroCartones As Integer ''indica el numero de cartones existentes.
@@ -689,6 +696,9 @@ Public Sub generarCartones() As Boolean 'si devuelve FALSE, hay un problema al c
   Dim agregar As Boolean 'bandera que nos sirve para añadir carton o no a la lista de cartones
   Dim cuadrosCuadricula As Integer
   Dim valorminimo As Integer
+  
+  Dim arfile As String[]
+  Dim nombrefile As String
   'borro los cartones anteriores...
   Me.ArrayCartones.Clear()
   Me.listaCartones.Clear()
@@ -711,6 +721,16 @@ Public Sub generarCartones() As Boolean 'si devuelve FALSE, hay un problema al c
     Return False
   Endif
   
+  Raise inicio
+  Wait 0.05
+  
+  'borra todos los archivos que empiecen por carton*
+  arfile = Dir("/tmp", "carton*", gb.file)
+  
+  For Each nombrefile In arfile
+    Kill "/tmp/" & nombrefile
+  Next
+  
   While (Me.ArrayCartones.count < (Me.NumeroCartones + 1))
     ctmp = New Carton
     ctmp.ArrayElmentosCarton = Me.ArrayElementosCarton
@@ -724,6 +744,7 @@ Public Sub generarCartones() As Boolean 'si devuelve FALSE, hay un problema al c
         contador += 1
         If contador > Me.NumeroCartones * 10 Then 
           'hay problemas es posible de que haya unproblema al generar los cartones
+          Raise FinCarton()
           Return False 
         Endif
       Endif
@@ -733,9 +754,39 @@ Public Sub generarCartones() As Boolean 'si devuelve FALSE, hay un problema al c
       listaCartones.Add(ctmp.id)
       ArrayCartones.Add(ctmp)
       ctmp.generarDibujo(ArrayElementosCarton, Me.tituloCarton)
+      Raise creadoCarton(listaCartones.count)
     Endif    
   Wend
   Dec Application.Busy 
+  Raise FinCarton()
+  
+  'todos los cartones creados deben de ser copiados al directorio de bingoedu...
+  copiarCartones()
+  
   Return True 'se han creado los cartones bien
+  
+End
+
+Public Sub copiarCartones()
+  
+  Dim nombrefile As String
+  Dim arFile As String[]
+  
+  'borra todos los archivos que empiecen por carton*
+  arfile = Dir(User.home & "/" & "bingoedu/" & Me.NombreFichero, "carton*", gb.file)
+  
+  For Each nombrefile In arfile
+    Kill User.home & "/" & "bingoedu/" & Me.NombreFichero & "/" & nombrefile
+  Next
+  
+  'inicio la copia de archivos 
+  arfile = Dir("/tmp", "carton*", gb.file)
+  
+  For Each nombrefile In arfile
+    If Exist(User.home & "/" & "bingoedu/" & Me.NombreFichero & "/" & nombrefile) Then 
+      Kill User.home & "/" & "bingoedu/" & Me.NombreFichero & "/" & nombrefile 'lo borro si existe uno igual nombre
+    Endif
+    Copy "/tmp/" & nombrefile To User.home & "/" & "bingoedu/" & Me.NombreFichero & "/" & nombrefile
+  Next
   
 End

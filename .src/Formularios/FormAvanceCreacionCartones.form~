@@ -1,5 +1,13 @@
 # Gambas Form File 3.0
 
-{ FormAvanceCreacionCartones Form
-  MoveScaled(0,0,64,64)
+{ Form Form
+  MoveScaled(0,0,92,16)
+  { ProgressBar1 ProgressBar
+    MoveScaled(6,7,81,6)
+  }
+  { ProgressBar2 ProgressBar
+    MoveScaled(6,2,81,3)
+    Background = &H5FFFFF&
+    Foreground = &H3F9FFF&
+  }
 }

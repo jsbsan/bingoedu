@@ -154,11 +154,15 @@ End
 Public Sub ButtonGenerarCartones_Click()
   
   Dim res As Integer
+  
   Dim textoMensaje As String
   
   res = Message.Question(("Generar cartones, borra los anteriores, ¿quiere continuar?"), ("Si, continua"), ("No, cancelar"))
   
   If res <> 1 Then Return 'no, ha cancelado el usuario
+  
+  'activo "vigilante" para que muestre el proceso de creación de cartones
+  FormAvanceCreacionCartones.bingoActual = bingotmp
   
   If bingotmp.generarCartones() = False Then 
     textoMensaje = ("Problemas al crear los cartones, causas:") 
@@ -184,5 +188,7 @@ End
 Public Sub ButtonVerCartones_Click()
   
   'ver cartones...
+  FormVerCartones.bingotmp = bingotmp
+  FormVerCartones.Show()
   
 End

@@ -12,6 +12,8 @@ Private tipotabla As String 'almacena el tipo de bingo de salida 4x3,5x4,5x5
 Public ArrayElmentosCarton As Elemento[]
 Public ArrayElmentosBingo As Elemento[]
 
+Private textoscarton As String[]
+
 Public Sub _new()
   
   'cuando se crea se identefica
@@ -120,7 +122,6 @@ End
 
 Private Sub colocarElementos(longitud As Integer, lista As String[], ByRef elementos As String[], numeroCuadrosBlancos As Integer, numeroCuadrosNegros As Integer)
   
-  Dim textoscarton As New String[]
   Dim ele As Object 'elemento
   Dim ele2 As Object
   
@@ -134,7 +135,7 @@ Private Sub colocarElementos(longitud As Integer, lista As String[], ByRef eleme
     
     While elementos[a] = "" 
       
-      aleatorio = Int(Rnd(0, l.count))
+      aleatorio = Int(Rnd(2, l.count))
       
       ele = buscaElemento(l[aleatorio], Me.ArrayElmentosCarton)
       If ele.id = "idnegro" Or ele.id = "idblanco" Then 
@@ -145,6 +146,7 @@ Private Sub colocarElementos(longitud As Integer, lista As String[], ByRef eleme
         elementos[a] = l[aleatorio]
         l.Delete(aleatorio)
         textoscarton.Add(ele.texto)
+        
       Endif
       
       'borro de la lista para no repetirlo
@@ -162,6 +164,8 @@ Private Sub colocarElementosRepetidos(longitud As Integer, listaRepetida As Stri
   Dim aleatorio As Integer
   Dim a As Integer
   
+  textoscarton = New String[]
+  
   For a = 1 To listaRepetida.Count
     Do
       aleatorio = Int(Rnd(2, longitud))
@@ -170,6 +174,8 @@ Private Sub colocarElementosRepetidos(longitud As Integer, listaRepetida As Stri
         eleBingo = buscaElemento(listaRepetida[a - 1], Me.ArrayElmentosBingo)
         
         elementos[aleatorio] = eleBingo.enlace
+        eleCarton = buscaElemento(eleBingo.enlace, Me.ArrayElmentosCarton)
+        textoscarton.Add(eleCarton.texto)
         Break
       Endif
       
@@ -305,6 +311,7 @@ Public Sub generarDibujo(arrayElementosCarton As Object[], titulo As String) ' E
           contenido &= "[y]" & "\t" & buscaCoordY(a, tipotabla) & "\n"
           contenido &= "[fw]" & "\t" & "225" & "\n" 'siempre es el mismo aunque cambie el carton
           contenido &= "[fh]" & "\t" & "199" & "\n" 'siempre es el mismo aunque cambie el carton
+          contenido &= "[dpi]" & "\t" & "100" & "\n" '' defino calidad de salida del dibujo com  dpi como 100
           
       End Select
     Next

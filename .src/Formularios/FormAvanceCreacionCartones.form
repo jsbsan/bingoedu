@@ -1,13 +1,15 @@
 # Gambas Form File 3.0
 
 { Form Form
-  MoveScaled(0,0,92,15)
+  MoveScaled(0,0,92,16)
+  Resizable = False
   { ProgressBar1 ProgressBar
-    MoveScaled(6,7,81,6)
+    MoveScaled(6,6,81,6)
   }
-  { ProgressBar2 ProgressBar
-    MoveScaled(6,2,81,3)
-    Background = &H5FFFFF&
-    Foreground = &H3F9FFF&
+  { TextLabel1 TextLabel
+    MoveScaled(7,1,78,4)
+    Font = Font["+5"]
+    Text = ("Creando Cartones.....")
+    Alignment = Align.Center
   }
 }

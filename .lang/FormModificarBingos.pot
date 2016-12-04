@@ -110,35 +110,35 @@ msgstr ""
 msgid "NuevoBingo"
 msgstr ""
 
-#: FormModificarBingos.class:159
+#: FormModificarBingos.class:160
 msgid "Generar cartones, borra los anteriores, ¿quiere continuar?"
 msgstr ""
 
-#: FormModificarBingos.class:159
+#: FormModificarBingos.class:160
 msgid "Si, continua"
 msgstr ""
 
-#: FormModificarBingos.class:159
+#: FormModificarBingos.class:160
 msgid "No, cancelar"
 msgstr ""
 
-#: FormModificarBingos.class:164
+#: FormModificarBingos.class:168
 msgid "Problemas al crear los cartones, causas:"
 msgstr ""
 
-#: FormModificarBingos.class:165
+#: FormModificarBingos.class:169
 msgid "     Hay pocos elementos"
 msgstr ""
 
-#: FormModificarBingos.class:166
+#: FormModificarBingos.class:170
 msgid "     Hay muchos cartones para crear"
 msgstr ""
 
-#: FormModificarBingos.class:167
+#: FormModificarBingos.class:171
 msgid "no es posible crear el numero de cartones solicitado"
 msgstr ""
 
-#: FormModificarBingos.class:170
+#: FormModificarBingos.class:174
 msgid "Cartones Generados !!!"
 msgstr ""
 

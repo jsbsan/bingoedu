@@ -1,0 +1,70 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,120,53)
+  { HBox1 HBox
+    MoveScaled(57,52,60,5)
+    { Panel4 Panel
+      MoveScaled(0,0,6,4)
+      Expand = True
+      AutoResize = True
+    }
+    { ButtonAnterior Button
+      MoveScaled(6,0,14,5)
+      Text = ("Anterior")
+      Picture = Picture["icon:/32/previous"]
+    }
+    { Panel1 Panel
+      MoveScaled(19,-1,6,4)
+      Expand = True
+      AutoResize = True
+    }
+    { LabelNumero Label
+      MoveScaled(27,0,7,5)
+      Font = Font["Times New Roman,Bold,+2"]
+      Alignment = Align.Center
+      Border = Border.Raised
+    }
+    { Panel5 Panel
+      MoveScaled(35,-1,2,4)
+      Expand = True
+      AutoResize = True
+    }
+    { ButtonSiguiente Button
+      MoveScaled(38,0,15,5)
+      Text = ("Siguiente")
+      Picture = Picture["icon:/32/right"]
+    }
+    { Panel2 Panel
+      MoveScaled(53,0,6,4)
+      Expand = True
+      AutoResize = True
+      { Panel3 Panel
+        MoveScaled(68,2,6,4)
+      }
+    }
+  }
+  { PictureBoxVisor PictureBox
+    MoveScaled(58,2,60,41.7143)
+    Stretch = True
+    Border = Border.Plain
+  }
+  { ScrollView1 ScrollView
+    MoveScaled(1,4,55,48)
+    Arrangement = Arrange.Column
+  }
+  { Label1 Label
+    MoveScaled(2,0,20,4)
+    Text = ("Lista de Cartones....")
+  }
+  { ButtonEditor Button
+    MoveScaled(60,45,25,5)
+    Text = ("Editar con inkscape")
+    Picture = Picture["inkscape.png"]
+  }
+  { ButtonSalir Button
+    MoveScaled(105,45,12,5)
+    Text = ("Salir")
+    Picture = Picture["icon:/16/quit"]
+  }
+}

@@ -1,3 +1,6 @@
+[Bookmarks]
+FormAvanceCreacionCartones=[45]
+
 [Breakpoints]
 Count=0
 
@@ -149,7 +152,10 @@ Geometry=[118,470,990,335]
 Geometry=[132,484,990,335]
 
 [DebugWindow/arfile]
-Geometry=[41,114,210,210]
+Geometry=[783,69,632,410]
+
+[DebugWindow/arfile2]
+Geometry=[22,572,210,210]
 
 [DebugWindow/arrayElem]
 Geometry=[635,436,550,210]
@@ -249,17 +255,16 @@ File[1]=".src/Formularios/FMain.form"
 File[2]=".src/Clases/json/JS354.class:0.0"
 File[3]=".src/Clases/json/JSONCollection354.class:24.0"
 File[4]=".src/Clases/json/JSON354.module:273.0"
-File[5]=".src/Formularios/FMain.class:7.0"
+File[5]=".src/Formularios/FMain.class:4.0"
 File[6]=".src/Formularios/FormFicherosBingos.form"
 File[7]="Nota.txt:7.0"
 File[8]=".src/Formularios/FormModificarBingos.form"
-File[9]=".src/Formularios/FormModificarBingos.class:10.3"
+File[9]=".src/Formularios/FormModificarBingos.class:191.24"
 File[10]=".src/Formularios/FormModificarCartones.form"
 File[11]=".src/Formularios/FormFicherosBingos.class:182.0"
 File[12]=".src/Clases/controles/SquareButton.class:78.8"
 File[13]=".src/Formularios/FormModificarElementos.form"
-Active=14
-File[14]=".src/Clases/Bingo.class:597.30"
+File[14]=".src/Clases/Bingo.class:734.21"
 File[15]=".src/Clases/elemento.class:82.0"
 File[16]=".src/Clases/elementoTexto.class:10.0"
 File[17]=".src/Clases/elementoImagen.class:10.2"
@@ -267,7 +272,7 @@ File[18]=".src/Formularios/FormModificarElementos.class:367.0"
 File[19]=".src/Formularios/testGuadarBingo.module:10.0"
 File[20]=".src/Clases/elementoBlanco.class:16.2"
 File[21]=".src/Clases/elementoNegro.class:1.0"
-File[22]=".src/Clases/Carton.class:176.3"
+File[22]=".src/Clases/Carton.class:135.28"
 File[23]=".src/Formularios/testCargarBingo.module:7.0"
 File[24]=".src/Formularios/FormGrabadora.form"
 File[25]=".src/Formularios/FormGrabadora.class:26.2"
@@ -282,8 +287,11 @@ File[33]="ModelosCarton/bingotablas5x5.svg:0.0"
 File[34]=".src/Formularios/FormMultipleElementosDeTexto.form"
 File[35]=".src/Formularios/FormMultipleElementosDeTexto.class:58.21"
 File[36]=".src/Formularios/FormAvanceCreacionCartones.form"
-File[37]=".src/Formularios/FormAvanceCreacionCartones.class:4.13"
-Count=37
+File[37]=".src/Formularios/FormAvanceCreacionCartones.class:47.11"
+File[38]=".src/Formularios/FormVerCartones.form"
+Active=39
+File[39]=".src/Formularios/FormVerCartones.class:98.2"
+Count=39
 
 [Watches]
 Count=1
