@@ -72,20 +72,20 @@ Public Function CompararCarton(c As Carton) As Boolean
   
 End
 
-Public Sub generarCarton(TamanoCuadricula As String, numeroCuadrosNegros As Integer, numeroCuadrosBlancos As Integer, listaRepetido As String[], listaelementos As String[])
+Public Function generarCarton(TamanoCuadricula As String, numeroCuadrosNegros As Integer, numeroCuadrosBlancos As Integer, listaRepetido As String[], listaelementos As String[]) As Boolean
   
   'crea la lista de elementos...
   
   Select Case TamanoCuadricula
     Case "4x3" 
       tipotabla = "4x3"
-      rellenaCarton(12, numeroCuadrosNegros, numeroCuadrosBlancos, listaRepetido, listaelementos)
+      Return rellenaCarton(12, numeroCuadrosNegros, numeroCuadrosBlancos, listaRepetido, listaelementos)
     Case "5x4"
       tipotabla = "5x4"
-      rellenaCarton(20, numeroCuadrosNegros, numeroCuadrosBlancos, listaRepetido, listaelementos)
+      Return rellenaCarton(20, numeroCuadrosNegros, numeroCuadrosBlancos, listaRepetido, listaelementos)
     Case "5x5"
       tipotabla = "5x5"
-      rellenaCarton(25, numeroCuadrosNegros, numeroCuadrosBlancos, listaRepetido, listaelementos)
+      Return rellenaCarton(25, numeroCuadrosNegros, numeroCuadrosBlancos, listaRepetido, listaelementos)
     Case Else
       Message.Info(("Error, desconocido tamaño de cuadricula"))
       Return 
@@ -94,8 +94,9 @@ Public Sub generarCarton(TamanoCuadricula As String, numeroCuadrosNegros As Inte
   
 End
 
-Private Sub rellenaCarton(numero As Integer, numeroCuadrosNegros As Integer, numeroCuadrosBlancos As Integer, listaRepetido As String[], listaelementos As String[])
-  
+Private Function rellenaCarton(numero As Integer, numeroCuadrosNegros As Integer, numeroCuadrosBlancos As Integer, listaRepetido As String[], listaelementos As String[]) As Boolean
+
+  Dim resp As Boolean
   Dim a As Integer
   Dim elementos As New String[]
   'Dim indice As Integer[] -> para futura mejora
@@ -114,13 +115,15 @@ Private Sub rellenaCarton(numero As Integer, numeroCuadrosNegros As Integer, num
   'colocar elementos de la lista  de repetidos...
   colocarElementosRepetidos(numero, listaRepetido, ByRef elementos)
   'colocar elementos...
-  colocarElementos(numero, listaelementos, ByRef elementos, numeroCuadrosBlancos, numeroCuadrosNegros)
+  resp = colocarElementos(numero, listaelementos, ByRef elementos, numeroCuadrosBlancos, numeroCuadrosNegros)
   
   $ArraIdElementos = elementos.Copy()
   
+  Return resp
+  
 End
 
-Private Sub colocarElementos(longitud As Integer, lista As String[], ByRef elementos As String[], numeroCuadrosBlancos As Integer, numeroCuadrosNegros As Integer)
+Private Function colocarElementos(longitud As Integer, lista As String[], ByRef elementos As String[], numeroCuadrosBlancos As Integer, numeroCuadrosNegros As Integer) As Boolean
   
   Dim ele As Object 'elemento
   Dim ele2 As Object
@@ -135,24 +138,33 @@ Private Sub colocarElementos(longitud As Integer, lista As String[], ByRef eleme
     
     While elementos[a] = "" 
       
+      If L.COUNT = 2 Then 
+        '   Message.Info(("Muy pocos elementos"))
+        Return False
+      Endif
+      
       aleatorio = Int(Rnd(2, l.count))
       
       ele = buscaElemento(l[aleatorio], Me.ArrayElmentosCarton)
-      If ele.id = "idnegro" Or ele.id = "idblanco" Then 
-        Continue
-      Endif
+      ' If ele.id = "idnegro" Or ele.id = "idblanco" Then 
+      '   Continue
+      ' Endif
       If textoscarton.Find(ele.texto) = -1 Then 
         'se añade elemento ya que es distinto el contenido de las celda
         elementos[a] = l[aleatorio]
         l.Delete(aleatorio)
         textoscarton.Add(ele.texto)
-        
+      Else
+        'ELEMENTO ENCONTRADO... BORRO DE LA LISTA, PARA NO REPETIRLO MAS
+        L.Delete(ALEATORIO)
       Endif
       
       'borro de la lista para no repetirlo
     Wend
     
   Next
+  
+  Return True
   
 End
 

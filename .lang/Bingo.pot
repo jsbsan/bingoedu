@@ -38,7 +38,7 @@ msgstr ""
 msgid "No, cancelar operación"
 msgstr ""
 
-#: Bingo.class:707
+#: Bingo.class:708
 msgid "cd /tmp;rm carton*"
 msgstr ""
 

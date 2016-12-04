@@ -224,13 +224,13 @@ Geometry=[0,29,210,210]
 Geometry=[777,296,229,695]
 
 [DebugWindow/elementos]
-Geometry=[841,222,308,551]
+Geometry=[997,257,308,551]
 
 [DebugWindow/l]
-Geometry=[0,149,210,703]
+Geometry=[480,538,210,457]
 
 [DebugWindow/listaRepetida]
-Geometry=[0,24,210,210]
+Geometry=[-31,403,210,210]
 
 [DebugWindow/listaRepetido]
 Geometry=[0,24,210,210]
@@ -242,7 +242,7 @@ Geometry=[0,24,210,605]
 Geometry=[5,21,210,210]
 
 [DebugWindow/textoscarton]
-Geometry=[70,594,210,210]
+Geometry=[664,45,210,425]
 
 [DebugWindow/tvariante]
 Geometry=[5,21,210,210]
@@ -259,12 +259,13 @@ File[5]=".src/Formularios/FMain.class:4.0"
 File[6]=".src/Formularios/FormFicherosBingos.form"
 File[7]="Nota.txt:7.0"
 File[8]=".src/Formularios/FormModificarBingos.form"
-File[9]=".src/Formularios/FormModificarBingos.class:191.24"
+Active=9
+File[9]=".src/Formularios/FormModificarBingos.class:175.24"
 File[10]=".src/Formularios/FormModificarCartones.form"
 File[11]=".src/Formularios/FormFicherosBingos.class:182.0"
 File[12]=".src/Clases/controles/SquareButton.class:78.8"
 File[13]=".src/Formularios/FormModificarElementos.form"
-File[14]=".src/Clases/Bingo.class:734.21"
+File[14]=".src/Clases/Bingo.class:742.23"
 File[15]=".src/Clases/elemento.class:82.0"
 File[16]=".src/Clases/elementoTexto.class:10.0"
 File[17]=".src/Clases/elementoImagen.class:10.2"
@@ -272,7 +273,7 @@ File[18]=".src/Formularios/FormModificarElementos.class:367.0"
 File[19]=".src/Formularios/testGuadarBingo.module:10.0"
 File[20]=".src/Clases/elementoBlanco.class:16.2"
 File[21]=".src/Clases/elementoNegro.class:1.0"
-File[22]=".src/Clases/Carton.class:135.28"
+File[22]=".src/Clases/Carton.class:277.2"
 File[23]=".src/Formularios/testCargarBingo.module:7.0"
 File[24]=".src/Formularios/FormGrabadora.form"
 File[25]=".src/Formularios/FormGrabadora.class:26.2"
@@ -289,11 +290,12 @@ File[35]=".src/Formularios/FormMultipleElementosDeTexto.class:58.21"
 File[36]=".src/Formularios/FormAvanceCreacionCartones.form"
 File[37]=".src/Formularios/FormAvanceCreacionCartones.class:47.11"
 File[38]=".src/Formularios/FormVerCartones.form"
-Active=39
-File[39]=".src/Formularios/FormVerCartones.class:98.2"
+File[39]=".src/Formularios/FormVerCartones.class:90.2"
 Count=39
 
 [Watches]
-Count=1
+Count=3
 Watch[1]="jsonstring"
+Watch[2]="A"
+Watch[3]="ALEATORIO"
 

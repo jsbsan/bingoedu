@@ -188,6 +188,7 @@ End
 Public Sub ButtonVerCartones_Click()
   
   'ver cartones...
+  FormVerCartones.bingotmp = bingotmp
   FormVerCartones.Show()
-
+  
 End

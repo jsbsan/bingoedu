@@ -42,7 +42,7 @@ msgstr ""
 msgid "No, cancelar operación"
 msgstr ""
 
-#: Bingo.class:707
+#: Bingo.class:708
 msgid "cd /tmp;rm carton*"
 msgstr ""
 
@@ -281,7 +281,7 @@ msgstr ""
 msgid "no es posible crear el numero de cartones solicitado"
 msgstr ""
 
-#: FormModificarBingos.class:174
+#: FormModificarBingos.class:175
 msgid "Cartones Generados !!!"
 msgstr ""
 
