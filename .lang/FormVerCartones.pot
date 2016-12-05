@@ -22,15 +22,15 @@ msgstr ""
 msgid "Siguiente"
 msgstr ""
 
-#: FormVerCartones.form:87
+#: FormVerCartones.form:88
 msgid "Lista de Cartones...."
 msgstr ""
 
-#: FormVerCartones.form:92
+#: FormVerCartones.form:93
 msgid "Editar con inkscape"
 msgstr ""
 
-#: FormVerCartones.form:98
+#: FormVerCartones.form:99
 msgid "Salir"
 msgstr ""
 

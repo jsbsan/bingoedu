@@ -42,7 +42,7 @@ msgstr ""
 msgid "No, cancelar operación"
 msgstr ""
 
-#: Bingo.class:708
+#: Bingo.class:727
 msgid "cd /tmp;rm carton*"
 msgstr ""
 
@@ -70,10 +70,10 @@ msgstr ""
 msgid "Autores: Julio Sanchez Berro (jsbsan) y Antonio Sanchez (introlinux)"
 msgstr ""
 
-#: FMain.form:80 FormFicherosBingos.form:165 FormModificarBingos.form:195
+#: FMain.form:80 FormFicherosBingos.form:165 FormModificarBingos.form:196
 #: FormModificarCartones.form:247 FormModificarElementos.form:117
 #: FormMultipleElementosDeTexto.form:51 FormPrevisualizar.form:42
-#: FormVerCartones.form:98
+#: FormVerCartones.form:99
 msgid "Salir"
 msgstr ""
 
@@ -225,23 +225,23 @@ msgstr ""
 msgid "Elementos que componen el Bingo actual:"
 msgstr ""
 
-#: FormModificarBingos.form:134
+#: FormModificarBingos.form:135
 msgid "Visualizar imagenes"
 msgstr ""
 
-#: FormModificarBingos.form:145
+#: FormModificarBingos.form:146
 msgid "Para editar un elemento, seleccionalo y haga DobleClick"
 msgstr ""
 
-#: FormModificarBingos.form:161
+#: FormModificarBingos.form:162
 msgid "Añadir Elemento"
 msgstr ""
 
-#: FormModificarBingos.form:173
+#: FormModificarBingos.form:174
 msgid "Multiple Elementos de Texto"
 msgstr ""
 
-#: FormModificarBingos.form:184 FormModificarCartones.form:254
+#: FormModificarBingos.form:185 FormModificarCartones.form:266
 msgid "Guardar"
 msgstr ""
 
@@ -349,6 +349,10 @@ msgstr ""
 msgid "Previsualizar"
 msgstr ""
 
+#: FormModificarCartones.form:254
+msgid "no visible Guardar"
+msgstr ""
+
 #: FormModificarCartones.class:167
 msgid "Los datos se han modificado, pero no guardado ¿desea salir?"
 msgstr ""
@@ -445,10 +449,10 @@ msgstr ""
 msgid "Siguiente"
 msgstr ""
 
-#: FormVerCartones.form:87
+#: FormVerCartones.form:88
 msgid "Lista de Cartones...."
 msgstr ""
 
-#: FormVerCartones.form:92
+#: FormVerCartones.form:93
 msgid "Editar con inkscape"
 msgstr ""

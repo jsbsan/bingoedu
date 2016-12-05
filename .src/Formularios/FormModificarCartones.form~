@@ -180,7 +180,7 @@
           MoveScaled(0,0,11,8)
           Expand = True
           Text = ("Guardar")
-          Picture = Picture["icon:/22/save"]
+          Picture = Picture["icon:/48/save"]
         }
       }
     }

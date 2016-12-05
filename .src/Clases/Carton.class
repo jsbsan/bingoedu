@@ -149,15 +149,32 @@ Private Function colocarElementos(longitud As Integer, lista As String[], ByRef 
       ' If ele.id = "idnegro" Or ele.id = "idblanco" Then 
       '   Continue
       ' Endif
-      If textoscarton.Find(ele.texto) = -1 Then 
-        'se añade elemento ya que es distinto el contenido de las celda
-        elementos[a] = l[aleatorio]
-        l.Delete(aleatorio)
-        textoscarton.Add(ele.texto)
-      Else
-        'ELEMENTO ENCONTRADO... BORRO DE LA LISTA, PARA NO REPETIRLO MAS
-        L.Delete(ALEATORIO)
-      Endif
+      ' 
+      '' comprobar si ya esta elemento...
+      Select Case Upper$(ele.tipoElemento())
+        Case Upper$("ElementoTexto")
+          
+          If textoscarton.Find(ele.texto) = -1 Then 
+            'se añade elemento ya que es distinto el contenido de las celda
+            elementos[a] = l[aleatorio]
+            l.Delete(aleatorio)
+            textoscarton.Add(ele.texto)
+          Else
+            'ELEMENTO ENCONTRADO... BORRO DE LA LISTA, PARA NO REPETIRLO MAS
+            L.Delete(ALEATORIO)
+          Endif
+        Case Upper$("ElementoImagen")
+          'la comprobación es por id
+          If Me.ArraIdElementos.Find(ele.id) = -1 Then 
+            
+            elementos[a] = l[aleatorio]
+            l.Delete(aleatorio)
+          Else
+            l.Delete(aleatorio)
+            
+          Endif
+          
+      End Select
       
       'borro de la lista para no repetirlo
     Wend
@@ -187,7 +204,11 @@ Private Sub colocarElementosRepetidos(longitud As Integer, listaRepetida As Stri
         
         elementos[aleatorio] = eleBingo.enlace
         eleCarton = buscaElemento(eleBingo.enlace, Me.ArrayElmentosCarton)
-        textoscarton.Add(eleCarton.texto)
+        If Upper$(eleCarton.tipoElemento()) = Upper$("ElementoTexto") Then 
+          textoscarton.Add(eleCarton.texto)
+        Else
+          Me.ArraIdElementos.Add(eleCarton.id)
+        Endif
         Break
       Endif
       

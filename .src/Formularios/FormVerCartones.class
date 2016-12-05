@@ -34,8 +34,8 @@ Public Sub cargarlistados()
   
   For Each nombrefichero In arfile
     p = New PictureBox(ScrollView1) 
-    p.w = 100
-    p.h = 70
+    p.w = 137
+    p.h = 95
     p.Picture = Picture.Load(User.home & "/" & "bingoedu/" & bingotmp.NombreFichero & "/" & nombrefichero)
     p.Stretch = True
     p.tag = User.home & "/" & "bingoedu/" & bingotmp.NombreFichero & "/" & nombrefichero

@@ -6,8 +6,8 @@ Public Sub main()
 
   Dim b As New Bingo
 
-  Dim tempEleSonido As ElementoSonido
-  Dim tempEleImagen As ElementoImagen
+  Dim tempEleSonido As ElementoSonido ''test de pruebas
+  Dim tempEleImagen As ElementoImagen ''test de pruebas
 
   Dim tempEleNegro As ElementoNegro '' exclusivo para los cartones
   Dim tempEleBlanco As ElementoBlanco '' excluisvo para los cartones

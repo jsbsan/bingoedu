@@ -139,7 +139,7 @@
     }
     { Panel8 Panel
       MoveScaled(91,0,44,27)
-      { Panel3 Panel
+      { Panel_Previsualizar Panel
         MoveScaled(17,6,11,10)
         Arrangement = Arrange.Fill
         Border = Border.Plain
@@ -150,7 +150,7 @@
           Picture = Picture["icon:/22/wizard"]
         }
       }
-      { Panel2 Panel
+      { Panel_Imprimir Panel
         MoveScaled(31,6,11,10)
         Arrangement = Arrange.Fill
         Border = Border.Plain
@@ -167,12 +167,12 @@
         Picture = Picture["icon:/22/quit"]
       }
       { ButtonGuardar Button
-        MoveScaled(3,20,13,4)
+        MoveScaled(3,21,20,4)
         Visible = False
-        Text = ("Guardar")
+        Text = ("no visible Guardar")
         Picture = Picture["icon:/22/save"]
       }
-      { Panel1 Panel
+      { Panel_Guardar Panel
         MoveScaled(3,6,11,10)
         Arrangement = Arrange.Fill
         Border = Border.Plain

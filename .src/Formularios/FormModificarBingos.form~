@@ -128,7 +128,7 @@
       Picture = Picture["icon:/22/save"]
     }
     { HBox3 HBox
-      MoveScaled(60,1,14,5)
+      MoveScaled(59,0,14,5)
       Expand = True
     }
     { ButtonSalir Button

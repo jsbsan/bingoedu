@@ -526,11 +526,15 @@ Public Sub CargarDatosBingoCartonesGridview(g As GridView) '' Carga los datos de
     g.Rows.Height = 45
     'datos del elemento Bingo
     g[g.Rows.Max, 0].Picture = ImagenTipoElemento(e) 'devuelve un icono que representa
+    '   g[g.Rows.Max, 0].Picture.Resize(30, 30)
+    
     g[g.Rows.Max, 1].text = TextoElemento(e) ''escribira el texto, o el nombre de la imagen o sonido
     'datos del elemnto carton relacionado con el elmento bingo
     ecarton = buscaElemento(e.enlace, ArrayElementosCarton)
     'escribimos datos del elemnto carton relacinado con el elemento bingo.
     g[g.Rows.Max, 2].Picture = ImagenTipoElemento(ecarton) 'devuelve un icono que representa
+    '  g[g.Rows.Max, 2].Picture.Resize(30, 30)
+    
     g[g.Rows.Max, 3].text = TextoElemento(ecarton) ''escribira el texto, o el nombre de la imagen o sonido
     
     g[g.Rows.Max, 0].Refresh()
@@ -561,11 +565,15 @@ Public Sub CargaDatosGridviewDatosRepetidos(G As GridView)
     g.Rows.Height = 45
     'datos del elemento Bingo
     g[g.Rows.Max, 0].Picture = ImagenTipoElemento(e) 'devuelve un icono que representa
+    '   g[g.Rows.Max, 0].Picture.Resize(30, 30)
+    
     g[g.Rows.Max, 1].text = TextoElemento(e) ''escribira el texto, o el nombre de la imagen o sonido
     'datos del elemnto carton relacionado con el elmento bingo
     ecarton = buscaElemento(e.enlace, ArrayElementosCarton)
     'escribimos datos del elemnto carton relacinado con el elemento bingo.
     g[g.Rows.Max, 2].Picture = ImagenTipoElemento(ecarton) 'devuelve un icono que representa
+    '  g[g.Rows.Max, 2].Picture.Resize(30, 30)
+    
     g[g.Rows.Max, 3].text = TextoElemento(ecarton) ''escribira el texto, o el nombre de la imagen o sonido
     
     g[g.Rows.Max, 0].Refresh()
@@ -598,13 +606,20 @@ Public Function buscaElemento(id As String, arrayElem As Elemento[]) As Elemento
 End
 
 '-----------------------
-Public Function ImagenTipoElemento(e As Elemento) As Picture
+Public Function ImagenTipoElemento(e As Variant) As Picture
   
   Dim rutaicono As String ''icono que representa imagen, texto, o sonido
+  
+  If IsNull(e) Then 
+    rutaIcono = "iconoletra16.png"
+    Return Picture[rutaicono]
+    
+  Endif
   
   Select Case e.tipoElemento()
     Case Upper$("ElementoImagen")
       rutaIcono = "iconoimagen32.png"
+      ' rutaicono = User.home & "/bingoedu/" & Me.NombreFichero & "/" & e.rutaimagen
     Case Upper$("ElementoTexto")
       rutaIcono = "iconoletra32.png"
     Case Upper$("ElementoSonido")
@@ -625,6 +640,10 @@ Public Function TextoElemento(e As Variant) As String
   '
   
   Dim contenido As String
+  
+  If IsNull(e) Then 
+    Return "n/a"
+  Endif
   
   Select Case e.tipoElemento()
     Case Upper$("ElementoImagen")
@@ -706,6 +725,7 @@ Public Sub generarCartones() As Boolean 'si devuelve FALSE, hay un problema al c
   
   Inc Application.Busy
   Shell ("cd /tmp;rm carton*")
+  Shell ("cd " & User.home & "/bingoedu/" & Me.NombreFichero & "/;rm carton*") 'borra los cartones anteriores
   'comprobar el numero de elementos minino
   Select Case Me.tamanoCuadricula
     Case "4x3"
@@ -730,6 +750,16 @@ Public Sub generarCartones() As Boolean 'si devuelve FALSE, hay un problema al c
   
   For Each nombrefile In arfile
     Kill "/tmp/" & nombrefile
+  Next
+  
+  'copia las imagenes desde la ruta del bingo.
+  '
+  arfile = Dir(User.home & "/bingoedu/" & Me.NombreFichero, "*.png", gb.file)
+  arfile.Insert(Dir(User.home & "/bingoedu/" & Me.NombreFichero, "*.jpg", gb.file))
+  arfile.Insert(Dir(User.home & "/bingoedu/" & Me.NombreFichero, "*.jpeg", gb.file))
+  
+  For Each nombrefile In arfile
+    Try Copy User.home & "/bingoedu/" & Me.NombreFichero & "/" & nombrefile To "/tmp/" & nombrefile
   Next
   
   While (Me.ArrayCartones.count < (Me.NumeroCartones))

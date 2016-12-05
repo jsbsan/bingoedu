@@ -1,5 +1,6 @@
 [Bookmarks]
 FormAvanceCreacionCartones=[45]
+Carton=[]
 
 [Breakpoints]
 Count=0
@@ -14,10 +15,22 @@ Geometry=[0,16,230,210]
 Geometry=[0,24,210,210]
 
 [DebugWindow/ArrayElementosCarton]
-Geometry=[16,388,412,210]
+Geometry=[48,226,412,728]
 
 [DebugWindow/ArrayElementosCarton[0]]
 Geometry=[16,620,412,210]
+
+[DebugWindow/ArrayElementosCarton[21]]
+Geometry=[62,96,412,728]
+
+[DebugWindow/ArrayElementosCarton[27]]
+Geometry=[62,96,412,728]
+
+[DebugWindow/ArrayElementosCarton[28]]
+Geometry=[62,96,412,728]
+
+[DebugWindow/ArrayElementosCarton[29]]
+Geometry=[1124,293,412,728]
 
 [DebugWindow/Carton]
 Geometry=[46,24,210,210]
@@ -152,7 +165,7 @@ Geometry=[118,470,990,335]
 Geometry=[132,484,990,335]
 
 [DebugWindow/arfile]
-Geometry=[783,69,632,410]
+Geometry=[342,577,632,410]
 
 [DebugWindow/arfile2]
 Geometry=[22,572,210,210]
@@ -259,21 +272,21 @@ File[5]=".src/Formularios/FMain.class:4.0"
 File[6]=".src/Formularios/FormFicherosBingos.form"
 File[7]="Nota.txt:7.0"
 File[8]=".src/Formularios/FormModificarBingos.form"
-Active=9
 File[9]=".src/Formularios/FormModificarBingos.class:175.24"
 File[10]=".src/Formularios/FormModificarCartones.form"
 File[11]=".src/Formularios/FormFicherosBingos.class:182.0"
 File[12]=".src/Clases/controles/SquareButton.class:78.8"
 File[13]=".src/Formularios/FormModificarElementos.form"
-File[14]=".src/Clases/Bingo.class:742.23"
-File[15]=".src/Clases/elemento.class:82.0"
+File[14]=".src/Clases/Bingo.class:728.42"
+File[15]=".src/Clases/elemento.class:46.30"
 File[16]=".src/Clases/elementoTexto.class:10.0"
 File[17]=".src/Clases/elementoImagen.class:10.2"
-File[18]=".src/Formularios/FormModificarElementos.class:367.0"
-File[19]=".src/Formularios/testGuadarBingo.module:10.0"
+File[18]=".src/Formularios/FormModificarElementos.class:313.2"
+File[19]=".src/Formularios/testGuadarBingo.module:17.23"
 File[20]=".src/Clases/elementoBlanco.class:16.2"
 File[21]=".src/Clases/elementoNegro.class:1.0"
-File[22]=".src/Clases/Carton.class:277.2"
+Active=22
+File[22]=".src/Clases/Carton.class:210.13"
 File[23]=".src/Formularios/testCargarBingo.module:7.0"
 File[24]=".src/Formularios/FormGrabadora.form"
 File[25]=".src/Formularios/FormGrabadora.class:26.2"
@@ -290,8 +303,10 @@ File[35]=".src/Formularios/FormMultipleElementosDeTexto.class:58.21"
 File[36]=".src/Formularios/FormAvanceCreacionCartones.form"
 File[37]=".src/Formularios/FormAvanceCreacionCartones.class:47.11"
 File[38]=".src/Formularios/FormVerCartones.form"
-File[39]=".src/Formularios/FormVerCartones.class:90.2"
-Count=39
+File[39]=".src/Formularios/FormVerCartones.class:38.106"
+File[40]="iconoletra32.png"
+File[41]="iconoletra16.png"
+Count=41
 
 [Watches]
 Count=3

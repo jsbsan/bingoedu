@@ -74,27 +74,27 @@ msgstr ""
 msgid "Elementos que componen el Bingo actual:"
 msgstr ""
 
-#: FormModificarBingos.form:134
+#: FormModificarBingos.form:135
 msgid "Visualizar imagenes"
 msgstr ""
 
-#: FormModificarBingos.form:145
+#: FormModificarBingos.form:146
 msgid "Para editar un elemento, seleccionalo y haga DobleClick"
 msgstr ""
 
-#: FormModificarBingos.form:161
+#: FormModificarBingos.form:162
 msgid "Añadir Elemento"
 msgstr ""
 
-#: FormModificarBingos.form:173
+#: FormModificarBingos.form:174
 msgid "Multiple Elementos de Texto"
 msgstr ""
 
-#: FormModificarBingos.form:184
+#: FormModificarBingos.form:185
 msgid "Guardar"
 msgstr ""
 
-#: FormModificarBingos.form:195
+#: FormModificarBingos.form:196
 msgid "Salir"
 msgstr ""
 

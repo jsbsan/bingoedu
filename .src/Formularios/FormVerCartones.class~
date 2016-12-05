@@ -7,7 +7,7 @@ Private obs As Observer
 Private contador As Integer
 
 Public Sub Form_Open()
-
+  
   Inc Application.busy
   Wait 0.01
   Me.Center
@@ -34,8 +34,8 @@ Public Sub cargarlistados()
   
   For Each nombrefichero In arfile
     p = New PictureBox(ScrollView1) 
-    p.w = 100
-    p.h = 70
+    p.w = 112
+    p.h = 78
     p.Picture = Picture.Load(User.home & "/" & "bingoedu/" & bingotmp.NombreFichero & "/" & nombrefichero)
     p.Stretch = True
     p.tag = User.home & "/" & "bingoedu/" & bingotmp.NombreFichero & "/" & nombrefichero
@@ -90,5 +90,11 @@ End
 Public Sub ButtonEditor_Click()
   
   Shell "inkscape " & Replace(PictureBoxVisor.tag, ".png", ".svg")
+  
+End
+
+Public Sub ButtonSalir_Click()
+  
+  Me.Close()
   
 End

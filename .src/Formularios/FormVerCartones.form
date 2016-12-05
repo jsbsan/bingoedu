@@ -1,7 +1,7 @@
 # Gambas Form File 3.0
 
 { Form Form
-  MoveScaled(0,0,123,53)
+  MoveScaled(0,0,123,51)
   { HBox1 HBox
     MoveScaled(59,50,60,5)
     Visible = False
@@ -51,11 +51,12 @@
     Border = Border.Plain
   }
   { ScrollView1 ScrollView
-    MoveScaled(1,4,55,48)
+    MoveScaled(1,5,55,45)
     Arrangement = Arrange.Column
   }
   { Label1 Label
-    MoveScaled(2,0,20,4)
+    MoveScaled(2,1,53,4)
+    Font = Font["Bold,+2"]
     Text = ("Lista de Cartones....")
   }
   { ButtonEditor Button

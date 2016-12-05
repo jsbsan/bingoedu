@@ -95,7 +95,7 @@ Public Function generarCarton(TamanoCuadricula As String, numeroCuadrosNegros As
 End
 
 Private Function rellenaCarton(numero As Integer, numeroCuadrosNegros As Integer, numeroCuadrosBlancos As Integer, listaRepetido As String[], listaelementos As String[]) As Boolean
-
+  
   Dim resp As Boolean
   Dim a As Integer
   Dim elementos As New String[]
@@ -149,15 +149,32 @@ Private Function colocarElementos(longitud As Integer, lista As String[], ByRef 
       ' If ele.id = "idnegro" Or ele.id = "idblanco" Then 
       '   Continue
       ' Endif
-      If textoscarton.Find(ele.texto) = -1 Then 
-        'se añade elemento ya que es distinto el contenido de las celda
-        elementos[a] = l[aleatorio]
-        l.Delete(aleatorio)
-        textoscarton.Add(ele.texto)
-      Else
-        'ELEMENTO ENCONTRADO... BORRO DE LA LISTA, PARA NO REPETIRLO MAS
-        L.Delete(ALEATORIO)
-      Endif
+      ' 
+      '' comprobar si ya esta elemento...
+      Select Case Upper$(ele.tipoElemento())
+        Case Upper$("ElementoTexto")
+          
+          If textoscarton.Find(ele.texto) = -1 Then 
+            'se añade elemento ya que es distinto el contenido de las celda
+            elementos[a] = l[aleatorio]
+            l.Delete(aleatorio)
+            textoscarton.Add(ele.texto)
+          Else
+            'ELEMENTO ENCONTRADO... BORRO DE LA LISTA, PARA NO REPETIRLO MAS
+            L.Delete(ALEATORIO)
+          Endif
+        Case Upper$("ElementoImagen")
+          'la comprobación es por id
+          If Me.ArraIdElementos.Find(ele.id) = -1 Then 
+            
+            elementos[a] = l[aleatorio]
+            l.Delete(aleatorio)
+          Else
+            l.Delete(aleatorio)
+            
+          Endif
+          
+      End Select
       
       'borro de la lista para no repetirlo
     Wend
@@ -187,7 +204,9 @@ Private Sub colocarElementosRepetidos(longitud As Integer, listaRepetida As Stri
         
         elementos[aleatorio] = eleBingo.enlace
         eleCarton = buscaElemento(eleBingo.enlace, Me.ArrayElmentosCarton)
-        textoscarton.Add(eleCarton.texto)
+        If Upper$(eleCarton.tipoElemento()) = Upper$("ElementoTexto") Then 
+          textoscarton.Add(eleCarton.texto)
+        Endif
         Break
       Endif
       
@@ -274,15 +293,24 @@ Public Sub generarDibujo(arrayElementosCarton As Object[], titulo As String) ' E
   Dim contador As Integer = -1
   Dim ele As Object 'ElementoTexto
   
-  Dim a, b As Integer
+  Dim a, b, afilas, bfilas As Integer
   
   Select Case tipotabla
     Case "4x3"
       tabla = "bingotablas4x3.svg"
+      bfilas = 4
+      afilas = 3
+      
     Case "5x4"
       tabla = "bingotablas5x4.svg"
+      bfilas = 5
+      afilas = 4
+      
     Case "5x5"
       tabla = "bingotablas5x5.svg"
+      bfilas = 5
+      afilas = 5
+      
   End Select
   
   'generar archivo txt
@@ -291,8 +319,8 @@ Public Sub generarDibujo(arrayElementosCarton As Object[], titulo As String) ' E
   contenido &= "[destino]\t&nombre\n" 'el carton tendrá el nombre de id
   contenido &= "#titulo#\t" & titulo & "\n"
   
-  For a = 1 To 3   'filas
-    For b = 1 To 4 'columna
+  For a = 1 To afilas   'filas
+    For b = 1 To bfilas 'columna
       contador += 1
       
       ele = buscaElemento(Me.ArraIdElementos[contador], arrayElementosCarton)

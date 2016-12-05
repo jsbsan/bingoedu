@@ -1,9 +1,10 @@
 # Gambas Form File 3.0
 
 { Form Form
-  MoveScaled(0,0,120,53)
+  MoveScaled(0,0,123,53)
   { HBox1 HBox
-    MoveScaled(57,52,60,5)
+    MoveScaled(59,50,60,5)
+    Visible = False
     { Panel4 Panel
       MoveScaled(0,0,6,4)
       Expand = True

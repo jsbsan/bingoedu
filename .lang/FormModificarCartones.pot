@@ -87,6 +87,10 @@ msgid "Salir"
 msgstr ""
 
 #: FormModificarCartones.form:254
+msgid "no visible Guardar"
+msgstr ""
+
+#: FormModificarCartones.form:266
 msgid "Guardar"
 msgstr ""
 
