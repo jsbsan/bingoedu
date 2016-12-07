@@ -46,7 +46,7 @@ msgstr ""
 msgid "cd /tmp;rm carton*"
 msgstr ""
 
-#: Carton.class:90
+#: Carton.class:92
 msgid "Error, desconocido tamaño de cuadricula"
 msgstr ""
 
@@ -70,7 +70,7 @@ msgstr ""
 msgid "Autores: Julio Sanchez Berro (jsbsan) y Antonio Sanchez (introlinux)"
 msgstr ""
 
-#: FMain.form:80 FormFicherosBingos.form:165 FormModificarBingos.form:196
+#: FMain.form:80 FormFicherosBingos.form:166 FormModificarBingos.form:196
 #: FormModificarCartones.form:247 FormModificarElementos.form:117
 #: FormMultipleElementosDeTexto.form:51 FormPrevisualizar.form:42
 #: FormVerCartones.form:99
@@ -121,31 +121,31 @@ msgstr ""
 msgid "Exportar"
 msgstr ""
 
-#: FormFicherosBingos.form:154 FormModificarCartones.form:61
+#: FormFicherosBingos.form:155 FormModificarCartones.form:61
 msgid "Borrar"
 msgstr ""
 
-#: FormFicherosBingos.class:46
+#: FormFicherosBingos.class:41
 msgid "Utilidades"
 msgstr ""
 
-#: FormFicherosBingos.class:86
+#: FormFicherosBingos.class:78
 msgid "Debe de seleccionar un  bingo educativo"
 msgstr ""
 
-#: FormFicherosBingos.class:130
+#: FormFicherosBingos.class:118
 msgid "Si, borrar"
 msgstr ""
 
-#: FormFicherosBingos.class:130 FormModificarBingos.class:160
+#: FormFicherosBingos.class:118 FormModificarBingos.class:160
 msgid "No, cancelar"
 msgstr ""
 
-#: FormFicherosBingos.class:172
+#: FormFicherosBingos.class:157
 msgid "Se ha guardado en "
 msgstr ""
 
-#: FormFicherosBingos.class:181
+#: FormFicherosBingos.class:166
 msgid "Archivos Bingo Educativo"
 msgstr ""
 

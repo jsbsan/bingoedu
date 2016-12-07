@@ -189,3 +189,9 @@ Public Sub ButtonAgregarBingo_Click()
   Endif
 
 End
+
+Public Sub GridViewFicherosDatos_DblClick()
+
+  ButtonEditarBingo_Click()
+
+End

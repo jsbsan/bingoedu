@@ -46,35 +46,35 @@ msgstr ""
 msgid "Exportar"
 msgstr ""
 
-#: FormFicherosBingos.form:154
+#: FormFicherosBingos.form:155
 msgid "Borrar"
 msgstr ""
 
-#: FormFicherosBingos.form:165
+#: FormFicherosBingos.form:166
 msgid "Salir"
 msgstr ""
 
-#: FormFicherosBingos.class:46
+#: FormFicherosBingos.class:41
 msgid "Utilidades"
 msgstr ""
 
-#: FormFicherosBingos.class:86
+#: FormFicherosBingos.class:78
 msgid "Debe de seleccionar un  bingo educativo"
 msgstr ""
 
-#: FormFicherosBingos.class:130
+#: FormFicherosBingos.class:118
 msgid "Si, borrar"
 msgstr ""
 
-#: FormFicherosBingos.class:130
+#: FormFicherosBingos.class:118
 msgid "No, cancelar"
 msgstr ""
 
-#: FormFicherosBingos.class:172
+#: FormFicherosBingos.class:157
 msgid "Se ha guardado en "
 msgstr ""
 
-#: FormFicherosBingos.class:181
+#: FormFicherosBingos.class:166
 msgid "Archivos Bingo Educativo"
 msgstr ""
 

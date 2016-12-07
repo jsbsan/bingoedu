@@ -1,7 +1,7 @@
 # Gambas Form File 3.0
 
 { Form Form
-  MoveScaled(0,0,131,53)
+  MoveScaled(0,0,135,53)
   Arrangement = Arrange.Vertical
   { HBox2 HBox
     MoveScaled(6,-2,60,8)
@@ -94,6 +94,7 @@
     }
     { ButtonRefrescarGridview Button
       MoveScaled(72,15,4,9)
+      Visible = False
       Picture = Picture["icon:/22/refresh"]
     }
   }

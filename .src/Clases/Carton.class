@@ -12,6 +12,8 @@ Private tipotabla As String 'almacena el tipo de bingo de salida 4x3,5x4,5x5
 Public ArrayElmentosCarton As Elemento[]
 Public ArrayElmentosBingo As Elemento[]
 
+Public TamanoLetraCarton As Integer = 40 'tamaño por defecto de la letra que sale en el carton
+
 Private textoscarton As String[]
 
 Public Sub _new()
@@ -346,18 +348,22 @@ Public Sub generarDibujo(arrayElementosCarton As Object[], titulo As String) ' E
           '   contenido &= "[fw]" & "\t" & "223.27" & "\n" 'siempre es el mismo aunque cambie el carton
           '   contenido &= "[fh]" & "\t" & "191.9" & "\n" 'siempre es el mismo aunque cambie el carton
         Case Upper$("ElementoImagen")
-          contenido &= "#" & Str$(b) & Str$(a) & "#\t.\n" 'borro el contenido
+          contenido &= "#" & Str$(b) & Str$(a) & "#\t \n" 'borro el contenido
           contenido &= "[imagen]" & "\t" & "/tmp/" & ele.rutaimagen & "\n"  'incluir el gráfico de 
           
           contenido &= "[x]" & "\t" & buscaCoordX(b, tipotabla) & "\n"
           contenido &= "[y]" & "\t" & buscaCoordY(a, tipotabla) & "\n"
           contenido &= "[fw]" & "\t" & "225" & "\n" 'siempre es el mismo aunque cambie el carton
           contenido &= "[fh]" & "\t" & "199" & "\n" 'siempre es el mismo aunque cambie el carton
-          contenido &= "[dpi]" & "\t" & "100" & "\n" '' defino calidad de salida del dibujo com  dpi como 100
+          contenido &= "[dpi]" & "\t" & "200" & "\n" '' defino calidad de salida del dibujo com  dpi como 200
           
       End Select
     Next
   Next
+  
+  ''cambio de letra de carton
+  tamanoletraCarton = CalculaLongitudyDevuelveSIZE()
+  contenido &= "[svg]" & "\t" & ";font-size:40px;" & "\t" & ";font-size:" & Str$(TamanoLetraCarton) & "px;" & "\n"
   
   File.Save("/tmp/" & "carton" & Me.id & ".txt", contenido)
   
@@ -415,4 +421,46 @@ Public Function buscaElemento(id As String, arrayElem As Elemento[]) As Elemento
   'poner mensaje de error o devolver null
   Return Null
   
+End
+
+'----------------------------------------------------------------------------------------
+
+Public Function CalculaLongitudyDevuelveSIZE() As Integer
+  
+  Dim palabra As String
+  Dim longitud As Integer = 0
+  
+  For Each palabra In textoscarton
+    If Len(palabra) > longitud Then longitud = Len(palabra)
+  Next
+  
+  Select Case longitud
+    Case 1
+      Return 145
+    Case 2
+      Return 145
+    Case 3
+      Return 145
+    Case 4
+      Return 140
+    Case 5
+      Return 105
+    Case 6
+      Return 75
+    Case 7
+      Return 75
+    Case 8
+      Return 65
+    Case 9
+      Return 55
+    Case 10
+      Return 50
+    Case 11
+      Return 45
+    Case 12
+      Return 40
+    Default
+      Return 30
+  End Select
+
 End
