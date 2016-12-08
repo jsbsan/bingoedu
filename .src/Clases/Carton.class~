@@ -461,5 +461,6 @@ Public Function CalculaLongitudyDevuelveSIZE() As Integer
       Return 40
     Default
       Return 30
-      
+  End Select
+
 End

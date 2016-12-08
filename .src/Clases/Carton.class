@@ -363,7 +363,7 @@ Public Sub generarDibujo(arrayElementosCarton As Object[], titulo As String) ' E
   
   ''cambio de letra de carton
   tamanoletraCarton = CalculaLongitudyDevuelveSIZE()
-  contenido &= "[svg]" & "\t" & ";font-size:40px;" & "\t" & ";font-size:" & Str$(TamanoLetraCarton) & "px;" & "\n"
+  contenido &= "[svg]" & "\t" & ";font-size:40px" & "\t" & ";font-size:" & Str$(TamanoLetraCarton) & "px" & "\n"
   
   File.Save("/tmp/" & "carton" & Me.id & ".txt", contenido)
   
@@ -462,5 +462,5 @@ Public Function CalculaLongitudyDevuelveSIZE() As Integer
     Default
       Return 30
   End Select
-
+  
 End
