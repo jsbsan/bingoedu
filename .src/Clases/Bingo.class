@@ -747,7 +747,7 @@ Public Sub generarCartones() As Boolean 'si devuelve FALSE, hay un problema al c
   
   'borra todos los archivos que empiecen por carton*
   arfile = Dir("/tmp", "carton*", gb.file)
-  
+  arfile.insert(Dir("/tmp", "minicarton*", gb.file))
   For Each nombrefile In arfile
     Kill "/tmp/" & nombrefile
   Next
@@ -824,6 +824,18 @@ Public Sub copiarCartones()
     If Exist(User.home & "/" & "bingoedu/" & Me.NombreFichero & "/" & nombrefile) Then 
       Kill User.home & "/" & "bingoedu/" & Me.NombreFichero & "/" & nombrefile 'lo borro si existe uno igual nombre
     Endif
+    
+    Copy "/tmp/" & nombrefile To User.home & "/" & "bingoedu/" & Me.NombreFichero & "/" & nombrefile
+    
+  Next
+  
+  'inicio la copia de archivos minicartones
+  arfile = Dir("/tmp", "minicarton*", gb.file)
+  For Each nombrefile In arfile
+    If Exist(User.home & "/" & "bingoedu/" & Me.NombreFichero & "/" & nombrefile) Then 
+      Kill User.home & "/" & "bingoedu/" & Me.NombreFichero & "/" & nombrefile 'lo borro si existe uno igual nombre
+    Endif
+    
     Copy "/tmp/" & nombrefile To User.home & "/" & "bingoedu/" & Me.NombreFichero & "/" & nombrefile
   Next
   

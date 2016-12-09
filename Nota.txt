@@ -11,3 +11,6 @@ http://jsonviewer.stack.hu/ (da problemas)
 
 Calculo de numero de cartones...
 http://pablopilotti.blogspot.com.es/2011/02/cartones-de-bingo.html
+
+Uso de task
+https://www.gambas-es.org/viewtopic.php?f=5&t=2681&highlight=task&sid=add5277cdb2ea5583238e57f4cecc847

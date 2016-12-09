@@ -6,49 +6,63 @@ Public bingotmp As Bingo
 Private obs As Observer
 Private contador As Integer
 
+Private $CargaImagenBingo As CargaImagenBingo
+
 Public Sub Form_Open()
   
   Inc Application.busy
   Wait 0.01
   Me.Center
-  cargarlistados()
-  Dec Application.busy
+  
+  ' cargarlistados()
+  
+  ' PictureBoxVisor.Picture = Picture.Load(User.home & "/" & "bingoedu/" & bingotmp.NombreFichero & "/" & arfile[0])
+  ' LabelNumero.text = Str$(1)
+  
   Me.Show()
   
 End
 
-Public Sub cargarlistados()
+Public Sub form_Show()
   
-  Dim p As PictureBox
-  Dim nombrefichero As String
-  Dim arfile2 As String[]
-  'borra todos los archivos que empiecen por carton*
-  arfile2 = Dir(User.home & "/" & "bingoedu/" & bingotmp.NombreFichero, "carton*", gb.file)
-  arfile.Clear()
+  $CargaImagenBingo = New CargaImagenBingo As "obsCartones"
   
-  For Each nombrefichero In arfile2
-    If File.Ext(nombrefichero) = "png" Then 
-      arfile.add(nombrefichero)
-    Endif
-  Next
-  
-  For Each nombrefichero In arfile
-    p = New PictureBox(ScrollView1) 
-    p.w = 137
-    p.h = 95
-    p.Picture = Picture.Load(User.home & "/" & "bingoedu/" & bingotmp.NombreFichero & "/" & nombrefichero)
-    p.Stretch = True
-    p.tag = User.home & "/" & "bingoedu/" & bingotmp.NombreFichero & "/" & nombrefichero
-    obs = New Observer(p) As "observador"
-    
-  Next
-  
-  mostrar(0)
+  $CargaImagenBingo.cargarlistados(bingotmp.NombreFichero, ScrollView1, PictureBoxVisor, arfile)
+  Dec Application.Busy
   
 End
+' 
+' Public Sub cargarlistados()
+'   
+'   Dim p As PictureBox
+'   Dim nombrefichero As String
+'   Dim arfile2 As String[]
+'   'borra todos los archivos que empiecen por carton*
+'   arfile2 = Dir(User.home & "/" & "bingoedu/" & bingotmp.NombreFichero, "carton*", gb.file)
+'   arfile.Clear()
+'   
+'   For Each nombrefichero In arfile2
+'     If File.Ext(nombrefichero) = "png" Then 
+'       arfile.add(nombrefichero)
+'     Endif
+'   Next
+'   
+'   For Each nombrefichero In arfile
+'     p = New PictureBox(ScrollView1) 
+'     p.w = 137
+'     p.h = 95
+'     p.Picture = Picture.Load(User.home & "/" & "bingoedu/" & bingotmp.NombreFichero & "/" & nombrefichero)
+'     p.Stretch = True
+'     p.tag = User.home & "/" & "bingoedu/" & bingotmp.NombreFichero & "/" & nombrefichero
+'     obs = New Observer(p) As "observador"
+'     
+'   Next
+'   
+' End
 
 Public Sub mostrar(n As Integer)
   
+  Inc Application.busy
   If n > -1 And (n < arfile.count) Then 
     PictureBoxVisor.Picture = Picture.Load(User.home & "/" & "bingoedu/" & bingotmp.NombreFichero & "/" & arfile[n])
     LabelNumero.text = Str$(n + 1)
@@ -59,13 +73,23 @@ Public Sub mostrar(n As Integer)
       contador = 0
     Endif
   Endif
+  Dec Application.busy
   
 End
 
-Public Sub observador_MouseDown()
-  
-  PictureBoxVisor.Picture = Picture.Load(Last.tag)
-  PictureBoxVisor.tag = Last.tag
+' Public Sub observador_MouseDown()
+'   
+'   PictureBoxVisor.Picture = Picture.Load(Last.tag)
+'   PictureBoxVisor.tag = Last.tag
+'   
+' End
+
+Public Sub obsCartones_PulsarBotonGaleriaImagen(t As String)
+
+  Inc Application.busy
+  PictureBoxVisor.Picture = Picture.Load(t)
+  PictureBoxVisor.tag = t
+  Dec Application.busy
   
 End
 

@@ -363,7 +363,7 @@ Public Sub generarDibujo(arrayElementosCarton As Object[], titulo As String) ' E
   
   ''cambio de letra de carton
   tamanoletraCarton = CalculaLongitudyDevuelveSIZE()
-  contenido &= "[svg]" & "\t" & ";font-size:40px;" & "\t" & ";font-size:" & Str$(TamanoLetraCarton) & "px;" & "\n"
+  contenido &= "[svg]" & "\t" & ";font-size:40px" & "\t" & ";font-size:" & Str$(TamanoLetraCarton) & "px" & "\n"
   
   File.Save("/tmp/" & "carton" & Me.id & ".txt", contenido)
   
@@ -373,6 +373,13 @@ Public Sub generarDibujo(arrayElementosCarton As Object[], titulo As String) ' E
   comando = "cd /tmp;SisRePlantillas " & "/tmp/" & "carton" & Me.id & ".txt"
   Debug "Comando uso SisRePlantillas:"; comando
   Shell comando To salida
+  Debug salida
+  
+  'hago miniaturas
+  comando = "convert /tmp/" & "carton" & Me.id & "_" & tabla & ".png" & " -resize 137x95 /tmp/mini" & "carton" & Me.id & "_" & tabla & ".png"
+  Shell comando To salida
+  
+  Debug comando
   Debug salida
   
 End
@@ -462,5 +469,5 @@ Public Function CalculaLongitudyDevuelveSIZE() As Integer
     Default
       Return 30
   End Select
-
+  
 End

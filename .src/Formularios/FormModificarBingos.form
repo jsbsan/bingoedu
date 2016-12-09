@@ -14,14 +14,14 @@
         Picture = Picture["propiedades.png"]
       }
       { PictureBox1 PictureBox
-        MoveScaled(1,6,9,6)
+        MoveScaled(1,3,9,6)
         Picture = Picture["carton de bingo50x32.jpg"]
         Stretch = True
       }
       { ButtonVerCartones Button
         MoveScaled(12,10,19,6)
         Text = ("Ver Cartones")
-        Picture = Picture["icon:/16/pdf"]
+        Picture = Picture["icon:/16/image"]
       }
       { ButtonGenerarCartones Button
         MoveScaled(34,10,22,6)
@@ -119,21 +119,30 @@
       Text = ("Multiple Elementos de Texto")
       Picture = Picture["iconoletra16.png"]
     }
+    { HBox5 HBox
+      MoveScaled(49,-1,5,6)
+      Expand = True
+    }
+    { ButtonBorrarElemento Button
+      MoveScaled(55,1,18,5)
+      Text = ("Borrar Elementos")
+      Picture = Picture["icon:/16/delete"]
+    }
     { HBox2 HBox
-      MoveScaled(37,0,5,6)
+      MoveScaled(62,0,5,6)
       Expand = True
     }
     { ButtonGuadarModificaciones Button
-      MoveScaled(45,0,13,6)
+      MoveScaled(67,1,13,6)
       Text = ("Guardar")
       Picture = Picture["icon:/22/save"]
     }
     { HBox3 HBox
-      MoveScaled(59,0,14,5)
+      MoveScaled(81,0,4,5)
       Expand = True
     }
     { ButtonSalir Button
-      MoveScaled(74,0,10,6)
+      MoveScaled(85,0,10,6)
       Text = ("Salir")
       Picture = Picture["icon:/22/quit"]
     }

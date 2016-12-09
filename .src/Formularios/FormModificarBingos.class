@@ -194,3 +194,20 @@ Public Sub ButtonVerCartones_Click()
   FormVerCartones.Show()
   
 End
+
+Public Sub ButtonBorrarElemento_Click()
+  
+  'Borrado de elemento bingo-carton
+  Dim ele As Elemento
+  Dim resp As Integer
+  
+  ele = GridViewDatosBingo.tag[GridViewDatosBingo.Row] ''Le paso el elemento del bingo que quiero editar
+  
+  resp = Message.Question(("El borrado de elementos puede probocar problemas en los cartones que lo usen\n" & "¿Desea Borrarlo?"), ("Si"), ("No, cancelar"))
+  
+  If resp = 2 Then Return
+  
+  bingotmp.borrarElementoBingo(ele.id)
+  bingotmp.borrarElementoCarton(ele.enlace)
+  
+End

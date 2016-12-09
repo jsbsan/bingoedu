@@ -375,6 +375,13 @@ Public Sub generarDibujo(arrayElementosCarton As Object[], titulo As String) ' E
   Shell comando To salida
   Debug salida
   
+  'hago miniaturas
+  comando = "convert /tmp/" & "carton" & Me.id & "_" & Replace(tabla, ".svg", "") & ".png" & " -resize 137x95 /tmp/mini" & "carton" & Me.id & "_" & Replace(tabla, ".svg", "") & ".png"
+  Shell comando To salida
+  
+  Debug comando
+  Debug salida
+  
 End
 
 Public Function buscaCoordX(valor As Integer, tipotabla As String) As String
