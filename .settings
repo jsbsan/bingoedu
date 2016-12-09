@@ -284,7 +284,8 @@ File[18]=".src/Formularios/FormModificarElementos.class:313.2"
 File[19]=".src/Formularios/testGuadarBingo.module:17.23"
 File[20]=".src/Clases/elementoBlanco.class:16.2"
 File[21]=".src/Clases/elementoNegro.class:1.0"
-File[22]=".src/Clases/Carton.class:378.8"
+Active=22
+File[22]=".src/Clases/Carton.class:365.110"
 File[23]=".src/Formularios/testCargarBingo.module:7.0"
 File[24]=".src/Formularios/FormGrabadora.form"
 File[25]=".src/Formularios/FormGrabadora.class:26.2"
@@ -305,7 +306,6 @@ File[39]=".src/Formularios/FormVerCartones.class:92.2"
 File[40]="iconoletra32.png"
 File[41]="iconoletra16.png"
 File[42]="informeGit.txt:0.0"
-Active=43
 File[43]=".src/Clases/CargaImagenBingo.class:36.2"
 Count=43
 
