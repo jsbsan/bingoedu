@@ -28,6 +28,10 @@
         Text = ("Generar Cartones")
         Picture = Picture["icon:/16/exec"]
       }
+      { ButtonImprimir Button
+        MoveScaled(1,10,9,6)
+        Picture = Picture["icon:/32/print"]
+      }
     }
     { ComboBoxCategoria ComboBox
       MoveScaled(16,14,34,4)

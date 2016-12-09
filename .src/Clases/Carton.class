@@ -355,7 +355,7 @@ Public Sub generarDibujo(arrayElementosCarton As Object[], titulo As String) ' E
           contenido &= "[y]" & "\t" & buscaCoordY(a, tipotabla) & "\n"
           contenido &= "[fw]" & "\t" & "225" & "\n" 'siempre es el mismo aunque cambie el carton
           contenido &= "[fh]" & "\t" & "199" & "\n" 'siempre es el mismo aunque cambie el carton
-          contenido &= "[dpi]" & "\t" & "200" & "\n" '' defino calidad de salida del dibujo com  dpi como 200
+          contenido &= "[dpi]" & "\t" & "100" & "\n" '' defino calidad de salida del dibujo com  dpi como 100
           
       End Select
     Next

@@ -24,4 +24,4 @@ Systems=debian
 Menus=debian:"Applications/Education"
 Categories=debian:"Education"
 Groups=debian:"admin"
-ExtraDependencies=debian:"sisreplantillas\t\t\ninkscape\t\t\nfonts-uralic\t\t"
+ExtraDependencies=debian:"sisreplantillas\t\t\ninkscape\t\t\nfonts-uralic\t\t\npcmanfm\t\t"

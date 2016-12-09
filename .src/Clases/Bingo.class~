@@ -815,6 +815,8 @@ Public Sub copiarCartones()
   
   For Each nombrefile In arfile
     Kill User.home & "/" & "bingoedu/" & Me.NombreFichero & "/" & nombrefile
+    Kill User.home & "/" & "bingoedu/" & Me.NombreFichero & "/mini" & nombrefile
+    
   Next
   
   'inicio la copia de archivos 
@@ -832,8 +834,8 @@ Public Sub copiarCartones()
   'inicio la copia de archivos minicartones
   arfile = Dir("/tmp", "minicarton*", gb.file)
   For Each nombrefile In arfile
-    If Exist(User.home & "/" & "bingoedu/" & Me.NombreFichero & "/mini" & nombrefile) Then 
-      Kill User.home & "/" & "bingoedu/" & Me.NombreFichero & "/mini" & nombrefile 'lo borro si existe uno igual nombre
+    If Exist(User.home & "/" & "bingoedu/" & Me.NombreFichero & "/" & nombrefile) Then 
+      Kill User.home & "/" & "bingoedu/" & Me.NombreFichero & "/" & nombrefile 'lo borro si existe uno igual nombre
     Endif
     
     Copy "/tmp/" & nombrefile To User.home & "/" & "bingoedu/" & Me.NombreFichero & "/" & nombrefile

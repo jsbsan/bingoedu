@@ -726,6 +726,7 @@ Public Sub generarCartones() As Boolean 'si devuelve FALSE, hay un problema al c
   Inc Application.Busy
   Shell ("cd /tmp;rm carton*")
   Shell ("cd " & User.home & "/bingoedu/" & Me.NombreFichero & "/;rm carton*") 'borra los cartones anteriores
+  Shell ("cd " & User.home & "/bingoedu/" & Me.NombreFichero & "/;rm minicarton*") 'borra los cartones anteriores
   'comprobar el numero de elementos minino
   Select Case Me.tamanoCuadricula
     Case "4x3"
@@ -815,6 +816,8 @@ Public Sub copiarCartones()
   
   For Each nombrefile In arfile
     Kill User.home & "/" & "bingoedu/" & Me.NombreFichero & "/" & nombrefile
+    Kill User.home & "/" & "bingoedu/" & Me.NombreFichero & "/mini" & nombrefile
+    
   Next
   
   'inicio la copia de archivos 

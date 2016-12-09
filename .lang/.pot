@@ -70,7 +70,7 @@ msgstr ""
 msgid "Autores: Julio Sanchez Berro (jsbsan) y Antonio Sanchez (introlinux)"
 msgstr ""
 
-#: FMain.form:80 FormFicherosBingos.form:166 FormModificarBingos.form:209
+#: FMain.form:80 FormFicherosBingos.form:166 FormModificarBingos.form:215
 #: FormModificarCartones.form:247 FormModificarElementos.form:117
 #: FormMultipleElementosDeTexto.form:51 FormPrevisualizar.form:42
 #: FormVerCartones.form:99
@@ -165,87 +165,87 @@ msgstr ""
 msgid "Grabadora de Sonido"
 msgstr ""
 
-#: FormModificarBingos.form:45 FormModificarCartones.class:17
+#: FormModificarBingos.form:46 FormModificarCartones.class:17
 msgid "Cartones"
 msgstr ""
 
-#: FormModificarBingos.form:49
+#: FormModificarBingos.form:50
 msgid "Propiedades de los Cartones"
 msgstr ""
 
-#: FormModificarBingos.form:61
+#: FormModificarBingos.form:62
 msgid "Ver Cartones"
 msgstr ""
 
-#: FormModificarBingos.form:67
+#: FormModificarBingos.form:68
 msgid "Generar Cartones"
 msgstr ""
 
-#: FormModificarBingos.form:76
+#: FormModificarBingos.form:82
 msgid "matematicas"
 msgstr ""
 
-#: FormModificarBingos.form:76
+#: FormModificarBingos.form:82
 msgid "ingles"
 msgstr ""
 
-#: FormModificarBingos.form:76
+#: FormModificarBingos.form:82
 msgid "lengua"
 msgstr ""
 
-#: FormModificarBingos.form:83
+#: FormModificarBingos.form:89
 msgid "aqui se define el titulo que vendrá en cada carton"
 msgstr ""
 
-#: FormModificarBingos.form:84
+#: FormModificarBingos.form:90
 msgid "Categoria:"
 msgstr ""
 
-#: FormModificarBingos.form:94
+#: FormModificarBingos.form:100
 msgid "aqui se define el tema del bingo"
 msgstr ""
 
-#: FormModificarBingos.form:95
+#: FormModificarBingos.form:101
 msgid "Titulo:"
 msgstr ""
 
-#: FormModificarBingos.form:101
+#: FormModificarBingos.form:107
 msgid "Nombre fichero:"
 msgstr ""
 
-#: FormModificarBingos.form:113
+#: FormModificarBingos.form:119
 msgid ".be"
 msgstr ""
 
-#: FormModificarBingos.form:125
+#: FormModificarBingos.form:131
 msgid "Descripción:"
 msgstr ""
 
-#: FormModificarBingos.form:131
+#: FormModificarBingos.form:137
 msgid "Elementos que componen el Bingo actual:"
 msgstr ""
 
-#: FormModificarBingos.form:137
+#: FormModificarBingos.form:143
 msgid "Visualizar imagenes"
 msgstr ""
 
-#: FormModificarBingos.form:148
+#: FormModificarBingos.form:154
 msgid "Para editar un elemento, seleccionalo y haga DobleClick"
 msgstr ""
 
-#: FormModificarBingos.form:164
+#: FormModificarBingos.form:170
 msgid "Añadir Elemento"
 msgstr ""
 
-#: FormModificarBingos.form:176
+#: FormModificarBingos.form:182
 msgid "Multiple Elementos de Texto"
 msgstr ""
 
-#: FormModificarBingos.form:187
+#: FormModificarBingos.form:193
 msgid "Borrar Elementos"
 msgstr ""
 
-#: FormModificarBingos.form:198 FormModificarCartones.form:266
+#: FormModificarBingos.form:204 FormModificarCartones.form:266
 msgid "Guardar"
 msgstr ""
 
@@ -291,6 +291,10 @@ msgstr ""
 
 #: FormModificarBingos.class:206
 msgid "Si"
+msgstr ""
+
+#: FormModificarBingos.class:300
+msgid "Terminado!!!"
 msgstr ""
 
 #: FormModificarCartones.form:53

@@ -41,7 +41,7 @@ Geometry=[774,580,210,210]
 Geometry=[46,16,748,387]
 
 [DebugWindow/Me]
-Geometry=[714,517,234,688]
+Geometry=[714,164,234,688]
 
 [DebugWindow/Me.ArrayCartones]
 Geometry=[0,24,210,828]
@@ -271,12 +271,13 @@ File[5]=".src/Formularios/FMain.class:35.9"
 File[6]=".src/Formularios/FormFicherosBingos.form"
 File[7]="Nota.txt:15.29"
 File[8]=".src/Formularios/FormModificarBingos.form"
-File[9]=".src/Formularios/FormModificarBingos.class:207.25"
+Active=9
+File[9]=".src/Formularios/FormModificarBingos.class:297.16"
 File[10]=".src/Formularios/FormModificarCartones.form"
 File[11]=".src/Formularios/FormFicherosBingos.class:23.27"
 File[12]=".src/Clases/controles/SquareButton.class:78.8"
 File[13]=".src/Formularios/FormModificarElementos.form"
-File[14]=".src/Clases/Bingo.class:836.9"
+File[14]=".src/Clases/Bingo.class:818.1"
 File[15]=".src/Clases/elemento.class:46.30"
 File[16]=".src/Clases/elementoTexto.class:10.0"
 File[17]=".src/Clases/elementoImagen.class:10.2"
@@ -284,8 +285,7 @@ File[18]=".src/Formularios/FormModificarElementos.class:313.2"
 File[19]=".src/Formularios/testGuadarBingo.module:17.23"
 File[20]=".src/Clases/elementoBlanco.class:16.2"
 File[21]=".src/Clases/elementoNegro.class:1.0"
-Active=22
-File[22]=".src/Clases/Carton.class:365.110"
+File[22]=".src/Clases/Carton.class:386.76"
 File[23]=".src/Formularios/testCargarBingo.module:7.0"
 File[24]=".src/Formularios/FormGrabadora.form"
 File[25]=".src/Formularios/FormGrabadora.class:26.2"
@@ -307,7 +307,8 @@ File[40]="iconoletra32.png"
 File[41]="iconoletra16.png"
 File[42]="informeGit.txt:0.0"
 File[43]=".src/Clases/CargaImagenBingo.class:36.2"
-Count=43
+File[44]="drawing-3x6.svg:0.0"
+Count=44
 
 [Watches]
 Count=3
