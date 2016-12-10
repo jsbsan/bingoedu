@@ -13,7 +13,7 @@ Public Sub Form_Open()
   Inc Application.busy
   Wait 0.01
   Me.Center
-  
+  Me.Title = ("Visualizando cartones")
   ' cargarlistados()
   
   ' PictureBoxVisor.Picture = Picture.Load(User.home & "/" & "bingoedu/" & bingotmp.NombreFichero & "/" & arfile[0])
@@ -65,7 +65,7 @@ Public Sub mostrar(n As Integer)
   Inc Application.busy
   If n > -1 And (n < arfile.count) Then 
     PictureBoxVisor.Picture = Picture.Load(User.home & "/" & "bingoedu/" & bingotmp.NombreFichero & "/" & arfile[n])
-    LabelNumero.text = Str$(n + 1)
+    
   Else
     If n >= arfile.count Then
       contador = arfile.count - 1
@@ -85,7 +85,7 @@ End
 ' End
 
 Public Sub obsCartones_PulsarBotonGaleriaImagen(t As String)
-
+  
   Inc Application.busy
   PictureBoxVisor.Picture = Picture.Load(t)
   PictureBoxVisor.tag = t

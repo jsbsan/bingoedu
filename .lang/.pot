@@ -73,7 +73,7 @@ msgstr ""
 #: FMain.form:80 FormFicherosBingos.form:167 FormModificarBingos.form:217
 #: FormModificarCartones.form:215 FormModificarElementos.form:118
 #: FormMultipleElementosDeTexto.form:52 FormPrevisualizar.form:43
-#: FormVerCartones.form:100
+#: FormVerCartones.form:82
 msgid "Salir"
 msgstr ""
 
@@ -456,6 +456,41 @@ msgstr ""
 msgid "Multiples Elementos de Texto"
 msgstr ""
 
+#: FormMultipleElementosDeTexto.class:83
+msgid ""
+" En cada reglon escriba un texto,luego pulse la tecla TAB, y luego escriba "
+"otro texto."
+msgstr ""
+
+#: FormMultipleElementosDeTexto.class:84
+msgid ""
+" El primer texto es el que se añade al bingo, el segundo es el que se añade "
+"al carton."
+msgstr ""
+
+#: FormMultipleElementosDeTexto.class:85
+msgid ""
+" Si solo escribe texto, sin pulsar la tecla TAB, el mismo texto sera "
+"asignado tanto al bingo como al carton."
+msgstr ""
+
+#: FormMultipleElementosDeTexto.class:86
+msgid ""
+" Puede escribir en varios renglones (pulsando la tecla RETURN o INTRO), para "
+"asignar tantos elementos del bingo y carton que necesite."
+msgstr ""
+
+#: FormMultipleElementosDeTexto.class:87
+msgid "Nota"
+msgstr ""
+
+#: FormMultipleElementosDeTexto.class:88
+msgid ""
+"Tambien se puede pegar desde otros programas, por ejemplo seleccionando dos "
+"columnas de una hoja de cálculo copiandolas y luego pegarlas en area de "
+"texto."
+msgstr ""
+
 #: FormPrevisualizar.form:17
 msgid "Previsualizar Simple"
 msgstr ""
@@ -464,18 +499,14 @@ msgstr ""
 msgid "Previsualizar con datos"
 msgstr ""
 
-#: FormVerCartones.form:35
-msgid "Anterior"
-msgstr ""
-
-#: FormVerCartones.form:60
-msgid "Siguiente"
-msgstr ""
-
-#: FormVerCartones.form:89
+#: FormVerCartones.form:32
 msgid "Lista de Cartones...."
 msgstr ""
 
-#: FormVerCartones.form:94
+#: FormVerCartones.form:49
+msgid "Visor"
+msgstr ""
+
+#: FormVerCartones.form:70
 msgid "Editar con inkscape"
 msgstr ""

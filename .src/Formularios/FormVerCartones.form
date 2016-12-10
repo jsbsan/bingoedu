@@ -1,73 +1,65 @@
 # Gambas Form File 3.0
 
 { Form Form
-  MoveScaled(0,0,123,51)
+  MoveScaled(0,0,123,64)
   Icon = Picture["icon:/32/image"]
-  { HBox1 HBox
-    MoveScaled(59,50,60,5)
-    Visible = False
-    { Panel4 Panel
-      MoveScaled(0,0,6,4)
+  Arrangement = Arrange.Column
+  Padding = 2
+  { Panel1 Panel
+    MoveScaled(1,1,56,53)
+    Expand = True
+    Arrangement = Arrange.Vertical
+    AutoResize = True
+    { Label1 Label
+      MoveScaled(1,0,53,4)
+      Font = Font["Bold,+2"]
+      Text = ("Lista de Cartones....")
+    }
+    { ScrollView1 ScrollView
+      MoveScaled(0,4,55,45)
       Expand = True
-      AutoResize = True
+      Arrangement = Arrange.Column
     }
-    { ButtonAnterior Button
-      MoveScaled(6,0,14,5)
-      Text = ("Anterior")
-      Picture = Picture["icon:/32/previous"]
-    }
-    { Panel1 Panel
-      MoveScaled(19,-1,6,4)
-      Expand = True
-      AutoResize = True
-    }
-    { LabelNumero Label
-      MoveScaled(27,0,7,5)
-      Font = Font["Times New Roman,Bold,+2"]
+  }
+  { VBox1 VBox
+    MoveScaled(58,1,64,62)
+    Padding = 2
+    { Label2 Label
+      MoveScaled(2,1,59,5)
+      Font = Font["+3"]
+      Text = ("Visor")
       Alignment = Align.Center
-      Border = Border.Raised
     }
-    { Panel5 Panel
-      MoveScaled(35,-1,2,4)
-      Expand = True
-      AutoResize = True
+    { PictureBoxVisor PictureBox
+      MoveScaled(2,6,60,41.7143)
+      Background = &HFFFFFF&
+      Stretch = True
+      Border = Border.Plain
     }
-    { ButtonSiguiente Button
-      MoveScaled(38,0,15,5)
-      Text = ("Siguiente")
-      Picture = Picture["icon:/32/right"]
-    }
-    { Panel2 Panel
-      MoveScaled(53,0,6,4)
-      Expand = True
-      AutoResize = True
+    { HBox1 HBox
+      MoveScaled(3,52,55,7)
+      Padding = 2
+      { Panel2 Panel
+        MoveScaled(1,2,4,4)
+      }
+      { ButtonEditor Button
+        MoveScaled(6,0,25,5)
+        Text = ("Editar con inkscape")
+        Picture = Picture["inkscape.png"]
+      }
+      { HBox2 HBox
+        MoveScaled(30,1,10,4)
+        Expand = True
+        AutoResize = True
+      }
+      { ButtonSalir Button
+        MoveScaled(37,1,12,5)
+        Text = ("Salir")
+        Picture = Picture["icon:/16/quit"]
+      }
       { Panel3 Panel
-        MoveScaled(68,2,6,4)
+        MoveScaled(50,1,5,5)
       }
     }
-  }
-  { PictureBoxVisor PictureBox
-    MoveScaled(58,2,60,41.7143)
-    Stretch = True
-    Border = Border.Plain
-  }
-  { ScrollView1 ScrollView
-    MoveScaled(1,5,55,45)
-    Arrangement = Arrange.Column
-  }
-  { Label1 Label
-    MoveScaled(2,1,53,4)
-    Font = Font["Bold,+2"]
-    Text = ("Lista de Cartones....")
-  }
-  { ButtonEditor Button
-    MoveScaled(60,45,25,5)
-    Text = ("Editar con inkscape")
-    Picture = Picture["inkscape.png"]
-  }
-  { ButtonSalir Button
-    MoveScaled(105,45,12,5)
-    Text = ("Salir")
-    Picture = Picture["icon:/16/quit"]
   }
 }

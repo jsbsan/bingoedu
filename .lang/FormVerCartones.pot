@@ -14,23 +14,19 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: FormVerCartones.form:35
-msgid "Anterior"
-msgstr ""
-
-#: FormVerCartones.form:60
-msgid "Siguiente"
-msgstr ""
-
-#: FormVerCartones.form:89
+#: FormVerCartones.form:32
 msgid "Lista de Cartones...."
 msgstr ""
 
-#: FormVerCartones.form:94
+#: FormVerCartones.form:49
+msgid "Visor"
+msgstr ""
+
+#: FormVerCartones.form:70
 msgid "Editar con inkscape"
 msgstr ""
 
-#: FormVerCartones.form:100
+#: FormVerCartones.form:82
 msgid "Salir"
 msgstr ""
 
