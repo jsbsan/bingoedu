@@ -353,9 +353,9 @@ Public Sub generarDibujo(arrayElementosCarton As Object[], titulo As String) ' E
           
           contenido &= "[x]" & "\t" & buscaCoordX(b, tipotabla) & "\n"
           contenido &= "[y]" & "\t" & buscaCoordY(a, tipotabla) & "\n"
-          contenido &= "[fw]" & "\t" & "225" & "\n" 'siempre es el mismo aunque cambie el carton
-          contenido &= "[fh]" & "\t" & "199" & "\n" 'siempre es el mismo aunque cambie el carton
-          contenido &= "[dpi]" & "\t" & "200" & "\n" '' defino calidad de salida del dibujo com  dpi como 200
+          contenido &= "[fw]" & "\t" & "224" & "\n" 'siempre es el mismo aunque cambie el carton
+          contenido &= "[fh]" & "\t" & "192" & "\n" 'siempre es el mismo aunque cambie el carton
+          contenido &= "[dpi]" & "\t" & "100" & "\n" '' defino calidad de salida del dibujo com  dpi como 100
           
       End Select
     Next
@@ -388,11 +388,11 @@ Public Function buscaCoordX(valor As Integer, tipotabla As String) As String
   
   Select Case tipotabla
     Case "4x3"
-      Return Choose(valor, "73.63", "308", "542", "776")
+      Return Choose(valor, "73", "308", "542", "776")
     Case "5x4"
-      Return Choose(valor, "81.8", "315.7", "549.7", "784", "1018.66")
+      Return Choose(valor, "81", "314", "549", "784", "1018.66")
     Case "5x5"
-      Return Choose(valor, "80.2", "314.11", "548.16", "782.48", "1017")
+      Return Choose(valor, "78", "312", "546", "780", "1015")
   End Select
   
 End
@@ -401,11 +401,11 @@ Public Function buscaCoordY(valor As Integer, tipotabla As String) As String
   
   Select Case tipotabla
     Case "4x3"
-      Return Choose(valor, "70", "270", "475")
+      Return Choose(valor, "73", "275", "478")
     Case "5x4"
-      Return Choose(valor, "80.82", "283.54", "486,2", "688.65")
+      Return Choose(valor, "82", "285", "487", "690")
     Case "5x5"
-      Return Choose(valor, "78", "285.36", "488", "690", "892.62")
+      Return Choose(valor, "81", "284", "487", "690", "896")
   End Select
   
 End  
