@@ -2,6 +2,7 @@
 
 { Form Form
   MoveScaled(0,0,135,53)
+  Icon = Picture["carton de bingo.jpg"]
   Arrangement = Arrange.Vertical
   { HBox2 HBox
     MoveScaled(6,-2,60,8)

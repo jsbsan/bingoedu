@@ -2,6 +2,7 @@
 
 { Form Form
   MoveScaled(0,0,123,51)
+  Icon = Picture["icon:/32/image"]
   { HBox1 HBox
     MoveScaled(59,50,60,5)
     Visible = False

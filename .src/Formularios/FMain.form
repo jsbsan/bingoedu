@@ -36,7 +36,7 @@
   }
   { Label3 Label
     MoveScaled(0,39,70,4)
-    Text = ("Realizado en Gambas3.5.4 para la distribución MininoPicaros 2015")
+    Text = ("Realizado en Gambas3.5.4 para la distribución MininoPicaros 2016")
     Alignment = Align.Center
   }
   { Labelversion Label

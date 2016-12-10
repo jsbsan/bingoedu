@@ -281,7 +281,8 @@ End
 '   
 ' End
 
-Public Sub SquareButtonGuardar_Click()
+Public Sub ButtonGuardarCambios_Click()
+  
   'guarda todos los datos de
   
   btmp.tituloCarton = TextBoxTitulo.text
@@ -307,5 +308,6 @@ Public Sub SquareButtonGuardar_Click()
   btmp.guardarBingo(True)
   
   okguardado = True
+  Me.Close()
   
 End

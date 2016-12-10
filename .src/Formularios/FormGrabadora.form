@@ -2,6 +2,7 @@
 
 { Form Form
   MoveScaled(0,0,43,28)
+  Icon = Picture["iconosonido32.png"]
   { PictureBoxMicro PictureBox
     MoveScaled(5,2,16,16)
     Picture = Picture["microfono.png"]

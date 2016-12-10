@@ -843,3 +843,43 @@ Public Sub copiarCartones()
   Next
   
 End
+
+Public Sub borrarElementoBingo(id As String)
+  
+  Dim a As Integer
+  
+  For a = 0 To ArrayElementosBingo.count - 1
+    If ArrayElementosBingo[a].id = id Then 
+      ArrayElementosBingo.Delete(a)
+      Break
+    Endif
+  Next
+  
+  For a = 0 To ListaElementosBingo.count - 1
+    If ListaElementosBingo[a] = id Then 
+      ListaElementosBingo.Delete(a)
+      Break
+    Endif
+  Next
+  
+End
+
+Public Sub borrarElementoCarton(id As String)
+  
+  Dim a As Integer
+  
+  For a = 0 To ArrayElementosCarton.count - 1
+    If ArrayElementosCarton[a].id = id Then 
+      ArrayElementosCarton.Delete(a)
+      Break
+    Endif
+  Next
+  
+  For a = 0 To ListaElementosCarton.count - 1
+    If ListaElementosCarton[a] = id Then 
+      ListaElementosCarton.Delete(a)
+      Break
+    Endif
+  Next
+  
+End

@@ -46,7 +46,7 @@ msgstr ""
 msgid "cd /tmp;rm carton*"
 msgstr ""
 
-#: Carton.class:92
+#: Carton.class:98
 msgid "Error, desconocido tamaño de cuadricula"
 msgstr ""
 
@@ -63,17 +63,17 @@ msgid "Jugar"
 msgstr ""
 
 #: FMain.form:58
-msgid "Realizado en Gambas3.5.4 para la distribución MininoPicaros 2015"
+msgid "Realizado en Gambas3.5.4 para la distribución MininoPicaros 2016"
 msgstr ""
 
 #: FMain.form:68
 msgid "Autores: Julio Sanchez Berro (jsbsan) y Antonio Sanchez (introlinux)"
 msgstr ""
 
-#: FMain.form:80 FormFicherosBingos.form:166 FormModificarBingos.form:215
-#: FormModificarCartones.form:247 FormModificarElementos.form:117
-#: FormMultipleElementosDeTexto.form:51 FormPrevisualizar.form:42
-#: FormVerCartones.form:99
+#: FMain.form:80 FormFicherosBingos.form:167 FormModificarBingos.form:217
+#: FormModificarCartones.form:215 FormModificarElementos.form:118
+#: FormMultipleElementosDeTexto.form:52 FormPrevisualizar.form:43
+#: FormVerCartones.form:100
 msgid "Salir"
 msgstr ""
 
@@ -85,43 +85,43 @@ msgstr ""
 msgid "Bingo Educativo"
 msgstr ""
 
-#: FormAvanceCreacionCartones.form:18
+#: FormAvanceCreacionCartones.form:19
 msgid "Creando Cartones....."
 msgstr ""
 
-#: FormFicherosBingos.form:51
+#: FormFicherosBingos.form:52
 msgid "Utilidades...."
 msgstr ""
 
-#: FormFicherosBingos.form:76
+#: FormFicherosBingos.form:77
 msgid "Crear"
 msgstr ""
 
-#: FormFicherosBingos.form:86
+#: FormFicherosBingos.form:87
 msgid "Editar"
 msgstr ""
 
-#: FormFicherosBingos.form:96
+#: FormFicherosBingos.form:97
 msgid "importa un fichero .be para usarlo en este ordenador"
 msgstr ""
 
-#: FormFicherosBingos.form:97
+#: FormFicherosBingos.form:98
 msgid "Importar"
 msgstr ""
 
-#: FormFicherosBingos.form:108 FormModificarCartones.form:240
+#: FormFicherosBingos.form:109
 msgid "Imprimir"
 msgstr ""
 
-#: FormFicherosBingos.form:118
+#: FormFicherosBingos.form:119
 msgid "exporta para compartir el fichero con otros profesores"
 msgstr ""
 
-#: FormFicherosBingos.form:119
+#: FormFicherosBingos.form:120
 msgid "Exportar"
 msgstr ""
 
-#: FormFicherosBingos.form:155 FormModificarCartones.form:61
+#: FormFicherosBingos.form:156 FormModificarCartones.form:55
 msgid "Borrar"
 msgstr ""
 
@@ -137,7 +137,7 @@ msgstr ""
 msgid "Si, borrar"
 msgstr ""
 
-#: FormFicherosBingos.class:118 FormModificarBingos.class:160
+#: FormFicherosBingos.class:118 FormModificarBingos.class:187
 msgid "No, cancelar"
 msgstr ""
 
@@ -149,15 +149,15 @@ msgstr ""
 msgid "Archivos Bingo Educativo"
 msgstr ""
 
-#: FormGrabadora.form:20
+#: FormGrabadora.form:21
 msgid "TextBox1"
 msgstr ""
 
-#: FormGrabadora.form:25
+#: FormGrabadora.form:26
 msgid "Iniciar"
 msgstr ""
 
-#: FormGrabadora.form:31
+#: FormGrabadora.form:32
 msgid "Terminar"
 msgstr ""
 
@@ -165,87 +165,87 @@ msgstr ""
 msgid "Grabadora de Sonido"
 msgstr ""
 
-#: FormModificarBingos.form:46 FormModificarCartones.class:17
+#: FormModificarBingos.form:47 FormModificarCartones.class:17
 msgid "Cartones"
 msgstr ""
 
-#: FormModificarBingos.form:50
+#: FormModificarBingos.form:51
 msgid "Propiedades de los Cartones"
 msgstr ""
 
-#: FormModificarBingos.form:62
+#: FormModificarBingos.form:63
 msgid "Ver Cartones"
 msgstr ""
 
-#: FormModificarBingos.form:68
+#: FormModificarBingos.form:69
 msgid "Generar Cartones"
 msgstr ""
 
-#: FormModificarBingos.form:82
+#: FormModificarBingos.form:83
 msgid "matematicas"
 msgstr ""
 
-#: FormModificarBingos.form:82
+#: FormModificarBingos.form:83
 msgid "ingles"
 msgstr ""
 
-#: FormModificarBingos.form:82
+#: FormModificarBingos.form:83
 msgid "lengua"
 msgstr ""
 
-#: FormModificarBingos.form:89
+#: FormModificarBingos.form:90
 msgid "aqui se define el titulo que vendrá en cada carton"
 msgstr ""
 
-#: FormModificarBingos.form:90
+#: FormModificarBingos.form:91
 msgid "Categoria:"
 msgstr ""
 
-#: FormModificarBingos.form:100
+#: FormModificarBingos.form:101
 msgid "aqui se define el tema del bingo"
 msgstr ""
 
-#: FormModificarBingos.form:101
+#: FormModificarBingos.form:102
 msgid "Titulo:"
 msgstr ""
 
-#: FormModificarBingos.form:107
+#: FormModificarBingos.form:108
 msgid "Nombre fichero:"
 msgstr ""
 
-#: FormModificarBingos.form:119
+#: FormModificarBingos.form:120
 msgid ".be"
 msgstr ""
 
-#: FormModificarBingos.form:131
+#: FormModificarBingos.form:132
 msgid "Descripción:"
 msgstr ""
 
-#: FormModificarBingos.form:137
+#: FormModificarBingos.form:138
 msgid "Elementos que componen el Bingo actual:"
 msgstr ""
 
-#: FormModificarBingos.form:143
+#: FormModificarBingos.form:144
 msgid "Visualizar imagenes"
 msgstr ""
 
-#: FormModificarBingos.form:154
+#: FormModificarBingos.form:155
 msgid "Para editar un elemento, seleccionalo y haga DobleClick"
 msgstr ""
 
-#: FormModificarBingos.form:170
+#: FormModificarBingos.form:171
 msgid "Añadir Elemento"
 msgstr ""
 
-#: FormModificarBingos.form:182
+#: FormModificarBingos.form:183
 msgid "Multiple Elementos de Texto"
 msgstr ""
 
-#: FormModificarBingos.form:193
+#: FormModificarBingos.form:195
 msgid "Borrar Elementos"
 msgstr ""
 
-#: FormModificarBingos.form:204 FormModificarCartones.form:266
+#: FormModificarBingos.form:206
 msgid "Guardar"
 msgstr ""
 
@@ -261,95 +261,110 @@ msgstr ""
 msgid "NuevoBingo"
 msgstr ""
 
-#: FormModificarBingos.class:160
+#: FormModificarBingos.class:161
+msgid ""
+"No se pueden generar cartones...\n"
+"demasiados elementos repetidos, cuadros blancos y/o negros para el tipo de "
+"cartón"
+msgstr ""
+
+#: FormModificarBingos.class:187
 msgid "Generar cartones, borra los anteriores, ¿quiere continuar?"
 msgstr ""
 
-#: FormModificarBingos.class:160
+#: FormModificarBingos.class:187
 msgid "Si, continua"
 msgstr ""
 
-#: FormModificarBingos.class:168
+#: FormModificarBingos.class:195
 msgid "Problemas al crear los cartones, causas:"
 msgstr ""
 
-#: FormModificarBingos.class:169
+#: FormModificarBingos.class:196
 msgid "     Hay pocos elementos"
 msgstr ""
 
-#: FormModificarBingos.class:170
+#: FormModificarBingos.class:197
 msgid "     Hay muchos cartones para crear"
 msgstr ""
 
-#: FormModificarBingos.class:171
+#: FormModificarBingos.class:198
 msgid "no es posible crear el numero de cartones solicitado"
 msgstr ""
 
-#: FormModificarBingos.class:175
+#: FormModificarBingos.class:203
 msgid "Cartones Generados !!!"
 msgstr ""
 
-#: FormModificarBingos.class:206
+#: FormModificarBingos.class:233
+msgid "No hay elemento seleccionado"
+msgstr ""
+
+#: FormModificarBingos.class:239
 msgid "Si"
 msgstr ""
 
-#: FormModificarBingos.class:300
+#: FormModificarBingos.class:246
+msgid "El elemento ha sido borrado"
+msgstr ""
+
+#: FormModificarBingos.class:335
 msgid "Terminado!!!"
 msgstr ""
 
-#: FormModificarCartones.form:53
+#: FormModificarCartones.form:47
 msgid "MenuGridview"
 msgstr ""
 
-#: FormModificarCartones.form:56
+#: FormModificarCartones.form:50
 msgid "Agregar"
 msgstr ""
 
-#: FormModificarCartones.form:72
+#: FormModificarCartones.form:66
 msgid "Características del Cartón:"
 msgstr ""
 
-#: FormModificarCartones.form:78
+#: FormModificarCartones.form:72
 msgid "Titulo del cartón:"
 msgstr ""
 
-#: FormModificarCartones.form:94
+#: FormModificarCartones.form:88
 msgid "Elementos que se repitirán en todos los cartones:"
 msgstr ""
 
-#: FormModificarCartones.form:145
+#: FormModificarCartones.form:139
 msgid "Tamaño de la Cuadrícula del Cartón"
 msgstr ""
 
-#: FormModificarCartones.form:149
+#: FormModificarCartones.form:143
 msgid "4x3"
 msgstr ""
 
-#: FormModificarCartones.form:155
+#: FormModificarCartones.form:149
 msgid "5x4"
 msgstr ""
 
-#: FormModificarCartones.form:160
+#: FormModificarCartones.form:154
 msgid "5x5"
 msgstr ""
 
-#: FormModificarCartones.form:166
+#: FormModificarCartones.form:160
 msgid "Huecos:"
 msgstr ""
 
-#: FormModificarCartones.form:170
+#: FormModificarCartones.form:164
 msgid "Negros (rellenos):"
 msgstr ""
 
-#: FormModificarCartones.form:175
+#: FormModificarCartones.form:169
 msgid "Blancos (vacíos):"
 msgstr ""
 
-#: FormModificarCartones.form:195
+#: FormModificarCartones.form:189
 msgid "Número de cartones distintos a Generar:"
 msgstr ""
 
-#: FormModificarCartones.form:206
+#: FormModificarCartones.form:200
 msgid ""
 "    <b>Nota:</b><br>\n"
 "   El número de cartones diferentes que se pueden generar, dependerá del "
@@ -357,12 +372,8 @@ msgid ""
 "bingo, mayor número de cartones distintos que se podrań crear."
 msgstr ""
 
-#: FormModificarCartones.form:227
-msgid "Previsualizar"
-msgstr ""
-
-#: FormModificarCartones.form:254
-msgid "no visible Guardar"
+#: FormModificarCartones.form:221
+msgid "Guardar Cambios"
 msgstr ""
 
 #: FormModificarCartones.class:167
@@ -385,27 +396,27 @@ msgstr ""
 msgid "Ese elemento ya esta incluido"
 msgstr ""
 
-#: FormModificarElementos.form:30
+#: FormModificarElementos.form:31
 msgid "Elemento en Bingo"
 msgstr ""
 
-#: FormModificarElementos.form:34
+#: FormModificarElementos.form:35
 msgid "texto:"
 msgstr ""
 
-#: FormModificarElementos.form:75
+#: FormModificarElementos.form:76
 msgid "Elemento en Cartón"
 msgstr ""
 
-#: FormModificarElementos.form:104
+#: FormModificarElementos.form:105
 msgid "Mismo elemento que en Bingo"
 msgstr ""
 
-#: FormModificarElementos.form:111
+#: FormModificarElementos.form:112
 msgid "Crear Elemento"
 msgstr ""
 
-#: FormModificarElementos.form:129
+#: FormModificarElementos.form:130
 msgid "iniciar grabadora"
 msgstr ""
 
@@ -433,11 +444,11 @@ msgstr ""
 msgid "Ficheros de Imagen"
 msgstr ""
 
-#: FormMultipleElementosDeTexto.form:22
+#: FormMultipleElementosDeTexto.form:23
 msgid "TextLabel1"
 msgstr ""
 
-#: FormMultipleElementosDeTexto.form:40
+#: FormMultipleElementosDeTexto.form:41
 msgid "Procesar"
 msgstr ""
 
@@ -445,26 +456,26 @@ msgstr ""
 msgid "Multiples Elementos de Texto"
 msgstr ""
 
-#: FormPrevisualizar.form:16
+#: FormPrevisualizar.form:17
 msgid "Previsualizar Simple"
 msgstr ""
 
-#: FormPrevisualizar.form:21
+#: FormPrevisualizar.form:22
 msgid "Previsualizar con datos"
 msgstr ""
 
-#: FormVerCartones.form:34
+#: FormVerCartones.form:35
 msgid "Anterior"
 msgstr ""
 
-#: FormVerCartones.form:59
+#: FormVerCartones.form:60
 msgid "Siguiente"
 msgstr ""
 
-#: FormVerCartones.form:88
+#: FormVerCartones.form:89
 msgid "Lista de Cartones...."
 msgstr ""
 
-#: FormVerCartones.form:93
+#: FormVerCartones.form:94
 msgid "Editar con inkscape"
 msgstr ""

@@ -16,6 +16,12 @@ Public TamanoLetraCarton As Integer = 40 'tamaño por defecto de la letra que sa
 
 Private textoscarton As String[]
 
+'merjora de algoritmo de colocacion de elementos 
+Private listasPosiciones As New Integer[]
+'Mejora en la busqueda de elementos, usando colecciones
+Private ColeccionElementosCarton As New Collection
+Private ColeccionElementosBingo As New Collection
+
 Public Sub _new()
   
   'cuando se crea se identefica
@@ -107,7 +113,17 @@ Private Function rellenaCarton(numero As Integer, numeroCuadrosNegros As Integer
   
   For a = 1 To numero
     elementos.Add("") 'longitud 12 veces
-    'indice.Add(a) -> para futura mejora
+    listasPosiciones.Add(a - 1)
+  Next
+  
+  'convertir array de elementos Me.ArrayElmentosCarton, en una coleccion
+  
+  For a = 0 To Me.ArrayElmentosCarton.count - 1
+    ColeccionElementosCarton.Add(Me.ArrayElmentosCarton[a], Me.ArrayElmentosCarton[a].id)
+  Next
+  
+  For a = 0 To Me.ArrayElmentosBingo.count - 1
+    ColeccionElementosBingo.Add(Me.ArrayElmentosBingo[a], Me.ArrayElmentosBingo[a].id)
   Next
   
   'coloco cuadros negros
@@ -127,6 +143,7 @@ End
 
 Private Function colocarElementos(longitud As Integer, lista As String[], ByRef elementos As String[], numeroCuadrosBlancos As Integer, numeroCuadrosNegros As Integer) As Boolean
   
+  Dim posicion As Integer
   Dim ele As Object 'elemento
   Dim ele2 As Object
   
@@ -136,9 +153,9 @@ Private Function colocarElementos(longitud As Integer, lista As String[], ByRef 
   
   l = lista.Copy()
   
-  For a = 0 To longitud - 1 
+  For a = 0 To listasPosiciones.count - 1
     
-    While elementos[a] = "" 
+    While elementos[listasPosiciones[a]] = "" 
       
       If L.COUNT = 2 Then 
         '   Message.Info(("Muy pocos elementos"))
@@ -158,7 +175,7 @@ Private Function colocarElementos(longitud As Integer, lista As String[], ByRef 
           
           If textoscarton.Find(ele.texto) = -1 Then 
             'se añade elemento ya que es distinto el contenido de las celda
-            elementos[a] = l[aleatorio]
+            elementos[listasPosiciones[a]] = l[aleatorio]
             l.Delete(aleatorio)
             textoscarton.Add(ele.texto)
           Else
@@ -169,7 +186,7 @@ Private Function colocarElementos(longitud As Integer, lista As String[], ByRef 
           'la comprobación es por id
           If Me.ArraIdElementos.Find(ele.id) = -1 Then 
             
-            elementos[a] = l[aleatorio]
+            elementos[listasPosiciones[a]] = l[aleatorio]
             l.Delete(aleatorio)
           Else
             l.Delete(aleatorio)
@@ -189,6 +206,7 @@ End
 
 Private Sub colocarElementosRepetidos(longitud As Integer, listaRepetida As String[], ByRef elementos As String[])
   
+  Dim posicion As Integer
   Dim eleBingo As Variant
   Dim eleCarton As Variant
   
@@ -199,10 +217,12 @@ Private Sub colocarElementosRepetidos(longitud As Integer, listaRepetida As Stri
   
   For a = 1 To listaRepetida.Count
     Do
-      aleatorio = Int(Rnd(2, longitud))
+      posicion = Int(Rnd(0, listasPosiciones.max))
+      aleatorio = listasPosiciones[posicion]
+      
       If elementos[aleatorio] = "" Then
         
-        eleBingo = buscaElemento(listaRepetida[a - 1], Me.ArrayElmentosBingo)
+        eleBingo = buscaElementoBingo(listaRepetida[a - 1], Me.ArrayElmentosBingo)
         
         elementos[aleatorio] = eleBingo.enlace
         eleCarton = buscaElemento(eleBingo.enlace, Me.ArrayElmentosCarton)
@@ -211,6 +231,8 @@ Private Sub colocarElementosRepetidos(longitud As Integer, listaRepetida As Stri
         Else
           Me.ArraIdElementos.Add(eleCarton.id)
         Endif
+        'mejora en el algoritmo de relleno de carton
+        listasPosiciones.Delete(posicion)
         Break
       Endif
       
@@ -222,16 +244,19 @@ End
 
 Private Sub colocarCuadros(longitud As Integer, numero As Integer, texto As String, ByRef elementos As String[])
   
+  Dim posicion As Integer
   Dim textotmp As String
   Dim aleatorio As Integer
   Dim a As Integer
   
   For a = 1 To numero
     Do
-      aleatorio = Int(Rnd(0, longitud))
+      posicion = Int(Rnd(0, listasPosiciones.max))
+      aleatorio = listasPosiciones[posicion]
       If elementos[aleatorio] = "" Then
         If texto = "idnegro" Or texto = "idblanco" Then
           elementos[aleatorio] = texto
+          listasPosiciones.Delete(posicion)
           Break
           ' Else
           '   'se trata de un texto
@@ -412,21 +437,34 @@ End
 
 '---------------------------------------------------------
 'codigo de la clase binco, que dado un id, busca el elemento que lo tenga.
+'
+Public Function buscaElementoBingo(id As String, arrayElem As Elemento[]) As Elemento
+  
+  Return ColeccionElementosBingo[id] '
+
+End
+'
+'
+
 Public Function buscaElemento(id As String, arrayElem As Elemento[]) As Elemento
   
-  Dim ebuscado As Elemento
-  'dado un id, y una lista de elementos[], nos devuelve el elemento que tenga ese id.
+  Return ColeccionElementosCarton[id]
   
-  For Each ebuscado In arrayElem
-    If ebuscado.id = id Then
-      Return ebuscado
-      
-    Endif
-  Next
-  
-  'Si llegamos a este punto, no ha encontrado el elemento enlazado...hay un error
-  'poner mensaje de error o devolver null
-  Return Null
+  ' 
+  ' 
+  ' Dim ebuscado As Elemento
+  ' 'dado un id, y una lista de elementos[], nos devuelve el elemento que tenga ese id.
+  ' 
+  ' For Each ebuscado In arrayElem
+  '   If ebuscado.id = id Then
+  '     Return ebuscado
+  '     
+  '   Endif
+  ' Next
+  ' 
+  ' 'Si llegamos a este punto, no ha encontrado el elemento enlazado...hay un error
+  ' 'poner mensaje de error o devolver null
+  ' Return Null
   
 End
 

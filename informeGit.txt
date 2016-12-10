@@ -1,3 +1,66 @@
+commit 934932486441b3b9a3da9000f6e8027bc6b7d15d
+Merge: 4ca14d4 a419f15
+Author: Julio Sanchez Berro <jusabejusabe@gmail.com>
+Date:   Sat Dec 10 10:06:09 2016 +0100
+
+    Merge pull request #1 from introlinux/alinea-plantillas
+    
+    Alineación de plantillas
+
+commit a419f15bf85ef9a7aa8f8eb5e0fbbaa84d00dce5
+Author: minino <minino@minino.galpon>
+Date:   Fri Dec 9 23:59:20 2016 +0100
+
+    Alineación de plantillas
+
+commit 4ca14d47671a3d3ef114ca2c4eedd68711510a47
+Author: jsbsan <jusabejusabe@hotmail.com>
+Date:   Fri Dec 9 22:02:23 2016 +0100
+
+    [alpha] Impresion de cartones
+
+commit c93ffb7068b0d50694b2ad7c4799218adc82170b
+Author: jsbsan <jusabejusabe@hotmail.com>
+Date:   Fri Dec 9 19:05:05 2016 +0100
+
+    Plantillas mejoradas por Antonio
+
+commit 19b45624dd90a21671568875fdb73619d3009a26
+Author: jsbsan <jusabejusabe@hotmail.com>
+Date:   Fri Dec 9 06:57:56 2016 +0100
+
+    miniaturas de cartones para mostrar más rápido
+
+commit 1980306e8156e565e2b1c1a47c4b1413bfea1c08
+Author: jsbsan <jusabejusabe@hotmail.com>
+Date:   Thu Dec 8 20:54:11 2016 +0100
+
+    Cambio en plantillas 5x4 y 5x5 tipo de letra y situacion de etiquetas a sustituir
+
+commit 1fc2ef70f6ed0bba98ddb7b2b9c4323bff98cd4d
+Author: jsbsan <jusabejusabe@hotmail.com>
+Date:   Wed Dec 7 22:13:58 2016 +0100
+
+    Cambio en plantilla 4x3 (tipo de letra Sans Condensed Uralic) auto detección tamaño letra del carton y   dpi200
+
+commit 229dd2018d0736ed8e2a5c86e5fd026c386fddc0
+Author: jsbsan <jusabejusabe@hotmail.com>
+Date:   Mon Dec 5 21:35:17 2016 +0100
+
+    Cartones con elementos imagenes
+
+commit 88c30b4c0db36c114f39a0a225216ba177b47b8d
+Author: jsbsan <jusabejusabe@hotmail.com>
+Date:   Sun Dec 4 18:58:23 2016 +0100
+
+    pruebas con cartones 5x4 y 5x5. Aviso de pocos elementos
+
+commit bd40792e25c3cf06bcb2d5e3f3188323bc6cec10
+Author: jsbsan <jusabejusabe@hotmail.com>
+Date:   Sun Dec 4 17:14:12 2016 +0100
+
+    Generando Cartones y Visor+Editar inkscape
+
 commit 5e888ca9f8409b78bed30ef8c0f29ef4c12837d9
 Author: jsbsan <jusabejusabe@hotmail.com>
 Date:   Sat Dec 3 01:12:34 2016 +0100

@@ -2,6 +2,7 @@
 
 { Form Form
   MoveScaled(0,0,92,16)
+  Icon = Picture["icon:/32/exec"]
   Resizable = False
   { ProgressBar1 ProgressBar
     MoveScaled(6,6,81,6)

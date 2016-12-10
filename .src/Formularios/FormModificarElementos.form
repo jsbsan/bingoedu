@@ -2,6 +2,7 @@
 
 { Form Form
   MoveScaled(0,0,106,44)
+  Icon = Picture["iconoletra16.png"]
   { Frame1 Frame
     MoveScaled(1,1,52,33)
     Text = ("Elemento en Bingo")

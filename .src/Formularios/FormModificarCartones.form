@@ -139,49 +139,15 @@
     }
     { Panel8 Panel
       MoveScaled(91,0,44,27)
-      { Panel_Previsualizar Panel
-        MoveScaled(17,6,11,10)
-        Arrangement = Arrange.Fill
-        Border = Border.Plain
-        { SquareButtonPrevisualizar SquareButton
-          MoveScaled(0,0,11,8)
-          Expand = True
-          Text = ("Previsualizar")
-          Picture = Picture["icon:/22/wizard"]
-        }
-      }
-      { Panel_Imprimir Panel
-        MoveScaled(31,6,11,10)
-        Arrangement = Arrange.Fill
-        Border = Border.Plain
-        { SquareButtonImprimir SquareButton
-          MoveScaled(0,1,11,8)
-          Expand = True
-          Text = ("Imprimir")
-          Picture = Picture["icon:/22/print"]
-        }
-      }
       { ButtonSalir Button
-        MoveScaled(29,21,13,4)
+        MoveScaled(31,15,13,7)
         Text = ("Salir")
         Picture = Picture["icon:/22/quit"]
       }
-      { ButtonGuardar Button
-        MoveScaled(3,21,20,4)
-        Visible = False
-        Text = ("no visible Guardar")
-        Picture = Picture["icon:/22/save"]
-      }
-      { Panel_Guardar Panel
-        MoveScaled(3,6,11,10)
-        Arrangement = Arrange.Fill
-        Border = Border.Plain
-        { SquareButtonGuardar SquareButton
-          MoveScaled(0,0,11,8)
-          Expand = True
-          Text = ("Guardar")
-          Picture = Picture["icon:/48/save"]
-        }
+      { ButtonGuardarCambios Button
+        MoveScaled(0,15,25,7)
+        Text = ("Guardar Cambios")
+        Picture = Picture["icon:/32/save"]
       }
     }
   }

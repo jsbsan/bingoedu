@@ -2,6 +2,7 @@
 
 { Form Form
   MoveScaled(0,0,64,64)
+  Icon = Picture["iconoletra16.png"]
   Arrangement = Arrange.Vertical
   Spacing = True
   Padding = 1

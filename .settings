@@ -13,6 +13,15 @@ Geometry=[0,16,230,210]
 [DebugWindow/ArrayCartones]
 Geometry=[0,24,210,210]
 
+[DebugWindow/ArrayElementosBingo]
+Geometry=[804,67,210,788]
+
+[DebugWindow/ArrayElementosBingo[36]]
+Geometry=[804,64,210,788]
+
+[DebugWindow/ArrayElementosBingo[37]]
+Geometry=[1027,642,210,210]
+
 [DebugWindow/ArrayElementosCarton]
 Geometry=[48,226,412,728]
 
@@ -31,8 +40,20 @@ Geometry=[62,96,412,728]
 [DebugWindow/ArrayElementosCarton[29]]
 Geometry=[1124,293,412,728]
 
+[DebugWindow/ArrayElmentosCarton]
+Geometry=[0,24,1280,836]
+
+[DebugWindow/ArrayElmentosCarton[0]]
+Geometry=[14,24,364,828]
+
 [DebugWindow/Carton]
 Geometry=[46,24,210,210]
+
+[DebugWindow/ColeccionElementosCarton]
+Geometry=[847,98,426,808]
+
+[DebugWindow/ColeccionElementosCarton[id]]
+Geometry=[0,24,210,210]
 
 [DebugWindow/Elemento]
 Geometry=[774,580,210,210]
@@ -42,6 +63,9 @@ Geometry=[46,16,748,387]
 
 [DebugWindow/Me]
 Geometry=[714,164,234,688]
+
+[DebugWindow/Me.ArraIdElementos]
+Geometry=[0,24,210,210]
 
 [DebugWindow/Me.ArrayCartones]
 Geometry=[0,24,210,828]
@@ -224,7 +248,7 @@ Geometry=[1,24,210,210]
 Geometry=[0,16,210,210]
 
 [DebugWindow/ele]
-Geometry=[0,24,210,210]
+Geometry=[48,601,210,210]
 
 [DebugWindow/eleBingo]
 Geometry=[1,29,210,210]
@@ -236,19 +260,22 @@ Geometry=[0,29,210,210]
 Geometry=[777,296,229,695]
 
 [DebugWindow/elementos]
-Geometry=[997,257,308,551]
+Geometry=[965,257,308,551]
 
 [DebugWindow/l]
-Geometry=[480,538,210,457]
+Geometry=[700,467,210,457]
 
 [DebugWindow/listaRepetida]
 Geometry=[-31,403,210,210]
 
 [DebugWindow/listaRepetido]
-Geometry=[0,24,210,210]
+Geometry=[-8,641,210,210]
 
 [DebugWindow/listaelementos]
 Geometry=[0,24,210,605]
+
+[DebugWindow/listasPosiciones]
+Geometry=[19,56,210,420]
 
 [DebugWindow/tempcole]
 Geometry=[5,21,210,210]
@@ -272,26 +299,26 @@ File[6]=".src/Formularios/FormFicherosBingos.form"
 File[7]="Nota.txt:15.29"
 File[8]=".src/Formularios/FormModificarBingos.form"
 Active=9
-File[9]=".src/Formularios/FormModificarBingos.class:297.16"
+File[9]=".src/Formularios/FormModificarBingos.class:202.44"
 File[10]=".src/Formularios/FormModificarCartones.form"
-File[11]=".src/Formularios/FormFicherosBingos.class:23.27"
+File[11]=".src/Formularios/FormFicherosBingos.class:179.2"
 File[12]=".src/Clases/controles/SquareButton.class:78.8"
 File[13]=".src/Formularios/FormModificarElementos.form"
-File[14]=".src/Clases/Bingo.class:818.1"
-File[15]=".src/Clases/elemento.class:46.30"
+File[14]=".src/Clases/Bingo.class:850.12"
+File[15]=".src/Clases/elemento.class:60.2"
 File[16]=".src/Clases/elementoTexto.class:10.0"
 File[17]=".src/Clases/elementoImagen.class:10.2"
 File[18]=".src/Formularios/FormModificarElementos.class:313.2"
 File[19]=".src/Formularios/testGuadarBingo.module:17.23"
 File[20]=".src/Clases/elementoBlanco.class:16.2"
 File[21]=".src/Clases/elementoNegro.class:1.0"
-File[22]=".src/Clases/Carton.class:386.76"
+File[22]=".src/Clases/Carton.class:155.36"
 File[23]=".src/Formularios/testCargarBingo.module:7.0"
 File[24]=".src/Formularios/FormGrabadora.form"
 File[25]=".src/Formularios/FormGrabadora.class:26.2"
 File[26]="grabar.sh:0.36"
 File[27]=".src/Clases/elementoSonido.class:15.15"
-File[28]=".src/Formularios/FormModificarCartones.class:187.21"
+File[28]=".src/Formularios/FormModificarCartones.class:311.2"
 File[29]=".src/Formularios/FormPrevisualizar.form"
 File[30]=".src/Formularios/FormPrevisualizar.class:61.3"
 File[31]="ModelosCarton/bingotablas4x3.svg:582.22"
@@ -300,7 +327,7 @@ File[33]="ModelosCarton/bingotablas5x5.svg:0.0"
 File[34]=".src/Formularios/FormMultipleElementosDeTexto.form"
 File[35]=".src/Formularios/FormMultipleElementosDeTexto.class:58.21"
 File[36]=".src/Formularios/FormAvanceCreacionCartones.form"
-File[37]=".src/Formularios/FormAvanceCreacionCartones.class:47.11"
+File[37]=".src/Formularios/FormAvanceCreacionCartones.class:33.3"
 File[38]=".src/Formularios/FormVerCartones.form"
 File[39]=".src/Formularios/FormVerCartones.class:92.2"
 File[40]="iconoletra32.png"
@@ -311,8 +338,6 @@ File[44]="drawing-3x6.svg:0.0"
 Count=44
 
 [Watches]
-Count=3
-Watch[1]="jsonstring"
-Watch[2]="A"
-Watch[3]="ALEATORIO"
+Count=1
+Watch[1]="a"
 

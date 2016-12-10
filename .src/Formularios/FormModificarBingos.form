@@ -2,6 +2,7 @@
 
 { Form Form
   MoveScaled(0,0,113,75)
+  Icon = Picture["carton de bingo50x32.jpg"]
   Arrangement = Arrange.Vertical
   { Panel1 Panel
     MoveScaled(1,1,111,34)
@@ -103,7 +104,7 @@
     ShowCursor = True
   }
   { HBox1 HBox
-    MoveScaled(3,68,103,6)
+    MoveScaled(3,68,111,6)
     { Panel2 Panel
       MoveScaled(0,0,4,6)
     }
@@ -118,7 +119,7 @@
       Expand = True
     }
     { Button1 Button
-      MoveScaled(25,0,26,5)
+      MoveScaled(24,1,29,5)
       Font = Font["-1"]
       Text = ("Multiple Elementos de Texto")
       Picture = Picture["iconoletra16.png"]
@@ -128,7 +129,8 @@
       Expand = True
     }
     { ButtonBorrarElemento Button
-      MoveScaled(55,1,18,5)
+      MoveScaled(55,1,20,5)
+      Font = Font["-1"]
       Text = ("Borrar Elementos")
       Picture = Picture["icon:/16/delete"]
     }
@@ -137,21 +139,21 @@
       Expand = True
     }
     { ButtonGuadarModificaciones Button
-      MoveScaled(67,1,13,6)
+      MoveScaled(77,0,13,6)
       Text = ("Guardar")
       Picture = Picture["icon:/22/save"]
     }
     { HBox3 HBox
-      MoveScaled(81,0,4,5)
+      MoveScaled(91,0,4,5)
       Expand = True
     }
     { ButtonSalir Button
-      MoveScaled(85,0,10,6)
+      MoveScaled(94,0,10,6)
       Text = ("Salir")
       Picture = Picture["icon:/22/quit"]
     }
     { Panel3 Panel
-      MoveScaled(96,0,4,6)
+      MoveScaled(105,1,4,6)
     }
   }
 }
