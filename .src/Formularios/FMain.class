@@ -63,3 +63,9 @@ End
 Public Sub Label2_MouseDown()
   
 End
+
+Public Sub ButtonJugar_Click()
+  
+  FormModoJuego.ShowModal()
+  
+End

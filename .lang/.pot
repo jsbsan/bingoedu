@@ -58,20 +58,21 @@ msgstr ""
 msgid "Gestión de Bingos"
 msgstr ""
 
-#: FMain.form:52
+#: FMain.form:51
 msgid "Jugar"
 msgstr ""
 
-#: FMain.form:58
+#: FMain.form:57
 msgid "Realizado en Gambas3.5.4 para la distribución MininoPicaros 2016"
 msgstr ""
 
-#: FMain.form:68
+#: FMain.form:67
 msgid "Autores: Julio Sanchez Berro (jsbsan) y Antonio Sanchez (introlinux)"
 msgstr ""
 
-#: FMain.form:80 FormFicherosBingos.form:167 FormModificarBingos.form:217
-#: FormModificarCartones.form:215 FormModificarElementos.form:118
+#: FMain.form:79 FormFicherosBingos.form:167 FormJuego.form:53
+#: FormModificarBingos.form:217 FormModificarCartones.form:215
+#: FormModificarElementos.form:118 FormModoJuego.form:108
 #: FormMultipleElementosDeTexto.form:52 FormPrevisualizar.form:43
 #: FormVerCartones.form:82
 msgid "Salir"
@@ -163,6 +164,30 @@ msgstr ""
 
 #: FormGrabadora.class:6
 msgid "Grabadora de Sonido"
+msgstr ""
+
+#: FormJuego.form:32 FormMultipleElementosDeTexto.form:23
+msgid "TextLabel1"
+msgstr ""
+
+#: FormJuego.form:64
+msgid "Lista de Elementos"
+msgstr ""
+
+#: FormJuego.form:76
+msgid "Pausar"
+msgstr ""
+
+#: FormJuego.form:82
+msgid "Ver Anterior Elemento"
+msgstr ""
+
+#: FormJuego.form:88
+msgid "Repite Elemento"
+msgstr ""
+
+#: FormJuego.form:94
+msgid "Mostrar Nuevo Elemento"
 msgstr ""
 
 #: FormModificarBingos.form:47 FormModificarCartones.class:17
@@ -444,8 +469,28 @@ msgstr ""
 msgid "Ficheros de Imagen"
 msgstr ""
 
-#: FormMultipleElementosDeTexto.form:23
-msgid "TextLabel1"
+#: FormModoJuego.form:44
+msgid "Automático"
+msgstr ""
+
+#: FormModoJuego.form:52
+msgid "Segundos entre elementos:"
+msgstr ""
+
+#: FormModoJuego.form:58
+msgid "Leer elementos del bingo"
+msgstr ""
+
+#: FormModoJuego.form:68
+msgid "Jugar Automático"
+msgstr ""
+
+#: FormModoJuego.form:79
+msgid "Jugar Manual"
+msgstr ""
+
+#: FormModoJuego.class:5
+msgid "Modo Juego"
 msgstr ""
 
 #: FormMultipleElementosDeTexto.form:41
@@ -509,4 +554,8 @@ msgstr ""
 
 #: FormVerCartones.form:70
 msgid "Editar con inkscape"
+msgstr ""
+
+#: FormVerCartones.class:16
+msgid "Visualizando cartones"
 msgstr ""

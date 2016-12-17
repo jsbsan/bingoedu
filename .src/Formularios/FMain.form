@@ -30,7 +30,6 @@
   }
   { ButtonJugar Button
     MoveScaled(29,29,32,9)
-    Enabled = False
     Text = ("Jugar")
     Picture = Picture["icon:/32/game"]
   }

@@ -83,11 +83,11 @@
       }
     }
     { ScrollView1 ScrollView
-      MoveScaled(17,1,45,36)
+      MoveScaled(19,6,45,27)
       Expand = True
       Arrangement = Arrange.Fill
       { GridViewFicherosDatos GridView
-        MoveScaled(5,8,47,20)
+        MoveScaled(1,3,47,20)
         Expand = True
         Mode = Select.Single
         ShowCursor = True

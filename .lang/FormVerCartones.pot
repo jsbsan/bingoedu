@@ -30,3 +30,7 @@ msgstr ""
 msgid "Salir"
 msgstr ""
 
+#: FormVerCartones.class:16
+msgid "Visualizando cartones"
+msgstr ""
+

@@ -1,0 +1,69 @@
+' Gambas class file
+
+Public Sub Form_Open()
+  
+  Me.Title = ("Modo Juego")
+  
+  definirGridviewFicheros()
+  recargarGridview()
+  
+  Me.Center()
+  
+End
+
+Public Sub ButtonSalir_Click()
+  
+  Me.Close()
+  
+End
+
+Public Sub recargarGridview()
+  
+  Dim arDir As String[]
+  Dim nombredir As String
+  Dim b As Bingo
+  Dim contador As Integer
+  Dim BingosDisponibles As New Bingo[]
+  'cargo los datos de las carpetas de bingo en el gridview.
+  
+  ardir = Dir(User.home & "/bingoedu/", "*", gb.Directory)
+  
+  For Each nombredir In ardir
+    b = New Bingo
+    b.cargadatos(User.home & "/bingoedu/" & nombredir, True)
+    GridViewFicherosDatos.Rows.count += 1
+    GridViewFicherosDatos[contador, 0].text = nombredir
+    GridViewFicherosDatos[contador, 1].text = b.titulo
+    GridViewFicherosDatos[contador, 2].text = b.descripcion
+    contador += 1
+    BingosDisponibles.add(b)
+    GridViewFicherosDatos.Tag = BingosDisponibles
+  Next
+  
+End
+
+Public Sub definirGridviewFicheros()
+  
+  With GridViewFicherosDatos
+    .header = 3
+    .rows.count = 0
+    .columns.count = 3
+    .Columns[0].title = "Archivo Bingo"
+    .Columns[1].title = "Tema"
+    .Columns[2].title = "Descripción"
+    .Columns[0].width = 0 '200
+    .Columns[1].width = 200
+    '  .Columns[2].width = 300
+    
+    .font.size = 12
+    .Mode = Select.single
+    .ShowCursor = True
+  End With
+  
+End
+
+Public Sub ButtonManual_Click()
+  
+  FormJuego.ShowModal()
+  
+End

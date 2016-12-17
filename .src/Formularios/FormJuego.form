@@ -1,0 +1,72 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,91,78)
+  Arrangement = Arrange.Vertical
+  { HBox2 Panel
+    MoveScaled(12,4,53,42)
+    Expand = True
+    Arrangement = Arrange.Fill
+    AutoResize = True
+    Spacing = True
+    Padding = 10
+    { TextLabel1 TextLabel
+      MoveScaled(9,24,38,6)
+      Expand = True
+      Text = ("TextLabel1")
+      Alignment = Align.Center
+      Border = Border.Plain
+    }
+    { PictureBox1 PictureBox
+      MoveScaled(17,4,24,17)
+      Visible = False
+      Stretch = True
+      AutoResize = True
+      Alignment = Align.Center
+      Border = Border.Plain
+    }
+  }
+  { HBox1 HBox
+    MoveScaled(2,64,83,8)
+    Spacing = True
+    { Button1 Button
+      MoveScaled(1,0,7.1429,7.1429)
+      ToolTip = ("Salir")
+      Picture = Picture["icon:/32/quit"]
+    }
+    { HBox4 HBox
+      MoveScaled(9,0,3,8)
+      Expand = True
+    }
+    { ButtonNuevo4 Button
+      MoveScaled(12,0,7.1429,7.1429)
+      ToolTip = ("Lista de Elementos")
+      Picture = Picture["lista de elementos.png"]
+    }
+    { HBox3 HBox
+      MoveScaled(22,1,9,5)
+      Expand = True
+      AutoResize = True
+    }
+    { ButtonNuevo3 Button
+      MoveScaled(33,1,7.1429,7.1429)
+      ToolTip = ("Pausar")
+      Picture = Picture["icon:/32/pause"]
+    }
+    { ButtonNuevo2 Button
+      MoveScaled(45,1,7.1429,7.1429)
+      ToolTip = ("Ver Anterior Elemento")
+      Picture = Picture["icon:/32/rewind"]
+    }
+    { ButtonRepetir Button
+      MoveScaled(56,1,7.1429,7.1429)
+      ToolTip = ("Repite Elemento")
+      Picture = Picture["icon:/32/refresh"]
+    }
+    { ButtonNuevo Button
+      MoveScaled(70,1,7.1429,7.1429)
+      ToolTip = ("Mostrar Nuevo Elemento")
+      Picture = Picture["icon:/32/forward"]
+    }
+  }
+}
