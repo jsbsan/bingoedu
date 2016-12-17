@@ -46,6 +46,10 @@ msgstr ""
 msgid "cd /tmp;rm carton*"
 msgstr ""
 
+#: BingoJuego.class:35
+msgid "Se ha llegado al final del bingo"
+msgstr ""
+
 #: Carton.class:98
 msgid "Error, desconocido tamaño de cuadricula"
 msgstr ""
@@ -70,9 +74,9 @@ msgstr ""
 msgid "Autores: Julio Sanchez Berro (jsbsan) y Antonio Sanchez (introlinux)"
 msgstr ""
 
-#: FMain.form:79 FormFicherosBingos.form:167 FormJuego.form:53
+#: FMain.form:79 FormFicherosBingos.form:167 FormJuego.form:109
 #: FormModificarBingos.form:217 FormModificarCartones.form:215
-#: FormModificarElementos.form:118 FormModoJuego.form:108
+#: FormModificarElementos.form:118 FormModoJuego.form:109
 #: FormMultipleElementosDeTexto.form:52 FormPrevisualizar.form:43
 #: FormVerCartones.form:82
 msgid "Salir"
@@ -130,7 +134,7 @@ msgstr ""
 msgid "Utilidades"
 msgstr ""
 
-#: FormFicherosBingos.class:78
+#: FormFicherosBingos.class:78 FormModoJuego.class:70
 msgid "Debe de seleccionar un  bingo educativo"
 msgstr ""
 
@@ -166,27 +170,27 @@ msgstr ""
 msgid "Grabadora de Sonido"
 msgstr ""
 
-#: FormJuego.form:32 FormMultipleElementosDeTexto.form:23
-msgid "TextLabel1"
+#: FormJuego.form:35
+msgid "Pulse el botón >>"
 msgstr ""
 
-#: FormJuego.form:64
+#: FormJuego.form:67
 msgid "Lista de Elementos"
 msgstr ""
 
-#: FormJuego.form:76
+#: FormJuego.form:79
 msgid "Pausar"
 msgstr ""
 
-#: FormJuego.form:82
+#: FormJuego.form:85
 msgid "Ver Anterior Elemento"
 msgstr ""
 
-#: FormJuego.form:88
+#: FormJuego.form:91
 msgid "Repite Elemento"
 msgstr ""
 
-#: FormJuego.form:94
+#: FormJuego.form:97
 msgid "Mostrar Nuevo Elemento"
 msgstr ""
 
@@ -445,27 +449,27 @@ msgstr ""
 msgid "iniciar grabadora"
 msgstr ""
 
-#: FormModificarElementos.class:26
+#: FormModificarElementos.class:22
 msgid "Guadar Elemento Editado"
 msgstr ""
 
-#: FormModificarElementos.class:29
+#: FormModificarElementos.class:25
 msgid "Editando Elemento"
 msgstr ""
 
-#: FormModificarElementos.class:37
+#: FormModificarElementos.class:33
 msgid "Nuevo Elemento"
 msgstr ""
 
-#: FormModificarElementos.class:47
+#: FormModificarElementos.class:42
 msgid "Ficheros de sonido mp3"
 msgstr ""
 
-#: FormModificarElementos.class:128
+#: FormModificarElementos.class:120
 msgid "Error El Carton no puede tener elementos de Sonido"
 msgstr ""
 
-#: FormModificarElementos.class:217
+#: FormModificarElementos.class:207
 msgid "Ficheros de Imagen"
 msgstr ""
 
@@ -473,24 +477,28 @@ msgstr ""
 msgid "Automático"
 msgstr ""
 
-#: FormModoJuego.form:52
+#: FormModoJuego.form:53
 msgid "Segundos entre elementos:"
 msgstr ""
 
-#: FormModoJuego.form:58
+#: FormModoJuego.form:59
 msgid "Leer elementos del bingo"
 msgstr ""
 
-#: FormModoJuego.form:68
+#: FormModoJuego.form:69
 msgid "Jugar Automático"
 msgstr ""
 
-#: FormModoJuego.form:79
+#: FormModoJuego.form:80
 msgid "Jugar Manual"
 msgstr ""
 
 #: FormModoJuego.class:5
 msgid "Modo Juego"
+msgstr ""
+
+#: FormMultipleElementosDeTexto.form:23
+msgid "TextLabel1"
 msgstr ""
 
 #: FormMultipleElementosDeTexto.form:41

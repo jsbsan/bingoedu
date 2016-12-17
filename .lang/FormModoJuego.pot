@@ -18,27 +18,31 @@ msgstr ""
 msgid "Automático"
 msgstr ""
 
-#: FormModoJuego.form:52
+#: FormModoJuego.form:53
 msgid "Segundos entre elementos:"
 msgstr ""
 
-#: FormModoJuego.form:58
+#: FormModoJuego.form:59
 msgid "Leer elementos del bingo"
 msgstr ""
 
-#: FormModoJuego.form:68
+#: FormModoJuego.form:69
 msgid "Jugar Automático"
 msgstr ""
 
-#: FormModoJuego.form:79
+#: FormModoJuego.form:80
 msgid "Jugar Manual"
 msgstr ""
 
-#: FormModoJuego.form:108
+#: FormModoJuego.form:109
 msgid "Salir"
 msgstr ""
 
 #: FormModoJuego.class:5
 msgid "Modo Juego"
+msgstr ""
+
+#: FormModoJuego.class:70
+msgid "Debe de seleccionar un  bingo educativo"
 msgstr ""
 

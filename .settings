@@ -2,7 +2,8 @@
 FormAvanceCreacionCartones=[45]
 
 [Breakpoints]
-Count=0
+Breakpoint[1]="Bingo.662"
+Count=1
 
 [DebugWindow]
 Count=0
@@ -298,23 +299,23 @@ File[5]=".src/Formularios/FMain.class:68.27"
 File[6]=".src/Formularios/FormFicherosBingos.form"
 File[7]="Nota.txt:15.29"
 File[8]=".src/Formularios/FormModificarBingos.form"
-File[9]=".src/Formularios/FormModificarBingos.class:202.44"
+File[9]=".src/Formularios/FormModificarBingos.class:23.2"
 File[10]=".src/Formularios/FormModificarCartones.form"
-File[11]=".src/Formularios/FormFicherosBingos.class:30.3"
+File[11]=".src/Formularios/FormFicherosBingos.class:91.2"
 File[12]=".src/Clases/controles/SquareButton.class:78.8"
 File[13]=".src/Formularios/FormModificarElementos.form"
-File[14]=".src/Clases/Bingo.class:850.12"
+File[14]=".src/Clases/Bingo.class:666.3"
 File[15]=".src/Clases/elemento.class:60.2"
 File[16]=".src/Clases/elementoTexto.class:10.0"
 File[17]=".src/Clases/elementoImagen.class:10.2"
-File[18]=".src/Formularios/FormModificarElementos.class:313.2"
+File[18]=".src/Formularios/FormModificarElementos.class:202.3"
 File[19]=".src/Formularios/testGuadarBingo.module:17.23"
 File[20]=".src/Clases/elementoBlanco.class:16.2"
 File[21]=".src/Clases/elementoNegro.class:1.0"
 File[22]=".src/Clases/Carton.class:155.36"
 File[23]=".src/Formularios/testCargarBingo.module:7.0"
 File[24]=".src/Formularios/FormGrabadora.form"
-File[25]=".src/Formularios/FormGrabadora.class:26.2"
+File[25]=".src/Formularios/FormGrabadora.class:20.2"
 File[26]="grabar.sh:0.36"
 File[27]=".src/Clases/elementoSonido.class:15.15"
 File[28]=".src/Formularios/FormModificarCartones.class:311.2"
@@ -335,14 +336,15 @@ File[42]="informeGit.txt:0.0"
 File[43]=".src/Clases/CargaImagenBingo.class:36.2"
 File[44]="drawing-3x6.svg:0.0"
 File[45]=".src/Formularios/FormModoJuego.form"
-File[46]=".src/Formularios/FormModoJuego.class:66.23"
+File[46]=".src/Formularios/FormModoJuego.class:90.23"
 File[47]="amano.png"
 File[48]="eco_green_machine_icon.png"
-Active=49
 File[49]=".src/Formularios/FormJuego.form"
 File[50]="lista de elementos.png"
-File[51]=".src/Formularios/FormJuego.class:4.2"
-Count=51
+Active=51
+File[51]=".src/Formularios/FormJuego.class:79.32"
+File[52]=".src/Clases/BingoJuego.class:35.15"
+Count=52
 
 [Watches]
 Count=1

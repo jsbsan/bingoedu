@@ -1,0 +1,48 @@
+' Gambas class file
+
+Private ArrayElementosBingo As New Elemento[] ''donde se guarda los datos que componen el bingo
+Private ArrayElementosCarton As New Elemento[] ''donde se guarda los datos que componen el carton
+
+Private ListaElementosBingo As New String[] 'contiene la lista de los id de los elementos de bingo
+Private ListaElementosCarton As New String[] 'contiene la lista de los id de los elementos de carton
+
+Private lista As New Integer[] 'Esta lista nos sirve para llevar el control de elementos que han salido del array de elementos
+Private listaSalida As New Integer[] 'Esta lista nos sirve para llevar el control de elementos que han salido del array de elementos
+
+Public Sub _new(BingoTrabajo As Bingo)
+  
+  Dim A As Integer
+  
+  ArrayElementosBingo = BingoTrabajo.ArrayElementosBingo
+  ArrayElementosCarton = BingoTrabajo.ArrayElementosCarton
+  
+  ListaElementosBingo = BingoTrabajo.ListaElementosBingo
+  ListaElementosCarton = BingoTrabajo.ListaElementosCarton  
+  
+  For a = 0 To ListaElementosBingo.count - 1
+    lista.Add(a)
+  Next
+  
+End
+
+Public Function extraeElementoBingo() As Elemento ''devuelve un elemento aleatorio
+  
+  Dim aleatorio As Integer
+  Dim ele As Elemento
+  
+  If lista.count = 0 Then
+    'fin del bingo
+    Message.Info(("Se ha llegado al final del bingo"))
+    Return Null
+  Endif
+  
+  aleatorio = Rnd(0, lista.count)
+  
+  ele = ArrayElementosBingo[lista[aleatorio]]
+  
+  listaSalida.Add(aleatorio)
+  lista.Delete(aleatorio)
+  
+  Return ele
+  
+End

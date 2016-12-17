@@ -64,6 +64,48 @@ End
 
 Public Sub ButtonManual_Click()
   
-  FormJuego.ShowModal()
+  Dim bingotmp As Bingo
+  
+  If GridViewFicherosDatos.Row = -1 Then
+    Message.Info(("Debe de seleccionar un  bingo educativo"))
+    Return
+  Else
+    
+    ''modo automatico
+    bingotmp = New Bingo
+    
+    bingotmp.NombreFichero = GridViewFicherosDatos[GridViewFicherosDatos.Row, 0].Text ''esta columna no se ve en el gridview....
+    bingotmp.cargadatos(bingotmp.NombreFichero, True) 'TRUE: los datos vienen de una carpeta en el disco duro,y no de un ".be"
+    FormJuego.bingotmp = bingotmp
+    FormJuego.modo = "manual"
+    FormJuego.tiempo = SpinBoxTiempo.Value
+    FormJuego.hablar = CheckBoxHablar.Value
+    
+    FormJuego.Showmodal()
+  Endif
+  
+End
+
+Public Sub ButtonAutomatico_Click()
+  
+  Dim bingotmp As Bingo
+  
+  If GridViewFicherosDatos.Row = -1 Then
+    Message.Info(("Debe de seleccionar un  bingo educativo"))
+    Return
+  Else
+    
+    ''modo automatico
+    bingotmp = New Bingo
+    
+    bingotmp.NombreFichero = GridViewFicherosDatos[GridViewFicherosDatos.Row, 0].Text ''esta columna no se ve en el gridview....
+    bingotmp.cargadatos(bingotmp.NombreFichero, True) 'TRUE: los datos vienen de una carpeta en el disco duro,y no de un ".be"
+    FormJuego.bingotmp = bingotmp
+    FormJuego.modo = "automatico"
+    FormJuego.tiempo = SpinBoxTiempo.Value
+    FormJuego.hablar = CheckBoxHablar.Value
+    
+    FormJuego.Showmodal()
+  Endif
   
 End

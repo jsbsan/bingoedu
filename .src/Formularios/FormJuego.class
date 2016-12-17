@@ -1,13 +1,119 @@
 ' Gambas class file
 
+Public bingotmp As Bingo
+
+Public modo As String
+
+Public tiempo As Integer
+Public hablar As Boolean = False
+
+Private bingoJuegoTmp As BingoJuego
+
+Public texto As String
+
 Public Sub Form_Open()
   
+End
+
+Public Sub form_Show()
+  
+  ''Modo automatico o Modo Manual
+  
+  Select Case modo
+    Case "automatico"
+      'desactiva o activa algunos botones....
+      'activar el reloj de presentacion de datos
+      
+    Case "manual"
+      
+  End Select
+  
+  ''TODO: Indicar modo completo de pantalla...
+  '  Me.FullScreen = True
+  
+  bingoJuegoTmp = New BingoJuego(bingotmp)  
+  asignarTexto("Pulse el botón >>")
   Me.Center()
   
 End
 
-Public Sub Button1_Click()
+Public Sub ButtonSalir_Click()
   
   Me.Close()
+  
+End
+
+'-----------------------------------------------------------------
+''Sistema de  extraer lista de elementos Bingo y elementos Carton
+''metodo para elegir aleatoriamente uno de esos elementos y su asociado
+''metodo para añadir la lista de seguimiento elemento el elemento extraido
+''
+
+Public Sub ButtonNuevo_Click()
+  
+  Dim ele As Variant
+  
+  ele = bingoJuegoTmp.extraeElementoBingo()
+  
+  If IsNull(ele) Then 
+    'se ha llegado al final del bingo
+    Return 
+    
+  Endif
+  
+  ''Mostra datos del elemento...
+  
+  Select Case ele.tipoElemento()
+    Case Upper$("ElementoImagen")
+      'si es del timpo imagen se muestra la imagen (oculto el texto, y visualizo la imagen)
+      TextLabelTexto.text = ""
+      PictureBox1.Visible = True
+      PictureBox1.Picture = Picture.load(User.home & "/bingoedu/" & Me.bingotmp.NombreFichero & "/" & ele.rutaimagen)
+      DrawingArea1.visible = False
+    Case Upper$("ElementoTexto")
+      'si es del tipo texto se muestra el texto
+      asignarTexto(ele.texto)
+      PictureBox1.Visible = False
+      DrawingArea1.visible = True
+    Case Upper$("ElementoSonido")
+      'si es de tipo sonido, lo reproduce...
+      PictureBox1.Visible = True
+      PictureBox1.Picture = Picture["icono sonido.png"]
+      DrawingArea1.visible = False
+      reproducir(ele.rutasonido)
+      
+  End Select
+  
+  ''Por otro lado, lo añade a al formulario de lista de elementos mostrados ya
+  
+End
+
+Private Sub reproducir(ruta As String)
+  
+End
+
+Private Sub asignarTexto(texto As String)
+  
+  Me.texto = texto
+  'DrawingArea1
+  'http://gambaswiki.org/wiki/comp/gb.qt4/paint/drawrichtext
+  DrawingArea1.Refresh()
+  
+End
+
+Public Sub DrawingArea1_Draw()
+  
+  Paint.Font.Size = 40
+  
+  If Paint.Font.TextWidth(Me.Texto) < (Me.W - 150) Then
+    While Paint.Font.TextWidth(Me.Texto) < (Me.W - 150)
+      Paint.Font.Size += 1
+    Wend
+    
+  Endif
+  
+  Draw.Text(Me.Texto, 0, 0, Me.W, Me.H, Align.Center)
+  
+  '  Draw.Text(Me.Texto, 0, 0, Me.W, Me.H + Me.H / 2 + 7, Align.Center)
   
 End

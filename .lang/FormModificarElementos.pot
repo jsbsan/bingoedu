@@ -42,27 +42,27 @@ msgstr ""
 msgid "iniciar grabadora"
 msgstr ""
 
-#: FormModificarElementos.class:26
+#: FormModificarElementos.class:22
 msgid "Guadar Elemento Editado"
 msgstr ""
 
-#: FormModificarElementos.class:29
+#: FormModificarElementos.class:25
 msgid "Editando Elemento"
 msgstr ""
 
-#: FormModificarElementos.class:37
+#: FormModificarElementos.class:33
 msgid "Nuevo Elemento"
 msgstr ""
 
-#: FormModificarElementos.class:47
+#: FormModificarElementos.class:42
 msgid "Ficheros de sonido mp3"
 msgstr ""
 
-#: FormModificarElementos.class:128
+#: FormModificarElementos.class:120
 msgid "Error El Carton no puede tener elementos de Sonido"
 msgstr ""
 
-#: FormModificarElementos.class:217
+#: FormModificarElementos.class:207
 msgid "Ficheros de Imagen"
 msgstr ""
 
