@@ -24,8 +24,12 @@ Public Sub form_Show()
       'desactiva o activa algunos botones....
       'activar el reloj de presentacion de datos
       
+      ButtonSigueLista.Enabled = False
+      ButtonAtras.Enabled = False
     Case "manual"
       
+      ButtonSigueLista.Enabled = False    
+      ButtonAtras.Enabled = False
   End Select
   
   ''TODO: Indicar modo completo de pantalla...
@@ -53,6 +57,8 @@ Public Sub ButtonNuevo_Click()
   
   Dim ele As Variant
   
+  'hay que distinguir en una nueva extraccion o mostrar el elemento siguiente de los ya mostrados
+  
   ele = bingoJuegoTmp.extraeElementoBingo()
   
   If IsNull(ele) Then 
@@ -62,6 +68,19 @@ Public Sub ButtonNuevo_Click()
   Endif
   
   ''Mostra datos del elemento...
+  muestraElmenento(ele)
+  ButtonAtras.Enabled = True
+  If bingoJuegoTmp.Primerelemento() Then 
+    ButtonAtras.Enabled = False
+  Endif
+  
+  If bingoJuegoTmp.ultimoelemento() Then 
+    ButtonSigueLista.Enabled = False
+  Endif
+  
+End
+
+Public Sub muestraElmenento(ele As Variant)
   
   Select Case ele.tipoElemento()
     Case Upper$("ElementoImagen")
@@ -83,8 +102,6 @@ Public Sub ButtonNuevo_Click()
       reproducir(ele.rutasonido)
       
   End Select
-  
-  ''Por otro lado, lo añade a al formulario de lista de elementos mostrados ya
   
 End
 
@@ -119,5 +136,56 @@ Public Sub DrawingArea1_Draw()
   Draw.Text(Me.Texto, 0, 0, Me.W, Me.H, Align.Center)
   
   '  Draw.Text(Me.Texto, 0, 0, Me.W, Me.H + Me.H / 2 + 7, Align.Center)
+  
+End
+
+Public Sub ButtonAtras_Click()
+  
+  'muestra el anterior elemento
+  Dim ele As Variant
+  
+  ele = bingoJuegoTmp.anteriorElemento()
+  
+  If IsNull(ele) Then 
+    'se ha llegado al final del bingo
+    ButtonAtras.Enabled = False
+    Return 
+    
+  Endif
+  
+  ''Mostra datos del elemento...
+  muestraElmenento(ele)
+  
+  ButtonSigueLista.Enabled = True
+  
+  If bingoJuegoTmp.ultimoelemento() Then 
+    ButtonSigueLista.Enabled = False
+  Endif
+  
+  If bingoJuegoTmp.Primerelemento() Then 
+    ButtonAtras.Enabled = False
+  Endif
+  
+End
+
+Public Sub ButtonSigueLista_Click()
+  
+  Dim ele As Variant
+  
+  ele = bingoJuegoTmp.siguiente()
+  
+  If IsNull(ele) Then 
+    'se ha llegado al final del bingo
+    ButtonSigueLista.Enabled = False
+    Return 
+    
+  Endif
+  
+  ''Mostra datos del elemento...
+  muestraElmenento(ele)
+  ButtonAtras.Enabled = True
+  If bingoJuegoTmp.ultimoelemento() Then 
+    ButtonSigueLista.Enabled = False
+  Endif
   
 End

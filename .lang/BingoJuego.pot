@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: BingoJuego.class:35
+#: BingoJuego.class:37
 msgid "Se ha llegado al final del bingo"
 msgstr ""
 

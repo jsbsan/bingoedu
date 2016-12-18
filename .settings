@@ -1,5 +1,6 @@
 [Bookmarks]
 FormAvanceCreacionCartones=[45]
+BingoJuego=[94]
 
 [Breakpoints]
 Count=0
@@ -274,6 +275,9 @@ Geometry=[-31,403,210,210]
 [DebugWindow/listaRepetido]
 Geometry=[-8,641,210,210]
 
+[DebugWindow/listaSalida]
+Geometry=[0,57,210,210]
+
 [DebugWindow/listaelementos]
 Geometry=[0,24,210,605]
 
@@ -310,7 +314,6 @@ File[14]=".src/Clases/Bingo.class:530.6"
 File[15]=".src/Clases/elemento.class:60.0"
 File[16]=".src/Clases/elementoTexto.class:18.0"
 File[17]=".src/Clases/elementoImagen.class:10.2"
-Active=18
 File[18]=".src/Formularios/FormModificarElementos.class:395.4"
 File[19]=".src/Formularios/testGuadarBingo.module:17.23"
 File[20]=".src/Clases/elementoBlanco.class:16.2"
@@ -342,10 +345,11 @@ File[45]=".src/Formularios/FormModoJuego.form"
 File[46]=".src/Formularios/FormModoJuego.class:90.23"
 File[47]="amano.png"
 File[48]="eco_green_machine_icon.png"
+Active=49
 File[49]=".src/Formularios/FormJuego.form"
 File[50]="lista de elementos.png"
-File[51]=".src/Formularios/FormJuego.class:95.0"
-File[52]=".src/Clases/BingoJuego.class:35.15"
+File[51]=".src/Formularios/FormJuego.class:78.7"
+File[52]=".src/Clases/BingoJuego.class:95.6"
 File[53]=".src/Clases/ModuleVarios.module:9.12"
 Count=53
 

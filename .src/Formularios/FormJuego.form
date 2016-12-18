@@ -51,18 +51,25 @@
     }
     { ButtonPausa Button
       MoveScaled(33,1,7.1429,7.1429)
+      Enabled = False
       ToolTip = ("Pausar")
       Picture = Picture["icon:/32/pause"]
     }
     { ButtonAtras Button
-      MoveScaled(45,1,7.1429,7.1429)
+      MoveScaled(40,0,7.1429,7.1429)
       ToolTip = ("Ver Anterior Elemento")
-      Picture = Picture["icon:/32/rewind"]
+      Picture = Picture["icon:/32/left"]
     }
     { ButtonRepetir Button
-      MoveScaled(56,1,7.1429,7.1429)
+      MoveScaled(47,1,7.1429,7.1429)
+      Enabled = False
       ToolTip = ("Repite Elemento")
       Picture = Picture["icon:/32/refresh"]
+    }
+    { ButtonSigueLista Button
+      MoveScaled(54,1,7.1429,7.1429)
+      ToolTip = ("Mostra Elemento Siguiente Mostrado")
+      Picture = Picture["icon:/32/next"]
     }
     { ButtonNuevo Button
       MoveScaled(63,1,7.1429,7.1429)

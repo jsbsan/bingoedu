@@ -9,6 +9,8 @@ Private ListaElementosCarton As New String[] 'contiene la lista de los id de los
 Private lista As New Integer[] 'Esta lista nos sirve para llevar el control de elementos que han salido del array de elementos
 Private listaSalida As New Integer[] 'Esta lista nos sirve para llevar el control de elementos que han salido del array de elementos
 
+Private puntero As Integer = 0 ''tiene el valor de elemento que se muestra...
+
 Public Sub _new(BingoTrabajo As Bingo)
   
   Dim A As Integer
@@ -40,9 +42,59 @@ Public Function extraeElementoBingo() As Elemento ''devuelve un elemento aleator
   
   ele = ArrayElementosBingo[lista[aleatorio]]
   
-  listaSalida.Add(aleatorio)
+  listaSalida.Add(lista[aleatorio])
   lista.Delete(aleatorio)
-  
+  puntero = listaSalida.count
   Return ele
+  
+End
+
+Public Function anteriorElemento() As Variant
+  
+  puntero -= 1
+  If puntero <= 0 Then
+    puntero = 1
+    Return Null
+  Else
+    
+    Return ArrayElementosBingo[listaSalida[puntero - 1]]
+    
+  Endif
+  
+End
+
+Public Function siguiente() As Variant
+  
+  puntero += 1
+  If (puntero) > listaSalida.count Then
+    puntero = listaSalida.count - 1
+    Return Null
+  Else
+    
+    Return ArrayElementosBingo[listaSalida[puntero - 1]]
+    
+  Endif
+  
+End
+
+Public Function ultimoelemento() As Boolean
+  
+  If puntero = listaSalida.count Then 
+    
+    Return True
+  Else
+    Return False
+    
+  Endif
+  
+End
+
+Public Sub Primerelemento() As Boolean
+  
+  If puntero = 1 Then 
+    Return True
+  Else
+    Return False
+  Endif
   
 End
