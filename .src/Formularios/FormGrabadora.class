@@ -1,39 +1,36 @@
 ' Gambas class file
 
-
 Public Sub Form_Open()
-
+  
   Me.Title = ("Grabadora de Sonido")
   Me.Center
-  TextBoxFichero.text = User.home & "/" & "sonido.mp3"
-
+  TextBoxFichero.text = User.home & "/" & "sonido.au"
+  
 End
 
 Public Sub ButtonIniciar_Click()
-
+  
   PictureBoxMicro.Picture = Picture["microfonograbando.png"]
-
+  
   Shell "arecord " & TextBoxFichero.text & " &"
-
+  
 End
 
 Public Sub ButtonTerminar_Click()
-
+  
   Dim texto As String
   Dim a As Integer
   Dim arrayprocesos As String[]
-
+  
   Shell "ps -ef | grep \"arecord\" | awk '{print $2}'" To texto
   '  Debug "Proceso arecord a matar: ", texto
-
+  
   arrayprocesos = Split(texto, "\n")
   For a = 0 To arrayprocesos.MAX
-
+    
     Shell "kill -9 " & arrayprocesos[A]
   Next
-
-
-
+  
   Me.Close()
-
+  
 End

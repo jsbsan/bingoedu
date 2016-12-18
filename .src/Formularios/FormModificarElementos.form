@@ -23,8 +23,9 @@
     { ButtonBoxSonidoBingo ButtonBox
       MoveScaled(20,25,31,6)
     }
-    { PictureBox1 PictureBox
+    { PictureBoxSonido PictureBox
       MoveScaled(9,23,10,9)
+      ToolTip = ("Reproduce el archivo de sonido asignado")
       Picture = Picture["icono sonido.png"]
       Stretch = True
       Border = Border.Plain

@@ -38,7 +38,11 @@ msgstr ""
 msgid "No, cancelar operación"
 msgstr ""
 
-#: Bingo.class:727
+#: Bingo.class:666
+msgid "Existe un fichero con el mismo nombre"
+msgstr ""
+
+#: Bingo.class:731
 msgid "cd /tmp;rm carton*"
 msgstr ""
 

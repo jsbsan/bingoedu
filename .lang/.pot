@@ -42,7 +42,11 @@ msgstr ""
 msgid "No, cancelar operación"
 msgstr ""
 
-#: Bingo.class:727
+#: Bingo.class:666
+msgid "Existe un fichero con el mismo nombre"
+msgstr ""
+
+#: Bingo.class:731
 msgid "cd /tmp;rm carton*"
 msgstr ""
 
@@ -76,7 +80,7 @@ msgstr ""
 
 #: FMain.form:79 FormFicherosBingos.form:167 FormJuego.form:109
 #: FormModificarBingos.form:217 FormModificarCartones.form:215
-#: FormModificarElementos.form:118 FormModoJuego.form:109
+#: FormModificarElementos.form:119 FormModoJuego.form:109
 #: FormMultipleElementosDeTexto.form:52 FormPrevisualizar.form:43
 #: FormVerCartones.form:82
 msgid "Salir"
@@ -159,14 +163,22 @@ msgid "TextBox1"
 msgstr ""
 
 #: FormGrabadora.form:26
+msgid "Inicia la grabación"
+msgstr ""
+
+#: FormGrabadora.form:27
 msgid "Iniciar"
 msgstr ""
 
-#: FormGrabadora.form:32
+#: FormGrabadora.form:33
+msgid "Termina de grabar y cierra la ventana"
+msgstr ""
+
+#: FormGrabadora.form:34
 msgid "Terminar"
 msgstr ""
 
-#: FormGrabadora.class:6
+#: FormGrabadora.class:5
 msgid "Grabadora de Sonido"
 msgstr ""
 
@@ -433,19 +445,23 @@ msgstr ""
 msgid "texto:"
 msgstr ""
 
-#: FormModificarElementos.form:76
+#: FormModificarElementos.form:57
+msgid "Reproduce el archivo de sonido asignado"
+msgstr ""
+
+#: FormModificarElementos.form:77
 msgid "Elemento en Cartón"
 msgstr ""
 
-#: FormModificarElementos.form:105
+#: FormModificarElementos.form:106
 msgid "Mismo elemento que en Bingo"
 msgstr ""
 
-#: FormModificarElementos.form:112
+#: FormModificarElementos.form:113
 msgid "Crear Elemento"
 msgstr ""
 
-#: FormModificarElementos.form:130
+#: FormModificarElementos.form:131
 msgid "iniciar grabadora"
 msgstr ""
 
@@ -462,14 +478,14 @@ msgid "Nuevo Elemento"
 msgstr ""
 
 #: FormModificarElementos.class:42
-msgid "Ficheros de sonido mp3"
+msgid "Ficheros de sonido mp3, wav, au"
 msgstr ""
 
-#: FormModificarElementos.class:120
+#: FormModificarElementos.class:131
 msgid "Error El Carton no puede tener elementos de Sonido"
 msgstr ""
 
-#: FormModificarElementos.class:207
+#: FormModificarElementos.class:227
 msgid "Ficheros de Imagen"
 msgstr ""
 

@@ -1,0 +1,12 @@
+' Gambas module file
+
+Public Sub ReproducirSonido(ruta As String)
+  
+  Select Case File.Ext(ruta)
+    Case "au"
+      Shell "aplay " & ruta
+    Case "mp3"
+      Shell "mpg123 " & ruta
+  End Select
+  
+End

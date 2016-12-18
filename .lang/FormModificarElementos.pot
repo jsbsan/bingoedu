@@ -22,23 +22,27 @@ msgstr ""
 msgid "texto:"
 msgstr ""
 
-#: FormModificarElementos.form:76
+#: FormModificarElementos.form:57
+msgid "Reproduce el archivo de sonido asignado"
+msgstr ""
+
+#: FormModificarElementos.form:77
 msgid "Elemento en Cartón"
 msgstr ""
 
-#: FormModificarElementos.form:105
+#: FormModificarElementos.form:106
 msgid "Mismo elemento que en Bingo"
 msgstr ""
 
-#: FormModificarElementos.form:112
+#: FormModificarElementos.form:113
 msgid "Crear Elemento"
 msgstr ""
 
-#: FormModificarElementos.form:118
+#: FormModificarElementos.form:119
 msgid "Salir"
 msgstr ""
 
-#: FormModificarElementos.form:130
+#: FormModificarElementos.form:131
 msgid "iniciar grabadora"
 msgstr ""
 
@@ -55,14 +59,14 @@ msgid "Nuevo Elemento"
 msgstr ""
 
 #: FormModificarElementos.class:42
-msgid "Ficheros de sonido mp3"
+msgid "Ficheros de sonido mp3, wav, au"
 msgstr ""
 
-#: FormModificarElementos.class:120
+#: FormModificarElementos.class:131
 msgid "Error El Carton no puede tener elementos de Sonido"
 msgstr ""
 
-#: FormModificarElementos.class:207
+#: FormModificarElementos.class:227
 msgid "Ficheros de Imagen"
 msgstr ""
 

@@ -39,7 +39,7 @@ End
 
 Public Sub ButtonBoxSonidoBingo_Click()
   
-  Dialog.Filter = ["*.mp3", ("Ficheros de sonido mp3")]
+  Dialog.Filter = ["*.mp3;*.wav;*.au", ("Ficheros de sonido mp3, wav, au")]
   If Dialog.Openfile() Then
     Return 'se ha cancelado la eleccion de un fichero
   Endif
@@ -65,6 +65,7 @@ End
 
 Public Sub ButtonGeneraElemento_Click()
   
+  Dim respuesta As Boolean '' respuesta de funcion de la copia de archivo...
   Dim eB As Variant 'cualquier tipo de elemnto , para el Bingo
   
   If IsNull($elementoBingoEditado) Then
@@ -83,12 +84,19 @@ Public Sub ButtonGeneraElemento_Click()
         eb = New ElementoImagen
         eb.rutaimagen = ButtonBoxImagenBingo.Text
         'copiar el fichero al directorio del bingo...
-        btmp.copiaFichero(ButtonBoxImagenBingo.Tag)
+        respuesta = btmp.copiaFichero(ButtonBoxImagenBingo.Tag)
+        If respuesta = False Then
+          Return 
+        Endif
+        
       Else
         If RadioButtonBingoSonido.value = True Then
           eb = New ElementoSonido
           eb.rutasonido = ButtonBoxSonidoBingo.Text
-          btmp.copiaFichero(ButtonBoxSonidoBingo.Tag)
+          respuesta = btmp.copiaFichero(ButtonBoxSonidoBingo.Tag)
+          If respuesta = False Then
+            Return 
+          Endif
         Endif
       Endif
     Endif
@@ -99,7 +107,10 @@ Public Sub ButtonGeneraElemento_Click()
       eC = New ElementoImagen
       eC.rutaimagen = ButtonBoxImagenCarton.Text
       'copiar el fichero al directorio del bingo...
-      btmp.copiaFichero(ButtonBoxImagenCarton.Tag)
+      respuesta = btmp.copiaFichero(ButtonBoxImagenCarton.Tag)
+      If respuesta = False Then
+        Return 
+      Endif
     Else
       If RadioButtonCartonTexto.value = True Then
         eC = New ElementoTexto
@@ -155,12 +166,18 @@ Public Sub ButtonGeneraElemento_Click()
         Me.ElementoBingoEditado = comprobarElemento(Me.ElementoBingoEditado, "elementoimagen", btmp.ArrayElementosBingo)
         Me.ElementoBingoEditado.rutaimagen = ButtonBoxImagenBingo.Text
         'copiar el fichero al directorio del bingo...
-        btmp.copiaFichero(ButtonBoxImagenBingo.Tag)
+        respuesta = btmp.copiaFichero(ButtonBoxImagenBingo.Tag)
+        If respuesta = False Then
+          Return 
+        Endif
       Else
         If RadioButtonBingoSonido.value = True Then
           Me.ElementoBingoEditado = comprobarElemento(Me.ElementoBingoEditado, "elementosonido", btmp.ArrayElementosBingo)
           Me.ElementoBingoEditado.rutasonido = ButtonBoxSonidoBingo.Text
-          btmp.copiaFichero(ButtonBoxSonidoBingo.Tag)
+          respuesta = btmp.copiaFichero(ButtonBoxSonidoBingo.Tag)
+          If respuesta = False Then
+            Return 
+          Endif
         Endif
       Endif
     Endif
@@ -172,7 +189,10 @@ Public Sub ButtonGeneraElemento_Click()
       ec = comprobarElemento(ec, "elementoimagen", btmp.ArrayElementosCarton)
       eC.rutaimagen = ButtonBoxImagenCarton.Text
       'copiar el fichero al directorio del bingo...
-      btmp.copiaFichero(ButtonBoxImagenCarton.Tag)
+      respuesta = btmp.copiaFichero(ButtonBoxImagenCarton.Tag)
+      If respuesta = False Then
+        Return 
+      Endif
     Else
       If RadioButtonCartonTexto.value = True Then
         ec = comprobarElemento(ec, "elementotexto", btmp.ArrayElementosCarton)
@@ -363,5 +383,17 @@ Public Function comprobarElemento(e As Variant, tipo As String, ArrayElementos A
   Endif
   
   Return e
+  
+End
+
+Public Sub PictureBoxSonido_MouseDown()
+  
+  If ButtonBoxSonidoBingo.text = "" Then Return
+  
+  If Exist(ButtonBoxSonidoBingo.tag) Then 
+    
+    ModuleVarios.ReproducirSonido(ButtonBoxSonidoBingo.tag)   ''en .tag esta guardada la ruta completa
+    
+  Endif
   
 End

@@ -19,14 +19,22 @@ msgid "TextBox1"
 msgstr ""
 
 #: FormGrabadora.form:26
+msgid "Inicia la grabación"
+msgstr ""
+
+#: FormGrabadora.form:27
 msgid "Iniciar"
 msgstr ""
 
-#: FormGrabadora.form:32
+#: FormGrabadora.form:33
+msgid "Termina de grabar y cierra la ventana"
+msgstr ""
+
+#: FormGrabadora.form:34
 msgid "Terminar"
 msgstr ""
 
-#: FormGrabadora.class:6
+#: FormGrabadora.class:5
 msgid "Grabadora de Sonido"
 msgstr ""
 

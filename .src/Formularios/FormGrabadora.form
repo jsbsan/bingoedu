@@ -13,12 +13,14 @@
     Text = ("TextBox1")
   }
   { ButtonIniciar Button
-    MoveScaled(28,4,12,4)
+    MoveScaled(28,2,12,4)
+    ToolTip = ("Inicia la grabación")
     Text = ("Iniciar")
     Picture = Picture["icon:/16/play"]
   }
   { ButtonTerminar Button
-    MoveScaled(28,12,12,4)
+    MoveScaled(28,11,12,4)
+    ToolTip = ("Termina de grabar y cierra la ventana")
     Text = ("Terminar")
     Picture = Picture["icon:/16/quit"]
   }

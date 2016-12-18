@@ -658,20 +658,24 @@ Public Function TextoElemento(e As Variant) As String
   
 End
 
-Public Function copiaFichero(ruta As String) ''Me encargo de copia un fichero de su origen al directorio del bingo
+Public Function copiaFichero(ruta As String) As Boolean  ''Me encargo de copia un fichero de su origen al directorio del bingo
   
   If Exist(User.home & "/bingoedu/" & $nombreFichero & "/" & File.Name(ruta)) Then
     'existe el fichero no lo copio
-    ''FIXME:Message.Info(("Existe un fichero con el mismo nombre"))
+    ''FIXME:
+    Message.Error(("Existe un fichero con el mismo nombre"))
     'no copio el fichero...
-    Return
+    Return False
   Endif
   
   Try Copy ruta To User.home & "/bingoedu/" & $nombreFichero & "/" & File.Name(ruta)
   
   If Error Then
     Print "Error al intentar copiar fichero "
+    Return False
   Endif
+  
+  Return True
   
 End
 

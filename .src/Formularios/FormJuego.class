@@ -90,6 +90,10 @@ End
 
 Private Sub reproducir(ruta As String)
   
+  Dim RutaTrabajo As String = User.home & "/bingoedu/" & Me.bingotmp.NombreFichero & "/"
+  
+  ModuleVarios.ReproducirSonido(RutaTrabajo & ruta)
+  
 End
 
 Private Sub asignarTexto(texto As String)
