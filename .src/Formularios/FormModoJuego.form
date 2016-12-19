@@ -2,6 +2,7 @@
 
 { Form Form
   MoveScaled(0,0,93,66)
+  Icon = Picture["dibujodegatosjugando.png"]
   Arrangement = Arrange.Vertical
   { HBox4 HBox
     MoveScaled(1,1,90,57)
@@ -30,6 +31,7 @@
       }
       { CheckBoxHablar CheckBox
         MoveScaled(1,27,32,5)
+        Visible = False
         Text = ("Leer elementos del bingo")
       }
       { VBox3 VBox

@@ -143,9 +143,9 @@ End
 
 Private Function colocarElementos(longitud As Integer, lista As String[], ByRef elementos As String[], numeroCuadrosBlancos As Integer, numeroCuadrosNegros As Integer) As Boolean
   
-  Dim posicion As Integer
+  'Dim posicion As Integer
   Dim ele As Object 'elemento
-  Dim ele2 As Object
+  '  Dim ele2 As Object
   
   Dim l As String[]
   Dim a As Integer
@@ -245,7 +245,7 @@ End
 Private Sub colocarCuadros(longitud As Integer, numero As Integer, texto As String, ByRef elementos As String[])
   
   Dim posicion As Integer
-  Dim textotmp As String
+  ' Dim textotmp As String
   Dim aleatorio As Integer
   Dim a As Integer
   
@@ -409,9 +409,9 @@ Public Sub generarDibujo(arrayElementosCarton As Object[], titulo As String) ' E
   
 End
 
-Public Function buscaCoordX(valor As Integer, tipotabla As String) As String
+Public Function buscaCoordX(valor As Integer, tipotablaAsignada As String) As String
   
-  Select Case tipotabla
+  Select Case tipotablaAsignada
     Case "4x3"
       Return Choose(valor, "73", "308", "542", "776")
     Case "5x4"
@@ -422,9 +422,9 @@ Public Function buscaCoordX(valor As Integer, tipotabla As String) As String
   
 End
 
-Public Function buscaCoordY(valor As Integer, tipotabla As String) As String
+Public Function buscaCoordY(valor As Integer, tipotablaAsignada As String) As String
   
-  Select Case tipotabla
+  Select Case tipotablaAsignada
     Case "4x3"
       Return Choose(valor, "73", "275", "478")
     Case "5x4"
@@ -438,15 +438,15 @@ End
 '---------------------------------------------------------
 'codigo de la clase binco, que dado un id, busca el elemento que lo tenga.
 '
-Public Function buscaElementoBingo(id As String, arrayElem As Elemento[]) As Elemento
+Public Function buscaElementoBingo(id As String, Optional arrayElem As Elemento[]) As Elemento
   
   Return ColeccionElementosBingo[id] '
-
+  
 End
 '
 '
 
-Public Function buscaElemento(id As String, arrayElem As Elemento[]) As Elemento
+Public Function buscaElemento(id As String, Optional arrayElem As Elemento[]) As Elemento
   
   Return ColeccionElementosCarton[id]
   

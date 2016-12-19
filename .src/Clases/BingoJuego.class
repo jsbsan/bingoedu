@@ -98,3 +98,9 @@ Public Sub Primerelemento() As Boolean
   Endif
   
 End
+
+Public Sub listaActual() As Integer[]
+  
+  Return listaSalida
+  
+End

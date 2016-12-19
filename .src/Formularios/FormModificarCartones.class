@@ -248,14 +248,14 @@ Public Sub ButtonQuitar_Click()
   btmp.CargaDatosGridviewDatosRepetidos(GridViewElementosRepetidos)
   
 End
-
-Public Sub SquareButtonPrevisualizar_Click()
-  
-  FormPrevisualizar.btmp = btmp
-  
-  FormPrevisualizar.Show()
-  
-End
+' 
+' Public Sub SquareButtonPrevisualizar_Click()
+'   
+'   FormPrevisualizar.btmp = btmp
+'   
+'   FormPrevisualizar.Show()
+'   
+' End
 
 ' 'PRUEBAS PARA GENERAR CARTONES
 ' Public Sub SquareButtonGenerar_Click()

@@ -550,7 +550,7 @@ End
 
 Public Sub CargaDatosGridviewDatosRepetidos(G As GridView)
   
-  Dim ArrayEle As Elemento[]
+  '  Dim ArrayEle As Elemento[]
   Dim e As Elemento
   Dim ecarton As Elemento
   
@@ -713,12 +713,12 @@ End
 Public Sub generarCartones() As Boolean 'si devuelve FALSE, hay un problema al crear los cartones
   
   Dim brespuesta As Boolean
-  Dim a As Integer
+  ' Dim a As Integer
   Dim contador As Integer 'nos sirve para comprobar el nuemro fallido de creacion de cartones que son iguales a los existentes
   Dim ctmp As Carton
   Dim ctmp2 As Carton
   Dim agregar As Boolean 'bandera que nos sirve para añadir carton o no a la lista de cartones
-  Dim cuadrosCuadricula As Integer
+  'Dim cuadrosCuadricula As Integer
   Dim valorminimo As Integer
   
   Dim arfile As String[]

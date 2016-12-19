@@ -11,33 +11,40 @@ Private bingoJuegoTmp As BingoJuego
 
 Public texto As String
 
-Public Sub Form_Open()
-  
-End
+Private pausado As Boolean = False ''control del boton de pausa/inicio
 
-Public Sub form_Show()
-  
+Public Sub Form_Open()
   ''Modo automatico o Modo Manual
   
   Select Case modo
     Case "automatico"
       'desactiva o activa algunos botones....
       'activar el reloj de presentacion de datos
-      
+      Timer1.Delay = tiempo * 1000
       ButtonSigueLista.Enabled = False
       ButtonAtras.Enabled = False
+      ButtonPausa.Visible = True
+      Timer1.Start()
+      ButtonPausa.Enabled = True
+      ButtonNuevo.Visible = False
+      asignarTexto("iniciando el juego...")
     Case "manual"
       
       ButtonSigueLista.Enabled = False    
       ButtonAtras.Enabled = False
+      asignarTexto("Pulse el botón >>")
   End Select
   
   ''TODO: Indicar modo completo de pantalla...
   '  Me.FullScreen = True
   
   bingoJuegoTmp = New BingoJuego(bingotmp)  
-  asignarTexto("Pulse el botón >>")
+  
   Me.Center()
+  
+End
+
+Public Sub form_Show()
   
 End
 
@@ -63,6 +70,8 @@ Public Sub ButtonNuevo_Click()
   
   If IsNull(ele) Then 
     'se ha llegado al final del bingo
+    
+    Timer1.Stop()
     Return 
     
   Endif
@@ -97,7 +106,7 @@ Public Sub muestraElmenento(ele As Variant)
     Case Upper$("ElementoSonido")
       'si es de tipo sonido, lo reproduce...
       PictureBox1.Visible = True
-      PictureBox1.Picture = Picture["icono sonido.png"]
+      PictureBox1.Picture = Picture["icono sonido grande.png"]
       DrawingArea1.visible = False
       reproducir(ele.rutasonido)
       
@@ -113,9 +122,9 @@ Private Sub reproducir(ruta As String)
   
 End
 
-Private Sub asignarTexto(texto As String)
+Private Sub asignarTexto(textoAsignado As String)
   
-  Me.texto = texto
+  Me.texto = textoAsignado
   'DrawingArea1
   'http://gambaswiki.org/wiki/comp/gb.qt4/paint/drawrichtext
   DrawingArea1.Refresh()
@@ -134,8 +143,6 @@ Public Sub DrawingArea1_Draw()
   Endif
   
   Draw.Text(Me.Texto, 0, 0, Me.W, Me.H, Align.Center)
-  
-  '  Draw.Text(Me.Texto, 0, 0, Me.W, Me.H + Me.H / 2 + 7, Align.Center)
   
 End
 
@@ -177,6 +184,7 @@ Public Sub ButtonSigueLista_Click()
   If IsNull(ele) Then 
     'se ha llegado al final del bingo
     ButtonSigueLista.Enabled = False
+    Timer1.Stop() 'paro el modo automatico
     Return 
     
   Endif
@@ -186,6 +194,34 @@ Public Sub ButtonSigueLista_Click()
   ButtonAtras.Enabled = True
   If bingoJuegoTmp.ultimoelemento() Then 
     ButtonSigueLista.Enabled = False
+  Endif
+  
+End
+
+Public Sub ButtonListado_Click()
+  
+  FormMostrarResultados.lista = bingoJuegoTmp.listaActual()
+  FormMostrarResultados.BingoActual = bingotmp
+  FormMostrarResultados.Show()
+  
+End
+
+Public Sub Timer1_Timer()
+  
+  ButtonNuevo_Click()
+  
+End
+
+Public Sub ButtonPausa_Click()
+  
+  If pausado = False Then 
+    Timer1.Stop()
+    pausado = True
+    ButtonPausa.Picture = Picture["icon:/32/play"]
+  Else
+    Timer1.Start()
+    pausado = False
+    ButtonPausa.Picture = Picture["icon:/32/pause"]
   Endif
   
 End

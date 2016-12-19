@@ -78,10 +78,10 @@ msgstr ""
 msgid "Autores: Julio Sanchez Berro (jsbsan) y Antonio Sanchez (introlinux)"
 msgstr ""
 
-#: FMain.form:79 FormFicherosBingos.form:167 FormJuego.form:118
+#: FMain.form:79 FormFicherosBingos.form:167 FormJuego.form:123
 #: FormModificarBingos.form:217 FormModificarCartones.form:215
-#: FormModificarElementos.form:119 FormModoJuego.form:109
-#: FormMultipleElementosDeTexto.form:52 FormPrevisualizar.form:43
+#: FormModificarElementos.form:119 FormModoJuego.form:110
+#: FormMostrarResultados.form:29 FormMultipleElementosDeTexto.form:52
 #: FormVerCartones.form:82
 msgid "Salir"
 msgstr ""
@@ -182,31 +182,31 @@ msgstr ""
 msgid "Grabadora de Sonido"
 msgstr ""
 
-#: FormJuego.form:36
+#: FormJuego.form:38
 msgid "Pulse el botón >>"
 msgstr ""
 
-#: FormJuego.form:68
+#: FormJuego.form:73
 msgid "Lista de Elementos"
 msgstr ""
 
-#: FormJuego.form:81
+#: FormJuego.form:86
 msgid "Pausar"
 msgstr ""
 
-#: FormJuego.form:87
+#: FormJuego.form:92
 msgid "Ver Anterior Elemento"
 msgstr ""
 
-#: FormJuego.form:94
+#: FormJuego.form:99
 msgid "Repite Elemento"
 msgstr ""
 
-#: FormJuego.form:100
+#: FormJuego.form:105
 msgid "Mostra Elemento Siguiente Mostrado"
 msgstr ""
 
-#: FormJuego.form:106
+#: FormJuego.form:111
 msgid "Mostrar Nuevo Elemento"
 msgstr ""
 
@@ -493,28 +493,32 @@ msgstr ""
 msgid "Ficheros de Imagen"
 msgstr ""
 
-#: FormModoJuego.form:44
+#: FormModoJuego.form:45
 msgid "Automático"
 msgstr ""
 
-#: FormModoJuego.form:53
+#: FormModoJuego.form:54
 msgid "Segundos entre elementos:"
 msgstr ""
 
-#: FormModoJuego.form:59
+#: FormModoJuego.form:60
 msgid "Leer elementos del bingo"
 msgstr ""
 
-#: FormModoJuego.form:69
+#: FormModoJuego.form:70
 msgid "Jugar Automático"
 msgstr ""
 
-#: FormModoJuego.form:80
+#: FormModoJuego.form:81
 msgid "Jugar Manual"
 msgstr ""
 
 #: FormModoJuego.class:5
 msgid "Modo Juego"
+msgstr ""
+
+#: FormMostrarResultados.class:72
+msgid "haga click para escuchar el sonido"
 msgstr ""
 
 #: FormMultipleElementosDeTexto.form:23
@@ -562,14 +566,6 @@ msgid ""
 "Tambien se puede pegar desde otros programas, por ejemplo seleccionando dos "
 "columnas de una hoja de cálculo copiandolas y luego pegarlas en area de "
 "texto."
-msgstr ""
-
-#: FormPrevisualizar.form:17
-msgid "Previsualizar Simple"
-msgstr ""
-
-#: FormPrevisualizar.form:22
-msgid "Previsualizar con datos"
 msgstr ""
 
 #: FormVerCartones.form:32

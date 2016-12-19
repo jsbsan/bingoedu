@@ -1,0 +1,23 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,62,76)
+  Icon = Picture["carton de bingo50x32.jpg"]
+  Arrangement = Arrange.Vertical
+  { ScrollView1 ScrollView
+    MoveScaled(7,3,33,41)
+    Expand = True
+  }
+  { HBox1 HBox
+    MoveScaled(5,56,46,6)
+    { HBox2 HBox
+      MoveScaled(8,1,8,4)
+      Expand = True
+    }
+    { ButtonSalir Button
+      MoveScaled(30,0,16,6)
+      Text = ("Salir")
+      Picture = Picture["icon:/32/quit"]
+    }
+  }
+}

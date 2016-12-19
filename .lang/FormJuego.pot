@@ -14,35 +14,35 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: FormJuego.form:36
+#: FormJuego.form:38
 msgid "Pulse el botón >>"
 msgstr ""
 
-#: FormJuego.form:68
+#: FormJuego.form:73
 msgid "Lista de Elementos"
 msgstr ""
 
-#: FormJuego.form:81
+#: FormJuego.form:86
 msgid "Pausar"
 msgstr ""
 
-#: FormJuego.form:87
+#: FormJuego.form:92
 msgid "Ver Anterior Elemento"
 msgstr ""
 
-#: FormJuego.form:94
+#: FormJuego.form:99
 msgid "Repite Elemento"
 msgstr ""
 
-#: FormJuego.form:100
+#: FormJuego.form:105
 msgid "Mostra Elemento Siguiente Mostrado"
 msgstr ""
 
-#: FormJuego.form:106
+#: FormJuego.form:111
 msgid "Mostrar Nuevo Elemento"
 msgstr ""
 
-#: FormJuego.form:118
+#: FormJuego.form:123
 msgid "Salir"
 msgstr ""
 

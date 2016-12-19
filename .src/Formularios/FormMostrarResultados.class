@@ -1,0 +1,100 @@
+' Gambas class file
+
+Public BingoActual As Bingo
+Public lista As Integer[]
+
+Private dimensionAncho As Integer = 150 'ancho donde se muestra el elemento del bingo-carton
+
+Public Sub ButtonSalir_Click()
+  
+  Me.Close()
+  
+End
+
+Public Sub Form_Show()
+  
+  Dim i As Integer
+  Dim hboxTmp As HBox
+  Dim id As String
+  Dim eleCarton As Object
+  
+  For i = 0 To lista.count - 1
+    'crea un hbox para cada lista
+    hboxtmp = New HBox(ScrollView1)
+    hboxtmp.h = dimensionAncho
+    
+    'elemento bingo
+    creaVisor(hboxtmp, BingoActual.ArrayElementosBingo[lista[i]])
+    '
+    'elemento relacionado con el carton
+    id = BingoActual.ArrayElementosBingo[lista[i]].enlace
+    eleCarton = BingoActual.buscaElemento(id, BingoActual.ArrayElementosCarton)
+    creaVisor(hboxtmp, eleCarton)
+    '
+  Next
+  ScrollView1.Arrangement = Arrange.Vertical
+  
+End
+
+Private Sub creaVisor(CONTENEDOR As HBOX, e As Object)
+  
+  Dim pictureboxTmp As PictureBox
+  Dim textLabelTmp As TextLabel
+  
+  Select Case e.tipoElemento()
+    Case Upper$("ElementoImagen")
+      pictureboxTmp = New PictureBox(contenedor)
+      pictureboxTmp.w = dimensionAncho
+      pictureboxTmp.h = dimensionAncho
+      pictureboxTmp.Picture = Picture.Load(User.home & "/bingoedu/" & BingoActual.NombreFichero & "/" & e.rutaimagen)
+      pictureboxTmp.Stretch = True
+      pictureboxTmp.Border = Border.Plain
+    Case Upper$("ElementoTexto")
+      
+      textLabelTmp = New TextLabel(contenedor)
+      textLabelTmp.h = dimensionAncho
+      textLabelTmp.w = dimensionAncho
+      textLabelTmp.text = e.texto
+      TextLabeltmp.Alignment = Align.center '3
+      TextLabeltmp.Border = Border.Plain
+      textLabelTmp.Expand = True
+      textLabelTmp.font = devuelveTamanoTexto(e.texto)
+      
+    Case Upper$("ElementoSonido")
+      pictureboxTmp = New PictureBox(contenedor) As "obs"
+      
+      pictureboxTmp.tag = e.rutasonido
+      pictureboxTmp.w = dimensionAncho
+      pictureboxTmp.h = dimensionAncho
+      pictureboxTmp.Picture = Picture.Load("icono sonido.png")
+      pictureboxTmp.Stretch = True
+      pictureboxTmp.Border = Border.Plain
+      pictureboxTmp.Tooltip = ("haga click para escuchar el sonido")
+      
+  End Select
+  
+End
+
+Public Sub Form_Open()
+  
+End
+
+Public Function devuelveTamanoTexto(texto As String) As Font
+  
+  Dim fonttmp As New Font
+  
+  fonttmp = Font[",,35"] 'tamaño de letra que he visto que queda mejor..
+  
+  Return fonttmp
+  
+End
+
+Public Sub obs_MouseDown()
+  'hay que reproducir un sonido...
+  
+  Dim RutaTrabajo As String = User.home & "/bingoedu/" & BingoActual.NombreFichero & "/"
+  Dim ruta As String = Last.tag
+  
+  ModuleVarios.ReproducirSonido(RutaTrabajo & ruta)
+  
+End
