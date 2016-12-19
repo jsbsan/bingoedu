@@ -18,31 +18,31 @@ msgstr ""
 msgid "Pulse el botón >>"
 msgstr ""
 
-#: FormJuego.form:73
+#: FormJuego.form:74
 msgid "Lista de Elementos"
 msgstr ""
 
-#: FormJuego.form:86
+#: FormJuego.form:87
 msgid "Pausar"
 msgstr ""
 
-#: FormJuego.form:92
+#: FormJuego.form:93
 msgid "Ver Anterior Elemento"
 msgstr ""
 
-#: FormJuego.form:99
+#: FormJuego.form:100
 msgid "Repite Elemento"
 msgstr ""
 
-#: FormJuego.form:105
+#: FormJuego.form:106
 msgid "Mostra Elemento Siguiente Mostrado"
 msgstr ""
 
-#: FormJuego.form:111
+#: FormJuego.form:112
 msgid "Mostrar Nuevo Elemento"
 msgstr ""
 
-#: FormJuego.form:123
+#: FormJuego.form:124
 msgid "Salir"
 msgstr ""
 

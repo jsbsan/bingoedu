@@ -78,10 +78,10 @@ msgstr ""
 msgid "Autores: Julio Sanchez Berro (jsbsan) y Antonio Sanchez (introlinux)"
 msgstr ""
 
-#: FMain.form:79 FormFicherosBingos.form:167 FormJuego.form:123
+#: FMain.form:79 FormFicherosBingos.form:167 FormJuego.form:124
 #: FormModificarBingos.form:217 FormModificarCartones.form:215
-#: FormModificarElementos.form:119 FormModoJuego.form:110
-#: FormMostrarResultados.form:29 FormMultipleElementosDeTexto.form:52
+#: FormModificarElementos.form:119 FormModoJuego.form:111
+#: FormMostrarResultados.form:57 FormMultipleElementosDeTexto.form:52
 #: FormVerCartones.form:82
 msgid "Salir"
 msgstr ""
@@ -186,27 +186,27 @@ msgstr ""
 msgid "Pulse el botón >>"
 msgstr ""
 
-#: FormJuego.form:73
+#: FormJuego.form:74
 msgid "Lista de Elementos"
 msgstr ""
 
-#: FormJuego.form:86
+#: FormJuego.form:87
 msgid "Pausar"
 msgstr ""
 
-#: FormJuego.form:92
+#: FormJuego.form:93
 msgid "Ver Anterior Elemento"
 msgstr ""
 
-#: FormJuego.form:99
+#: FormJuego.form:100
 msgid "Repite Elemento"
 msgstr ""
 
-#: FormJuego.form:105
+#: FormJuego.form:106
 msgid "Mostra Elemento Siguiente Mostrado"
 msgstr ""
 
-#: FormJuego.form:111
+#: FormJuego.form:112
 msgid "Mostrar Nuevo Elemento"
 msgstr ""
 
@@ -501,15 +501,15 @@ msgstr ""
 msgid "Segundos entre elementos:"
 msgstr ""
 
-#: FormModoJuego.form:60
+#: FormModoJuego.form:61
 msgid "Leer elementos del bingo"
 msgstr ""
 
-#: FormModoJuego.form:70
+#: FormModoJuego.form:71
 msgid "Jugar Automático"
 msgstr ""
 
-#: FormModoJuego.form:81
+#: FormModoJuego.form:82
 msgid "Jugar Manual"
 msgstr ""
 
@@ -517,7 +517,15 @@ msgstr ""
 msgid "Modo Juego"
 msgstr ""
 
-#: FormMostrarResultados.class:72
+#: FormMostrarResultados.form:25
+msgid "Bingo"
+msgstr ""
+
+#: FormMostrarResultados.form:36
+msgid "Cartón"
+msgstr ""
+
+#: FormMostrarResultados.class:88
 msgid "haga click para escuchar el sonido"
 msgstr ""
 

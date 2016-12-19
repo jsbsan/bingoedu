@@ -22,19 +22,19 @@ msgstr ""
 msgid "Segundos entre elementos:"
 msgstr ""
 
-#: FormModoJuego.form:60
+#: FormModoJuego.form:61
 msgid "Leer elementos del bingo"
 msgstr ""
 
-#: FormModoJuego.form:70
+#: FormModoJuego.form:71
 msgid "Jugar Automático"
 msgstr ""
 
-#: FormModoJuego.form:81
+#: FormModoJuego.form:82
 msgid "Jugar Manual"
 msgstr ""
 
-#: FormModoJuego.form:110
+#: FormModoJuego.form:111
 msgid "Salir"
 msgstr ""
 

@@ -13,9 +13,14 @@ Public texto As String
 
 Private pausado As Boolean = False ''control del boton de pausa/inicio
 
+Private elementoActual As Variant 'elemento actual si es de sonido..
+
 Public Sub Form_Open()
-  ''Modo automatico o Modo Manual
+  'activo pantalla completa
+
+  Me.FullScreen = True
   
+  ''Modo automatico o Modo Manual
   Select Case modo
     Case "automatico"
       'desactiva o activa algunos botones....
@@ -60,6 +65,18 @@ End
 ''metodo para añadir la lista de seguimiento elemento el elemento extraido
 ''
 
+Public Sub comprobarElementoSonido(ele As Object)
+  
+  'mostra el botón de repetir para  repetir el sonido...
+  If ele.tipoElemento() = Upper$("ElementoSonido") Then 
+    ButtonRepetir.Enabled = True
+    elementoActual = ele
+  Else
+    ButtonRepetir.Enabled = False  
+  Endif
+  
+End
+
 Public Sub ButtonNuevo_Click()
   
   Dim ele As Variant
@@ -78,6 +95,10 @@ Public Sub ButtonNuevo_Click()
   
   ''Mostra datos del elemento...
   muestraElmenento(ele)
+  
+  'comprobar si es un elemento de sonido
+  comprobarElementoSonido(ele)
+  
   ButtonAtras.Enabled = True
   If bingoJuegoTmp.Primerelemento() Then 
     ButtonAtras.Enabled = False
@@ -163,6 +184,9 @@ Public Sub ButtonAtras_Click()
   ''Mostra datos del elemento...
   muestraElmenento(ele)
   
+  'comprobar si es un elemento de sonido
+  comprobarElementoSonido(ele)
+  
   ButtonSigueLista.Enabled = True
   
   If bingoJuegoTmp.ultimoelemento() Then 
@@ -191,6 +215,10 @@ Public Sub ButtonSigueLista_Click()
   
   ''Mostra datos del elemento...
   muestraElmenento(ele)
+  
+  'comprobar si es un elemento de sonido
+  comprobarElementoSonido(ele)
+  
   ButtonAtras.Enabled = True
   If bingoJuegoTmp.ultimoelemento() Then 
     ButtonSigueLista.Enabled = False
@@ -223,5 +251,11 @@ Public Sub ButtonPausa_Click()
     pausado = False
     ButtonPausa.Picture = Picture["icon:/32/pause"]
   Endif
+  
+End
+
+Public Sub ButtonRepetir_Click()
+  
+  reproducir(elementoActual.rutasonido)
   
 End

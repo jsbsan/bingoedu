@@ -40,18 +40,30 @@ Private Sub creaVisor(CONTENEDOR As HBOX, e As Object)
   
   Dim pictureboxTmp As PictureBox
   Dim textLabelTmp As TextLabel
+  Dim htemporal As Hbox
+  Dim contenedor2 As HBox
+  
+  contenedor2 = New HBox(CONTENEDOR)
+  contenedor2.Expand = True
   
   Select Case e.tipoElemento()
     Case Upper$("ElementoImagen")
-      pictureboxTmp = New PictureBox(contenedor)
+      
+      htemporal = New HBox(contenedor2)
+      htemporal.Expand = True
+      
+      pictureboxTmp = New PictureBox(contenedor2)
       pictureboxTmp.w = dimensionAncho
       pictureboxTmp.h = dimensionAncho
       pictureboxTmp.Picture = Picture.Load(User.home & "/bingoedu/" & BingoActual.NombreFichero & "/" & e.rutaimagen)
       pictureboxTmp.Stretch = True
       pictureboxTmp.Border = Border.Plain
-    Case Upper$("ElementoTexto")
       
-      textLabelTmp = New TextLabel(contenedor)
+      htemporal = New HBox(contenedor2)
+      htemporal.Expand = True
+      
+    Case Upper$("ElementoTexto")
+      textLabelTmp = New TextLabel(contenedor2)
       textLabelTmp.h = dimensionAncho
       textLabelTmp.w = dimensionAncho
       textLabelTmp.text = e.texto
@@ -61,7 +73,11 @@ Private Sub creaVisor(CONTENEDOR As HBOX, e As Object)
       textLabelTmp.font = devuelveTamanoTexto(e.texto)
       
     Case Upper$("ElementoSonido")
-      pictureboxTmp = New PictureBox(contenedor) As "obs"
+      
+      htemporal = New HBox(contenedor2)
+      htemporal.Expand = True
+      
+      pictureboxTmp = New PictureBox(contenedor2) As "obs"
       
       pictureboxTmp.tag = e.rutasonido
       pictureboxTmp.w = dimensionAncho
@@ -70,6 +86,9 @@ Private Sub creaVisor(CONTENEDOR As HBOX, e As Object)
       pictureboxTmp.Stretch = True
       pictureboxTmp.Border = Border.Plain
       pictureboxTmp.Tooltip = ("haga click para escuchar el sonido")
+      
+      htemporal = New HBox(contenedor2)
+      htemporal.Expand = True
       
   End Select
   

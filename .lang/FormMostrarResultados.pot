@@ -14,11 +14,19 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: FormMostrarResultados.form:29
+#: FormMostrarResultados.form:25
+msgid "Bingo"
+msgstr ""
+
+#: FormMostrarResultados.form:36
+msgid "Cartón"
+msgstr ""
+
+#: FormMostrarResultados.form:57
 msgid "Salir"
 msgstr ""
 
-#: FormMostrarResultados.class:72
+#: FormMostrarResultados.class:88
 msgid "haga click para escuchar el sonido"
 msgstr ""
 

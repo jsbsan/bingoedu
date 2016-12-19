@@ -31,6 +31,7 @@
       MoveScaled(14,29,34,25)
       Expand = True
       AutoResize = True
+      Border = Border.Plain
     }
   }
   { Timer1 #Timer

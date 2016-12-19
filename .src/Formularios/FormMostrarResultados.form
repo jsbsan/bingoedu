@@ -4,8 +4,30 @@
   MoveScaled(0,0,62,76)
   Icon = Picture["carton de bingo50x32.jpg"]
   Arrangement = Arrange.Vertical
+  { HBox3 HBox
+    MoveScaled(6,2,51,9)
+    { TextLabel1 TextLabel
+      MoveScaled(0,2,26,5)
+      Font = Font["Bold,+5"]
+      Background = &HFFFFFF&
+      Expand = True
+      Text = ("Bingo")
+      Alignment = Align.Center
+      Border = Border.Plain
+    }
+    { TextLabel2 TextLabel
+      MoveScaled(28,2,26,5)
+      Font = Font["Bold,+5"]
+      Background = &H000000&
+      Foreground = &HFFFFFF&
+      Expand = True
+      Text = ("Cartón")
+      Alignment = Align.Center
+      Border = Border.Plain
+    }
+  }
   { ScrollView1 ScrollView
-    MoveScaled(7,3,33,41)
+    MoveScaled(10,11,33,41)
     Expand = True
   }
   { HBox1 HBox
