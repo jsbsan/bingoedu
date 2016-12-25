@@ -672,6 +672,9 @@ Public Function copiaFichero(ruta As String) As Boolean  ''Me encargo de copia u
   
   If Error Then
     Print "Error al intentar copiar fichero "
+    Print "Error texto: "; Error.Text
+    Print "Error lugar: "; Error.where
+    Print "Error trazada: "; Error.Backtrace.Join("\n")
     Return False
   Endif
   

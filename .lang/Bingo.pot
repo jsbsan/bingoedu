@@ -42,7 +42,7 @@ msgstr ""
 msgid "Existe un fichero con el mismo nombre"
 msgstr ""
 
-#: Bingo.class:731
+#: Bingo.class:734
 msgid "cd /tmp;rm carton*"
 msgstr ""
 

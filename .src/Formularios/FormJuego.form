@@ -3,6 +3,7 @@
 { Form Form
   MoveScaled(0,0,91,78)
   Icon = Picture["dibujodegatosjugando.png"]
+  Resizable = False
   Arrangement = Arrange.Vertical
   { HBox2 Panel
     MoveScaled(12,4,59,57)

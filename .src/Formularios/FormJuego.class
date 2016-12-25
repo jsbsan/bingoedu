@@ -17,7 +17,14 @@ Private elementoActual As Variant 'elemento actual si es de sonido..
 
 Public Sub Form_Open()
   'activo pantalla completa
-
+  
+  'depuracion: Comrpobar modo IDE
+  If modoIde() Then
+    Me.FullScreen = False
+  Else
+    Me.FullScreen = True
+  Endif
+  
   Me.FullScreen = True
   
   ''Modo automatico o Modo Manual
@@ -124,6 +131,11 @@ Public Sub muestraElmenento(ele As Variant)
       asignarTexto(ele.texto)
       PictureBox1.Visible = False
       DrawingArea1.visible = True
+      
+      If hablar Then 
+        Shell "espeak -ves+f4 " & "\"" & CambiaSignos(ele.texto) & "\""
+      Endif
+      
     Case Upper$("ElementoSonido")
       'si es de tipo sonido, lo reproduce...
       PictureBox1.Visible = True
@@ -257,5 +269,32 @@ End
 Public Sub ButtonRepetir_Click()
   
   reproducir(elementoActual.rutasonido)
+  
+End
+
+Public Function CambiaSignos(t As String) As String
+  
+  If InStr(t, "x") <> 0 Then t = Replace$(t, "x", " por ")
+  If InStr(t, "+") <> 0 Then t = Replace$(t, "+", " mas ")
+  If InStr(t, "-") <> 0 Then t = Replace$(t, "-", " menos ")
+  If InStr(t, "/") <> 0 Then t = Replace$(t, "/", " dividido ")
+  If InStr(t, "^") <> 0 Then t = Replace$(t, "^", " potencia ")
+  Return t
+  
+End
+
+Public Function modoIde() As Boolean
+  
+  Dim s As String
+  
+  s = File.Load("/proc" &/ CStr(Application.Id) &/ "comm")
+  
+  If Left(s, 4) = "gbx3" Then
+    Print "Desde el IDE: "
+    Return True
+  Else
+    Print "Desde ejecutable: "
+    Return False
+  Endif
   
 End
