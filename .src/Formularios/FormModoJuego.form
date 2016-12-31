@@ -8,9 +8,9 @@
     MoveScaled(1,1,90,57)
     Expand = True
     { VBox1 VBox
-      MoveScaled(2,0,28,55)
+      MoveScaled(2,0,28,59)
       Spacing = True
-      Padding = 10
+      Padding = 5
       { PictureBox1 PictureBox
         MoveScaled(1,1,23,14)
         Picture = Picture["dibujodegatosjugando.png"]
@@ -31,23 +31,42 @@
       }
       { CheckBoxHablar CheckBox
         MoveScaled(1,27,32,5)
-        Text = ("Leer elementos del bingo")
+        ToolTip = ("(los textos deben de estar escrito en el idioma seleccionado)")
+        Text = ("Leer textos en voz alta")
       }
       { VBox3 VBox
-        MoveScaled(3,32,14,3)
+        MoveScaled(6,31,14,3)
+        Expand = True
+      }
+      { HBox5 HBox
+        MoveScaled(0,33,26,5)
+        { Label2 Label
+          MoveScaled(0,1,10,3)
+          Text = ("Idioma:")
+          Alignment = Align.Right
+        }
+        { ComboBoxIdioma ComboBox
+          MoveScaled(11,1,14,3)
+          ReadOnly = True
+          List = [("Castellano"), ("Inglés"), ("Catalán"), ("Francés"), ("Alemán")]
+          Text = ("Castellano")
+        }
+      }
+      { VBox4 VBox
+        MoveScaled(6,38,14,3)
         Expand = True
       }
       { ButtonAutomatico Button
-        MoveScaled(1,35,27,6)
+        MoveScaled(1,39,27,6)
         Text = ("Jugar Automático")
         Picture = Picture["eco_green_machine_icon.png"]
       }
       { VBox2 VBox
-        MoveScaled(4,43,15,4)
+        MoveScaled(3,46,15,4)
         Expand = True
       }
       { ButtonManual Button
-        MoveScaled(0,44,27,6)
+        MoveScaled(0,49,27,6)
         Text = ("Jugar Manual")
         Picture = Picture["amano.png"]
       }

@@ -25,12 +25,14 @@
       Alignment = Align.Center
     }
     { Label1 Label
-      MoveScaled(1,5,17,4)
-      Text = ("Titulo del cartón:")
+      MoveScaled(79,1,17,4)
+      Visible = False
+      Text = ("Temática:")
       Alignment = Align.Right
     }
     { TextBoxTitulo TextBox
-      MoveScaled(19,5,25,4)
+      MoveScaled(82,4,25,4)
+      Visible = False
     }
     { PictureBox1 PictureBox
       MoveScaled(58.1429,0,9,6)
@@ -38,7 +40,7 @@
       Stretch = True
     }
     { TextLabel3 TextLabel
-      MoveScaled(45,5,47,5)
+      MoveScaled(2,4,47,5)
       Text = ("Elementos que se repitirán en todos los cartones:")
       Alignment = Align.Center
     }
@@ -126,6 +128,7 @@
         MoveScaled(9,5,11,4)
         MinValue = 1
         MaxValue = 10000
+        Value = 25
       }
       { TextLabel1 TextLabel
         MoveScaled(1,9,36,17)

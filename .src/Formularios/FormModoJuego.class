@@ -48,9 +48,9 @@ Public Sub definirGridviewFicheros()
     .header = 3
     .rows.count = 0
     .columns.count = 3
-    .Columns[0].title = "Archivo Bingo"
-    .Columns[1].title = "Tema"
-    .Columns[2].title = "Descripción"
+    .Columns[0].title = ("Archivo Bingo")
+    .Columns[1].title = ("Temática")
+    .Columns[2].title = ("Descripción")
     .Columns[0].width = 0 '200
     .Columns[1].width = 200
     '  .Columns[2].width = 300
@@ -80,7 +80,7 @@ Public Sub ButtonManual_Click()
     FormJuego.modo = "manual"
     FormJuego.tiempo = SpinBoxTiempo.Value
     FormJuego.hablar = CheckBoxHablar.Value
-    
+    FormJuego.idioma = ComboBoxIdioma.text
     FormJuego.Showmodal()
   Endif
   
@@ -104,7 +104,7 @@ Public Sub ButtonAutomatico_Click()
     FormJuego.modo = "automatico"
     FormJuego.tiempo = SpinBoxTiempo.Value
     FormJuego.hablar = CheckBoxHablar.Value
-    
+    FormJuego.idioma = ComboBoxIdioma.text
     FormJuego.Showmodal()
   Endif
   

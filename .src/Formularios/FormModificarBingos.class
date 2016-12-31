@@ -41,22 +41,23 @@ End
 Public Sub Form_Open()
   
   definirGridViewDatosBingo()
-  If IsNull(bingoEditor) Then
-    'estamos creando un bingo vacio
-    '' Comprobar que el impo
-    TextBoxFicheroBingo.text = InputBox(("Nombre:"), ("Nuevo Bingo"), ("NuevoBingo") & Format$(Now, "yyyy_mm_dd"))
-    If TextBoxFicheroBingo.text = "" Then
-      'se ha cancelado la creacion del bincoedicion del nombre
-      Return
-    Endif
-    bingotmp = New Bingo
-    bingotmp.NombreFichero = TextBoxFicheroBingo.text
-  Else
-    'estamos en modo edición de un bingo existente.
-    bingotmp = bingoEditor
-    TextBoxFicheroBingo.text = bingotmp.NombreFichero
-    
-  Endif
+  ' If IsNull(bingoEditor) Then
+  '   'estamos creando un bingo vacio
+  '   '' Comprobar que el impo
+  '   TextBoxFicheroBingo.text = InputBox(("Nombre:"), ("Nuevo Bingo"), ("NuevoBingo") & Format$(Now, "yyyy_mm_dd"))
+  '   If TextBoxFicheroBingo.text = "" Then
+  '     'se ha cancelado la creacion del bincoedicion del nombre
+  '     Me.Close()
+  '     Return
+  '   Endif
+  '   bingotmp = New Bingo
+  '   bingotmp.NombreFichero = TextBoxFicheroBingo.text
+  ' Else
+  'estamos en modo edición de un bingo existente.
+  bingotmp = bingoEditor
+  TextBoxFicheroBingo.text = bingotmp.NombreFichero
+  
+  '   Endif
   
   'cargar los datos del bingo
   TextBoxTituloBingo.Text = bingotmp.titulo
@@ -79,10 +80,10 @@ Public Sub definirGridViewDatosBingo()
     .header = 3
     .rows.count = 0
     .columns.count = 4
-    .Columns[0].title = "Tipo"
-    .Columns[1].title = "Dato Bingo"
-    .Columns[2].title = "Tipo"
-    .Columns[3].title = "Dato Carton"
+    .Columns[0].title = ("Tipo")
+    .Columns[1].title = ("Dato Bingo")
+    .Columns[2].title = ("Tipo")
+    .Columns[3].title = ("Dato Carton")
     
     .Columns[0].width = 65
     .Columns[1].width = 250
@@ -200,8 +201,11 @@ Public Sub ButtonGenerarCartones_Click()
     Application.busy = 0
   Else
     ButtonGuadarModificaciones_Click()
-    Message.Info(("Cartones Generados !!!"))
     Application.busy = 0
+    ButtonVerCartones_Click()
+    
+    'Message.Info(("Cartones Generados !!!"))
+    
   Endif
   
   'Proceso de generar cartones
@@ -211,7 +215,6 @@ Public Sub ButtonGenerarCartones_Click()
   'compara con los que hay, si es dintinto lo añade
   'repite tantas veces como cartones haya que crear
   ' como medida de seguridad, si el numero de repeticiones es excesivo... se informa de que o son pocos elementos, o muchos cartones
-  '
   
 End
 
@@ -250,88 +253,90 @@ End
 Public Sub ButtonImprimir_Click()
   
   'imprimir formato 2x3
-  '
+  
+  ModuleVarios.Imprimir(bingotmp)
+  
   'numero de cartones / 6 -> numero de p´aginas...
-  Dim NumeroPaginas As Float
-  Dim paginas As Integer
-  Dim arfile As New String[]
-  Dim arfileborrar As String[]
-  Dim nombrefile As String
-  Dim ArrayCuadroBlancos As String[] = ["/tmp/cuadroBlanco.jpg", "/tmp/cuadroBlanco.jpg", "/tmp/cuadroBlanco.jpg", "/tmp/cuadroBlanco.jpg", "/tmp/cuadroBlanco.jpg", "/tmp/cuadroBlanco.jpg"]
-  Dim ncarton As Integer
-  Dim ruta As String
-  Dim contenido As String
-  Dim a As Integer
-  Dim arfileTodos As String[]
-  Dim salida As String
-  
-  Inc Application.busy  
-  arfileTodos = Dir(User.home & "/" & "bingoedu/" & bingotmp.NombreFichero & "/", "carton*", gb.file)
-  a = -1
-  
-  For a = 0 To arfileTodos.Count - 1
-    If File.Ext(arfileTodos[a]) = "png" Then 
-      arfile.Add(arfileTodos[a])
-    Endif
-  Next
-  
-  a = -1
-  For Each nombrefile In arfile
-    a += 1
-    arfile[a] = User.home & "/" & "bingoedu/" & bingotmp.NombreFichero & "/" & arfile[a]
-  Next
-  
-  arfile.Insert(ArrayCuadroBlancos)
-  
-  NumeroPaginas = bingotmp.NumeroCartones / 6
-  
-  If Int(NumeroPaginas) <> (bingotmp.NumeroCartones / 6) Then 
-    NumeroPaginas = Int(NumeroPaginas) + 1 'añado una página porque no cabe en una entera
-  Endif
-  
-  ncarton = -1
-  
-  If Not (Exist("/tmp/trabajo")) Then 
-    Mkdir "/tmp/trabajo"
-  Else
-    'borrado de fichero...
-    arfileborrar = Dir("/tmp/trabajo", "pag*", gb.file)
-    
-    For Each nombrefile In arfileborrar
-      Kill "/tmp/trabajo/" & nombrefile
-    Next
-  Endif
-  
-  ruta = User.home & "/bingoedu/" & bingotmp.NombreFichero & "/"
-  For paginas = 0 To NumeroPaginas - 1
-    contenido = File.Load("drawing-3x6.svg")
-    ncarton += 1
-    contenido = Replace(contenido, "#ruta11#", arfile[ncarton])
-    
-    ncarton += 1
-    contenido = Replace(contenido, "#ruta12#", arfile[ncarton])
-    
-    ncarton += 1
-    contenido = Replace(contenido, "#ruta21#", arfile[ncarton])
-    
-    ncarton += 1
-    contenido = Replace(contenido, "#ruta22#", arfile[ncarton])
-    
-    ncarton += 1
-    contenido = Replace(contenido, "#ruta31#", arfile[ncarton])
-    
-    ncarton += 1
-    contenido = Replace(contenido, "#ruta32#", arfile[ncarton])
-    
-    File.Save("/tmp/trabajo/pag" & Str$(paginas) & ".svg", contenido)
-    
-    'convierto en png.... Shell     
-    Shell ("inkscape " & "/tmp/trabajo/pag" & Str$(paginas) & ".svg" & " --export-dpi=200 --export-png=" & "/tmp/trabajo/pag" & Str$(paginas) & ".png") To salida
-    
-  Next
-  Dec Application.busy  
-  Shell "pcmanfm /tmp/trabajo"
-  
-  Message.Info(("Terminado!!!"))
+  ' Dim NumeroPaginas As Float
+  ' Dim paginas As Integer
+  ' Dim arfile As New String[]
+  ' Dim arfileborrar As String[]
+  ' Dim nombrefile As String
+  ' Dim ArrayCuadroBlancos As String[] = ["/tmp/cuadroBlanco.jpg", "/tmp/cuadroBlanco.jpg", "/tmp/cuadroBlanco.jpg", "/tmp/cuadroBlanco.jpg", "/tmp/cuadroBlanco.jpg", "/tmp/cuadroBlanco.jpg"]
+  ' Dim ncarton As Integer
+  ' Dim ruta As String
+  ' Dim contenido As String
+  ' Dim a As Integer
+  ' Dim arfileTodos As String[]
+  ' Dim salida As String
+  ' 
+  ' Inc Application.busy  
+  ' arfileTodos = Dir(User.home & "/" & "bingoedu/" & bingotmp.NombreFichero & "/", "carton*", gb.file)
+  ' a = -1
+  ' 
+  ' For a = 0 To arfileTodos.Count - 1
+  '   If File.Ext(arfileTodos[a]) = "png" Then 
+  '     arfile.Add(arfileTodos[a])
+  '   Endif
+  ' Next
+  ' 
+  ' a = -1
+  ' For Each nombrefile In arfile
+  '   a += 1
+  '   arfile[a] = User.home & "/" & "bingoedu/" & bingotmp.NombreFichero & "/" & arfile[a]
+  ' Next
+  ' 
+  ' arfile.Insert(ArrayCuadroBlancos)
+  ' 
+  ' NumeroPaginas = bingotmp.NumeroCartones / 6
+  ' 
+  ' If Int(NumeroPaginas) <> (bingotmp.NumeroCartones / 6) Then 
+  '   NumeroPaginas = Int(NumeroPaginas) + 1 'añado una página porque no cabe en una entera
+  ' Endif
+  ' 
+  ' ncarton = -1
+  ' 
+  ' If Not (Exist("/tmp/trabajo")) Then 
+  '   Mkdir "/tmp/trabajo"
+  ' Else
+  '   'borrado de fichero...
+  '   arfileborrar = Dir("/tmp/trabajo", "pag*", gb.file)
+  '   
+  '   For Each nombrefile In arfileborrar
+  '     Kill "/tmp/trabajo/" & nombrefile
+  '   Next
+  ' Endif
+  ' 
+  ' ruta = User.home & "/bingoedu/" & bingotmp.NombreFichero & "/"
+  ' For paginas = 0 To NumeroPaginas - 1
+  '   contenido = File.Load("drawing-3x6.svg")
+  '   ncarton += 1
+  '   contenido = Replace(contenido, "#ruta11#", arfile[ncarton])
+  '   
+  '   ncarton += 1
+  '   contenido = Replace(contenido, "#ruta12#", arfile[ncarton])
+  '   
+  '   ncarton += 1
+  '   contenido = Replace(contenido, "#ruta21#", arfile[ncarton])
+  '   
+  '   ncarton += 1
+  '   contenido = Replace(contenido, "#ruta22#", arfile[ncarton])
+  '   
+  '   ncarton += 1
+  '   contenido = Replace(contenido, "#ruta31#", arfile[ncarton])
+  '   
+  '   ncarton += 1
+  '   contenido = Replace(contenido, "#ruta32#", arfile[ncarton])
+  '   
+  '   File.Save("/tmp/trabajo/pag" & Str$(paginas) & ".svg", contenido)
+  '   
+  '   'convierto en png.... Shell     
+  '   Shell ("inkscape " & "/tmp/trabajo/pag" & Str$(paginas) & ".svg" & " --export-dpi=200 --export-png=" & "/tmp/trabajo/pag" & Str$(paginas) & ".png") To salida
+  '   
+  ' Next
+  ' Dec Application.busy  
+  ' Shell "pcmanfm /tmp/trabajo"
+  ' 
+  ' Message.Info(("Terminado!!!"))
   
 End

@@ -5,7 +5,7 @@
   Icon = Picture["carton de bingo.jpg"]
   Arrangement = Arrange.Vertical
   { HBox2 HBox
-    MoveScaled(6,-2,60,8)
+    MoveScaled(6,-2,87,8)
     { PictureBox1 PictureBox
       MoveScaled(0,0,9,8)
       Picture = Picture["icon36x36.png"]
@@ -18,11 +18,12 @@
     { Label1 Label
       MoveScaled(26,1,28,6)
       Font = Font["Bold,Italic,+5"]
-      Text = ("Utilidades....")
+      Expand = True
+      Text = ("Gestión De Bingos")
       Alignment = Align.Center
     }
     { HBox5 HBox
-      MoveScaled(55,3,4,3)
+      MoveScaled(77,3,4,3)
       Expand = True
     }
   }
@@ -63,7 +64,6 @@
       }
       { ButtomImprimir Button
         MoveScaled(-1,22,13.5714,4)
-        Enabled = False
         Text = ("Imprimir")
         Picture = Picture["icon:/16/printer"]
       }

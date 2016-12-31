@@ -30,55 +30,55 @@ msgstr ""
 msgid "Características del Cartón:"
 msgstr ""
 
-#: FormModificarCartones.form:72
-msgid "Titulo del cartón:"
+#: FormModificarCartones.form:73
+msgid "Temática:"
 msgstr ""
 
-#: FormModificarCartones.form:88
+#: FormModificarCartones.form:90
 msgid "Elementos que se repitirán en todos los cartones:"
 msgstr ""
 
-#: FormModificarCartones.form:139
+#: FormModificarCartones.form:141
 msgid "Tamaño de la Cuadrícula del Cartón"
 msgstr ""
 
-#: FormModificarCartones.form:143
+#: FormModificarCartones.form:145
 msgid "4x3"
 msgstr ""
 
-#: FormModificarCartones.form:149
+#: FormModificarCartones.form:151
 msgid "5x4"
 msgstr ""
 
-#: FormModificarCartones.form:154
+#: FormModificarCartones.form:156
 msgid "5x5"
 msgstr ""
 
-#: FormModificarCartones.form:160
+#: FormModificarCartones.form:162
 msgid "Huecos:"
 msgstr ""
 
-#: FormModificarCartones.form:164
+#: FormModificarCartones.form:166
 msgid "Negros (rellenos):"
 msgstr ""
 
-#: FormModificarCartones.form:169
+#: FormModificarCartones.form:171
 msgid "Blancos (vacíos):"
 msgstr ""
 
-#: FormModificarCartones.form:189
+#: FormModificarCartones.form:191
 msgid "Número de cartones distintos a Generar:"
 msgstr ""
 
-#: FormModificarCartones.form:200
+#: FormModificarCartones.form:203
 msgid "    <b>Nota:</b><br>\n   El número de cartones diferentes que se pueden generar, dependerá del número de elementos que tenga el Bingo. A mayor número de elementos del bingo, mayor número de cartones distintos que se podrań crear."
 msgstr ""
 
-#: FormModificarCartones.form:215
+#: FormModificarCartones.form:218
 msgid "Salir"
 msgstr ""
 
-#: FormModificarCartones.form:221
+#: FormModificarCartones.form:224
 msgid "Guardar Cambios"
 msgstr ""
 
@@ -86,23 +86,35 @@ msgstr ""
 msgid "Cartones"
 msgstr ""
 
-#: FormModificarCartones.class:167
+#: FormModificarCartones.class:52
+msgid "Tipo"
+msgstr ""
+
+#: FormModificarCartones.class:53
+msgid "Dato Bingo"
+msgstr ""
+
+#: FormModificarCartones.class:55
+msgid "Dato Carton"
+msgstr ""
+
+#: FormModificarCartones.class:169
 msgid "Los datos se han modificado, pero no guardado ¿desea salir?"
 msgstr ""
 
-#: FormModificarCartones.class:167
+#: FormModificarCartones.class:169
 msgid "Si, salir sin guardar"
 msgstr ""
 
-#: FormModificarCartones.class:167
+#: FormModificarCartones.class:169
 msgid "No"
 msgstr ""
 
-#: FormModificarCartones.class:192
+#: FormModificarCartones.class:194
 msgid "Debe seleccionar un elemento"
 msgstr ""
 
-#: FormModificarCartones.class:200
+#: FormModificarCartones.class:202
 msgid "Ese elemento ya esta incluido"
 msgstr ""
 

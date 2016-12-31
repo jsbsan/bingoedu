@@ -54,7 +54,7 @@
     { Label2 Label
       MoveScaled(2,8,14,4)
       ToolTip = ("aqui se define el tema del bingo")
-      Text = ("Titulo:")
+      Text = ("Temática:")
       Alignment = Align.Right
     }
     { Label4 Label
@@ -64,6 +64,7 @@
     }
     { TextBoxFicheroBingo TextBox
       MoveScaled(16,3,29,4)
+      Background = &HBFBFBF&
       Expand = True
       ReadOnly = True
     }

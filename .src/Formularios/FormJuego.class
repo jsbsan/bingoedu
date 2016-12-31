@@ -15,6 +15,8 @@ Private pausado As Boolean = False ''control del boton de pausa/inicio
 
 Private elementoActual As Variant 'elemento actual si es de sonido..
 
+Public idioma As String
+
 Public Sub Form_Open()
   'activo pantalla completa
   
@@ -133,7 +135,7 @@ Public Sub muestraElmenento(ele As Variant)
       DrawingArea1.visible = True
       
       If hablar Then 
-        Shell "espeak -ves+f4 " & "\"" & CambiaSignos(ele.texto) & "\""
+        Shell "espeak -v" & eligeIdioma(idioma) & "+f4 " & "\"" & CambiaSignos(ele.texto) & "\""
       Endif
       
     Case Upper$("ElementoSonido")
@@ -274,11 +276,11 @@ End
 
 Public Function CambiaSignos(t As String) As String
   
-  If InStr(t, "x") <> 0 Then t = Replace$(t, "x", " por ")
-  If InStr(t, "+") <> 0 Then t = Replace$(t, "+", " mas ")
-  If InStr(t, "-") <> 0 Then t = Replace$(t, "-", " menos ")
-  If InStr(t, "/") <> 0 Then t = Replace$(t, "/", " dividido ")
-  If InStr(t, "^") <> 0 Then t = Replace$(t, "^", " potencia ")
+  If InStr(t, "x") <> 0 Then t = Replace$(t, "x", " " & ("por") & " ")
+  If InStr(t, "+") <> 0 Then t = Replace$(t, "+", " " & ("mas") & " ")
+  If InStr(t, "-") <> 0 Then t = Replace$(t, "-", " " & ("menos") & " ")
+  If InStr(t, "/") <> 0 Then t = Replace$(t, "/", " " & ("dividido") & " ")
+  If InStr(t, "^") <> 0 Then t = Replace$(t, "^", " " & ("potencia") & " ")
   Return t
   
 End
@@ -296,5 +298,25 @@ Public Function modoIde() As Boolean
     Print "Desde ejecutable: "
     Return False
   Endif
+  
+End
+
+Private Function eligeIdioma(idiomatmp As String) As String
+  
+  Select Case idiomatmp
+    Case ("Castellano")
+      Return "es"
+    Case ("Inglés")
+      Return "en"
+    Case ("Catalán")
+      Return "ca"
+    Case ("Francés")
+      Return "fr"
+    Case ("Alemán")
+      Return "de"
+  End Select
+  
+  ''NOTE:
+  ''otros idiomas: http://espeak.sourceforge.net/languages.html
   
 End

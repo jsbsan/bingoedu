@@ -46,3 +46,43 @@ msgstr ""
 msgid "Salir"
 msgstr ""
 
+#: FormJuego.class:279
+msgid "por"
+msgstr ""
+
+#: FormJuego.class:280
+msgid "mas"
+msgstr ""
+
+#: FormJuego.class:281
+msgid "menos"
+msgstr ""
+
+#: FormJuego.class:282
+msgid "dividido"
+msgstr ""
+
+#: FormJuego.class:283
+msgid "potencia"
+msgstr ""
+
+#: FormJuego.class:307
+msgid "Castellano"
+msgstr ""
+
+#: FormJuego.class:309
+msgid "Inglés"
+msgstr ""
+
+#: FormJuego.class:311
+msgid "Catalán"
+msgstr ""
+
+#: FormJuego.class:313
+msgid "Francés"
+msgstr ""
+
+#: FormJuego.class:315
+msgid "Alemán"
+msgstr ""
+

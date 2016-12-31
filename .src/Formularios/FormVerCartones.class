@@ -122,3 +122,9 @@ Public Sub ButtonSalir_Click()
   Me.Close()
   
 End
+
+Public Sub ButtonImprimir_Click()
+  
+  ModuleVarios.imprimir(bingotmp)
+  
+End

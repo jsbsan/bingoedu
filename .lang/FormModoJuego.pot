@@ -14,32 +14,72 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: FormModoJuego.form:45
+#: FormModoJuego.form:49
 msgid "Automático"
 msgstr ""
 
-#: FormModoJuego.form:54
+#: FormModoJuego.form:58
 msgid "Segundos entre elementos:"
 msgstr ""
 
-#: FormModoJuego.form:60
-msgid "Leer elementos del bingo"
+#: FormModoJuego.form:64
+msgid "(los textos deben de estar escrito en el idioma seleccionado)"
 msgstr ""
 
-#: FormModoJuego.form:70
+#: FormModoJuego.form:65
+msgid "Leer textos en voz alta"
+msgstr ""
+
+#: FormModoJuego.form:78
+msgid "Idioma:"
+msgstr ""
+
+#: FormModoJuego.form:85
+msgid "Castellano"
+msgstr ""
+
+#: FormModoJuego.form:85
+msgid "Inglés"
+msgstr ""
+
+#: FormModoJuego.form:85
+msgid "Catalán"
+msgstr ""
+
+#: FormModoJuego.form:85
+msgid "Francés"
+msgstr ""
+
+#: FormModoJuego.form:85
+msgid "Alemán"
+msgstr ""
+
+#: FormModoJuego.form:97
 msgid "Jugar Automático"
 msgstr ""
 
-#: FormModoJuego.form:81
+#: FormModoJuego.form:108
 msgid "Jugar Manual"
 msgstr ""
 
-#: FormModoJuego.form:110
+#: FormModoJuego.form:137
 msgid "Salir"
 msgstr ""
 
 #: FormModoJuego.class:5
 msgid "Modo Juego"
+msgstr ""
+
+#: FormModoJuego.class:51
+msgid "Archivo Bingo"
+msgstr ""
+
+#: FormModoJuego.class:52
+msgid "Temática"
+msgstr ""
+
+#: FormModoJuego.class:53
+msgid "Descripción"
 msgstr ""
 
 #: FormModoJuego.class:70

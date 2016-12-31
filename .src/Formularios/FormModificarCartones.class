@@ -33,6 +33,8 @@ Public Sub rellenadatos()
       RadioButton5x5.value = True
   End Select
   
+  'poner valores por defecto:
+  
   spinboxBlancos.value = btmp.cuadrosBlancos
   spinboxNegros.value = btmp.cuadrosNegros
   SpinBoxNumeroCarton.value = btmp.NumeroCartones
@@ -47,10 +49,10 @@ Public Sub definirGridViewBingo()
     .header = 3
     .rows.count = 0
     .columns.count = 4
-    .Columns[0].title = "Tipo"
-    .Columns[1].title = "Dato Bingo"
-    .Columns[2].title = "Tipo"
-    .Columns[3].title = "Dato Carton"
+    .Columns[0].title = ("Tipo")
+    .Columns[1].title = ("Dato Bingo")
+    .Columns[2].title = ("Tipo")
+    .Columns[3].title = ("Dato Carton")
     
     .Columns[0].width = 65
     .Columns[1].width = 250
@@ -71,10 +73,10 @@ Public Sub definirGridViewElementosRepetidos()
     .header = 3
     .rows.count = 0
     .columns.count = 4
-    .Columns[0].title = "Tipo"
-    .Columns[1].title = "Dato Bingo"
-    .Columns[2].title = "Tipo"
-    .Columns[3].title = "Dato Carton"
+    .Columns[0].title = ("Tipo")
+    .Columns[1].title = ("Dato Bingo")
+    .Columns[2].title = ("Tipo")
+    .Columns[3].title = ("Dato Carton")
     
     .Columns[0].width = 65
     .Columns[1].width = 250
@@ -249,37 +251,6 @@ Public Sub ButtonQuitar_Click()
   
 End
 ' 
-' Public Sub SquareButtonPrevisualizar_Click()
-'   
-'   FormPrevisualizar.btmp = btmp
-'   
-'   FormPrevisualizar.Show()
-'   
-' End
-
-' 'PRUEBAS PARA GENERAR CARTONES
-' Public Sub SquareButtonGenerar_Click()
-'   
-'   Dim a As Integer
-'   Dim c As New Carton
-'   
-'   'guardar todos los cambios realizados...
-'   ButtonGuardar_Click()
-'   
-'   ''TODO: Prueba de generación de cartones...
-'   'generar tantos cartones como indique   SpinBoxNumeroCarton
-'   '
-'   'para teste text hacemo uno
-'   
-'   For a = 1 To 50
-'     c.generarCarton(btmp.tamanoCuadricula, btmp.cuadrosNegros, btmp.cuadrosBlancos, btmp.ListaElementosRepetidos, btmp.ListaElementosCarton)
-'     
-'     Print "carton generado"
-'     Print c.ArraIdElementos.Join(" ")
-'     c = New Carton
-'   Next 
-'   
-' End
 
 Public Sub ButtonGuardarCambios_Click()
   

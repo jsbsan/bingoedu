@@ -8,7 +8,7 @@ Event FinCarton() 'final de creación de carton. Sirve para cerrar el formulario
 
 'variables y propiedades
 Property NombreFichero As String ''nombre del fichero .be para operaciones obtener el nombre de la carpeta, copiar archivos
-Property titulo As String ''titulo del bingo
+Property titulo As String ''titulo del bingo -> tematica
 Property descripcion As String ''describe como es el bingo: se trata de un bingo para aprender matematica de 1º de eso. Tema Tablas de multiplicar
 Property tipo As String ''indica el tipo de bingo: para lenguaje,matematicas, ingles, etc...
 
@@ -68,6 +68,10 @@ Public Sub _new()
   
   ListaElementosCarton.Add(elementoNegro.id)
   ListaElementosCarton.Add(elementoBlanco.id)
+  
+  Me.cuadrosBlancos = 0
+  Me.cuadrosNegros = 2
+  Me.NumeroCartones = 25
   
 End
 
@@ -386,7 +390,8 @@ End
 Private Sub titulo_Write(Value As String)
   
   $titulo = value
-  
+  $tituloCarton = value 'para que el titulo (tematica) del bingo sea tambien la tematica del carton
+
 End
 
 Private Function descripcion_Read() As String
@@ -422,7 +427,8 @@ End
 Private Sub tituloCarton_Write(Value As String)
   
   $tituloCarton = value
-  
+  $titulo = value 'para que el titulo del Carton sea la tematica del bingo
+
 End
 
 Private Function tamanoCuadricula_Read() As String
