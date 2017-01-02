@@ -80,7 +80,7 @@ msgstr ""
 
 #: FMain.form:79 FormFicherosBingos.form:167 FormJuego.form:125
 #: FormModificarBingos.form:218 FormModificarCartones.form:218
-#: FormModificarElementos.form:119 FormModoJuego.form:137
+#: FormModificarElementos.form:126 FormModoJuego.form:137
 #: FormMostrarResultados.form:57 FormMultipleElementosDeTexto.form:52
 #: FormVerCartones.form:103
 msgid "Salir"
@@ -501,23 +501,23 @@ msgstr ""
 msgid "texto:"
 msgstr ""
 
-#: FormModificarElementos.form:57
+#: FormModificarElementos.form:58
 msgid "Reproduce el archivo de sonido asignado"
 msgstr ""
 
-#: FormModificarElementos.form:77
+#: FormModificarElementos.form:82
 msgid "Elemento en Cartón"
 msgstr ""
 
-#: FormModificarElementos.form:106
+#: FormModificarElementos.form:113
 msgid "Mismo elemento que en Bingo"
 msgstr ""
 
-#: FormModificarElementos.form:113
+#: FormModificarElementos.form:120
 msgid "Crear Elemento"
 msgstr ""
 
-#: FormModificarElementos.form:131
+#: FormModificarElementos.form:138
 msgid "iniciar grabadora"
 msgstr ""
 
@@ -543,6 +543,14 @@ msgstr ""
 
 #: FormModificarElementos.class:227
 msgid "Ficheros de Imagen"
+msgstr ""
+
+#: FormModificarElementos.class:420
+msgid "Solo acepto imagenes .png y .jpg"
+msgstr ""
+
+#: FormModificarElementos.class:470
+msgid "Solo acepto imagenes .mp3 y .au"
 msgstr ""
 
 #: FormModoJuego.form:49

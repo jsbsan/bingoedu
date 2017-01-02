@@ -26,6 +26,7 @@
     { PictureBoxSonido PictureBox
       MoveScaled(9,23,10,9)
       ToolTip = ("Reproduce el archivo de sonido asignado")
+      Drop = True
       Picture = Picture["icono sonido.png"]
       Stretch = True
       Border = Border.Plain
@@ -33,12 +34,14 @@
     { !PictureBoxBingo PictureBox
       MoveScaled(9,11,10,9)
       #Public = True
+      Drop = True
       Picture = Picture["icon:/64/image"]
       Stretch = True
       Border = Border.Plain
     }
     { ButtonBoxImagenBingo ButtonBox
       MoveScaled(20,13,30,6)
+      Alignment = Align.Right
     }
   }
   { Frame2 Frame
@@ -56,6 +59,7 @@
     }
     { PictureBoxCarton PictureBox
       MoveScaled(7,23,10,9)
+      Drop = True
       Picture = Picture["icon:/64/image"]
       Stretch = True
       Border = Border.Plain

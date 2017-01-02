@@ -97,3 +97,48 @@ Public Sub imprimir(bingotmp As Bingo)
   Message.Info(("Terminado!!!"))
   
 End
+
+'----------------------------------------------------------------------
+'http://www.gambas-es.org/viewtopic.php?f=1&t=2054&postdays=0&postorder=asc&start=10
+'----------------------------------------------------------------------
+'
+Public Function URLDecode(txt As String) As String
+  ''' Descodifica los caracteres hexadecimales en las URI's recorriendo la cadena dada
+  ''' Params: txt la URI a descodificar
+  ''' Return: la URI descodificada
+  
+  Dim txt_len As Integer
+  Dim i As Integer
+  Dim ch As String
+  Dim digits As String
+  Dim resultado As String
+  
+  resultado = ""
+  txt_len = Len(txt)
+  i = 1
+  Do While i <= txt_len
+    ' Examinar el siguiente caracter
+    ch = Mid$(txt, i, 1)
+    If ch = "+" Then
+      ' Convertir a espacio
+      resultado = resultado & " "
+    Else If ch <> "%" Then
+      ' Normal, no cambiar
+      resultado = resultado & ch
+    Else If i > txt_len - 2 Then
+      resultado = resultado & ch
+    Else
+      ' Obtener los siguientes caracteres hex.
+      digits = Mid$(txt, i + 1, 2)
+      ' Debug digits
+      ' aquí convertimos el valor hexadecimal a entero y
+      ' se lo pasamos a Chr que devuelve el carácter correcto.
+      resultado = resultado & Chr$(CInt(Val("&" & digits)))
+      i = i + 2
+    Endif
+    i = i + 1
+  Loop
+  
+  Return resultado
+  
+End

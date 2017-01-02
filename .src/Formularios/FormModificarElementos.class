@@ -397,3 +397,78 @@ Public Sub PictureBoxSonido_MouseDown()
   Endif
   
 End
+
+Public Sub PictureBoxBingo_Drop()
+  
+  Dim subcadena As String[]
+  Dim cadena As String[]
+  
+  If Drag.Type = 1 Then 
+    cadena = Split(Drag.data, "\n")
+    subcadena = Split(cadena[0], "\r")
+    subcadena[0] = Replace$(subcadena[0], "file://", "")
+    
+    If Upper(File.Ext(subcadena[0])) = Upper("png") Or Upper(File.Ext(subcadena[0])) = Upper("jpg") Then 
+      
+      ButtonBoxImagenBingo.text = File.Name(subcadena[0])
+      ButtonBoxImagenBingo.tag = subcadena[0]
+      
+      PictureBoxBingo.Picture = Picture.load(ModuleVarios.URLDecode(subcadena[0]))
+      
+      RadioButtonBingoImagen.value = True
+    Else
+      Message.Error(("Solo acepto imagenes .png y .jpg"))
+    Endif
+  Endif
+  
+End
+
+Public Sub PictureBoxCarton_Drop()
+  
+  Dim subcadena As String[]
+  Dim cadena As String[]
+  
+  If Drag.Type = 1 Then 
+    cadena = Split(Drag.data, "\n")
+    subcadena = Split(cadena[0], "\r")
+    subcadena[0] = Replace$(subcadena[0], "file://", "")
+    
+    If Upper(File.Ext(subcadena[0])) = Upper("png") Or Upper(File.Ext(subcadena[0])) = Upper("jpg") Then 
+      
+      ButtonBoxImagenCarton.text = File.Name(subcadena[0])
+      ButtonBoxImagenCarton.tag = subcadena[0]
+      
+      PictureBoxCarton.Picture = Picture.load(ModuleVarios.URLDecode(subcadena[0]))
+      
+      RadioButtonCartonImagen.value = True
+    Else
+      Message.Error(("Solo acepto imagenes .png y .jpg"))
+    Endif
+  Endif
+  
+End
+
+'-------------------------
+
+Public Sub PictureBoxSonido_Drop()
+  
+  Dim subcadena As String[]
+  Dim cadena As String[]
+  
+  If Drag.Type = 1 Then 
+    cadena = Split(Drag.data, "\n")
+    subcadena = Split(cadena[0], "\r")
+    subcadena[0] = Replace$(subcadena[0], "file://", "")
+    
+    If Upper(File.Ext(subcadena[0])) = Upper("mp3") Or Upper(File.Ext(subcadena[0])) = Upper("au") Then 
+      
+      ButtonBoxSonidoBingo.text = File.Name(subcadena[0])
+      ButtonBoxSonidoBingo.tag = subcadena[0]
+      
+      RadioButtonBingoSonido.value = True
+    Else
+      Message.Error(("Solo acepto imagenes .mp3 y .au"))
+    Endif
+  Endif
+  
+End
