@@ -1,0 +1,128 @@
+' Gambas class file
+
+Public btmp As Bingo
+
+Public Sub Form_Open()
+  
+  Me.center
+  
+End
+
+Public Sub DirChooser1_Change()
+  
+  LabelCarpetaElegida.text = DirChooser1.Value
+  
+End
+
+Public Sub ButtonSalir_Click()
+  
+  Me.Close
+  
+End
+
+Public Sub ButtonContinuar_Click()
+  
+  Dim nombreFichero As String
+  Dim eb As Variant
+  Dim ec As Variant
+  
+  Dim a As Integer
+  Dim arFileTodos As String[]
+  
+  Inc Application.busy  
+  'obtener listado de imagenes y/o archivos sonido .mp3 o .au
+  arfileTodos = Dir(LabelCarpetaElegida.text, "*.mp3", gb.file)
+  arfileTodos.Insert(Dir(LabelCarpetaElegida.text, "*.au", gb.file))
+  arfileTodos.Insert(Dir(LabelCarpetaElegida.text, "*.wav", gb.file))
+  arfileTodos.Insert(Dir(LabelCarpetaElegida.text, "*.png", gb.file))
+  arfileTodos.Insert(Dir(LabelCarpetaElegida.text, "*.jpg", gb.file))
+  arfileTodos.Insert(Dir(LabelCarpetaElegida.text, "*.jpeg", gb.file))
+  arfileTodos.Insert(Dir(LabelCarpetaElegida.text, "*.bmp", gb.file))
+  
+  'dependiendeo si es   RadioButtonImgBingo o RadioButtonImgCarton
+  
+  'Tareas:
+  'generar array con todos los nombres de ficheros del directorio elegido
+  
+  For a = 0 To arfileTodos.count - 1
+    nombreFichero = LabelCarpetaElegida.text & "/" & arfileTodos[a]
+    
+    'por cada fichero...
+    '   crear un elemento Bingo
+    '   crear un elemento Carton
+    '   si la opción es RadioButtomImgBingo
+    '      elementoBingo es imagen o musica (si termina en mp3 o au)
+    '      elementoCarton es texto=nombre del fichero sin extension
+    '   si la opción es RadioButtomimpCArton
+    '      elementoBingo es texto = nombre del fichero sin extension
+    '      elementoCarton es imagen o musica (si termina en mp3 o au) 
+    
+    If RadioButtonImgBingo.value = True Then 
+      Select Case tipoFichero(nombreFichero)
+        Case "sonido"
+          eb = New ElementoSonido
+          eb.rutasonido = File.Name(nombreFichero)
+          btmp.copiaFichero(nombreFichero)
+          ec = New ElementoTexto
+          ec.texto = File.BaseName(nombreFichero)
+          
+        Case "imagen"
+          eb = New ElementoImagen
+          eb.rutaimagen = File.Name(nombreFichero)
+          btmp.copiaFichero(nombreFichero)
+          ec = New ElementoTexto
+          ec.texto = File.BaseName(nombreFichero)
+          
+      End Select
+      
+    Else
+      ' Imagenes a elemento Carton y texto a elemento Bingo
+      Select Case tipoFichero(nombreFichero)
+        Case "imagen"
+          ec = New ElementoImagen
+          ec.rutaimagen = File.Name(nombreFichero)
+          btmp.copiaFichero(nombreFichero)
+          eb = New ElementoTexto
+          eb.texto = File.BaseName(nombreFichero)
+      End Select
+      
+    Endif
+    
+    'añadir a la lista del bingo
+    
+    '3º enlaza a los dos elementos!!!
+    eC.enlace = eb.id
+    eB.enlace = eC.id
+    
+    '4º  guardo los nuevo elementos creados...
+    '4.1. añado a la lista de elemntoes Bingo y Carton
+    btmp.ListaElementosBingo.Add(eb.id) 'añado a una array de cadenas, el dato del id
+    btmp.ListaElementosCarton.Add(ec.id)
+    '4.2 añado a la lsita de array de elementos
+    btmp.ArrayElementosBingo.Add(eb) 'añado a un array de elemento, el elemento en si
+    btmp.ArrayElementosCarton.Add(ec)
+    
+  Next
+  
+  'todo Ok, elementos añadidos !!!
+  FormModificarBingos.ButtonRefrescar_Click()
+  
+  Dec Application.busy 
+  Me.Close()
+  
+End
+
+Public Function tipoFichero(nombreFichero As String) As String
+  
+  nombreFichero = String.Upper(File.Name(nombreFichero))
+  
+  If InStr(nombreFichero, ".MP3") <> 0 Then Return "sonido"
+  If InStr(nombreFichero, ".AU") <> 0 Then Return "sonido"
+  If InStr(nombreFichero, ".WAV") <> 0 Then Return "sonido"
+  
+  If InStr(nombreFichero, ".PNG") <> 0 Then Return "imagen"
+  If InStr(nombreFichero, ".JPG") <> 0 Then Return "imagen"
+  If InStr(nombreFichero, ".JPEG") <> 0 Then Return "imagen"
+  If InStr(nombreFichero, ".BMP") <> 0 Then Return "imagen"
+  
+End

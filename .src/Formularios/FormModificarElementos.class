@@ -109,7 +109,7 @@ Public Sub ButtonGeneraElemento_Click()
       'copiar el fichero al directorio del bingo...
       respuesta = btmp.copiaFichero(ButtonBoxImagenCarton.Tag)
       If respuesta = False Then
-        Return 
+        Return
       Endif
     Else
       If RadioButtonCartonTexto.value = True Then
@@ -150,6 +150,7 @@ Public Sub ButtonGeneraElemento_Click()
     FormModificarBingos.ButtonRefrescar_Click()
     Me.close()
   Else
+    '{  tramo de editar un elemento
     ''------------------------------------
     '' EDITANTO ELEMENTO
     ''------------------------------------
@@ -166,17 +167,19 @@ Public Sub ButtonGeneraElemento_Click()
         Me.ElementoBingoEditado = comprobarElemento(Me.ElementoBingoEditado, "elementoimagen", btmp.ArrayElementosBingo)
         Me.ElementoBingoEditado.rutaimagen = ButtonBoxImagenBingo.Text
         'copiar el fichero al directorio del bingo...
-        respuesta = btmp.copiaFichero(ButtonBoxImagenBingo.Tag)
+        respuesta = btmp.copiaFichero(ButtonBoxImagenBingo.Tag, "editando")
         If respuesta = False Then
-          Return 
+          'Si estamos editanto el elemento puede existir
+          'Return 
         Endif
       Else
         If RadioButtonBingoSonido.value = True Then
           Me.ElementoBingoEditado = comprobarElemento(Me.ElementoBingoEditado, "elementosonido", btmp.ArrayElementosBingo)
           Me.ElementoBingoEditado.rutasonido = ButtonBoxSonidoBingo.Text
-          respuesta = btmp.copiaFichero(ButtonBoxSonidoBingo.Tag)
+          respuesta = btmp.copiaFichero(ButtonBoxSonidoBingo.Tag, "editando")
           If respuesta = False Then
-            Return 
+            'si estamos editando el elemento puede existir
+            'Return 
           Endif
         Endif
       Endif
@@ -189,8 +192,9 @@ Public Sub ButtonGeneraElemento_Click()
       ec = comprobarElemento(ec, "elementoimagen", btmp.ArrayElementosCarton)
       eC.rutaimagen = ButtonBoxImagenCarton.Text
       'copiar el fichero al directorio del bingo...
-      respuesta = btmp.copiaFichero(ButtonBoxImagenCarton.Tag)
+      respuesta = btmp.copiaFichero(ButtonBoxImagenCarton.Tag, "editando")
       If respuesta = False Then
+        
         Return 
       Endif
     Else
@@ -218,6 +222,7 @@ Public Sub ButtonGeneraElemento_Click()
     'todo Ok, elementos modificados !!!
     FormModificarBingos.ButtonRefrescar_Click()
     Me.close()
+    '} tramo de editar un elemento
   Endif
   
 End

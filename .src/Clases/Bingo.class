@@ -664,14 +664,20 @@ Public Function TextoElemento(e As Variant) As String
   
 End
 
-Public Function copiaFichero(ruta As String) As Boolean  ''Me encargo de copia un fichero de su origen al directorio del bingo
+Public Function copiaFichero(ruta As String, Optional modo As String) As Boolean  ''Me encargo de copia un fichero de su origen al directorio del bingo
   
   If Exist(User.home & "/bingoedu/" & $nombreFichero & "/" & File.Name(ruta)) Then
     'existe el fichero no lo copio
     ''FIXME:
-    Message.Error(("Existe un fichero con el mismo nombre"))
-    'no copio el fichero...
-    Return False
+    If IsNull(modo) Then 
+      Message.Error(("Existe un fichero con el mismo nombre"))
+      'no copio el fichero...
+      Return False
+    Else
+      'estamos editando, y es posible que el archivo ya exista
+      Return True
+    Endif
+    Return True
   Endif
   
   Try Copy ModuleVarios.URLDecode(ruta) To User.home & "/bingoedu/" & $nombreFichero & "/" & File.Name(ruta)
@@ -683,8 +689,6 @@ Public Function copiaFichero(ruta As String) As Boolean  ''Me encargo de copia u
     Print "Error trazada: "; Error.Backtrace.Join("\n")
     Return False
   Endif
-  
-  Return True
   
 End
 

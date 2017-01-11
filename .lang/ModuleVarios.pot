@@ -14,7 +14,23 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ModuleVarios.module:97
+#: ModuleVarios.module:20
+msgid "¿Imprimir en formato 2x3 (6) o 2x2 (4)?"
+msgstr ""
+
+#: ModuleVarios.module:20
+msgid "2x2 (4 cartones-Apaisado)"
+msgstr ""
+
+#: ModuleVarios.module:20
+msgid "2x3 (6 cartones-Vertica)"
+msgstr ""
+
+#: ModuleVarios.module:20
+msgid "Cancelar"
+msgstr ""
+
+#: ModuleVarios.module:116
 msgid "Terminado!!!"
 msgstr ""
 

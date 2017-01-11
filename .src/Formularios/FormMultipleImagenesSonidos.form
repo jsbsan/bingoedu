@@ -1,0 +1,47 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,105,64)
+  Text = ("Creación de Elementos a partir de Carpetas")
+  Icon = Picture["icon:/32/directory"]
+  Resizable = False
+  { DirChooser1 DirChooser
+    MoveScaled(2,6,100,28)
+  }
+  { Label1 Label
+    MoveScaled(2,1,65,3)
+    Text = ("Selecciones Carpeta donte tenga las imágenes y/o sonidos:")
+  }
+  { LabelCarpetaElegida Label
+    MoveScaled(21,37,75,5)
+    Background = &H9F9F9F&
+    Border = Border.Plain
+  }
+  { Label2 Label
+    MoveScaled(2,37,17,5)
+    Text = ("Carpeta Elegida:")
+    Alignment = Align.Right
+  }
+  { RadioButtonImgBingo RadioButton
+    MoveScaled(2,44,101,6)
+    Font = Font["-1"]
+    Text = ("Las imágenes y/o sonidos se incluyen en elementos Bingo, el nombre del fichero se incluye en el elemento Cartón")
+    Value = True
+  }
+  { RadioButtonImgCarton RadioButton
+    MoveScaled(2,50,100,6)
+    Font = Font["-1"]
+    Text = ("Las imágenes se incluyen en elementos Cartón. El nombre del fichero se incluye en el elemento Bingo como texto.")
+  }
+  { ButtonContinuar Button
+    MoveScaled(22,57,29,5)
+    ToolTip = ("Creación de elementos usando carpetas")
+    Text = ("Continuar....")
+  }
+  { ButtonSalir Button
+    MoveScaled(73,57,20,5)
+    ToolTip = ("cancelar operación")
+    Text = ("Salir")
+    Picture = Picture["icon:/32/quit"]
+  }
+}

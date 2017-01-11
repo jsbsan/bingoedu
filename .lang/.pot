@@ -42,11 +42,11 @@ msgstr ""
 msgid "No, cancelar operación"
 msgstr ""
 
-#: Bingo.class:672
+#: Bingo.class:673
 msgid "Existe un fichero con el mismo nombre"
 msgstr ""
 
-#: Bingo.class:740
+#: Bingo.class:744
 msgid "cd /tmp;rm carton*"
 msgstr ""
 
@@ -79,10 +79,10 @@ msgid "Autores: Julio Sanchez Berro (jsbsan) y Antonio Sanchez (introlinux)"
 msgstr ""
 
 #: FMain.form:79 FormFicherosBingos.form:167 FormJuego.form:125
-#: FormModificarBingos.form:218 FormModificarCartones.form:218
-#: FormModificarElementos.form:126 FormModoJuego.form:137
+#: FormModificarBingos.form:211 FormModificarCartones.form:218
+#: FormModificarElementos.form:123 FormModoJuego.form:137
 #: FormMostrarResultados.form:57 FormMultipleElementosDeTexto.form:52
-#: FormVerCartones.form:103
+#: FormMultipleImagenesSonidos.form:62 FormVerCartones.form:103
 msgid "Salir"
 msgstr ""
 
@@ -274,88 +274,92 @@ msgstr ""
 msgid "Alemán"
 msgstr ""
 
-#: FormModificarBingos.form:47 FormModificarCartones.class:17
+#: FormModificarBingos.form:52 FormModificarCartones.class:17
 msgid "Cartones"
 msgstr ""
 
-#: FormModificarBingos.form:51
+#: FormModificarBingos.form:56
 msgid "Propiedades de los Cartones"
 msgstr ""
 
-#: FormModificarBingos.form:63
+#: FormModificarBingos.form:68
 msgid "Ver Cartones"
 msgstr ""
 
-#: FormModificarBingos.form:69
+#: FormModificarBingos.form:74
 msgid "Generar Cartones"
 msgstr ""
 
-#: FormModificarBingos.form:83
+#: FormModificarBingos.form:88
 msgid "matematicas"
 msgstr ""
 
-#: FormModificarBingos.form:83
+#: FormModificarBingos.form:88
 msgid "ingles"
 msgstr ""
 
-#: FormModificarBingos.form:83
+#: FormModificarBingos.form:88
 msgid "lengua"
 msgstr ""
 
-#: FormModificarBingos.form:90
+#: FormModificarBingos.form:95
 msgid "aqui se define el titulo que vendrá en cada carton"
 msgstr ""
 
-#: FormModificarBingos.form:91
+#: FormModificarBingos.form:96
 msgid "Categoria:"
 msgstr ""
 
-#: FormModificarBingos.form:101
+#: FormModificarBingos.form:106
 msgid "aqui se define el tema del bingo"
 msgstr ""
 
-#: FormModificarBingos.form:102 FormModificarCartones.form:73
+#: FormModificarBingos.form:107 FormModificarCartones.form:73
 msgid "Temática:"
 msgstr ""
 
-#: FormModificarBingos.form:108
+#: FormModificarBingos.form:113
 msgid "Nombre fichero:"
 msgstr ""
 
-#: FormModificarBingos.form:121
+#: FormModificarBingos.form:126
 msgid ".be"
 msgstr ""
 
-#: FormModificarBingos.form:133
+#: FormModificarBingos.form:138
 msgid "Descripción:"
 msgstr ""
 
-#: FormModificarBingos.form:139
+#: FormModificarBingos.form:144
 msgid "Elementos que componen el Bingo actual:"
 msgstr ""
 
-#: FormModificarBingos.form:145
+#: FormModificarBingos.form:150
 msgid "Visualizar imagenes"
 msgstr ""
 
-#: FormModificarBingos.form:156
+#: FormModificarBingos.form:161
 msgid "Para editar un elemento, seleccionalo y haga DobleClick"
 msgstr ""
 
-#: FormModificarBingos.form:172
+#: FormModificarBingos.form:177
 msgid "Añadir Elemento"
 msgstr ""
 
-#: FormModificarBingos.form:184
-msgid "Multiple Elementos de Texto"
-msgstr ""
-
-#: FormModificarBingos.form:196
+#: FormModificarBingos.form:189
 msgid "Borrar Elementos"
 msgstr ""
 
-#: FormModificarBingos.form:207
+#: FormModificarBingos.form:200
 msgid "Guardar"
+msgstr ""
+
+#: FormModificarBingos.form:231
+msgid "Multiple Elementos de Texto"
+msgstr ""
+
+#: FormModificarBingos.form:243
+msgid "Múltiple Elementos de Imagenes/Sonido"
 msgstr ""
 
 #: FormModificarBingos.class:83 FormModificarCartones.class:52
@@ -501,23 +505,23 @@ msgstr ""
 msgid "texto:"
 msgstr ""
 
-#: FormModificarElementos.form:58
+#: FormModificarElementos.form:57
 msgid "Reproduce el archivo de sonido asignado"
 msgstr ""
 
-#: FormModificarElementos.form:82
+#: FormModificarElementos.form:80
 msgid "Elemento en Cartón"
 msgstr ""
 
-#: FormModificarElementos.form:113
+#: FormModificarElementos.form:110
 msgid "Mismo elemento que en Bingo"
 msgstr ""
 
-#: FormModificarElementos.form:120
+#: FormModificarElementos.form:117
 msgid "Crear Elemento"
 msgstr ""
 
-#: FormModificarElementos.form:138
+#: FormModificarElementos.form:135
 msgid "iniciar grabadora"
 msgstr ""
 
@@ -541,15 +545,15 @@ msgstr ""
 msgid "Error El Carton no puede tener elementos de Sonido"
 msgstr ""
 
-#: FormModificarElementos.class:227
+#: FormModificarElementos.class:232
 msgid "Ficheros de Imagen"
 msgstr ""
 
-#: FormModificarElementos.class:420
+#: FormModificarElementos.class:425
 msgid "Solo acepto imagenes .png y .jpg"
 msgstr ""
 
-#: FormModificarElementos.class:470
+#: FormModificarElementos.class:475
 msgid "Solo acepto imagenes .mp3 y .au"
 msgstr ""
 
@@ -648,6 +652,42 @@ msgid ""
 "texto."
 msgstr ""
 
+#: FormMultipleImagenesSonidos.form:15
+msgid "Creación de Elementos a partir de Carpetas"
+msgstr ""
+
+#: FormMultipleImagenesSonidos.form:25
+msgid "Selecciones Carpeta donte tenga las imágenes y/o sonidos:"
+msgstr ""
+
+#: FormMultipleImagenesSonidos.form:36
+msgid "Carpeta Elegida:"
+msgstr ""
+
+#: FormMultipleImagenesSonidos.form:43
+msgid ""
+"Las imágenes y/o sonidos se incluyen en elementos Bingo, el nombre del "
+"fichero se incluye en el elemento Cartón"
+msgstr ""
+
+#: FormMultipleImagenesSonidos.form:50
+msgid ""
+"Las imágenes se incluyen en elementos Cartón. El nombre del fichero se "
+"incluye en el elemento Bingo como texto."
+msgstr ""
+
+#: FormMultipleImagenesSonidos.form:55
+msgid "Creación de elementos usando carpetas"
+msgstr ""
+
+#: FormMultipleImagenesSonidos.form:56
+msgid "Continuar...."
+msgstr ""
+
+#: FormMultipleImagenesSonidos.form:61
+msgid "cancelar operación"
+msgstr ""
+
 #: FormVerCartones.form:35
 msgid "Lista de Cartones...."
 msgstr ""
@@ -664,6 +704,22 @@ msgstr ""
 msgid "Visualizando cartones"
 msgstr ""
 
-#: ModuleVarios.module:97
+#: ModuleVarios.module:20
+msgid "¿Imprimir en formato 2x3 (6) o 2x2 (4)?"
+msgstr ""
+
+#: ModuleVarios.module:20
+msgid "2x2 (4 cartones-Apaisado)"
+msgstr ""
+
+#: ModuleVarios.module:20
+msgid "2x3 (6 cartones-Vertica)"
+msgstr ""
+
+#: ModuleVarios.module:20
+msgid "Cancelar"
+msgstr ""
+
+#: ModuleVarios.module:116
 msgid "Terminado!!!"
 msgstr ""

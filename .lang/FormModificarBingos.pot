@@ -14,92 +14,96 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: FormModificarBingos.form:47
+#: FormModificarBingos.form:52
 msgid "Cartones"
 msgstr ""
 
-#: FormModificarBingos.form:51
+#: FormModificarBingos.form:56
 msgid "Propiedades de los Cartones"
 msgstr ""
 
-#: FormModificarBingos.form:63
+#: FormModificarBingos.form:68
 msgid "Ver Cartones"
 msgstr ""
 
-#: FormModificarBingos.form:69
+#: FormModificarBingos.form:74
 msgid "Generar Cartones"
 msgstr ""
 
-#: FormModificarBingos.form:83
+#: FormModificarBingos.form:88
 msgid "matematicas"
 msgstr ""
 
-#: FormModificarBingos.form:83
+#: FormModificarBingos.form:88
 msgid "ingles"
 msgstr ""
 
-#: FormModificarBingos.form:83
+#: FormModificarBingos.form:88
 msgid "lengua"
 msgstr ""
 
-#: FormModificarBingos.form:90
+#: FormModificarBingos.form:95
 msgid "aqui se define el titulo que vendrá en cada carton"
 msgstr ""
 
-#: FormModificarBingos.form:91
+#: FormModificarBingos.form:96
 msgid "Categoria:"
 msgstr ""
 
-#: FormModificarBingos.form:101
+#: FormModificarBingos.form:106
 msgid "aqui se define el tema del bingo"
 msgstr ""
 
-#: FormModificarBingos.form:102
+#: FormModificarBingos.form:107
 msgid "Temática:"
 msgstr ""
 
-#: FormModificarBingos.form:108
+#: FormModificarBingos.form:113
 msgid "Nombre fichero:"
 msgstr ""
 
-#: FormModificarBingos.form:121
+#: FormModificarBingos.form:126
 msgid ".be"
 msgstr ""
 
-#: FormModificarBingos.form:133
+#: FormModificarBingos.form:138
 msgid "Descripción:"
 msgstr ""
 
-#: FormModificarBingos.form:139
+#: FormModificarBingos.form:144
 msgid "Elementos que componen el Bingo actual:"
 msgstr ""
 
-#: FormModificarBingos.form:145
+#: FormModificarBingos.form:150
 msgid "Visualizar imagenes"
 msgstr ""
 
-#: FormModificarBingos.form:156
+#: FormModificarBingos.form:161
 msgid "Para editar un elemento, seleccionalo y haga DobleClick"
 msgstr ""
 
-#: FormModificarBingos.form:172
+#: FormModificarBingos.form:177
 msgid "Añadir Elemento"
 msgstr ""
 
-#: FormModificarBingos.form:184
-msgid "Multiple Elementos de Texto"
-msgstr ""
-
-#: FormModificarBingos.form:196
+#: FormModificarBingos.form:189
 msgid "Borrar Elementos"
 msgstr ""
 
-#: FormModificarBingos.form:207
+#: FormModificarBingos.form:200
 msgid "Guardar"
 msgstr ""
 
-#: FormModificarBingos.form:218
+#: FormModificarBingos.form:211
 msgid "Salir"
+msgstr ""
+
+#: FormModificarBingos.form:231
+msgid "Multiple Elementos de Texto"
+msgstr ""
+
+#: FormModificarBingos.form:243
+msgid "Múltiple Elementos de Imagenes/Sonido"
 msgstr ""
 
 #: FormModificarBingos.class:83
