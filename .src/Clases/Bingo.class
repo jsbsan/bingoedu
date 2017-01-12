@@ -690,6 +690,9 @@ Public Function copiaFichero(ruta As String, Optional modo As String) As Boolean
     Return False
   Endif
   
+  'todo ha ido bien !!!
+  Return True
+  
 End
 
 Public Function creoContenidoVacio() As String

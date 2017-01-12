@@ -4,7 +4,9 @@ BingoJuego=[94,103]
 FormFicherosBingos=[211]
 
 [Breakpoints]
-Count=0
+Breakpoint[1]="Bingo.668"
+Breakpoint[2]="FormModificarElementos.70"
+Count=2
 
 [DebugWindow]
 Count=0
@@ -321,16 +323,17 @@ File[5]=".src/Formularios/FMain.class:68.27"
 File[6]=".src/Formularios/FormFicherosBingos.form"
 File[7]="Nota.txt:15.29"
 File[8]=".src/Formularios/FormModificarBingos.form"
-File[9]=".src/Formularios/FormModificarBingos.class:261.36"
+File[9]=".src/Formularios/FormModificarBingos.class:28.3"
 File[10]=".src/Formularios/FormModificarCartones.form"
 File[11]=".src/Formularios/FormFicherosBingos.class:211.13"
 File[12]=".src/Clases/controles/SquareButton.class:78.8"
 File[13]=".src/Formularios/FormModificarElementos.form"
-File[14]=".src/Clases/Bingo.class:681.2"
-File[15]=".src/Clases/elemento.class:51.0"
+File[14]=".src/Clases/Bingo.class:693.11"
+File[15]=".src/Clases/elemento.class:60.0"
 File[16]=".src/Clases/elementoTexto.class:10.0"
-File[17]=".src/Clases/elementoImagen.class:10.2"
-File[18]=".src/Formularios/FormModificarElementos.class:231.25"
+File[17]=".src/Clases/elementoImagen.class:10.0"
+Active=18
+File[18]=".src/Formularios/FormModificarElementos.class:114.17"
 File[19]=".src/Formularios/testGuadarBingo.module:11.23"
 File[20]=".src/Clases/elementoBlanco.class:16.2"
 File[21]=".src/Clases/elementoNegro.class:1.0"
@@ -368,7 +371,6 @@ File[52]=".src/Formularios/FormMostrarResultados.form"
 File[53]=".src/Formularios/FormMostrarResultados.class:47.2"
 File[54]="icono sonido grande.png"
 File[55]=".src/Formularios/FormMultipleImagenesSonidos.form"
-Active=56
 File[56]=".src/Formularios/FormMultipleImagenesSonidos.class:55.41"
 File[57]="drawing-2x2.svg:0.0"
 Count=57
