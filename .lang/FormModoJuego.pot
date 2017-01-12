@@ -43,10 +43,6 @@ msgid "Inglés"
 msgstr ""
 
 #: FormModoJuego.form:85
-msgid "Catalán"
-msgstr ""
-
-#: FormModoJuego.form:85
 msgid "Francés"
 msgstr ""
 
@@ -66,23 +62,23 @@ msgstr ""
 msgid "Salir"
 msgstr ""
 
-#: FormModoJuego.class:5
+#: FormModoJuego.class:7
 msgid "Modo Juego"
 msgstr ""
 
-#: FormModoJuego.class:51
+#: FormModoJuego.class:53
 msgid "Archivo Bingo"
 msgstr ""
 
-#: FormModoJuego.class:52
+#: FormModoJuego.class:54
 msgid "Temática"
 msgstr ""
 
-#: FormModoJuego.class:53
+#: FormModoJuego.class:55
 msgid "Descripción"
 msgstr ""
 
-#: FormModoJuego.class:70
+#: FormModoJuego.class:72
 msgid "Debe de seleccionar un  bingo educativo"
 msgstr ""
 

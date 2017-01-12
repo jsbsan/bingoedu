@@ -1,5 +1,7 @@
 ' Gambas class file
 
+Private modovoz As String = "pico2wave"
+
 Public Sub Form_Open()
   
   Me.Title = ("Modo Juego")

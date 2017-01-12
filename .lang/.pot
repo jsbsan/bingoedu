@@ -150,11 +150,11 @@ msgstr ""
 msgid "Nombre"
 msgstr ""
 
-#: FormFicherosBingos.class:34 FormModoJuego.class:52
+#: FormFicherosBingos.class:34 FormModoJuego.class:54
 msgid "Temática"
 msgstr ""
 
-#: FormFicherosBingos.class:35 FormModoJuego.class:53
+#: FormFicherosBingos.class:35 FormModoJuego.class:55
 msgid "Descripción"
 msgstr ""
 
@@ -162,7 +162,7 @@ msgstr ""
 msgid "Utilidades"
 msgstr ""
 
-#: FormFicherosBingos.class:92 FormModoJuego.class:70
+#: FormFicherosBingos.class:92 FormModoJuego.class:72
 msgid "Debe de seleccionar un  bingo educativo"
 msgstr ""
 
@@ -234,43 +234,43 @@ msgstr ""
 msgid "Mostrar Nuevo Elemento"
 msgstr ""
 
-#: FormJuego.class:279
+#: FormJuego.class:287
 msgid "por"
 msgstr ""
 
-#: FormJuego.class:280
+#: FormJuego.class:288
 msgid "mas"
 msgstr ""
 
-#: FormJuego.class:281
+#: FormJuego.class:289
 msgid "menos"
 msgstr ""
 
-#: FormJuego.class:282
+#: FormJuego.class:290
 msgid "dividido"
 msgstr ""
 
-#: FormJuego.class:283
+#: FormJuego.class:291
 msgid "potencia"
 msgstr ""
 
-#: FormJuego.class:307 FormModoJuego.form:85
+#: FormJuego.class:319 FormModoJuego.form:85
 msgid "Castellano"
 msgstr ""
 
-#: FormJuego.class:309 FormModoJuego.form:85
+#: FormJuego.class:321 FormModoJuego.form:85
 msgid "Inglés"
 msgstr ""
 
-#: FormJuego.class:311 FormModoJuego.form:85
+#: FormJuego.class:323
 msgid "Catalán"
 msgstr ""
 
-#: FormJuego.class:313 FormModoJuego.form:85
+#: FormJuego.class:325 FormModoJuego.form:85
 msgid "Francés"
 msgstr ""
 
-#: FormJuego.class:315 FormModoJuego.form:85
+#: FormJuego.class:327 FormModoJuego.form:85
 msgid "Alemán"
 msgstr ""
 
@@ -585,11 +585,11 @@ msgstr ""
 msgid "Jugar Manual"
 msgstr ""
 
-#: FormModoJuego.class:5
+#: FormModoJuego.class:7
 msgid "Modo Juego"
 msgstr ""
 
-#: FormModoJuego.class:51
+#: FormModoJuego.class:53
 msgid "Archivo Bingo"
 msgstr ""
 

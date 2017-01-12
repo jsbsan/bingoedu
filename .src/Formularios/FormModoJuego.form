@@ -48,7 +48,7 @@
         { ComboBoxIdioma ComboBox
           MoveScaled(11,1,14,3)
           ReadOnly = True
-          List = [("Castellano"), ("Inglés"), ("Catalán"), ("Francés"), ("Alemán")]
+          List = [("Castellano"), ("Inglés"), ("Francés"), ("Alemán")]
           Text = ("Castellano")
         }
       }

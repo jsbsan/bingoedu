@@ -1,5 +1,7 @@
 ' Gambas class file
 
+Private ProgramaVoz As String = "pico2wave"
+
 Public bingotmp As Bingo
 
 Public modo As String
@@ -135,7 +137,13 @@ Public Sub muestraElmenento(ele As Variant)
       DrawingArea1.visible = True
       
       If hablar Then 
-        Shell "espeak -v" & eligeIdioma(idioma) & "+f4 " & "\"" & CambiaSignos(ele.texto) & "\""
+        
+        If ProgramaVoz = "pico2wave" Then 
+          Shell "pico2wave -l " & eligeIdioma(idioma) & " -w /tmp/a.wav \"" & CambiaSignos(ele.texto) & "\" && aplay /tmp/a.wav"
+        Else
+          Shell "espeak -v" & eligeIdioma(idioma) & "+f4 " & "\"" & CambiaSignos(ele.texto) & "\""              
+        Endif
+        
       Endif
       
     Case Upper$("ElementoSonido")
@@ -303,20 +311,41 @@ End
 
 Private Function eligeIdioma(idiomatmp As String) As String
   
-  Select Case idiomatmp
-    Case ("Castellano")
-      Return "es"
-    Case ("Inglés")
-      Return "en"
-    Case ("Catalán")
-      Return "ca"
-    Case ("Francés")
-      Return "fr"
-    Case ("Alemán")
-      Return "de"
-  End Select
-  
-  ''NOTE:
-  ''otros idiomas: http://espeak.sourceforge.net/languages.html
+  If ProgramaVoz = "pico2wave" Then 
+    'pico2wave 
+    'los idiomas que soporta son: it-IT, fr-FR, es-ES, de-DE, en-US, en-GB
+    
+    Select Case idiomatmp
+      Case ("Castellano")
+        Return "es-ES"
+      Case ("Inglés")
+        Return "en-GB"
+      Case ("Catalán")
+        Return "ca"
+      Case ("Francés")
+        Return "fr-FR"
+      Case ("Alemán")
+        Return "de-DE"
+    End Select
+    
+  Else
+    
+    ''NOTE:
+    ''otros idiomas: http://espeak.sourceforge.net/languages.html
+    
+    Select Case idiomatmp
+      Case ("Castellano")
+        Return "es"
+      Case ("Inglés")
+        Return "en"
+      Case ("Catalán")
+        Return "ca"
+      Case ("Francés")
+        Return "fr"
+      Case ("Alemán")
+        Return "de"
+    End Select
+    
+  Endif
   
 End
