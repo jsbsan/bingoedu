@@ -15,18 +15,207 @@ End
 
 Public Sub imprimir(bingotmp As Bingo)
   
-  Dim res As Integer
+  Dim res As New Integer[]
   
-  res = Message.Question(("¿Imprimir en formato 2x3 (6) o 2x2 (4)?"), ("2x2 (4 cartones-Apaisado)"), ("2x3 (6 cartones-Vertica)"), ("Cancelar"))
+  res.Add(0)
   
-  Select Case res
+  FormFormatoImpresion.respuesta = res
+  FormFormatoImpresion.ShowDialog()
+  'res = Message.Question(("¿Imprimir en formato 2x3 (6) o 2x2 (4)?"), ("2x2 (4 cartones-Apaisado)"), ("2x3 (6 cartones-Vertica)"), ("Cancelar"))
+  
+  Select Case res[0]
+    Case 0
+      Return 
     Case 1
       'imprimir formato 2x2 (4)
       ModuleVarios.Imprimir2x2(bingotmp)
     Case 2
       'imprimir formato 2x3 (6)
       ModuleVarios.Imprimir2x3(bingotmp)
+    Case 3
+      'imprimir formato 5
+      ModuleVarios.imprimir5(bingotmp)
+    Case 4
+      'imprimir formato 2x4 (8)
+      ModuleVarios.imprimir2x4(bingotmp)
   End Select
+  
+End
+
+Public Sub imprimir2x4(bingotmp As Bingo) ''imprimir en vertical 2x4 = 8 cartones
+  
+  'numero de cartones / 8 -> numero de p´aginas...
+  Dim NumeroPaginas As Float
+  Dim paginas As Integer
+  Dim arfile As New String[]
+  Dim arfileborrar As String[]
+  Dim nombrefile As String
+  Dim ArrayCuadroBlancos As String[] = ["/tmp/cuadroBlanco.jpg", "/tmp/cuadroBlanco.jpg", "/tmp/cuadroBlanco.jpg", "/tmp/cuadroBlanco.jpg", "/tmp/cuadroBlanco.jpg", "/tmp/cuadroBlanco.jpg", "/tmp/cuadroBlanco.jpg", "/tmp/cuadroBlanco.jpg", "/tmp/cuadroBlanco.jpg"]
+  Dim ncarton As Integer
+  Dim ruta As String
+  Dim contenido As String
+  Dim a As Integer
+  Dim arfileTodos As String[]
+  Dim salida As String
+  
+  Inc Application.busy  
+  arfileTodos = Dir(User.home & "/" & "bingoedu/" & bingotmp.NombreFichero & "/", "carton*", gb.file)
+  a = -1
+  
+  For a = 0 To arfileTodos.Count - 1
+    If File.Ext(arfileTodos[a]) = "png" Then 
+      arfile.Add(arfileTodos[a])
+    Endif
+  Next
+  
+  a = -1
+  For Each nombrefile In arfile
+    a += 1
+    arfile[a] = User.home & "/" & "bingoedu/" & bingotmp.NombreFichero & "/" & arfile[a]
+  Next
+  
+  arfile.Insert(ArrayCuadroBlancos)
+  
+  NumeroPaginas = bingotmp.NumeroCartones / (2 * 4)
+  
+  If Int(NumeroPaginas) <> (bingotmp.NumeroCartones / (2 * 4)) Then 
+    NumeroPaginas = Int(NumeroPaginas) + 1 'añado una página porque no cabe en una entera
+  Endif
+  
+  ncarton = -1
+  
+  If Not (Exist("/tmp/trabajo")) Then 
+    Mkdir "/tmp/trabajo"
+  Else
+    'borrado de fichero...
+    arfileborrar = Dir("/tmp/trabajo", "pag*", gb.file)
+    
+    For Each nombrefile In arfileborrar
+      Kill "/tmp/trabajo/" & nombrefile
+    Next
+  Endif
+  
+  ruta = User.home & "/bingoedu/" & bingotmp.NombreFichero & "/"
+  For paginas = 0 To NumeroPaginas - 1
+    contenido = File.Load("8cartonesporpag.svg")
+    ncarton += 1
+    contenido = Replace(contenido, "#ruta11#", arfile[ncarton])
+    
+    ncarton += 1
+    contenido = Replace(contenido, "#ruta12#", arfile[ncarton])
+    
+    ncarton += 1
+    contenido = Replace(contenido, "#ruta21#", arfile[ncarton])
+    
+    ncarton += 1
+    contenido = Replace(contenido, "#ruta22#", arfile[ncarton])
+    
+    ncarton += 1
+    contenido = Replace(contenido, "#ruta31#", arfile[ncarton])
+    
+    ncarton += 1
+    contenido = Replace(contenido, "#ruta32#", arfile[ncarton])
+    
+    ncarton += 1
+    contenido = Replace(contenido, "#ruta41#", arfile[ncarton])
+    
+    ncarton += 1
+    contenido = Replace(contenido, "#ruta42#", arfile[ncarton])
+    
+    File.Save("/tmp/trabajo/pag" & Str$(paginas) & ".svg", contenido)
+    
+    'convierto en png.... Shell     
+    Shell ("inkscape " & "/tmp/trabajo/pag" & Str$(paginas) & ".svg" & " --export-dpi=200 --export-png=" & "/tmp/trabajo/pag" & Str$(paginas) & ".png") To salida
+    
+  Next
+  Dec Application.busy  
+  Shell "pcmanfm /tmp/trabajo"
+  
+  Message.Info(("Terminado!!!"))
+  
+End
+
+Public Sub imprimir5(bingotmp As Bingo) ''imprimir 5 cartones
+  
+  'numero de cartones / 5 -> numero de p´aginas...
+  Dim NumeroPaginas As Float
+  Dim paginas As Integer
+  Dim arfile As New String[]
+  Dim arfileborrar As String[]
+  Dim nombrefile As String
+  Dim ArrayCuadroBlancos As String[] = ["/tmp/cuadroBlanco.jpg", "/tmp/cuadroBlanco.jpg", "/tmp/cuadroBlanco.jpg", "/tmp/cuadroBlanco.jpg", "/tmp/cuadroBlanco.jpg", "/tmp/cuadroBlanco.jpg"]
+  Dim ncarton As Integer
+  Dim ruta As String
+  Dim contenido As String
+  Dim a As Integer
+  Dim arfileTodos As String[]
+  Dim salida As String
+  
+  Inc Application.busy  
+  arfileTodos = Dir(User.home & "/" & "bingoedu/" & bingotmp.NombreFichero & "/", "carton*", gb.file)
+  a = -1
+  
+  For a = 0 To arfileTodos.Count - 1
+    If File.Ext(arfileTodos[a]) = "png" Then 
+      arfile.Add(arfileTodos[a])
+    Endif
+  Next
+  
+  a = -1
+  For Each nombrefile In arfile
+    a += 1
+    arfile[a] = User.home & "/" & "bingoedu/" & bingotmp.NombreFichero & "/" & arfile[a]
+  Next
+  
+  arfile.Insert(ArrayCuadroBlancos)
+  
+  NumeroPaginas = bingotmp.NumeroCartones / (5)
+  
+  If Int(NumeroPaginas) <> (bingotmp.NumeroCartones / (5)) Then 
+    NumeroPaginas = Int(NumeroPaginas) + 1 'añado una página porque no cabe en una entera
+  Endif
+  
+  ncarton = -1
+  
+  If Not (Exist("/tmp/trabajo")) Then 
+    Mkdir "/tmp/trabajo"
+  Else
+    'borrado de fichero...
+    arfileborrar = Dir("/tmp/trabajo", "pag*", gb.file)
+    
+    For Each nombrefile In arfileborrar
+      Kill "/tmp/trabajo/" & nombrefile
+    Next
+  Endif
+  
+  ruta = User.home & "/bingoedu/" & bingotmp.NombreFichero & "/"
+  For paginas = 0 To NumeroPaginas - 1
+    contenido = File.Load("5cartonesporpag.svg") ''plantilla de como se colocan los cartones
+    ncarton += 1
+    contenido = Replace(contenido, "#ruta11#", arfile[ncarton])
+    
+    ncarton += 1
+    contenido = Replace(contenido, "#ruta12#", arfile[ncarton])
+    
+    ncarton += 1
+    contenido = Replace(contenido, "#ruta21#", arfile[ncarton])
+    
+    ncarton += 1
+    contenido = Replace(contenido, "#ruta22#", arfile[ncarton])
+    
+    ncarton += 1
+    contenido = Replace(contenido, "#ruta31#", arfile[ncarton])
+    
+    File.Save("/tmp/trabajo/pag" & Str$(paginas) & ".svg", contenido)
+    
+    'convierto en png.... Shell     
+    Shell ("inkscape " & "/tmp/trabajo/pag" & Str$(paginas) & ".svg" & " --export-dpi=200 --export-png=" & "/tmp/trabajo/pag" & Str$(paginas) & ".png") To salida
+    
+  Next
+  Dec Application.busy  
+  Shell "pcmanfm /tmp/trabajo"
+  
+  Message.Info(("Terminado!!!"))
   
 End
 

@@ -1,0 +1,47 @@
+' Gambas class file
+
+Public respuesta As Integer[]
+
+Public Sub ButtonSalir_Click()
+  
+  respuesta[0] = 0
+  Me.Close()
+  
+End
+
+Public Sub RadioButton2x2_Click()
+  
+  respuesta[0] = 1
+  
+End
+
+Public Sub RadioButton2x3_Click()
+  
+  respuesta[0] = 2
+  
+End
+
+Public Sub RadioButton5_Click()
+  
+  respuesta[0] = 3
+  
+End
+
+Public Sub RadioButton2x4_Click()
+  
+  respuesta[0] = 4
+  
+End
+
+Public Sub ButtonImprimir_Click()
+  
+  Me.Close()
+  
+End
+
+Public Sub Form_Open()
+  'por defecto es de 2x2
+
+  respuesta[0] = 1
+  
+End

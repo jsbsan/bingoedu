@@ -67,6 +67,9 @@ Public Sub Form_Open()
   'cargar datos en el gridview
   actualizarDatosGridview()
   
+  'guardo datos...
+  ButtonGuadarModificaciones_Click()
+  
   Me.Center()
   
 End
@@ -189,6 +192,9 @@ Public Sub ButtonGenerarCartones_Click()
   
   If res <> 1 Then Return 'no, ha cancelado el usuario
   
+  'guardo los cambios actuales del bingo...antes de crear los cartones.
+  ButtonGuadarModificaciones_Click()
+  
   'activo "vigilante" para que muestre el proceso de creación de cartones
   FormAvanceCreacionCartones.bingoActual = bingotmp
   
@@ -200,7 +206,7 @@ Public Sub ButtonGenerarCartones_Click()
     Message.Error(textoMensaje)
     Application.busy = 0
   Else
-    ButtonGuadarModificaciones_Click()
+    ButtonGuadarModificaciones_Click() '' este es para guardar los cartones realizados...
     Application.busy = 0
     ButtonVerCartones_Click()
     
@@ -257,7 +263,7 @@ Public Sub ButtonImprimir_Click()
 End
 
 Public Sub ButtonMultipleElementosImagenSonido_Click()
-
+  
   FormMultipleImagenesSonidos.btmp = bingotmp
   FormMultipleImagenesSonidos.Show()
   

@@ -17,6 +17,8 @@
     }
     { ScrollView1 ScrollView
       MoveScaled(0,4,55,45)
+      Background = &HFFFFFF&
+      ToolTip = ("Haga click sobre un cartón para verlo en el Visor")
       Expand = True
       Arrangement = Arrange.Column
     }

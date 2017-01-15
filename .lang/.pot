@@ -18,35 +18,35 @@ msgstr ""
 msgid "Juego del bingo educativo para refrescar conocimientos."
 msgstr ""
 
-#: Bingo.class:102
+#: Bingo.class:103
 msgid "Existe un bingo con el mismo nombre, ¿que desea hacer?"
 msgstr ""
 
-#: Bingo.class:102
+#: Bingo.class:103
 msgid "Borra y continua"
 msgstr ""
 
-#: Bingo.class:102
+#: Bingo.class:103
 msgid "Cancelar Operacion"
 msgstr ""
 
-#: Bingo.class:289
+#: Bingo.class:290
 msgid "Existe un fichero con el mismo nombre, ¿desea borrarlo?"
 msgstr ""
 
-#: Bingo.class:289
+#: Bingo.class:290
 msgid "Si, borralo y continua"
 msgstr ""
 
-#: Bingo.class:289
+#: Bingo.class:290
 msgid "No, cancelar operación"
 msgstr ""
 
-#: Bingo.class:673
+#: Bingo.class:674
 msgid "Existe un fichero con el mismo nombre"
 msgstr ""
 
-#: Bingo.class:747
+#: Bingo.class:748
 msgid "cd /tmp;rm carton*"
 msgstr ""
 
@@ -82,7 +82,7 @@ msgstr ""
 #: FormModificarBingos.form:211 FormModificarCartones.form:218
 #: FormModificarElementos.form:123 FormModoJuego.form:137
 #: FormMostrarResultados.form:57 FormMultipleElementosDeTexto.form:52
-#: FormMultipleImagenesSonidos.form:62 FormVerCartones.form:103
+#: FormMultipleImagenesSonidos.form:62 FormVerCartones.form:105
 msgid "Salir"
 msgstr ""
 
@@ -118,7 +118,8 @@ msgstr ""
 msgid "Importar"
 msgstr ""
 
-#: FormFicherosBingos.form:109 FormVerCartones.form:91
+#: FormFicherosBingos.form:109 FormFormatoImpresion.form:52
+#: FormVerCartones.form:93
 msgid "Imprimir"
 msgstr ""
 
@@ -170,7 +171,7 @@ msgstr ""
 msgid "Si, borrar"
 msgstr ""
 
-#: FormFicherosBingos.class:132 FormModificarBingos.class:188
+#: FormFicherosBingos.class:132 FormModificarBingos.class:191
 msgid "No, cancelar"
 msgstr ""
 
@@ -180,6 +181,30 @@ msgstr ""
 
 #: FormFicherosBingos.class:180
 msgid "Archivos Bingo Educativo"
+msgstr ""
+
+#: FormFormatoImpresion.form:18
+msgid "Formatos de Impresión"
+msgstr ""
+
+#: FormFormatoImpresion.form:25
+msgid "Cancelar"
+msgstr ""
+
+#: FormFormatoImpresion.form:31
+msgid "2x2 = 4 cartones (apaisado)"
+msgstr ""
+
+#: FormFormatoImpresion.form:37
+msgid "2x3 = 6 cartones (vertical)"
+msgstr ""
+
+#: FormFormatoImpresion.form:42
+msgid "5 cartones"
+msgstr ""
+
+#: FormFormatoImpresion.form:47
+msgid "2x4 = 8 cartones (vertical)"
 msgstr ""
 
 #: FormGrabadora.form:21
@@ -362,58 +387,58 @@ msgstr ""
 msgid "Múltiple Elementos de Imagenes/Sonido"
 msgstr ""
 
-#: FormModificarBingos.class:83 FormModificarCartones.class:52
+#: FormModificarBingos.class:86 FormModificarCartones.class:52
 msgid "Tipo"
 msgstr ""
 
-#: FormModificarBingos.class:84 FormModificarCartones.class:53
+#: FormModificarBingos.class:87 FormModificarCartones.class:53
 msgid "Dato Bingo"
 msgstr ""
 
-#: FormModificarBingos.class:86 FormModificarCartones.class:55
+#: FormModificarBingos.class:89 FormModificarCartones.class:55
 msgid "Dato Carton"
 msgstr ""
 
-#: FormModificarBingos.class:162
+#: FormModificarBingos.class:165
 msgid ""
 "No se pueden generar cartones...\n"
 "demasiados elementos repetidos, cuadros blancos y/o negros para el tipo de "
 "cartón"
 msgstr ""
 
-#: FormModificarBingos.class:188
+#: FormModificarBingos.class:191
 msgid "Generar cartones, borra los anteriores, ¿quiere continuar?"
 msgstr ""
 
-#: FormModificarBingos.class:188
+#: FormModificarBingos.class:191
 msgid "Si, continua"
 msgstr ""
 
-#: FormModificarBingos.class:196
+#: FormModificarBingos.class:202
 msgid "Problemas al crear los cartones, causas:"
 msgstr ""
 
-#: FormModificarBingos.class:197
+#: FormModificarBingos.class:203
 msgid "     Hay pocos elementos"
 msgstr ""
 
-#: FormModificarBingos.class:198
+#: FormModificarBingos.class:204
 msgid "     Hay muchos cartones para crear"
 msgstr ""
 
-#: FormModificarBingos.class:199
+#: FormModificarBingos.class:205
 msgid "no es posible crear el numero de cartones solicitado"
 msgstr ""
 
-#: FormModificarBingos.class:236
+#: FormModificarBingos.class:242
 msgid "No hay elemento seleccionado"
 msgstr ""
 
-#: FormModificarBingos.class:242
+#: FormModificarBingos.class:248
 msgid "Si"
 msgstr ""
 
-#: FormModificarBingos.class:249
+#: FormModificarBingos.class:255
 msgid "El elemento ha sido borrado"
 msgstr ""
 
@@ -692,11 +717,15 @@ msgstr ""
 msgid "Lista de Cartones...."
 msgstr ""
 
-#: FormVerCartones.form:52
+#: FormVerCartones.form:41
+msgid "Haga click sobre un cartón para verlo en el Visor"
+msgstr ""
+
+#: FormVerCartones.form:54
 msgid "Visor"
 msgstr ""
 
-#: FormVerCartones.form:79
+#: FormVerCartones.form:81
 msgid "Editar con inkscape"
 msgstr ""
 
@@ -704,22 +733,6 @@ msgstr ""
 msgid "Visualizando cartones"
 msgstr ""
 
-#: ModuleVarios.module:20
-msgid "¿Imprimir en formato 2x3 (6) o 2x2 (4)?"
-msgstr ""
-
-#: ModuleVarios.module:20
-msgid "2x2 (4 cartones-Apaisado)"
-msgstr ""
-
-#: ModuleVarios.module:20
-msgid "2x3 (6 cartones-Vertica)"
-msgstr ""
-
-#: ModuleVarios.module:20
-msgid "Cancelar"
-msgstr ""
-
-#: ModuleVarios.module:116
+#: ModuleVarios.module:134
 msgid "Terminado!!!"
 msgstr ""

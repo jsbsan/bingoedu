@@ -14,35 +14,35 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: Bingo.class:102
+#: Bingo.class:103
 msgid "Existe un bingo con el mismo nombre, ¿que desea hacer?"
 msgstr ""
 
-#: Bingo.class:102
+#: Bingo.class:103
 msgid "Borra y continua"
 msgstr ""
 
-#: Bingo.class:102
+#: Bingo.class:103
 msgid "Cancelar Operacion"
 msgstr ""
 
-#: Bingo.class:289
+#: Bingo.class:290
 msgid "Existe un fichero con el mismo nombre, ¿desea borrarlo?"
 msgstr ""
 
-#: Bingo.class:289
+#: Bingo.class:290
 msgid "Si, borralo y continua"
 msgstr ""
 
-#: Bingo.class:289
+#: Bingo.class:290
 msgid "No, cancelar operación"
 msgstr ""
 
-#: Bingo.class:673
+#: Bingo.class:674
 msgid "Existe un fichero con el mismo nombre"
 msgstr ""
 
-#: Bingo.class:747
+#: Bingo.class:748
 msgid "cd /tmp;rm carton*"
 msgstr ""
 

@@ -18,19 +18,23 @@ msgstr ""
 msgid "Lista de Cartones...."
 msgstr ""
 
-#: FormVerCartones.form:52
+#: FormVerCartones.form:41
+msgid "Haga click sobre un cartón para verlo en el Visor"
+msgstr ""
+
+#: FormVerCartones.form:54
 msgid "Visor"
 msgstr ""
 
-#: FormVerCartones.form:79
+#: FormVerCartones.form:81
 msgid "Editar con inkscape"
 msgstr ""
 
-#: FormVerCartones.form:91
+#: FormVerCartones.form:93
 msgid "Imprimir"
 msgstr ""
 
-#: FormVerCartones.form:103
+#: FormVerCartones.form:105
 msgid "Salir"
 msgstr ""
 
