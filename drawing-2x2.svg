@@ -16,7 +16,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.48.3.1 r9886"
-   sodipodi:docname="drawing-2x2.svg">
+   sodipodi:docname="4cartonesporpag.svg">
   <defs
      id="defs4" />
   <sodipodi:namedview
@@ -28,14 +28,14 @@
      inkscape:pageshadow="2"
      inkscape:zoom="0.7"
      inkscape:cx="645.6269"
-     inkscape:cy="340.42192"
+     inkscape:cy="372.04724"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1280"
-     inkscape:window-height="836"
+     inkscape:window-width="1350"
+     inkscape:window-height="693"
      inkscape:window-x="0"
-     inkscape:window-y="24"
+     inkscape:window-y="38"
      inkscape:window-maximized="1" />
   <metadata
      id="metadata7">
@@ -45,7 +45,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -57,37 +57,37 @@
     <image
        sodipodi:absref="#ruta11#"
        xlink:href="#ruta11#"
-       width="298.33502"
-       height="298.33502"
+       width="510"
+       height="350"
        preserveAspectRatio="none"
        id="image4262"
-       x="201.19046"
-       y="695.33246" />
+       x="11.190457"
+       y="687.95319" />
     <image
-       width="298.33502"
-       height="298.33502"
+       width="510"
+       height="350"
        preserveAspectRatio="none"
        id="image4262-3"
-       x="573.95465"
-       y="695.33246"
+       x="529.66895"
+       y="688.23889"
        xlink:href="#ruta12#"
        sodipodi:absref="#ruta12#" />
     <image
-       width="298.33502"
-       height="298.33502"
+       width="510"
+       height="350"
        preserveAspectRatio="none"
        id="image4262-6-5"
-       x="201.19046"
-       y="349.37003"
+       x="12.619032"
+       y="320.23819"
        xlink:href="#ruta21#"
        sodipodi:absref="#ruta21#" />
     <image
-       width="298.33502"
-       height="298.33502"
+       width="510"
+       height="350"
        preserveAspectRatio="none"
        id="image4262-3-7-3"
-       x="573.95465"
-       y="349.37003"
+       x="531.38324"
+       y="320.27649"
        xlink:href="#ruta22#"
        sodipodi:absref="#ruta22#" />
   </g>

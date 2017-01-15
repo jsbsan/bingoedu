@@ -14,31 +14,31 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: FormFormatoImpresion.form:18
+#: FormFormatoImpresion.form:20
 msgid "Formatos de Impresión"
 msgstr ""
 
-#: FormFormatoImpresion.form:25
+#: FormFormatoImpresion.form:27
 msgid "Cancelar"
 msgstr ""
 
-#: FormFormatoImpresion.form:31
+#: FormFormatoImpresion.form:33
 msgid "2x2 = 4 cartones (apaisado)"
 msgstr ""
 
-#: FormFormatoImpresion.form:37
+#: FormFormatoImpresion.form:39
 msgid "2x3 = 6 cartones (vertical)"
 msgstr ""
 
-#: FormFormatoImpresion.form:42
+#: FormFormatoImpresion.form:44
 msgid "5 cartones"
 msgstr ""
 
-#: FormFormatoImpresion.form:47
+#: FormFormatoImpresion.form:49
 msgid "2x4 = 8 cartones (vertical)"
 msgstr ""
 
-#: FormFormatoImpresion.form:52
+#: FormFormatoImpresion.form:54
 msgid "Imprimir"
 msgstr ""
 
