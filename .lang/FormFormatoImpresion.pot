@@ -26,19 +26,19 @@ msgstr ""
 msgid "2x2 = 4 cartones (apaisado)"
 msgstr ""
 
-#: FormFormatoImpresion.form:39
+#: FormFormatoImpresion.form:40
 msgid "2x3 = 6 cartones (vertical)"
 msgstr ""
 
-#: FormFormatoImpresion.form:44
+#: FormFormatoImpresion.form:45
 msgid "5 cartones"
 msgstr ""
 
-#: FormFormatoImpresion.form:49
+#: FormFormatoImpresion.form:50
 msgid "2x4 = 8 cartones (vertical)"
 msgstr ""
 
-#: FormFormatoImpresion.form:54
+#: FormFormatoImpresion.form:55
 msgid "Imprimir"
 msgstr ""
 

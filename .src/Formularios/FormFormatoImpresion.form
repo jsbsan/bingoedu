@@ -1,7 +1,7 @@
 # Gambas Form File 3.0
 
 { Form Form
-  MoveScaled(0,0,60,49)
+  MoveScaled(0,0,60,39)
   Icon = Picture["icon:/32/printer"]
   Resizable = False
   { Label1 Label
@@ -12,7 +12,7 @@
     Border = Border.Raised
   }
   { ButtonSalir Button
-    MoveScaled(38,39,17,6)
+    MoveScaled(38,31,17,6)
     Text = ("Cancelar")
     Picture = Picture["icon:/32/quit"]
   }
@@ -22,19 +22,20 @@
     Value = True
   }
   { RadioButton2x3 RadioButton
-    MoveScaled(13,18,33,5)
+    MoveScaled(47,18,33,5)
+    Visible = False
     Text = ("2x3 = 6 cartones (vertical)")
   }
   { RadioButton5 RadioButton
-    MoveScaled(13,25,33,5)
+    MoveScaled(13,17,33,5)
     Text = ("5 cartones")
   }
   { RadioButton2x4 RadioButton
-    MoveScaled(13,31,33,5)
+    MoveScaled(13,23,33,5)
     Text = ("2x4 = 8 cartones (vertical)")
   }
   { !ButtonImprimir Button
-    MoveScaled(5,39,18,6)
+    MoveScaled(5,31,18,6)
     #Public = True
     Text = ("Imprimir")
     Picture = Picture["icon:/32/printer"]

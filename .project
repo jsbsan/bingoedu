@@ -7,6 +7,7 @@ Version=0.0.1
 Component=gb.image
 Component=gb.qt4
 Component=gb.form
+Component=gb.desktop
 Component=gb.qt4.ext
 Description="Juego del bingo educativo para refrescar conocimientos."
 Authors="Julio Sánchez Berro & Antonio Sánchez"

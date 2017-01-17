@@ -189,12 +189,6 @@ Public Sub ButtonAgregarBingo_Click()
   
 End
 
-Public Sub GridViewFicherosDatos_DblClick()
-  
-  ButtonEditarBingo_Click()
-  
-End
-
 Public Sub ButtomImprimir_Click()
   
   Dim bingotmp As Bingo
@@ -211,5 +205,11 @@ Public Sub ButtomImprimir_Click()
     
     ModuleVarios.imprimir(bingotmp)
   Endif
+  
+End
+
+Public Sub GridViewFicherosDatos_MouseDown()
+  
+  ButtonEditarBingo_Click()
   
 End

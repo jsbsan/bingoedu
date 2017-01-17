@@ -129,7 +129,8 @@ Public Sub imprimir2x4(bingotmp As Bingo) ''imprimir en vertical 2x4 = 8 cartone
     
   Next
   Dec Application.busy  
-  Shell "pcmanfm /tmp/trabajo"
+  
+  crearpdf()
   
   Message.Info(("Terminado!!!"))
   
@@ -213,7 +214,7 @@ Public Sub imprimir5(bingotmp As Bingo) ''imprimir 5 cartones
     
   Next
   Dec Application.busy  
-  Shell "pcmanfm /tmp/trabajo"
+  crearpdf()
   
   Message.Info(("Terminado!!!"))
   
@@ -300,7 +301,7 @@ Public Sub imprimir2x3(bingotmp As Bingo) ''imprimir en vertical 2x3 = 6 cartone
     
   Next
   Dec Application.busy  
-  Shell "pcmanfm /tmp/trabajo"
+  crearpdf()
   
   Message.Info(("Terminado!!!"))
   
@@ -381,7 +382,7 @@ Public Sub imprimir2x2(bingotmp As Bingo) ''imprimir en apaisado 2x2 = 4 cartone
     
   Next
   Dec Application.busy  
-  Shell "pcmanfm /tmp/trabajo"
+  crearpdf()
   
   Message.Info(("Terminado!!!"))
   
@@ -430,4 +431,16 @@ Public Function URLDecode(txt As String) As String
   
   Return resultado
   
+End
+
+Private Sub crearpdf()
+  
+  Dim salida As String
+
+  Inc Application.Busy
+  Shell "cd /tmp/trabajo;convert -quality 100 *.png bingo.pdf" To salida
+  
+  Desktop.Open("/tmp/trabajo/bingo.pdf")
+  Dec Application.Busy  
+
 End

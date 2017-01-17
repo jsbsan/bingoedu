@@ -118,7 +118,7 @@ msgstr ""
 msgid "Importar"
 msgstr ""
 
-#: FormFicherosBingos.form:109 FormFormatoImpresion.form:54
+#: FormFicherosBingos.form:109 FormFormatoImpresion.form:55
 #: FormVerCartones.form:93
 msgid "Imprimir"
 msgstr ""
@@ -195,15 +195,15 @@ msgstr ""
 msgid "2x2 = 4 cartones (apaisado)"
 msgstr ""
 
-#: FormFormatoImpresion.form:39
+#: FormFormatoImpresion.form:40
 msgid "2x3 = 6 cartones (vertical)"
 msgstr ""
 
-#: FormFormatoImpresion.form:44
+#: FormFormatoImpresion.form:45
 msgid "5 cartones"
 msgstr ""
 
-#: FormFormatoImpresion.form:49
+#: FormFormatoImpresion.form:50
 msgid "2x4 = 8 cartones (vertical)"
 msgstr ""
 
@@ -733,6 +733,6 @@ msgstr ""
 msgid "Visualizando cartones"
 msgstr ""
 
-#: ModuleVarios.module:134
+#: ModuleVarios.module:135
 msgid "Terminado!!!"
 msgstr ""
