@@ -208,8 +208,8 @@ Public Sub ButtomImprimir_Click()
   
 End
 
-Public Sub GridViewFicherosDatos_MouseDown()
-  
+Public Sub GridViewFicherosDatos_DblClick()
+
   ButtonEditarBingo_Click()
   
 End
