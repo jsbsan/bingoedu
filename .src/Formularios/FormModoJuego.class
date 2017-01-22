@@ -4,7 +4,7 @@ Private modovoz As String = "pico2wave"
 
 Public Sub Form_Open()
   
-  Me.Title = ("Modo Juego")
+  Me.Title = ("Modo de juego")
   
   definirGridviewFicheros()
   recargarGridview()
@@ -50,7 +50,7 @@ Public Sub definirGridviewFicheros()
     .header = 3
     .rows.count = 0
     .columns.count = 3
-    .Columns[0].title = ("Archivo Bingo")
+    .Columns[0].title = ("Archivo")
     .Columns[1].title = ("Temática")
     .Columns[2].title = ("Descripción")
     .Columns[0].width = 0 '200
@@ -69,7 +69,7 @@ Public Sub ButtonManual_Click()
   Dim bingotmp As Bingo
   
   If GridViewFicherosDatos.Row = -1 Then
-    Message.Info(("Debe de seleccionar un  bingo educativo"))
+    Message.Info(("Debe seleccionar un bingo educativo."))
     Return
   Else
     
@@ -93,7 +93,7 @@ Public Sub ButtonAutomatico_Click()
   Dim bingotmp As Bingo
   
   If GridViewFicherosDatos.Row = -1 Then
-    Message.Info(("Debe de seleccionar un  bingo educativo"))
+    Message.Info(("Debe seleccionar un bingo educativo"))
     Return
   Else
     

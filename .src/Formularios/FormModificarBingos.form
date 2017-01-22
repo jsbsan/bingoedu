@@ -11,7 +11,7 @@
       Text = ("Cartones")
       { ButtonPropiedadesCartones Button
         MoveScaled(12,3,44,6)
-        Text = ("Propiedades de los Cartones")
+        Text = ("Propiedades de los cartones")
         Picture = Picture["propiedades.png"]
       }
       { PictureBox1 PictureBox
@@ -21,12 +21,12 @@
       }
       { ButtonVerCartones Button
         MoveScaled(12,10,19,6)
-        Text = ("Ver Cartones")
+        Text = ("Ver cartones")
         Picture = Picture["icon:/16/image"]
       }
       { ButtonGenerarCartones Button
         MoveScaled(34,10,22,6)
-        Text = ("Generar Cartones")
+        Text = ("Generar cartones")
         Picture = Picture["icon:/16/exec"]
       }
       { ButtonImprimir Button
@@ -49,17 +49,18 @@
       Alignment = Align.Right
     }
     { TextBoxTituloBingo TextBox
-      MoveScaled(16,8,33,4)
+      MoveScaled(16,8,29,4)
+      ToolTip = ("(Opcional) Se usa como título del cartón")
     }
     { Label2 Label
       MoveScaled(2,8,14,4)
-      ToolTip = ("aqui se define el tema del bingo")
+      ToolTip = ("Se usará como título en el cartón")
       Text = ("Temática:")
       Alignment = Align.Right
     }
     { Label4 Label
-      MoveScaled(0,3,16,4)
-      Text = ("Nombre fichero:")
+      MoveScaled(3,3,12,4)
+      Text = ("Archivo:")
       Alignment = Align.Right
     }
     { TextBoxFicheroBingo TextBox
@@ -69,23 +70,24 @@
       ReadOnly = True
     }
     { Label5 Label
-      MoveScaled(46,3,5,4)
+      MoveScaled(45,3,5,4)
       Text = (".be")
       Alignment = Align.Center
     }
     { TextAreaDescripcion TextArea
-      MoveScaled(3,22,104,7)
+      MoveScaled(3,22,106,7)
+      ToolTip = ("(Opcional) Breve descripción del bingo")
       Wrap = True
     }
     { Label6 Label
-      MoveScaled(1,18,14,4)
+      MoveScaled(1,18,13,4)
       ToolTip = ("aqui se define el titulo que vendrá en cada carton")
       Text = ("Descripción:")
       Alignment = Align.Right
     }
     { Label1 Label
-      MoveScaled(2,30,45,4)
-      Text = ("Elementos que componen el Bingo actual:")
+      MoveScaled(3,30,45,4)
+      Text = ("Elementos que componen el bingo actual:")
     }
     { CheckBoxVisualizar CheckBox
       MoveScaled(54,30,27,4)
@@ -94,6 +96,7 @@
     }
     { ButtonRefrescar Button
       MoveScaled(91,29,7,5)
+      Visible = False
       Picture = Picture["icon:/22/refresh"]
     }
   }
@@ -106,76 +109,53 @@
   }
   { HBox1 HBox
     MoveScaled(1,66,111,6)
-    { Panel2 Panel
-      MoveScaled(0,0,4,6)
-    }
     { ButtonAgregarElemento Button
       MoveScaled(5,0,17,6)
       Font = Font["-1"]
-      Text = ("Añadir Elemento")
+      Text = ("Añadir elemento")
       Picture = Picture["icon:/16/add"]
     }
-    { HBox6 HBox
-      MoveScaled(25,0,5,6)
-      Expand = True
-    }
-    { ButtonBorrarElemento Button
-      MoveScaled(28,0,20,5)
+    { ButtonMultipleElementosTexto Button
+      MoveScaled(23,1,29,5)
       Font = Font["-1"]
-      Text = ("Borrar Elementos")
-      Picture = Picture["icon:/16/delete"]
+      Text = ("Múltiples elementos de texto")
+      Picture = Picture["iconoletra16.png"]
     }
-    { HBox4 HBox
-      MoveScaled(52,-1,5,6)
-      Expand = True
-    }
-    { ButtonGuadarModificaciones Button
-      MoveScaled(77,0,13,6)
-      Text = ("Guardar")
-      Picture = Picture["icon:/22/save"]
-    }
-    { HBox3 HBox
-      MoveScaled(91,0,4,5)
-      Expand = True
-    }
-    { ButtonSalir Button
-      MoveScaled(94,0,10,6)
-      Text = ("Salir")
-      Picture = Picture["icon:/22/quit"]
+    { ButtonMultipleElementosImagenSonido Button
+      MoveScaled(54,1,44,5)
+      Font = Font["-1"]
+      Text = ("Múltiples elementos de imagen o sonido")
+      Picture = Picture["icon:/32/image"]
     }
     { Panel3 Panel
-      MoveScaled(105,1,4,6)
+      MoveScaled(104,0,4,6)
     }
   }
   { HBox7 HBox
-    MoveScaled(2,74,102,6)
-    { HBox8 HBox
-      MoveScaled(0,0,4,5)
-      Expand = True
-    }
-    { ButtonMultipleElementosTexto Button
-      MoveScaled(7,0,29,5)
+    MoveScaled(2,74,110,6)
+    { ButtonBorrarElemento Button
+      MoveScaled(6,0,17,5)
       Font = Font["-1"]
-      Text = ("Multiple Elementos de Texto")
-      Picture = Picture["iconoletra16.png"]
+      Text = ("Borrar elemento")
+      Picture = Picture["icon:/16/delete"]
     }
     { HBox9 HBox
-      MoveScaled(38,-1,4,5)
+      MoveScaled(34,0,4,5)
       Expand = True
-    }
-    { ButtonMultipleElementosImagenSonido Button
-      MoveScaled(44,0,44,5)
-      Font = Font["-1"]
-      Text = ("Múltiple Elementos de Imagenes/Sonido")
-      Picture = Picture["icon:/32/image"]
     }
     { HBox2 HBox
-      MoveScaled(89,-2,5,6)
+      MoveScaled(83,0,5,6)
       Expand = True
     }
-    { HBox5 HBox
-      MoveScaled(96,-1,5,6)
-      Expand = True
+    { ButtonGuadarModificaciones Button
+      MoveScaled(85,0,13,6)
+      Text = ("Guardar")
+      Picture = Picture["icon:/22/save"]
+    }
+    { ButtonSalir Button
+      MoveScaled(99,0,10,6)
+      Text = ("Salir")
+      Picture = Picture["icon:/22/quit"]
     }
   }
 }

@@ -19,10 +19,10 @@ Public Sub Form_Open()
   
   If Not IsNull($elementoBingoEditado) Then
     
-    ButtonGeneraElemento.text = ("Guadar Elemento Editado")
+    ButtonGeneraElemento.text = ("Guadar el elemento editado")
     ButtonGeneraElemento.Picture = Picture["icon:/32/save"]
     
-    Me.Title = ("Editando Elemento")
+    Me.Title = ("Editando elemento")
     
     ''TODO: Estamos en mode Edicion, hay que cargar los datos del elemento bingo y su enlace al elemento carton
     'dependiendo del tipo de elemento (texto, imagen,sonido), tengo que ir rellenado los datos...)
@@ -30,7 +30,7 @@ Public Sub Form_Open()
     rellenarDatosFormulario($elementoBingoEditado)
     
   Else
-    Me.Title = ("Nuevo Elemento")
+    Me.Title = ("Nuevo elemento")
   Endif
   
   Me.Center()
@@ -39,7 +39,7 @@ End
 
 Public Sub ButtonBoxSonidoBingo_Click()
   
-  Dialog.Filter = ["*.mp3;*.wav;*.au", ("Ficheros de sonido mp3, wav, au")]
+  Dialog.Filter = ["*.mp3;*.wav;*.au", ("Archivos de sonido mp3, wav, au")]
   If Dialog.Openfile() Then
     Return 'se ha cancelado la eleccion de un fichero
   Endif
@@ -128,7 +128,7 @@ Public Sub ButtonGeneraElemento_Click()
             ec.texto = eb.texto
           Case Upper$("ElementoSonido")
             ''aviso al usuario que hay un error y no puedo continuar.
-            Message.Info(("Error El Carton no puede tener elementos de Sonido"))
+            Message.Info(("Error. El cartón no puede tener elementos de sonido, es sólo un cartón ;-)"))
             Return 'no puedo continuar
         End Select
       Endif
@@ -214,7 +214,7 @@ Public Sub ButtonGeneraElemento_Click()
             ec.texto = Me.ElementoBingoEditado.texto
           Case Upper$("ElementoSonido")
             ''aviso al usuario que hay un error y no puedo continuar.
-            Message.Info(("Error El Carton no puede tener elementos de Sonido"))
+            Message.Info(("Error. El cartón no puede tener elementos de sonido, es sólo un cartón ;-)"))
             Return 'no puedo continuar
         End Select
       Endif
@@ -229,7 +229,7 @@ End
 
 Public Sub ButtonBoxImagenBingo_Click()
   
-  Dialog.Filter = ["*.png;*.jpg;*.jpeg;*.bmp", ("Ficheros de Imagen")]
+  Dialog.Filter = ["*.png;*.jpg;*.jpeg;*.bmp", ("Archivos de imagen")]
   If Dialog.OpenFile() Then
     Return 'se ha cancelado la eleccion de un fichero
   Endif
@@ -257,7 +257,7 @@ End
 
 Public Sub ButtonBoxImagenCarton_Click()
   
-  Dialog.Filter = ["*.png;*.jpg;*.jpeg;*.bmp", ("Ficheros de Imagen")]
+  Dialog.Filter = ["*.png;*.jpg;*.jpeg;*.bmp", ("Archivos de imagen")]
   If Dialog.Openfile() Then
     Return 'se ha cancelado la eleccion de un fichero
   Endif
@@ -422,7 +422,13 @@ Public Sub PictureBoxBingo_Drop()
       
       RadioButtonBingoImagen.value = True
     Else
-      Message.Error(("Solo acepto imagenes .png y .jpg"))
+      Message.E
+      
+      
+      
+      
+      
+      Error(("Sólo se aceptan imagenes .png y .jpg"))
     Endif
   Endif
   
@@ -447,7 +453,7 @@ Public Sub PictureBoxCarton_Drop()
       
       RadioButtonCartonImagen.value = True
     Else
-      Message.Error(("Solo acepto imagenes .png y .jpg"))
+      Message.Error(("Sólo se aceptan imagenes .png y .jpg"))
     Endif
   Endif
   
@@ -472,7 +478,7 @@ Public Sub PictureBoxSonido_Drop()
       
       RadioButtonBingoSonido.value = True
     Else
-      Message.Error(("Solo acepto imagenes .mp3 y .au"))
+      Message.Error(("Sólo se aceptan sonidos .mp3 y .au"))
     Endif
   Endif
   

@@ -7,12 +7,12 @@
   Spacing = True
   Padding = 1
   { TextLabel1 TextLabel
-    MoveScaled(6,1,50,18)
+    MoveScaled(6,1,50,25)
     AutoResize = True
-    Text = ("TextLabel1")
+    Text = ("En cada reglón escriba un texto,luego pulse la tecla TAB (tabulador), y luego escriba otro texto.\n<pre><b>[texto en pantalla]  [TAB]  [texto en cartón] </b></pre>\nPor ejemplo:\n<pre>\n5x4       20\n6x8       48</pre>\nTambién puede copiar y pegar aquí seleccionando un par de columnas de una hoja de cálculo. En esta dirección tiene algunos ejemplos: <a href=\"goo.gl/WlvRio\">goo.gl/WlvRio</a>.<br>")
   }
   { TextAreaMultipleElementos TextArea
-    MoveScaled(5,22,49,14)
+    MoveScaled(5,27,49,14)
     Expand = True
   }
   { HBox1 HBox

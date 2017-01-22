@@ -15,23 +15,23 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: FormMultipleImagenesSonidos.form:15
-msgid "Creación de Elementos a partir de Carpetas"
+msgid "Añadir múltiples elementos de una vez"
 msgstr ""
 
 #: FormMultipleImagenesSonidos.form:25
-msgid "Selecciones Carpeta donte tenga las imágenes y/o sonidos:"
+msgid "Seleccione la carpeta donte tenga las imágenes y/o sonidos:"
 msgstr ""
 
 #: FormMultipleImagenesSonidos.form:36
-msgid "Carpeta Elegida:"
+msgid "Carpeta elegida:"
 msgstr ""
 
 #: FormMultipleImagenesSonidos.form:43
-msgid "Las imágenes y/o sonidos se incluyen en elementos Bingo, el nombre del fichero se incluye en el elemento Cartón"
+msgid "Las imágenes y/o sonidos se presentarán en la pantalla al cantar el bingo.\nEl nombre del archivo aparecerá en el cartón."
 msgstr ""
 
 #: FormMultipleImagenesSonidos.form:50
-msgid "Las imágenes se incluyen en elementos Cartón. El nombre del fichero se incluye en el elemento Bingo como texto."
+msgid "Las imágenes aparecerán en el cartón.\nEl nombre del archivo se presentará en la pantalla al cantar el bingo."
 msgstr ""
 
 #: FormMultipleImagenesSonidos.form:55

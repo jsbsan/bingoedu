@@ -8,7 +8,7 @@ Public Sub ButtonCrearBingo_Click()
   'nombre
   'descripcion
   
-  nombretmp = InputBox(("Nombre:"), ("Nuevo Bingo"), ("NuevoBingo") & Format$(Now, "yyyy_mm_dd"))
+  nombretmp = InputBox(("Nombre:"), ("Nuevo bingo"), ("NuevoBingo") & Format$(Now, "yyyy_mm_dd"))
   
   If nombretmp = "" Then 
     'ha cancelado la operacion
@@ -89,7 +89,7 @@ Public Sub ButtonEditarBingo_Click()
   Dim bingotmp As Bingo
   
   If GridViewFicherosDatos.Row = -1 Then
-    Message.Info(("Debe de seleccionar un  bingo educativo"))
+    Message.Info(("Debe seleccionar un bingo educativo."))
     Return
   Else
     
@@ -155,7 +155,7 @@ Public Sub ButtonCrearCopia_Click()
   Dim bingotmp As Bingo
   
   If GridViewFicherosDatos.Row = -1 Then
-    Message.Info(("Debe de seleccionar un  bingo educativo"))
+    Message.Info(("Debe seleccionar un bingo educativo."))
     Return
   Else
     

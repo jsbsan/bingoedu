@@ -5,7 +5,7 @@
   Icon = Picture["iconoletra16.png"]
   { Frame1 Frame
     MoveScaled(1,1,52,33)
-    Text = ("Elemento en Bingo")
+    Text = ("Elemento en pantalla")
     { RadioButtonBingoTexto RadioButton
       MoveScaled(4,3,8,6)
       Text = ("texto:")
@@ -46,7 +46,7 @@
   }
   { Frame2 Frame
     MoveScaled(54,1,50,33)
-    Text = ("Elemento en Cartón")
+    Text = ("Elemento en cartón")
     { RadioButtonCartonTexto RadioButton
       MoveScaled(3,11,10,6)
       Text = ("texto:")
@@ -70,13 +70,13 @@
     }
     { RadioButtonCartonIgual RadioButton
       MoveScaled(3,3,43,5)
-      Text = ("Mismo elemento que en Bingo")
+      Text = ("Mismo elemento que en pantalla")
       Value = True
     }
   }
   { ButtonGeneraElemento Button
     MoveScaled(37,36,34,6)
-    Text = ("Crear Elemento")
+    Text = ("Añadir elemento al bingo")
     Picture = Picture["icon:/32/new"]
   }
   { ButtonSalir Button

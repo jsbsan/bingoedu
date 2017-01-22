@@ -2,7 +2,7 @@
 
 Public Sub Form_Open()
   
-  Me.Title = ("Grabadora de Sonido")
+  Me.Title = ("Grabadora de sonido")
   Me.Center
   TextBoxFichero.text = User.home & "/" & "sonido.au"
   

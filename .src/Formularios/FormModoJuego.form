@@ -21,7 +21,7 @@
         MoveScaled(-1,15,28,14)
         Text = ("Automático")
         { SpinBoxTiempo SpinBox
-          MoveScaled(3,8,15,4)
+          MoveScaled(2,8,7,4)
           MinValue = 2
         }
         { Label1 Label
@@ -58,7 +58,8 @@
       }
       { ButtonAutomatico Button
         MoveScaled(1,39,27,6)
-        Text = ("Jugar Automático")
+        ToolTip = ("Se pasará de forma automática\nde un elemento a otro del bingo.")
+        Text = ("Juego automático")
         Picture = Picture["eco_green_machine_icon.png"]
       }
       { VBox2 VBox
@@ -67,7 +68,8 @@
       }
       { ButtonManual Button
         MoveScaled(0,49,27,6)
-        Text = ("Jugar Manual")
+        ToolTip = ("Se pasa de un elemento a otro\nde forma manual utilizando el ratón.")
+        Text = ("Juego manual")
         Picture = Picture["amano.png"]
       }
     }
@@ -93,9 +95,6 @@
       MoveScaled(21,0,18,5)
       Text = ("Salir")
       Picture = Picture["icon:/16/quit"]
-    }
-    { HBox3 HBox
-      MoveScaled(43,1,8,4)
     }
   }
 }

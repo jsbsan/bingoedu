@@ -79,12 +79,12 @@ End
 
 Public Sub Form_Open()
   
-  Me.Title = ("Multiples Elementos de Texto")
-  TextLabel1.text = (" En cada reglon escriba un texto,luego pulse la tecla TAB, y luego escriba otro texto.") & "<br>"
-  TextLabel1.text &= (" El primer texto es el que se añade al bingo, el segundo es el que se añade al carton.") & "<br>"
-  TextLabel1.text &= (" Si solo escribe texto, sin pulsar la tecla TAB, el mismo texto sera asignado tanto al bingo como al carton.") & "<br>"
-  TextLabel1.text &= (" Puede escribir en varios renglones (pulsando la tecla RETURN o INTRO), para asignar tantos elementos del bingo y carton que necesite.") & "<br>"
-  TextLabel1.text &= ("Nota") & "<br>"
-  TextLabel1.text &= ("Tambien se puede pegar desde otros programas, por ejemplo seleccionando dos columnas de una hoja de cálculo copiandolas y luego pegarlas en area de texto.") & "<br>"
+  Me.Title = ("Añadir múltiples elementos de texto")
+  'TextLabel1.text = (" En cada reglon escriba un texto,luego pulse la tecla TAB, y luego escriba otro texto.") & "<br>"
+  'TextLabel1.text &= (" El primer texto es el que se añade al bingo, el segundo es el que se añade al carton.") & "<br>"
+  'TextLabel1.text &= (" Si solo escribe texto, sin pulsar la tecla TAB, el mismo texto sera asignado tanto al bingo como al carton.") & "<br>"
+  'TextLabel1.text &= (" Puede escribir en varios renglones (pulsando la tecla RETURN o INTRO), para asignar tantos elementos del bingo y carton que necesite.") & "<br>"
+  'TextLabel1.text &= ("Nota") & "<br>"
+  'TextLabel1.text &= ("Tambien se puede pegar desde otros programas, por ejemplo seleccionando dos columnas de una hoja de cálculo copiandolas y luego pegarlas en area de texto.") & "<br>"
 
 End

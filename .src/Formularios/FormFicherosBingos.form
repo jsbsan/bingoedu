@@ -19,7 +19,7 @@
       MoveScaled(26,1,28,6)
       Font = Font["Bold,Italic,+5"]
       Expand = True
-      Text = ("Gestión De Bingos")
+      Text = ("Gestión de bingos")
       Alignment = Align.Center
     }
     { HBox5 HBox
@@ -42,9 +42,6 @@
         Text = ("Crear")
         Picture = Picture["icon:/16/new"]
       }
-      { VBox3 VBox
-        MoveScaled(3,6,9,3)
-      }
       { ButtonEditarBingo Button
         MoveScaled(0,8,13.5714,4)
         Text = ("Editar")
@@ -59,22 +56,19 @@
         Text = ("Importar")
         Picture = Picture["icon:/16/add"]
       }
-      { VBox6 VBox
-        MoveScaled(1,20,9,3)
-      }
-      { ButtomImprimir Button
-        MoveScaled(-1,22,13.5714,4)
-        Text = ("Imprimir")
-        Picture = Picture["icon:/16/printer"]
+      { ButtonCrearCopia Button
+        MoveScaled(0,22,13.5714,4)
+        ToolTip = ("exporta para compartir el fichero con otros profesores")
+        Text = ("Exportar")
+        Picture = Picture["icon:/16/people"]
       }
       { VBox2 VBox
         MoveScaled(2,26,9,3)
       }
-      { ButtonCrearCopia Button
+      { ButtomImprimir Button
         MoveScaled(0,29,13.5714,4)
-        ToolTip = ("exporta para compartir el fichero con otros profesores")
-        Text = ("Exportar")
-        Picture = Picture["icon:/16/people"]
+        Text = ("Imprimir")
+        Picture = Picture["icon:/16/printer"]
       }
       { VBox4 VBox
         MoveScaled(1,33,13,4)

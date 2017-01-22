@@ -27,7 +27,7 @@
     }
   }
   { ScrollView1 ScrollView
-    MoveScaled(10,11,33,41)
+    MoveScaled(11,11,33,41)
     Expand = True
   }
   { HBox1 HBox
@@ -38,7 +38,7 @@
     }
     { ButtonSalir Button
       MoveScaled(30,0,16,6)
-      Text = ("Salir")
+      Text = ("Cerrar")
       Picture = Picture["icon:/32/quit"]
     }
   }

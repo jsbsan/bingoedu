@@ -25,11 +25,13 @@
   }
   { ButtonCrearEditar Button
     MoveScaled(29,17,32,8)
-    Text = ("Gestión de Bingos")
+    ToolTip = ("Crear y editar nuevos bingos")
+    Text = ("Gestión de bingos")
     Picture = Picture["icon:/32/new"]
   }
   { ButtonJugar Button
     MoveScaled(29,29,32,9)
+    ToolTip = ("Cantar bingos por pantalla")
     Text = ("Jugar")
     Picture = Picture["icon:/32/game"]
   }
@@ -43,7 +45,7 @@
   }
   { Label4 Label
     MoveScaled(0,42,70,4)
-    Text = ("Autores: Julio Sanchez Berro (jsbsan) y Antonio Sanchez (introlinux)")
+    Text = ("Autores: Julio Sánchez Berro (jsbsan) y Antonio Sánchez (introlinux)")
     Alignment = Align.Center
   }
   { PictureBox2 PictureBox

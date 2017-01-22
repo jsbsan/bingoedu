@@ -47,7 +47,7 @@
     }
     { ButtonListado Button
       MoveScaled(5,0,7.1429,7.1429)
-      ToolTip = ("Lista de Elementos")
+      ToolTip = ("Lista de elementos ya cantados")
       Picture = Picture["lista de elementos.png"]
     }
     { HBox3 HBox
@@ -63,23 +63,23 @@
     }
     { ButtonAtras Button
       MoveScaled(40,0,7.1429,7.1429)
-      ToolTip = ("Ver Anterior Elemento")
+      ToolTip = ("Ver el elemento anterior")
       Picture = Picture["icon:/32/left"]
     }
     { ButtonRepetir Button
       MoveScaled(47,1,7.1429,7.1429)
       Enabled = False
-      ToolTip = ("Repite Elemento")
+      ToolTip = ("Repite elemento")
       Picture = Picture["icon:/32/refresh"]
     }
     { ButtonSigueLista Button
       MoveScaled(54,1,7.1429,7.1429)
-      ToolTip = ("Mostra Elemento Siguiente Mostrado")
+      ToolTip = ("Muestra elemento siguiente")
       Picture = Picture["icon:/32/next"]
     }
     { ButtonNuevo Button
       MoveScaled(63,1,7.1429,7.1429)
-      ToolTip = ("Mostrar Nuevo Elemento")
+      ToolTip = ("Muestra elemento nuevo")
       Picture = Picture["icon:/32/forward"]
     }
     { HBox5 HBox

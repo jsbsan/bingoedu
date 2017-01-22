@@ -12,7 +12,7 @@ End
 Public Sub RadioButton2x2_Click()
   
   respuesta[0] = 1
-  
+  miniaturaimpresion.Picture = Picture.Load("miniatura4cartones.png") 
 End
 
 Public Sub RadioButton2x3_Click()
@@ -24,12 +24,13 @@ End
 Public Sub RadioButton5_Click()
   
   respuesta[0] = 3
-  
+  miniaturaimpresion.Picture = Picture.Load("miniatura5cartones.png")
 End
 
 Public Sub RadioButton2x4_Click()
   
   respuesta[0] = 4
+  miniaturaimpresion.Picture = Picture.Load("miniatura8cartones.png")
   
 End
 

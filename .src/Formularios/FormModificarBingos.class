@@ -84,9 +84,9 @@ Public Sub definirGridViewDatosBingo()
     .rows.count = 0
     .columns.count = 4
     .Columns[0].title = ("Tipo")
-    .Columns[1].title = ("Dato Bingo")
+    .Columns[1].title = ("Dato en pantalla")
     .Columns[2].title = ("Tipo")
-    .Columns[3].title = ("Dato Carton")
+    .Columns[3].title = ("Dato en el cartón")
     
     .Columns[0].width = 65
     .Columns[1].width = 250
@@ -162,7 +162,7 @@ Public Sub ButtonGenerarCartones_Click()
   
   Dim textoMensaje As String
   
-  Dim mensaje1 As String = ("No se pueden generar cartones...\ndemasiados elementos repetidos, cuadros blancos y/o negros para el tipo de cartón")
+  Dim mensaje1 As String = ("No se pueden generar los cartones...\ndemasiados elementos repetidos, cuadros blancos o negros para este tipo de cartón")
   '**************************************************************************************************************************************  
   'comprobacion tonta... el numero de elementos repetidos+numero de cuadros negros y blancos debe de ser inferior al tipo de carton...
   '**************************************************************************************************************************************
@@ -188,7 +188,7 @@ Public Sub ButtonGenerarCartones_Click()
       
   End Select
   
-  res = Message.Question(("Generar cartones, borra los anteriores, ¿quiere continuar?"), ("Si, continua"), ("No, cancelar"))
+  res = Message.Question(("Al generar nuevos cartones se borrarán los anteriores, ¿quiere continuar?"), ("Sí, continúa"), ("No, cancelar"))
   
   If res <> 1 Then Return 'no, ha cancelado el usuario
   
@@ -202,7 +202,7 @@ Public Sub ButtonGenerarCartones_Click()
     textoMensaje = ("Problemas al crear los cartones, causas:") 
     textoMensaje &= "\n" & ("     Hay pocos elementos") 
     textoMensaje &= "\n" & ("     Hay muchos cartones para crear") 
-    textoMensaje &= "\n" & ("no es posible crear el numero de cartones solicitado")
+    textoMensaje &= "\n" & ("no es posible crear el número de cartones solicitado")
     Message.Error(textoMensaje)
     Application.busy = 0
   Else
@@ -245,14 +245,14 @@ Public Sub ButtonBorrarElemento_Click()
   
   ele = GridViewDatosBingo.tag[GridViewDatosBingo.Row] ''Le paso el elemento del bingo que quiero editar
   
-  resp = Message.Question(("El borrado de elementos puede provocar problemas en los cartones que lo usen\n" & "¿Desea Borrarlo?"), ("Si"), ("No, cancelar"))
+  resp = Message.Question(("El borrado de elementos puede provocar problemas en los cartones que lo usen\n" & "¿Desea borrarlo?"), ("Sí"), ("No, cancelar"))
   
   If resp = 2 Then Return
   
   bingotmp.borrarElementoBingo(ele.id)
   bingotmp.borrarElementoCarton(ele.enlace)
   ButtonRefrescar_Click()
-  Message.Info(("El elemento ha sido borrado"))
+  Message.Info(("El elemento ha sido borrado."))
   
 End
 

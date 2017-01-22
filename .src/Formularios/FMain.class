@@ -7,7 +7,7 @@ End
 Public Sub Form_Open()
   
   Randomize 'inicio generador aleatorio
-  Labelversion.text = ("Version") & ": " & Application.Version
+  Labelversion.text = ("Versión") & ": " & Application.Version
   Me.Center
   Me.Title = ("Bingo Educativo")
   

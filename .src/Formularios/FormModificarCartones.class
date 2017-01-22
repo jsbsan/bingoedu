@@ -11,10 +11,19 @@ Public Sub Form_Open()
   definirGridViewBingo()
   HsplitGridView.Layout = [5, 5]
   rellenadatos()
+
+  If RadioButton4x3.Value = True Then
+    muestra.Picture = Picture.Load("miniatura4x3.png")
+  Else If RadioButton5x4.Value = True Then
+      muestra.Picture = Picture.Load("miniatura5x4.png")
+  Else If RadioButton5x5.Value = True Then
+      muestra.Picture = Picture.Load("miniatura5x5.png")      
+  Endif
+
   
   okguardado = True
   
-  Me.Title = ("Cartones")
+  Me.Title = ("Características de los cartones")
   
   Me.Center()
   
@@ -50,9 +59,9 @@ Public Sub definirGridViewBingo()
     .rows.count = 0
     .columns.count = 4
     .Columns[0].title = ("Tipo")
-    .Columns[1].title = ("Dato Bingo")
+    .Columns[1].title = ("Dato en pantalla")
     .Columns[2].title = ("Tipo")
-    .Columns[3].title = ("Dato Carton")
+    .Columns[3].title = ("Dato en el cartón")
     
     .Columns[0].width = 65
     .Columns[1].width = 250
@@ -74,9 +83,9 @@ Public Sub definirGridViewElementosRepetidos()
     .rows.count = 0
     .columns.count = 4
     .Columns[0].title = ("Tipo")
-    .Columns[1].title = ("Dato Bingo")
+    .Columns[1].title = ("Dato en pantalla")
     .Columns[2].title = ("Tipo")
-    .Columns[3].title = ("Dato Carton")
+    .Columns[3].title = ("Dato en el cartón")
     
     .Columns[0].width = 65
     .Columns[1].width = 250
@@ -139,18 +148,25 @@ End
 Public Sub RadioButton4x3_Click()
   
   okguardado = False
-  
+  muestra.Picture = Picture.Load("miniatura4x3.png")
+
+
 End
 
 Public Sub RadioButton5x4_Click()
   
   okguardado = False
-  
+  muestra.Picture = Picture.Load("miniatura5x4.png")
+
 End
 
 Public Sub RadioButton5x5_Click()
   
   okguardado = False
+  muestra.Picture = Picture.Load("miniatura5x5.png")      
+
+
+
   
 End
 
@@ -166,7 +182,7 @@ Public Sub Form_Close()
   ''NOTE: Parar cerrar la ventana, usando STOP EVENT
   If okguardado = False Then
     
-    res = Message.Question(("Los datos se han modificado, pero no guardado ¿desea salir?"), ("Si, salir sin guardar"), ("No"))
+    res = Message.Question(("Los datos se han modificado, pero no guardado, ¿desea salir?"), ("Sí, salir sin guardar"), ("No"))
     If res <> 1 Then
       Stop Event
       Return
@@ -191,7 +207,7 @@ Public Sub ButtonPasar_Click()
   
   'el elemento seleccionado en el Grid de DAtos del bingo, se pasa al otro grid de Repetidos
   If GridViewElementosBingo.row = -1 Then
-    Message.Info(("Debe seleccionar un elemento"))
+    Message.Info(("Debe seleccionar un elemento."))
     Return
   Endif
   fila = GridViewElementosBingo.row
@@ -199,7 +215,7 @@ Public Sub ButtonPasar_Click()
   elementoElegido = btmp.buscaElemento(GridViewElementosBingo.Tag[fila].id, btmp.ArrayElementosBingo)
   'comprobar si ese elemento ya esta incluido
   If btmp.ListaElementosRepetidos.Find(elementoElegido.id) <> -1 Then
-    Message.Info(("Ese elemento ya esta incluido"))
+    Message.Info(("Ese elemento ya está incluido"))
     Return
     
   Endif
@@ -228,7 +244,7 @@ Public Sub ButtonQuitar_Click()
   
   'el elemento seleccionado en el Grid de DAtos del bingo, se pasa al otro grid de Repetidos
   If GridViewElementosRepetidos.row = -1 Then
-    Message.Info(("Debe seleccionar un elemento"))
+    Message.Info(("Debe seleccionar un elemento."))
     Return
   Endif
   fila = GridViewElementosRepetidos.row
@@ -282,3 +298,6 @@ Public Sub ButtonGuardarCambios_Click()
   Me.Close()
   
 End
+
+
+

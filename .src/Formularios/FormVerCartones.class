@@ -128,3 +128,5 @@ Public Sub ButtonImprimir_Click()
   ModuleVarios.imprimir(bingotmp)
   
 End
+
+

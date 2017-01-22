@@ -2,7 +2,7 @@
 
 { Form Form
   MoveScaled(0,0,105,64)
-  Text = ("Creación de Elementos a partir de Carpetas")
+  Text = ("Añadir múltiples elementos de una vez")
   Icon = Picture["icon:/32/directory"]
   Resizable = False
   { DirChooser1 DirChooser
@@ -10,7 +10,7 @@
   }
   { Label1 Label
     MoveScaled(2,1,65,3)
-    Text = ("Selecciones Carpeta donte tenga las imágenes y/o sonidos:")
+    Text = ("Seleccione la carpeta donte tenga las imágenes y/o sonidos:")
   }
   { LabelCarpetaElegida Label
     MoveScaled(21,37,75,5)
@@ -19,19 +19,19 @@
   }
   { Label2 Label
     MoveScaled(2,37,17,5)
-    Text = ("Carpeta Elegida:")
+    Text = ("Carpeta elegida:")
     Alignment = Align.Right
   }
   { RadioButtonImgBingo RadioButton
     MoveScaled(2,44,101,6)
     Font = Font["-1"]
-    Text = ("Las imágenes y/o sonidos se incluyen en elementos Bingo, el nombre del fichero se incluye en el elemento Cartón")
+    Text = ("Las imágenes y/o sonidos se presentarán en la pantalla al cantar el bingo.\nEl nombre del archivo aparecerá en el cartón.")
     Value = True
   }
   { RadioButtonImgCarton RadioButton
     MoveScaled(2,50,100,6)
     Font = Font["-1"]
-    Text = ("Las imágenes se incluyen en elementos Cartón. El nombre del fichero se incluye en el elemento Bingo como texto.")
+    Text = ("Las imágenes aparecerán en el cartón.\nEl nombre del archivo se presentará en la pantalla al cantar el bingo.")
   }
   { ButtonContinuar Button
     MoveScaled(22,57,29,5)
