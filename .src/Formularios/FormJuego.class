@@ -19,6 +19,8 @@ Private elementoActual As Variant 'elemento actual si es de sonido..
 
 Public idioma As String
 
+Public sonidosalto As String ''sonido que se escucha al saltar el elemento...
+
 Public Sub Form_Open()
   'activo pantalla completa
   
@@ -122,6 +124,11 @@ Public Sub ButtonNuevo_Click()
 End
 
 Public Sub muestraElmenento(ele As Variant)
+  
+  'reproduce salto
+  If Exist(User.home & "/bingoedu/" & sonidosalto) Then 
+    ModuleVarios.ReproducirSonido(User.home & "/bingoedu/" & sonidosalto)
+  Endif
   
   Select Case ele.tipoElemento()
     Case Upper$("ElementoImagen")

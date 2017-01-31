@@ -88,7 +88,7 @@ msgstr ""
 
 #: FMain.form:81 FormFicherosBingos.form:157 FormJuego.form:125
 #: FormModificarBingos.form:221 FormModificarCartones.form:192
-#: FormModificarElementos.form:123 FormModoJuego.form:138
+#: FormModificarElementos.form:123 FormModoJuego.form:153
 #: FormMultipleElementosDeTexto.form:52 FormMultipleImagenesSonidos.form:62
 #: FormVerCartones.form:105
 msgid "Salir"
@@ -234,7 +234,7 @@ msgstr ""
 msgid "Parar"
 msgstr ""
 
-#: FormGrabadora.class:5
+#: FormGrabadora.class:7
 msgid "Grabadora de sonido"
 msgstr ""
 
@@ -266,43 +266,43 @@ msgstr ""
 msgid "Muestra elemento nuevo"
 msgstr ""
 
-#: FormJuego.class:287
+#: FormJuego.class:294
 msgid "por"
 msgstr ""
 
-#: FormJuego.class:288
+#: FormJuego.class:295
 msgid "mas"
 msgstr ""
 
-#: FormJuego.class:289
+#: FormJuego.class:296
 msgid "menos"
 msgstr ""
 
-#: FormJuego.class:290
+#: FormJuego.class:297
 msgid "dividido"
 msgstr ""
 
-#: FormJuego.class:291
+#: FormJuego.class:298
 msgid "potencia"
 msgstr ""
 
-#: FormJuego.class:319 FormModoJuego.form:84
+#: FormJuego.class:326 FormModoJuego.form:82
 msgid "Castellano"
 msgstr ""
 
-#: FormJuego.class:321 FormModoJuego.form:84
+#: FormJuego.class:328 FormModoJuego.form:82
 msgid "Inglés"
 msgstr ""
 
-#: FormJuego.class:323
+#: FormJuego.class:330
 msgid "Catalán"
 msgstr ""
 
-#: FormJuego.class:325 FormModoJuego.form:84
+#: FormJuego.class:332 FormModoJuego.form:82
 msgid "Francés"
 msgstr ""
 
-#: FormJuego.class:327 FormModoJuego.form:84
+#: FormJuego.class:334 FormModoJuego.form:82
 msgid "Alemán"
 msgstr ""
 
@@ -597,60 +597,84 @@ msgstr ""
 msgid "Archivos de sonido mp3, wav, au"
 msgstr ""
 
-#: FormModificarElementos.class:131
+#: FormModificarElementos.class:142
 msgid ""
 "Error. El cartón no puede tener elementos de sonido, es sólo un cartón ;-)"
 msgstr ""
 
-#: FormModificarElementos.class:232
+#: FormModificarElementos.class:243
 msgid "Archivos de imagen"
 msgstr ""
 
-#: FormModificarElementos.class:431
+#: FormModificarElementos.class:438
 msgid "Sólo se aceptan imagenes .png y .jpg"
 msgstr ""
 
-#: FormModificarElementos.class:481
+#: FormModificarElementos.class:488
 msgid "Sólo se aceptan sonidos .mp3 y .au"
 msgstr ""
 
-#: FormModoJuego.form:48
+#: FormModoJuego.form:29
+msgid "Modo Juego"
+msgstr ""
+
+#: FormModoJuego.form:51
 msgid "Automático"
 msgstr ""
 
-#: FormModoJuego.form:57
+#: FormModoJuego.form:60
 msgid "Segundos entre elementos:"
 msgstr ""
 
-#: FormModoJuego.form:63
+#: FormModoJuego.form:66
 msgid "(los textos deben de estar escrito en el idioma seleccionado)"
 msgstr ""
 
-#: FormModoJuego.form:64
+#: FormModoJuego.form:67
 msgid "Leer textos en voz alta"
 msgstr ""
 
-#: FormModoJuego.form:77
+#: FormModoJuego.form:75
 msgid "Idioma:"
 msgstr ""
 
-#: FormModoJuego.form:96
+#: FormModoJuego.form:94
+msgid "Sonido de Paso Elemento"
+msgstr ""
+
+#: FormModoJuego.form:99
+msgid "coin.mp3"
+msgstr ""
+
+#: FormModoJuego.form:99
+msgid "gong.wav"
+msgstr ""
+
+#: FormModoJuego.form:99
+msgid "tap-tap-tap.wav"
+msgstr ""
+
+#: FormModoJuego.form:99
+msgid "ninguno"
+msgstr ""
+
+#: FormModoJuego.form:111
 msgid ""
 "Se pasará de forma automática\n"
 "de un elemento a otro del bingo."
 msgstr ""
 
-#: FormModoJuego.form:97
+#: FormModoJuego.form:112
 msgid "Juego automático"
 msgstr ""
 
-#: FormModoJuego.form:108
+#: FormModoJuego.form:123
 msgid ""
 "Se pasa de un elemento a otro\n"
 "de forma manual utilizando el ratón."
 msgstr ""
 
-#: FormModoJuego.form:109
+#: FormModoJuego.form:124
 msgid "Juego manual"
 msgstr ""
 
@@ -662,7 +686,7 @@ msgstr ""
 msgid "Archivo"
 msgstr ""
 
-#: FormModoJuego.class:96
+#: FormModoJuego.class:100
 msgid "Debe seleccionar un bingo educativo"
 msgstr ""
 
@@ -764,6 +788,6 @@ msgstr ""
 msgid "Visualizando cartones"
 msgstr ""
 
-#: ModuleVarios.module:135
+#: ModuleVarios.module:137
 msgid "Terminado!!!"
 msgstr ""

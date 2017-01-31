@@ -51,15 +51,26 @@ Public Sub ButtonBoxSonidoBingo_Click()
   
 End
 
-Public Sub PictureBoxIniciarGrabadora_MouseDown()
+Public Sub PictureBoxIniciarGrabadora_MouseUp()
   
-  FormGrabadora.Show()
+  Dim cadena As New String[]
+  
+  FormGrabadora.datos = cadena
+  FormGrabadora.ShowDialog()
+  
+  If cadena.count > 0 Then 
+    
+    ButtonBoxSonidoBingo.text = File.Name(cadena[0])
+    ButtonBoxSonidoBingo.tag = cadena[0]
+    
+    RadioButtonBingoSonido.value = True
+  Endif
   
 End
 
-Public Sub LabelIniciarGrabadora_MouseDown()
+Public Sub LabelIniciarGrabadora_MouseUp()
   
-  PictureBoxIniciarGrabadora_MouseDown()
+  PictureBoxIniciarGrabadora_MouseUp()
   
 End
 
@@ -423,10 +434,6 @@ Public Sub PictureBoxBingo_Drop()
       RadioButtonBingoImagen.value = True
     Else
       Message.E
-      
-      
-      
-      
       
       Error(("Sólo se aceptan imagenes .png y .jpg"))
     Endif

@@ -2,13 +2,15 @@
 
 Public Sub ReproducirSonido(ruta As String)
   
+  Dim espera As String
+
   Select Case File.Ext(ruta)
     Case "au"
-      Shell "aplay " & ruta
+      Shell "aplay " & ruta To espera
     Case "wav"
-      Shell "aplay " & ruta
+      Shell "aplay " & ruta To espera
     Case "mp3"
-      Shell "mpg123 " & ruta
+      Shell "mpg123 " & ruta To espera
   End Select
   
 End
@@ -436,11 +438,11 @@ End
 Private Sub crearpdf()
   
   Dim salida As String
-
+  
   Inc Application.Busy
   Shell "cd /tmp/trabajo;convert -quality 100 *.png bingo.pdf" To salida
   
   Desktop.Open("/tmp/trabajo/bingo.pdf")
   Dec Application.Busy  
-
+  
 End

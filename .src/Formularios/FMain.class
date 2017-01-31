@@ -18,6 +18,8 @@ Public Sub Form_Open()
   
   'copiar ficheros de plantilla:
   copiarficheroplantilla()
+  'copiar ficheros de musica
+  copiarmusica()
   
 End
 
@@ -45,6 +47,14 @@ Private Sub copiarficheroplantilla()
   
   Try Copy "cuadroBlanco.jpg" To "/tmp/cuadroBlanco.jpg"
   Try Copy "cuadroNegro.jpg" To "/tmp/cuadroNegro.jpg"
+  
+End
+
+Public Sub copiarmusica()
+  
+  Try Copy Application.Path & "/musica/coin.mp3" To User.home & "/bingoedu/coin.mp3" 
+  Try Copy Application.Path & "/musica/gong.wav" To User.home & "/bingoedu/gong.wav" 
+  Try Copy Application.Path & "/musica/tap-tap-tap.wav" To User.home & "/bingoedu/tap-tap-tap.wav" 
   
 End
 

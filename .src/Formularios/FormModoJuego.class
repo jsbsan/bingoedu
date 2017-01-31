@@ -83,6 +83,10 @@ Public Sub ButtonManual_Click()
     FormJuego.tiempo = SpinBoxTiempo.Value
     FormJuego.hablar = CheckBoxHablar.Value
     FormJuego.idioma = ComboBoxIdioma.text
+    
+    'agreso sonido para cada vez que salga un elemento
+    FormJuego.sonidosalto = ComboBoxSonidoJuego.Text
+    
     FormJuego.Showmodal()
   Endif
   
@@ -107,6 +111,10 @@ Public Sub ButtonAutomatico_Click()
     FormJuego.tiempo = SpinBoxTiempo.Value
     FormJuego.hablar = CheckBoxHablar.Value
     FormJuego.idioma = ComboBoxIdioma.text
+    
+    'agreso sonido para cada vez que salga un elemento
+    FormJuego.sonidosalto = ComboBoxSonidoJuego.Text
+    
     FormJuego.Showmodal()
   Endif
   
