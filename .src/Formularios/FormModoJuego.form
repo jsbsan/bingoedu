@@ -55,7 +55,7 @@
       }
       { Frame2 Frame
         MoveScaled(1,36,26,6)
-        Text = ("Sonido de Paso Elemento")
+        Text = ("Sonido de paso")
         { ComboBoxSonidoJuego ComboBox
           MoveScaled(3,2,22,3)
           ReadOnly = True

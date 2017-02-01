@@ -53,7 +53,7 @@ Public Sub Form_Open()
       asignarTexto("Pulse el botón >>")
   End Select
   
-  ''TODO: Indicar modo completo de pantalla...
+  '' Indicar modo completo de pantalla...
   '  Me.FullScreen = True
   
   bingoJuegoTmp = New BingoJuego(bingotmp)  
@@ -337,7 +337,6 @@ Private Function eligeIdioma(idiomatmp As String) As String
     
   Else
     
-    ''NOTE:
     ''otros idiomas: http://espeak.sourceforge.net/languages.html
     
     Select Case idiomatmp

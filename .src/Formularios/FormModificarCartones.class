@@ -11,15 +11,14 @@ Public Sub Form_Open()
   definirGridViewBingo()
   HsplitGridView.Layout = [5, 5]
   rellenadatos()
-
+  
   If RadioButton4x3.Value = True Then
     muestra.Picture = Picture.Load("miniatura4x3.png")
   Else If RadioButton5x4.Value = True Then
-      muestra.Picture = Picture.Load("miniatura5x4.png")
+    muestra.Picture = Picture.Load("miniatura5x4.png")
   Else If RadioButton5x5.Value = True Then
-      muestra.Picture = Picture.Load("miniatura5x5.png")      
+    muestra.Picture = Picture.Load("miniatura5x5.png")      
   Endif
-
   
   okguardado = True
   
@@ -109,7 +108,7 @@ End
 
 Public Sub ButtonSalir_Click()
   'salvar datos...
-  ''TODO: al salir del formulario hay que salvar los datos del carton
+  '' al salir del formulario hay que salvar los datos del carton
   
   Me.Close()
   
@@ -149,24 +148,20 @@ Public Sub RadioButton4x3_Click()
   
   okguardado = False
   muestra.Picture = Picture.Load("miniatura4x3.png")
-
-
+  
 End
 
 Public Sub RadioButton5x4_Click()
   
   okguardado = False
   muestra.Picture = Picture.Load("miniatura5x4.png")
-
+  
 End
 
 Public Sub RadioButton5x5_Click()
   
   okguardado = False
   muestra.Picture = Picture.Load("miniatura5x5.png")      
-
-
-
   
 End
 
@@ -179,7 +174,7 @@ End
 Public Sub Form_Close()
   
   Dim res As Integer
-  ''NOTE: Parar cerrar la ventana, usando STOP EVENT
+  '' Parar cerrar la ventana, usando STOP EVENT
   If okguardado = False Then
     
     res = Message.Question(("Los datos se han modificado, pero no guardado, ¿desea salir?"), ("Sí, salir sin guardar"), ("No"))
@@ -298,6 +293,3 @@ Public Sub ButtonGuardarCambios_Click()
   Me.Close()
   
 End
-
-
-

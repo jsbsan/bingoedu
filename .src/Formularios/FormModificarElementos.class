@@ -24,7 +24,7 @@ Public Sub Form_Open()
     
     Me.Title = ("Editando elemento")
     
-    ''TODO: Estamos en mode Edicion, hay que cargar los datos del elemento bingo y su enlace al elemento carton
+    '' Estamos en mode Edicion, hay que cargar los datos del elemento bingo y su enlace al elemento carton
     'dependiendo del tipo de elemento (texto, imagen,sonido), tengo que ir rellenado los datos...)
     
     rellenarDatosFormulario($elementoBingoEditado)
@@ -55,6 +55,7 @@ Public Sub PictureBoxIniciarGrabadora_MouseUp()
   
   Dim cadena As New String[]
   
+  FormGrabadora.btmp = btmp
   FormGrabadora.datos = cadena
   FormGrabadora.ShowDialog()
   
@@ -165,7 +166,7 @@ Public Sub ButtonGeneraElemento_Click()
     ''------------------------------------
     '' EDITANTO ELEMENTO
     ''------------------------------------
-    ''TODO:  'estamos editando un elemento existente en el bingo !!!     'Guardar un elemento que ya existe...
+    'estamos editando un elemento existente en el bingo !!!     'Guardar un elemento que ya existe...
     'hay que guardarlo en este formulario, modificnado los datos del bingo...
     '
     ' Lo que hay que hacer es, modificar el elemento del Bingo y Carton relacionados.
@@ -324,7 +325,7 @@ Public Sub rellenarDatosFormulario(e As Variant)
       ButtonBoxSonidoBingo.tag = User.home & "/bingoedu/" & Me.BingoTemporalDatos.NombreFichero & "/" & e.rutasonido
   End Select
   
-  ''TODO: escribir datos el elemento enlazado...
+  '' escribir datos el elemento enlazado...
   eC = Me.BingoTemporalDatos.buscaElemento(e.enlace, Me.BingoTemporalDatos.ArrayElementosCarton)
   'cuando un elemento de carton es igual al elemento del bingo, lo que se ha hecho en crear un elemento Texto / imagen con las mismas propiedades
   

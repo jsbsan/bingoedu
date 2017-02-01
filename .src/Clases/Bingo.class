@@ -162,7 +162,7 @@ Public Sub cargadatos(NombreArchivo As String, Optional carpeta As Boolean) 'leo
   agregarListaElementos(VariableDatos, Me.ListaElementosBingo, Me.ArrayElementosBingo)
   agregarListaElementos(VariableDatos, Me.ListaElementosCarton, Me.ArrayElementosCarton)
   
-  ''NOTE: lista de cartornes y array de cartones
+  '' lista de cartornes y array de cartones
   
   Me.tituloCarton = VariableDatos["TituloCarton"]
   Me.tamanoCuadricula = VariableDatos["TamanoCuadricula"]
@@ -303,7 +303,7 @@ Public Sub guardarBingo(CARPETA As Boolean) ''True: guarda los datos en carpeta 
     
   Endif
   
-  ''NOTE: ver este enlace http://jsbsan.blogspot.com.es/2014/12/truco-como-guardar-y-abrir-comprimidos.html, para el tema de descompresion.
+  '' ver este enlace http://jsbsan.blogspot.com.es/2014/12/truco-como-guardar-y-abrir-comprimidos.html, para el tema de descompresion.
   
 End
 
@@ -331,7 +331,7 @@ Public Function generaJson() As String
     tempcole.Add(tmpElemento.creaVariant(), tmpElemento.id)
   Next
   
-  ''TODO: mirarlo. todos los elementos son indistintos si estan en el bingo que en el carton
+  '' mirarlo. todos los elementos son indistintos si estan en el bingo que en el carton
   For Each tmpElemento In ArrayElementosCarton
     tempcole.Add(tmpElemento.creaVariant(), tmpElemento.id)
   Next
@@ -507,7 +507,7 @@ Private Sub NombreFichero_Write(Value As String)
     Mkdir User.home & "/bingoedu"
   Endif
   
-  ''NOTE: modo test para debug, creacion de directorio test de bingo
+  '' modo test para debug, creacion de directorio test de bingo
   ' If Not Exist(User.home & "/bingoedu/" & File.Name($nombreFichero)) Then
   '   Mkdir User.home & "/bingoedu/" & file.name($nombreFichero)
   ' Endif
@@ -669,7 +669,7 @@ Public Function copiaFichero(ruta As String, Optional modo As String) As Boolean
   
   If Exist(User.home & "/bingoedu/" & $nombreFichero & "/" & File.Name(ruta)) Then
     'existe el fichero no lo copio
-    ''FIXME:
+    
     If IsNull(modo) Then 
       Message.Error(("Existe un fichero con el mismo nombre"))
       'no copio el fichero...

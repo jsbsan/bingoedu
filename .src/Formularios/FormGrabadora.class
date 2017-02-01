@@ -1,12 +1,15 @@
 ' Gambas class file
 
+Private estado As Integer = 0 '
+Public btmp As Bingo
 Public datos As String[]
 
 Public Sub Form_Open()
   
   Me.Title = ("Grabadora de sonido")
   Me.Center
-  TextBoxFichero.text = User.home & "/" & "sonido.wav"
+  
+  TextBoxFichero.text = ponernombre()
   
 End
 
@@ -15,7 +18,7 @@ Public Sub ButtonIniciar_Click()
   PictureBoxMicro.Picture = Picture["microfonograbando.png"]
   
   'Shell "arecord " & TextBoxFichero.text & " &"
-  Shell "rec -t wav " & TextBoxFichero.text & " &"
+  Shell "rec -t wav " & "/tmp/" & TextBoxFichero.text & ".wav" & " &"
   
 End
 
@@ -35,8 +38,49 @@ Public Sub ButtonTerminar_Click()
     Shell "kill -9 " & arrayprocesos[A]
   Next
   
-  datos.Add(TextBoxFichero.text)
+  datos.Add("/tmp/" & TextBoxFichero.text & ".wav")
   
   Me.Close()
+  
+End
+
+Public Sub PictureBoxMicro_MouseUp()
+  
+  If estado = 0 Then 
+    estado = 1
+    ButtonIniciar_Click()
+  Else
+    estado = 0
+    
+    ButtonTerminar_Click()
+    
+  Endif
+  
+End
+
+Public Sub PictureBoxMicro_MouseDown()
+  
+  PictureBoxMicro.Tooltip = ("haga click para parar y guardar la grabación")
+  
+End
+
+Private Function ponernombre() As String
+  
+  Dim texto As String = "sonido_"
+  Dim a As Integer = 0
+  Dim extension As String
+  Dim cadena As String = "00"
+  
+  While True
+    a = a + 1
+    extension = Right$(cadena & Str$(a), 2)
+    
+    If Not Exist(User.home & "/bingoedu/" & btmp.NombreFichero & "/" & texto & extension & ".wav") Then 
+      Break
+    Endif
+    
+  Wend  
+  
+  Return texto & extension 
   
 End

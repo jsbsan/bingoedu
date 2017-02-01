@@ -31,6 +31,7 @@
       }
       { ButtonImprimir Button
         MoveScaled(1,10,9,6)
+        ToolTip = ("imprimir cartones")
         Picture = Picture["icon:/32/print"]
       }
     }
@@ -98,6 +99,11 @@
       MoveScaled(91,29,7,5)
       Visible = False
       Picture = Picture["icon:/22/refresh"]
+    }
+    { ButtonListadoBingo Button
+      MoveScaled(1,13,49,5)
+      Text = ("Imprimir Listado de Elementos Bingo/Carton")
+      Picture = Picture["icon:/32/print"]
     }
   }
   { GridViewDatosBingo GridView

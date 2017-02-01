@@ -55,7 +55,7 @@ msgid "Alemán"
 msgstr ""
 
 #: FormModoJuego.form:94
-msgid "Sonido de Paso Elemento"
+msgid "Sonido de paso"
 msgstr ""
 
 #: FormModoJuego.form:99

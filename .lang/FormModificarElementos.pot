@@ -62,19 +62,19 @@ msgstr ""
 msgid "Archivos de sonido mp3, wav, au"
 msgstr ""
 
-#: FormModificarElementos.class:142
+#: FormModificarElementos.class:143
 msgid "Error. El cartón no puede tener elementos de sonido, es sólo un cartón ;-)"
 msgstr ""
 
-#: FormModificarElementos.class:243
+#: FormModificarElementos.class:244
 msgid "Archivos de imagen"
 msgstr ""
 
-#: FormModificarElementos.class:438
+#: FormModificarElementos.class:439
 msgid "Sólo se aceptan imagenes .png y .jpg"
 msgstr ""
 
-#: FormModificarElementos.class:488
+#: FormModificarElementos.class:489
 msgid "Sólo se aceptan sonidos .mp3 y .au"
 msgstr ""
 

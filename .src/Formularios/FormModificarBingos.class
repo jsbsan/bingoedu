@@ -131,7 +131,7 @@ Public Sub ButtonGuadarModificaciones_Click()
   If bingotmp.NombreFichero = TextBoxFicheroBingo.text Then
     'no hacer nada, permacene con el mismo nombre..
   Else
-    ''TODO: comprobar si se ha cambiado el nombre del fichero, si es asi
+    '' comprobar si se ha cambiado el nombre del fichero, si es asi
     ''hay que crear nuevo directorio, guardar los datos en él y borrar el directorio antiguo.
     
   Endif
@@ -266,5 +266,11 @@ Public Sub ButtonMultipleElementosImagenSonido_Click()
   
   FormMultipleImagenesSonidos.btmp = bingotmp
   FormMultipleImagenesSonidos.Show()
+  
+End
+
+Public Sub ButtonListadoBingo_Click()
+  
+  ModuleVarios.imprimirBingo(bingotmp)
   
 End

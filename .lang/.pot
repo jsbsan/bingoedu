@@ -87,7 +87,7 @@ msgid "Autores: Julio Sánchez Berro (jsbsan) y Antonio Sánchez (introlinux)"
 msgstr ""
 
 #: FMain.form:81 FormFicherosBingos.form:157 FormJuego.form:125
-#: FormModificarBingos.form:221 FormModificarCartones.form:192
+#: FormModificarBingos.form:229 FormModificarCartones.form:192
 #: FormModificarElementos.form:123 FormModoJuego.form:153
 #: FormMultipleElementosDeTexto.form:52 FormMultipleImagenesSonidos.form:62
 #: FormVerCartones.form:105
@@ -214,28 +214,44 @@ msgstr ""
 msgid "8 cartones/pág"
 msgstr ""
 
-#: FormGrabadora.form:21
+#: FormGrabadora.form:17
+msgid "haga click para empezar a grabar"
+msgstr ""
+
+#: FormGrabadora.form:24
 msgid "TextBox1"
 msgstr ""
 
-#: FormGrabadora.form:26
+#: FormGrabadora.form:29
 msgid "Inicia la grabación"
 msgstr ""
 
-#: FormGrabadora.form:27
+#: FormGrabadora.form:30
 msgid "Grabar"
 msgstr ""
 
-#: FormGrabadora.form:33
+#: FormGrabadora.form:36
 msgid "Termina de grabar y cierra la ventana"
 msgstr ""
 
-#: FormGrabadora.form:34
+#: FormGrabadora.form:37
 msgid "Parar"
 msgstr ""
 
-#: FormGrabadora.class:7
+#: FormGrabadora.form:43
+msgid "nombre:"
+msgstr ""
+
+#: FormGrabadora.form:49
+msgid ".wav"
+msgstr ""
+
+#: FormGrabadora.class:9
 msgid "Grabadora de sonido"
+msgstr ""
+
+#: FormGrabadora.class:63
+msgid "haga click para parar y guardar la grabación"
 msgstr ""
 
 #: FormJuego.form:39
@@ -306,99 +322,107 @@ msgstr ""
 msgid "Alemán"
 msgstr ""
 
-#: FormModificarBingos.form:46
+#: FormModificarBingos.form:47
 msgid "Cartones"
 msgstr ""
 
-#: FormModificarBingos.form:50
+#: FormModificarBingos.form:51
 msgid "Propiedades de los cartones"
 msgstr ""
 
-#: FormModificarBingos.form:62
+#: FormModificarBingos.form:63
 msgid "Ver cartones"
 msgstr ""
 
-#: FormModificarBingos.form:68
+#: FormModificarBingos.form:69
 msgid "Generar cartones"
 msgstr ""
 
-#: FormModificarBingos.form:82
+#: FormModificarBingos.form:75
+msgid "imprimir cartones"
+msgstr ""
+
+#: FormModificarBingos.form:84
 msgid "matematicas"
 msgstr ""
 
-#: FormModificarBingos.form:82
+#: FormModificarBingos.form:84
 msgid "ingles"
 msgstr ""
 
-#: FormModificarBingos.form:82
+#: FormModificarBingos.form:84
 msgid "lengua"
 msgstr ""
 
-#: FormModificarBingos.form:89
+#: FormModificarBingos.form:91
 msgid "aqui se define el titulo que vendrá en cada carton"
 msgstr ""
 
-#: FormModificarBingos.form:90
+#: FormModificarBingos.form:92
 msgid "Categoria:"
 msgstr ""
 
-#: FormModificarBingos.form:96
+#: FormModificarBingos.form:98
 msgid "(Opcional) Se usa como título del cartón"
 msgstr ""
 
-#: FormModificarBingos.form:101
+#: FormModificarBingos.form:103
 msgid "Se usará como título en el cartón"
 msgstr ""
 
-#: FormModificarBingos.form:102 FormModificarCartones.form:47
+#: FormModificarBingos.form:104 FormModificarCartones.form:47
 msgid "Temática:"
 msgstr ""
 
-#: FormModificarBingos.form:108
+#: FormModificarBingos.form:110
 msgid "Archivo:"
 msgstr ""
 
-#: FormModificarBingos.form:121
+#: FormModificarBingos.form:123
 msgid ".be"
 msgstr ""
 
-#: FormModificarBingos.form:127
+#: FormModificarBingos.form:129
 msgid "(Opcional) Breve descripción del bingo"
 msgstr ""
 
-#: FormModificarBingos.form:134
+#: FormModificarBingos.form:136
 msgid "Descripción:"
 msgstr ""
 
-#: FormModificarBingos.form:140
+#: FormModificarBingos.form:142
 msgid "Elementos que componen el bingo actual:"
 msgstr ""
 
-#: FormModificarBingos.form:146
+#: FormModificarBingos.form:148
 msgid "Visualizar imagenes"
 msgstr ""
 
-#: FormModificarBingos.form:158
+#: FormModificarBingos.form:159
+msgid "Imprimir Listado de Elementos Bingo/Carton"
+msgstr ""
+
+#: FormModificarBingos.form:166
 msgid "Para editar un elemento, seleccionalo y haga DobleClick"
 msgstr ""
 
-#: FormModificarBingos.form:170
+#: FormModificarBingos.form:178
 msgid "Añadir elemento"
 msgstr ""
 
-#: FormModificarBingos.form:177
+#: FormModificarBingos.form:185
 msgid "Múltiples elementos de texto"
 msgstr ""
 
-#: FormModificarBingos.form:184
+#: FormModificarBingos.form:192
 msgid "Múltiples elementos de imagen o sonido"
 msgstr ""
 
-#: FormModificarBingos.form:199
+#: FormModificarBingos.form:207
 msgid "Borrar elemento"
 msgstr ""
 
-#: FormModificarBingos.form:215
+#: FormModificarBingos.form:223
 msgid "Guardar"
 msgstr ""
 
@@ -597,20 +621,20 @@ msgstr ""
 msgid "Archivos de sonido mp3, wav, au"
 msgstr ""
 
-#: FormModificarElementos.class:142
+#: FormModificarElementos.class:143
 msgid ""
 "Error. El cartón no puede tener elementos de sonido, es sólo un cartón ;-)"
 msgstr ""
 
-#: FormModificarElementos.class:243
+#: FormModificarElementos.class:244
 msgid "Archivos de imagen"
 msgstr ""
 
-#: FormModificarElementos.class:438
+#: FormModificarElementos.class:439
 msgid "Sólo se aceptan imagenes .png y .jpg"
 msgstr ""
 
-#: FormModificarElementos.class:488
+#: FormModificarElementos.class:489
 msgid "Sólo se aceptan sonidos .mp3 y .au"
 msgstr ""
 
@@ -639,7 +663,7 @@ msgid "Idioma:"
 msgstr ""
 
 #: FormModoJuego.form:94
-msgid "Sonido de Paso Elemento"
+msgid "Sonido de paso"
 msgstr ""
 
 #: FormModoJuego.form:99

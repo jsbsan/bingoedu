@@ -14,27 +14,43 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: FormGrabadora.form:21
+#: FormGrabadora.form:17
+msgid "haga click para empezar a grabar"
+msgstr ""
+
+#: FormGrabadora.form:24
 msgid "TextBox1"
 msgstr ""
 
-#: FormGrabadora.form:26
+#: FormGrabadora.form:29
 msgid "Inicia la grabación"
 msgstr ""
 
-#: FormGrabadora.form:27
+#: FormGrabadora.form:30
 msgid "Grabar"
 msgstr ""
 
-#: FormGrabadora.form:33
+#: FormGrabadora.form:36
 msgid "Termina de grabar y cierra la ventana"
 msgstr ""
 
-#: FormGrabadora.form:34
+#: FormGrabadora.form:37
 msgid "Parar"
 msgstr ""
 
-#: FormGrabadora.class:7
+#: FormGrabadora.form:43
+msgid "nombre:"
+msgstr ""
+
+#: FormGrabadora.form:49
+msgid ".wav"
+msgstr ""
+
+#: FormGrabadora.class:9
 msgid "Grabadora de sonido"
+msgstr ""
+
+#: FormGrabadora.class:63
+msgid "haga click para parar y guardar la grabación"
 msgstr ""
 

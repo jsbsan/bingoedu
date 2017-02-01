@@ -3,7 +3,7 @@
 Public Sub ReproducirSonido(ruta As String)
   
   Dim espera As String
-
+  
   Select Case File.Ext(ruta)
     Case "au"
       Shell "aplay " & ruta To espera
@@ -444,5 +444,89 @@ Private Sub crearpdf()
   
   Desktop.Open("/tmp/trabajo/bingo.pdf")
   Dec Application.Busy  
+  
+End
+
+Public Sub imprimirBingo(bingotmp As Bingo)
+  
+  Dim ruta As String
+  Dim paginas As Integer
+  Dim NumeroPaginas As Integer
+  
+  Dim arfile As New String[]
+  Dim arfileborrar As String[]
+  Dim nombrefile As String
+  
+  Dim contenido As String
+  
+  Dim salida As String
+  
+  Dim contadorElemento As Integer
+  
+  Dim a As Integer
+  Dim arfileTodos As String[]
+  
+  Inc Application.busy  
+  
+  'calcular el numero de páginas... en PlantillaDatosREV01.svg caben 8 elementos
+  NumeroPaginas = bingotmp.listaCartones.count / 8
+  
+  If Int(NumeroPaginas) <> (bingotmp.NumeroCartones / (8)) Then 
+    NumeroPaginas = Int(NumeroPaginas) + 1 'añado una página porque no cabe en una entera
+  Endif
+  
+  'crear directorio de trabajo, con BingoPag borrados 
+  If Not (Exist("/tmp/trabajo")) Then 
+    Mkdir "/tmp/trabajo"
+  Else
+    'borrado de fichero...
+    arfileborrar = Dir("/tmp/trabajo", "BingoPag*", gb.file)
+    
+    For Each nombrefile In arfileborrar
+      Kill "/tmp/trabajo/" & nombrefile
+    Next
+  Endif
+  
+  ruta = User.home & "/bingoedu/" & bingotmp.NombreFichero & "/"
+  For paginas = 0 To NumeroPaginas - 1
+    contenido = File.Load("PlantillaDatosREV01.svg")
+    
+    'reemplazar 8 veces palabra: ruta11 a 18, #11# a #18# ruta21 a 28, #21# a #28#, 
+    InsertoElementos(ByRef contenido, ByRef bingotmp, ByRef contadorElemento)
+    
+  Next
+  Dec Application.busy  
+  crearpdf()
+  
+  Message.Info(("Terminado!!!"))
+  
+End
+
+Private Sub InsertoElementos(ByRef contenido As String, ByRef btmp As Bingo, ByRef contadorElemento As Integer)
+  
+  Dim eb As Elemento ' Variant 'elemento bingo
+  Dim ec As Variant 'elemento carton
+  
+  contadorElemento += 1
+  
+  eB = btmp.ArrayElementosBingo[contadorElemento]
+  
+  eC = btmp.buscaElemento(eb.enlace, btmp.ArrayElementosCarton)
+  ''TODO: QUEDA por hacer definir lo que se sustituye...
+  Select eb.tipoElemento
+    Case ""
+      'si es sonido
+      'si es imagen
+      'si es texto
+      
+  End Select
+  
+  Select eC.tipoElemento
+    Case ""
+      'si es sonido
+      'si es imagen
+      'si es texto
+      
+  End Select
   
 End
