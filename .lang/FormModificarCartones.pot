@@ -90,39 +90,39 @@ msgstr ""
 msgid "Volver"
 msgstr ""
 
-#: FormModificarCartones.class:26
+#: FormModificarCartones.class:25
 msgid "Características de los cartones"
 msgstr ""
 
-#: FormModificarCartones.class:61
+#: FormModificarCartones.class:60
 msgid "Tipo"
 msgstr ""
 
-#: FormModificarCartones.class:62
+#: FormModificarCartones.class:61
 msgid "Dato en pantalla"
 msgstr ""
 
-#: FormModificarCartones.class:64
+#: FormModificarCartones.class:63
 msgid "Dato en el cartón"
 msgstr ""
 
-#: FormModificarCartones.class:185
+#: FormModificarCartones.class:180
 msgid "Los datos se han modificado, pero no guardado, ¿desea salir?"
 msgstr ""
 
-#: FormModificarCartones.class:185
+#: FormModificarCartones.class:180
 msgid "Sí, salir sin guardar"
 msgstr ""
 
-#: FormModificarCartones.class:185
+#: FormModificarCartones.class:180
 msgid "No"
 msgstr ""
 
-#: FormModificarCartones.class:210
+#: FormModificarCartones.class:205
 msgid "Debe seleccionar un elemento."
 msgstr ""
 
-#: FormModificarCartones.class:218
+#: FormModificarCartones.class:213
 msgid "Ese elemento ya está incluido"
 msgstr ""
 

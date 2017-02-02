@@ -426,15 +426,15 @@ msgstr ""
 msgid "Guardar"
 msgstr ""
 
-#: FormModificarBingos.class:86 FormModificarCartones.class:61
+#: FormModificarBingos.class:86 FormModificarCartones.class:60
 msgid "Tipo"
 msgstr ""
 
-#: FormModificarBingos.class:87 FormModificarCartones.class:62
+#: FormModificarBingos.class:87 FormModificarCartones.class:61
 msgid "Dato en pantalla"
 msgstr ""
 
-#: FormModificarBingos.class:89 FormModificarCartones.class:64
+#: FormModificarBingos.class:89 FormModificarCartones.class:63
 msgid "Dato en el cartón"
 msgstr ""
 
@@ -553,27 +553,27 @@ msgstr ""
 msgid "Volver"
 msgstr ""
 
-#: FormModificarCartones.class:26
+#: FormModificarCartones.class:25
 msgid "Características de los cartones"
 msgstr ""
 
-#: FormModificarCartones.class:185
+#: FormModificarCartones.class:180
 msgid "Los datos se han modificado, pero no guardado, ¿desea salir?"
 msgstr ""
 
-#: FormModificarCartones.class:185
+#: FormModificarCartones.class:180
 msgid "Sí, salir sin guardar"
 msgstr ""
 
-#: FormModificarCartones.class:185
+#: FormModificarCartones.class:180
 msgid "No"
 msgstr ""
 
-#: FormModificarCartones.class:210
+#: FormModificarCartones.class:205
 msgid "Debe seleccionar un elemento."
 msgstr ""
 
-#: FormModificarCartones.class:218
+#: FormModificarCartones.class:213
 msgid "Ese elemento ya está incluido"
 msgstr ""
 
@@ -814,4 +814,8 @@ msgstr ""
 
 #: ModuleVarios.module:137
 msgid "Terminado!!!"
+msgstr ""
+
+#: ModuleVarios.module:510
+msgid "No se ha generado ninguna página"
 msgstr ""

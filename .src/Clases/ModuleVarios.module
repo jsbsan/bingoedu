@@ -384,8 +384,8 @@ Public Sub imprimir2x2(bingotmp As Bingo) ''imprimir en apaisado 2x2 = 4 cartone
     
   Next
   Dec Application.busy  
-  crearpdf()
   
+  crearpdf()
   Message.Info(("Terminado!!!"))
   
 End
@@ -469,9 +469,9 @@ Public Sub imprimirBingo(bingotmp As Bingo)
   Inc Application.busy  
   
   'calcular el numero de páginas... en PlantillaDatosREV01.svg caben 8 elementos
-  NumeroPaginas = bingotmp.listaCartones.count / 8
+  NumeroPaginas = bingotmp.ArrayElementosBingo.Count / 8
   
-  If Int(NumeroPaginas) <> (bingotmp.NumeroCartones / (8)) Then 
+  If Int(NumeroPaginas) <> (bingotmp.ArrayElementosBingo.Count / (8)) Then 
     NumeroPaginas = Int(NumeroPaginas) + 1 'añado una página porque no cabe en una entera
   Endif
   
@@ -490,43 +490,110 @@ Public Sub imprimirBingo(bingotmp As Bingo)
   ruta = User.home & "/bingoedu/" & bingotmp.NombreFichero & "/"
   For paginas = 0 To NumeroPaginas - 1
     contenido = File.Load("PlantillaDatosREV01.svg")
-    
     'reemplazar 8 veces palabra: ruta11 a 18, #11# a #18# ruta21 a 28, #21# a #28#, 
     InsertoElementos(ByRef contenido, ByRef bingotmp, ByRef contadorElemento)
     
+    ' genero  fichero
+    File.Save("/tmp/trabajo/BingoPag" & Str$(paginas) & ".svg", contenido)
+    
+    'convierto en png.... Shell     
+    Shell ("inkscape " & "/tmp/trabajo/BingoPag" & Str$(paginas) & ".svg" & " --export-dpi=200 --export-png=" & "/tmp/trabajo/BingoPag" & Str$(paginas) & ".png") To salida
+    
   Next
   Dec Application.busy  
-  crearpdf()
   
-  Message.Info(("Terminado!!!"))
+  If NumeroPaginas <> 0 Then 
+    crearpdf()
+    Message.Info(("Terminado!!!"))
+    
+  Else
+    Message.Warning(("No se ha generado ninguna página"))
+  Endif  
   
 End
 
 Private Sub InsertoElementos(ByRef contenido As String, ByRef btmp As Bingo, ByRef contadorElemento As Integer)
   
-  Dim eb As Elemento ' Variant 'elemento bingo
+  Dim eb As Variant 'elemento bingo
   Dim ec As Variant 'elemento carton
   
-  contadorElemento += 1
+  Dim repite As Integer
   
-  eB = btmp.ArrayElementosBingo[contadorElemento]
+  Dim ruta1 As String
+  Dim ruta2 As String
+  Dim texto1 As String
+  Dim texto2 As String
   
-  eC = btmp.buscaElemento(eb.enlace, btmp.ArrayElementosCarton)
-  ''TODO: QUEDA por hacer definir lo que se sustituye...
-  Select eb.tipoElemento
-    Case ""
-      'si es sonido
-      'si es imagen
-      'si es texto
+  Dim rutaimagen1 As String
+  Dim rutaimagen2 As String
+  Dim textobingo As String
+  Dim textoCarton As String
+  
+  For repite = 1 To 8
+    contadorElemento += 1
+    
+    ruta1 = "#ruta" & Str$(repite) & "1#"
+    texto1 = "#" & Str$(repite) & "1#"
+    
+    ruta2 = "#ruta" & Str$(repite) & "2#"
+    texto2 = "#" & Str$(repite) & "2#"
+    
+    If contadorElemento > btmp.ArrayElementosBingo.Count Then
       
-  End Select
-  
-  Select eC.tipoElemento
-    Case ""
-      'si es sonido
-      'si es imagen
-      'si es texto
+      'hacer sustitucion por espacios vacios...
+      contenido = Replace(contenido, ruta1, "/tmp/cuadroBlanco.jpg")
+      contenido = Replace(contenido, texto1, "")
+      contenido = Replace(contenido, ruta2, "/tmp/cuadroBlanco.jpg")
+      contenido = Replace(contenido, texto2, "")
       
-  End Select
+    Else
+      
+      eB = btmp.ArrayElementosBingo[contadorElemento - 1]
+      
+      eC = btmp.buscaElemento(eb.enlace, btmp.ArrayElementosCarton)
+      ''TODO: QUEDA por hacer definir lo que se sustituye...
+      '----------------------------
+      'Datos de la columna Bingo
+      '----------------------------
+      Select Case eb.tipoElemento()
+          'si es sonido
+        Case Upper$("ElementoSonido")
+          rutaimagen1 = "/tmp/iconosonido32.png"
+          textobingo = eb.rutasonido
+          
+          'si es imagen
+        Case Upper$("ElementoImagen")
+          rutaimagen1 = User.home & "/bingoedu/" & btmp.NombreFichero & "/" & eB.rutaimagen
+          textobingo = eb.rutaimagen
+          
+          'si es texto
+        Case Upper$("ElementoTexto")
+          rutaimagen1 = "/tmp/iconoletra32.png"
+          textobingo = eb.texto
+          
+      End Select
+      '----------------------------
+      'Datos de la columna Carton
+      '----------------------------
+      Select Case eC.tipoElemento()
+          'si es imagen
+        Case Upper$("ElementoImagen")
+          rutaimagen2 = User.home & "/bingoedu/" & btmp.NombreFichero & "/" & eC.rutaimagen
+          textoCarton = ec.rutaimagen
+          
+          'si es texto
+        Case Upper$("ElementoTexto")
+          rutaimagen2 = "/tmp/iconoletra32.png"
+          textoCarton = ec.texto
+      End Select
+      
+      'hacer sustitucion por espacios vacios...
+      contenido = Replace(contenido, ruta1, rutaimagen1)
+      contenido = Replace(contenido, texto1, textobingo)
+      contenido = Replace(contenido, ruta2, rutaimagen2)
+      contenido = Replace(contenido, texto2, textoCarton)
+      
+    Endif
+  Next
   
 End

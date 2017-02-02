@@ -47,6 +47,8 @@ Private Sub copiarficheroplantilla()
   
   Try Copy "cuadroBlanco.jpg" To "/tmp/cuadroBlanco.jpg"
   Try Copy "cuadroNegro.jpg" To "/tmp/cuadroNegro.jpg"
+  Try Copy "iconosonido32.png" To "/tmp/iconosonido32.png"
+  Try Copy "iconoletra32.png" To "/tmp/iconoletra32.png"
   
 End
 
@@ -67,10 +69,6 @@ End
 Public Sub ButtonSalir_Click()
   
   Me.Close()
-  
-End
-
-Public Sub Label2_MouseDown()
   
 End
 
