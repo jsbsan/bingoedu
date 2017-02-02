@@ -18,7 +18,7 @@ msgstr ""
 msgid "Terminado!!!"
 msgstr ""
 
-#: ModuleVarios.module:510
+#: ModuleVarios.module:515
 msgid "No se ha generado ninguna página"
 msgstr ""
 

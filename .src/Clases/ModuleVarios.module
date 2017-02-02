@@ -493,6 +493,11 @@ Public Sub imprimirBingo(bingotmp As Bingo)
     'reemplazar 8 veces palabra: ruta11 a 18, #11# a #18# ruta21 a 28, #21# a #28#, 
     InsertoElementos(ByRef contenido, ByRef bingotmp, ByRef contadorElemento)
     
+    'reemplazar numero de paginas
+    contenido = Replace(contenido, "#Pag#", Str$(paginas + 1))
+    contenido = Replace(contenido, "#TotalPag#", Str$(NumeroPaginas))
+    contenido = Replace(contenido, "#bingo#", "Nombre Bingo: " & bingotmp.NombreFichero)
+    
     ' genero  fichero
     File.Save("/tmp/trabajo/BingoPag" & Str$(paginas) & ".svg", contenido)
     
