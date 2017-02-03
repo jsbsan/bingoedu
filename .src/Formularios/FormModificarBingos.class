@@ -270,7 +270,8 @@ Public Sub ButtonMultipleElementosImagenSonido_Click()
 End
 
 Public Sub ButtonListadoBingo_Click()
-  
-  ModuleVarios.imprimirBingo(bingotmp)
+
+  Dim c As New CreandoInformeBingo
+  c.imprimirBingo(bingotmp)
   
 End

@@ -1,0 +1,72 @@
+' Gambas class file
+
+Public creandoinforme As CreandoInformeBingo
+
+Private ObservadorCreando As Observer
+
+Private totalpaginas As Integer
+Private totalelementos As Integer
+Private cadenapunto As String
+
+Public Sub Form_Open()
+  
+  Me.Center()
+  
+  ObservadorCreando = New Observer(creandoinforme) As "Observador"
+  
+End
+
+Public Sub observador_datosElementosPagina(elementos As Integer, paginas As Integer)
+  
+  totalelementos = elementos
+  totalpaginas = paginas
+  
+End
+
+Public Sub observador_creandoelemento(n As Integer)
+  
+  ProgressBarElementos.value = n / totalelementos
+  
+  LabelElementos.text = Str$(n) & " " & ("de") & " " & Str$(totalelementos)
+  Me.Refresh()
+  
+End
+
+Public Sub observador_creandoPagina(n As Integer)
+  
+  ProgressBarPaginas.value = n / totalpaginas
+  labelPaginas.text = Str$(n) & " " & ("de") & " " & Str$(totalpaginas)
+  
+  If n = totalpaginas Then 
+    LabelInformefinal.text = ("Empezando a crear informe final en .PDF")
+  Endif
+  Me.Refresh()
+  
+End
+
+Public Sub observador_CreandoBingoInicion()
+  
+  LabelInformefinal.text = ("Empezando a crear informe final en .PDF") & cadenapunto
+  Me.Refresh()
+  Timer1.Trigger
+  Timer1.Start()
+  
+End
+
+Public Sub observador_CreandoBingoFin()
+  
+  LabelInformefinal.text = ("Informe final terminado!!!")
+  Wait 2
+  Me.Close
+  
+End
+
+Public Sub Timer1_Timer()
+  
+  cadenapunto &= "."
+  If Len(cadenapunto) > 10 Then cadenapunto = ""
+  
+  LabelInformefinal.text = ("Empezando a crear informe final en .PDF") & cadenapunto
+  Me.Refresh()
+  
+End

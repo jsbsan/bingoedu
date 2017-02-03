@@ -243,6 +243,9 @@ Geometry=[46,16,210,210]
 [DebugWindow/b]
 Geometry=[-4,16,210,210]
 
+[DebugWindow/bingotmp.ArrayElementosBingo]
+Geometry=[2,24,210,611]
+
 [DebugWindow/btmp.ArrayElementosBingo]
 Geometry=[0,24,210,793]
 
@@ -330,12 +333,12 @@ File[5]=".src/Formularios/FMain.class:50.56"
 File[6]=".src/Formularios/FormFicherosBingos.form"
 File[7]="Nota.txt:15.29"
 File[8]=".src/Formularios/FormModificarBingos.form"
-File[9]=".src/Formularios/FormModificarBingos.class:133.67"
+File[9]=".src/Formularios/FormModificarBingos.class:273.15"
 File[10]=".src/Formularios/FormModificarCartones.form"
 File[11]=".src/Formularios/FormFicherosBingos.class:157.55"
 File[12]=".src/Clases/controles/SquareButton.class:78.8"
 File[13]=".src/Formularios/FormModificarElementos.form"
-File[14]=".src/Clases/Bingo.class:496.12"
+File[14]=".src/Clases/Bingo.class:496.11"
 File[15]=".src/Clases/elemento.class:15.0"
 File[16]=".src/Clases/elementoTexto.class:10.0"
 File[17]=".src/Clases/elementoImagen.class:18.0"
@@ -356,7 +359,7 @@ File[31]="ModelosCarton/bingotablas5x5.svg:0.0"
 File[32]=".src/Formularios/FormMultipleElementosDeTexto.form"
 File[33]=".src/Formularios/FormMultipleElementosDeTexto.class:81.43"
 File[34]=".src/Formularios/FormAvanceCreacionCartones.form"
-File[35]=".src/Formularios/FormAvanceCreacionCartones.class:33.3"
+File[35]=".src/Formularios/FormAvanceCreacionCartones.class:9.2"
 File[36]=".src/Formularios/FormVerCartones.form"
 File[37]=".src/Formularios/FormVerCartones.class:130.0"
 File[38]="iconoletra32.png"
@@ -372,8 +375,7 @@ File[47]=".src/Formularios/FormJuego.form"
 File[48]="lista de elementos.png"
 File[49]=".src/Formularios/FormJuego.class:339.65"
 File[50]=".src/Clases/BingoJuego.class:32.21"
-Active=51
-File[51]=".src/Clases/ModuleVarios.module:498.88"
+File[51]=".src/Clases/ModuleVarios.module:437.0"
 File[52]=".src/Formularios/FormMostrarResultados.form"
 File[53]=".src/Formularios/FormMostrarResultados.class:47.2"
 File[54]="icono sonido grande.png"
@@ -383,7 +385,11 @@ File[57]="drawing-2x2.svg:0.0"
 File[58]=".src/Formularios/FormFormatoImpresion.form"
 File[59]=".src/Formularios/FormFormatoImpresion.class:32.2"
 File[60]="PlantillaDatosREV01.svg:0.0"
-Count=60
+File[61]=".src/Formularios/FormAvanceInformeBingo.form"
+File[62]=".src/Formularios/FormAvanceInformeBingo.class:40.72"
+Active=63
+File[63]=".src/Clases/CreandoInformeBingo.class:187.22"
+Count=63
 
 [Watches]
 Count=1

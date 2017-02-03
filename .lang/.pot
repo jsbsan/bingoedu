@@ -58,6 +58,14 @@ msgstr ""
 msgid "Error, desconocido tamaño de cuadricula"
 msgstr ""
 
+#: CreandoInformeBingo.class:88 ModuleVarios.module:137
+msgid "Terminado!!!"
+msgstr ""
+
+#: CreandoInformeBingo.class:91
+msgid "No se ha generado ninguna página"
+msgstr ""
+
 #: FMain.form:32
 msgid "EDUCATIVO"
 msgstr ""
@@ -104,6 +112,30 @@ msgstr ""
 
 #: FormAvanceCreacionCartones.form:19
 msgid "Creando cartones....."
+msgstr ""
+
+#: FormAvanceInformeBingo.form:21
+msgid "Creando Informe de elementos de Bingo/Cartón"
+msgstr ""
+
+#: FormAvanceInformeBingo.form:27
+msgid "Elementos:"
+msgstr ""
+
+#: FormAvanceInformeBingo.form:32
+msgid "Paginas:"
+msgstr ""
+
+#: FormAvanceInformeBingo.class:30
+msgid "de"
+msgstr ""
+
+#: FormAvanceInformeBingo.class:41
+msgid "Empezando a crear informe final en .PDF"
+msgstr ""
+
+#: FormAvanceInformeBingo.class:58
+msgid "Informe final terminado!!!"
 msgstr ""
 
 #: FormFicherosBingos.form:76
@@ -810,12 +842,4 @@ msgstr ""
 
 #: FormVerCartones.class:16
 msgid "Visualizando cartones"
-msgstr ""
-
-#: ModuleVarios.module:137
-msgid "Terminado!!!"
-msgstr ""
-
-#: ModuleVarios.module:515
-msgid "No se ha generado ninguna página"
 msgstr ""
