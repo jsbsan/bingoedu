@@ -14,11 +14,15 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: CreandoInformeBingo.class:88
+#: CreandoInformeBingo.class:33
+msgid "No hay elementos para imprimir"
+msgstr ""
+
+#: CreandoInformeBingo.class:93
 msgid "Terminado!!!"
 msgstr ""
 
-#: CreandoInformeBingo.class:91
+#: CreandoInformeBingo.class:96
 msgid "No se ha generado ninguna página"
 msgstr ""
 

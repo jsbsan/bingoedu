@@ -270,8 +270,25 @@ Public Sub ButtonMultipleElementosImagenSonido_Click()
 End
 
 Public Sub ButtonListadoBingo_Click()
-
+  
   Dim c As New CreandoInformeBingo
+  
   c.imprimirBingo(bingotmp)
+  
+End
+
+Public Sub GridViewDatosBingo_MouseDown()
+  
+  Dim res As Integer
+  
+  If Mouse.Right = True Then 
+    res = Message.Question(("Desea imprimir el listado de elementos?"), ("Si, imprime"), ("No"))
+    If res = 1 Then 
+      
+      ButtonListadoBingo_Click()
+      Stop Event  
+    Endif
+    
+  Endif
   
 End

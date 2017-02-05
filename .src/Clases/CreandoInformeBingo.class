@@ -29,6 +29,11 @@ Public Sub imprimirBingo(bingotmp As Bingo)
   
   Dim totalelementos As Integer
   
+  If bingotmp.ArrayElementosBingo.Count = 0 Then 
+    Message.Info(("No hay elementos para imprimir"))
+    Return 
+  Endif
+  
   Inc Application.busy  
   
   FormAvanceInformeBingo.creandoinforme = Me

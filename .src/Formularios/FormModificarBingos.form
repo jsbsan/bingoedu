@@ -7,10 +7,10 @@
   { Panel1 Panel
     MoveScaled(1,1,111,34)
     { Frame1 Frame
-      MoveScaled(51,1,58,18)
+      MoveScaled(48,1,62,18)
       Text = ("Cartones")
       { ButtonPropiedadesCartones Button
-        MoveScaled(12,3,44,6)
+        MoveScaled(12,3,45,6)
         Text = ("Propiedades de los cartones")
         Picture = Picture["propiedades.png"]
       }
@@ -20,29 +20,33 @@
         Stretch = True
       }
       { ButtonVerCartones Button
-        MoveScaled(12,10,19,6)
+        MoveScaled(25,10,15,6)
+        Font = Font["-1"]
         Text = ("Ver cartones")
         Picture = Picture["icon:/16/image"]
       }
       { ButtonGenerarCartones Button
-        MoveScaled(34,10,22,6)
+        MoveScaled(41,10,20,6)
+        Font = Font["-1"]
         Text = ("Generar cartones")
         Picture = Picture["icon:/16/exec"]
       }
       { ButtonImprimir Button
-        MoveScaled(1,10,9,6)
+        MoveScaled(1,10,23,6)
+        Font = Font["-1"]
         ToolTip = ("imprimir cartones")
-        Picture = Picture["icon:/32/print"]
+        Text = ("Imprimir Cartones")
+        Picture = Picture["iconoimprimircarton.png"]
       }
     }
     { ComboBoxCategoria ComboBox
-      MoveScaled(16,14,34,4)
+      MoveScaled(13,14,34,4)
       Visible = False
       Enabled = False
       List = [("matematicas"), ("ingles"), ("lengua")]
     }
     { Label3 Label
-      MoveScaled(2,14,13,4)
+      MoveScaled(-1,14,13,4)
       Visible = False
       Enabled = False
       ToolTip = ("aqui se define el titulo que vendrá en cada carton")
@@ -50,28 +54,28 @@
       Alignment = Align.Right
     }
     { TextBoxTituloBingo TextBox
-      MoveScaled(16,8,29,4)
+      MoveScaled(13,11,29,4)
       ToolTip = ("(Opcional) Se usa como título del cartón")
     }
     { Label2 Label
-      MoveScaled(2,8,14,4)
+      MoveScaled(-2,11,14,4)
       ToolTip = ("Se usará como título en el cartón")
       Text = ("Temática:")
       Alignment = Align.Right
     }
     { Label4 Label
-      MoveScaled(3,3,12,4)
+      MoveScaled(0,3,12,4)
       Text = ("Archivo:")
       Alignment = Align.Right
     }
     { TextBoxFicheroBingo TextBox
-      MoveScaled(16,3,29,4)
+      MoveScaled(13,3,29,4)
       Background = &HBFBFBF&
       Expand = True
       ReadOnly = True
     }
     { Label5 Label
-      MoveScaled(45,3,5,4)
+      MoveScaled(42,3,5,4)
       Text = (".be")
       Alignment = Align.Center
     }
@@ -100,15 +104,10 @@
       Visible = False
       Picture = Picture["icon:/22/refresh"]
     }
-    { ButtonListadoBingo Button
-      MoveScaled(1,13,49,5)
-      Text = ("Imprimir Listado de Elementos Bingo/Carton")
-      Picture = Picture["icon:/32/print"]
-    }
   }
   { GridViewDatosBingo GridView
     MoveScaled(8,37,74,28)
-    ToolTip = ("Para editar un elemento, seleccionalo y haga DobleClick")
+    ToolTip = ("Para editar un elemento, seleccionalo y haga DobleClick\nClick con el boton derecho pregunta si quiere imprimir listado de elementos")
     Expand = True
     Mode = Select.Single
     ShowCursor = True
@@ -116,7 +115,7 @@
   { HBox1 HBox
     MoveScaled(1,66,111,6)
     { ButtonAgregarElemento Button
-      MoveScaled(5,0,17,6)
+      MoveScaled(1,0,17,6)
       Font = Font["-1"]
       Text = ("Añadir elemento")
       Picture = Picture["icon:/16/add"]
@@ -138,7 +137,7 @@
     }
   }
   { HBox7 HBox
-    MoveScaled(2,74,110,6)
+    MoveScaled(2,75,110,6)
     { ButtonBorrarElemento Button
       MoveScaled(6,0,17,5)
       Font = Font["-1"]
@@ -147,6 +146,16 @@
     }
     { HBox9 HBox
       MoveScaled(34,0,4,5)
+      Expand = True
+    }
+    { ButtonListadoBingo Button
+      MoveScaled(36,1,36,5)
+      ToolTip = ("Imprime un listado de elementos de Bingo y Carton")
+      Text = ("Imprimir Listado de Elementos")
+      Picture = Picture["icon:/32/print"]
+    }
+    { HBox3 HBox
+      MoveScaled(63,-1,4,5)
       Expand = True
     }
     { HBox2 HBox

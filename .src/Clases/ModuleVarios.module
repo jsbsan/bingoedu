@@ -64,6 +64,12 @@ Public Sub imprimir2x4(bingotmp As Bingo) ''imprimir en vertical 2x4 = 8 cartone
   arfileTodos = Dir(User.home & "/" & "bingoedu/" & bingotmp.NombreFichero & "/", "carton*", gb.file)
   a = -1
   
+  If arfileTodos.count = 0 Then 
+    Message.Error(("No existen cartones para imprimir"))
+    Dec Application.busy
+    Return 
+  Endif
+  
   For a = 0 To arfileTodos.Count - 1
     If File.Ext(arfileTodos[a]) = "png" Then 
       arfile.Add(arfileTodos[a])
@@ -158,6 +164,12 @@ Public Sub imprimir5(bingotmp As Bingo) ''imprimir 5 cartones
   arfileTodos = Dir(User.home & "/" & "bingoedu/" & bingotmp.NombreFichero & "/", "carton*", gb.file)
   a = -1
   
+  If arfileTodos.count = 0 Then 
+    Message.Error(("No existen cartones para imprimir"))
+    Dec Application.busy
+    Return 
+  Endif
+  
   For a = 0 To arfileTodos.Count - 1
     If File.Ext(arfileTodos[a]) = "png" Then 
       arfile.Add(arfileTodos[a])
@@ -241,6 +253,12 @@ Public Sub imprimir2x3(bingotmp As Bingo) ''imprimir en vertical 2x3 = 6 cartone
   Inc Application.busy  
   arfileTodos = Dir(User.home & "/" & "bingoedu/" & bingotmp.NombreFichero & "/", "carton*", gb.file)
   a = -1
+  
+  If arfileTodos.count = 0 Then 
+    Message.Error(("No existen cartones para imprimir"))
+    Dec Application.busy
+    Return 
+  Endif
   
   For a = 0 To arfileTodos.Count - 1
     If File.Ext(arfileTodos[a]) = "png" Then 
@@ -328,6 +346,12 @@ Public Sub imprimir2x2(bingotmp As Bingo) ''imprimir en apaisado 2x2 = 4 cartone
   Inc Application.busy  
   arfileTodos = Dir(User.home & "/" & "bingoedu/" & bingotmp.NombreFichero & "/", "carton*", gb.file)
   a = -1
+  
+  If arfileTodos.count = 0 Then 
+    Message.Error(("No existen cartones para imprimir"))
+    Dec Application.busy
+    Return 
+  Endif
   
   For a = 0 To arfileTodos.Count - 1
     If File.Ext(arfileTodos[a]) = "png" Then 

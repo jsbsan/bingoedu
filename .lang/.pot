@@ -58,11 +58,15 @@ msgstr ""
 msgid "Error, desconocido tamaño de cuadricula"
 msgstr ""
 
-#: CreandoInformeBingo.class:88 ModuleVarios.module:137
+#: CreandoInformeBingo.class:33
+msgid "No hay elementos para imprimir"
+msgstr ""
+
+#: CreandoInformeBingo.class:93 ModuleVarios.module:143
 msgid "Terminado!!!"
 msgstr ""
 
-#: CreandoInformeBingo.class:91
+#: CreandoInformeBingo.class:96
 msgid "No se ha generado ninguna página"
 msgstr ""
 
@@ -95,7 +99,7 @@ msgid "Autores: Julio Sánchez Berro (jsbsan) y Antonio Sánchez (introlinux)"
 msgstr ""
 
 #: FMain.form:81 FormFicherosBingos.form:157 FormJuego.form:125
-#: FormModificarBingos.form:229 FormModificarCartones.form:192
+#: FormModificarBingos.form:240 FormModificarCartones.form:192
 #: FormModificarElementos.form:123 FormModoJuego.form:153
 #: FormMultipleElementosDeTexto.form:52 FormMultipleImagenesSonidos.form:62
 #: FormVerCartones.form:105
@@ -354,107 +358,117 @@ msgstr ""
 msgid "Alemán"
 msgstr ""
 
-#: FormModificarBingos.form:47
+#: FormModificarBingos.form:48
 msgid "Cartones"
 msgstr ""
 
-#: FormModificarBingos.form:51
+#: FormModificarBingos.form:52
 msgid "Propiedades de los cartones"
 msgstr ""
 
-#: FormModificarBingos.form:63
+#: FormModificarBingos.form:65
 msgid "Ver cartones"
 msgstr ""
 
-#: FormModificarBingos.form:69
+#: FormModificarBingos.form:72
 msgid "Generar cartones"
 msgstr ""
 
-#: FormModificarBingos.form:75
+#: FormModificarBingos.form:79
 msgid "imprimir cartones"
 msgstr ""
 
-#: FormModificarBingos.form:84
+#: FormModificarBingos.form:80
+msgid "Imprimir Cartones"
+msgstr ""
+
+#: FormModificarBingos.form:89
 msgid "matematicas"
 msgstr ""
 
-#: FormModificarBingos.form:84
+#: FormModificarBingos.form:89
 msgid "ingles"
 msgstr ""
 
-#: FormModificarBingos.form:84
+#: FormModificarBingos.form:89
 msgid "lengua"
 msgstr ""
 
-#: FormModificarBingos.form:91
+#: FormModificarBingos.form:96
 msgid "aqui se define el titulo que vendrá en cada carton"
 msgstr ""
 
-#: FormModificarBingos.form:92
+#: FormModificarBingos.form:97
 msgid "Categoria:"
 msgstr ""
 
-#: FormModificarBingos.form:98
+#: FormModificarBingos.form:103
 msgid "(Opcional) Se usa como título del cartón"
 msgstr ""
 
-#: FormModificarBingos.form:103
+#: FormModificarBingos.form:108
 msgid "Se usará como título en el cartón"
 msgstr ""
 
-#: FormModificarBingos.form:104 FormModificarCartones.form:47
+#: FormModificarBingos.form:109 FormModificarCartones.form:47
 msgid "Temática:"
 msgstr ""
 
-#: FormModificarBingos.form:110
+#: FormModificarBingos.form:115
 msgid "Archivo:"
 msgstr ""
 
-#: FormModificarBingos.form:123
+#: FormModificarBingos.form:128
 msgid ".be"
 msgstr ""
 
-#: FormModificarBingos.form:129
+#: FormModificarBingos.form:134
 msgid "(Opcional) Breve descripción del bingo"
 msgstr ""
 
-#: FormModificarBingos.form:136
+#: FormModificarBingos.form:141
 msgid "Descripción:"
 msgstr ""
 
-#: FormModificarBingos.form:142
+#: FormModificarBingos.form:147
 msgid "Elementos que componen el bingo actual:"
 msgstr ""
 
-#: FormModificarBingos.form:148
+#: FormModificarBingos.form:153
 msgid "Visualizar imagenes"
 msgstr ""
 
-#: FormModificarBingos.form:159
-msgid "Imprimir Listado de Elementos Bingo/Carton"
+#: FormModificarBingos.form:165
+msgid ""
+"Para editar un elemento, seleccionalo y haga DobleClick\n"
+"Click con el boton derecho pregunta si quiere imprimir listado de elementos"
 msgstr ""
 
-#: FormModificarBingos.form:166
-msgid "Para editar un elemento, seleccionalo y haga DobleClick"
-msgstr ""
-
-#: FormModificarBingos.form:178
+#: FormModificarBingos.form:177
 msgid "Añadir elemento"
 msgstr ""
 
-#: FormModificarBingos.form:185
+#: FormModificarBingos.form:184
 msgid "Múltiples elementos de texto"
 msgstr ""
 
-#: FormModificarBingos.form:192
+#: FormModificarBingos.form:191
 msgid "Múltiples elementos de imagen o sonido"
 msgstr ""
 
-#: FormModificarBingos.form:207
+#: FormModificarBingos.form:206
 msgid "Borrar elemento"
 msgstr ""
 
-#: FormModificarBingos.form:223
+#: FormModificarBingos.form:217
+msgid "Imprime un listado de elementos de Bingo y Carton"
+msgstr ""
+
+#: FormModificarBingos.form:218
+msgid "Imprimir Listado de Elementos"
+msgstr ""
+
+#: FormModificarBingos.form:234
 msgid "Guardar"
 msgstr ""
 
@@ -512,6 +526,18 @@ msgstr ""
 
 #: FormModificarBingos.class:255
 msgid "El elemento ha sido borrado."
+msgstr ""
+
+#: FormModificarBingos.class:285
+msgid "Desea imprimir el listado de elementos?"
+msgstr ""
+
+#: FormModificarBingos.class:285
+msgid "Si, imprime"
+msgstr ""
+
+#: FormModificarBingos.class:285 FormModificarCartones.class:180
+msgid "No"
 msgstr ""
 
 #: FormModificarCartones.form:61
@@ -595,10 +621,6 @@ msgstr ""
 
 #: FormModificarCartones.class:180
 msgid "Sí, salir sin guardar"
-msgstr ""
-
-#: FormModificarCartones.class:180
-msgid "No"
 msgstr ""
 
 #: FormModificarCartones.class:205
@@ -842,4 +864,8 @@ msgstr ""
 
 #: FormVerCartones.class:16
 msgid "Visualizando cartones"
+msgstr ""
+
+#: ModuleVarios.module:68
+msgid "No existen cartones para imprimir"
 msgstr ""

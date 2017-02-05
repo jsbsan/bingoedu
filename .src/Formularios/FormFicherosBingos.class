@@ -209,7 +209,8 @@ Public Sub ButtomImprimir_Click()
 End
 
 Public Sub GridViewFicherosDatos_DblClick()
-
-  ButtonEditarBingo_Click()
   
+  ButtonEditarBingo_Click()
+  Stop Event
+
 End
