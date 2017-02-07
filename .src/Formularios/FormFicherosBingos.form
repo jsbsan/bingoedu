@@ -28,12 +28,12 @@
     }
   }
   { HBox3 HBox
-    MoveScaled(1,9,79,36)
+    MoveScaled(1,6,79,43)
     Expand = True
     { VBox1 VBox
-      MoveScaled(0,0,14,37)
+      MoveScaled(6,1,15,43)
       { VBox7 VBox
-        MoveScaled(2,1,9,3)
+        MoveScaled(2,0,9,3)
         Expand = True
         AutoResize = True
       }
@@ -41,6 +41,9 @@
         MoveScaled(0,3,13.5714,4)
         Text = ("Crear")
         Picture = Picture["icon:/16/new"]
+      }
+      { VBox3 VBox
+        MoveScaled(1,6,9,3)
       }
       { ButtonEditarBingo Button
         MoveScaled(0,8,13.5714,4)
@@ -56,8 +59,11 @@
         Text = ("Importar")
         Picture = Picture["icon:/16/add"]
       }
+      { VBox6 VBox
+        MoveScaled(3,20,9,3)
+      }
       { ButtonCrearCopia Button
-        MoveScaled(0,22,13.5714,4)
+        MoveScaled(1,22,13.5714,4)
         ToolTip = ("exporta para compartir el fichero con otros profesores")
         Text = ("Exportar")
         Picture = Picture["icon:/16/people"]
@@ -65,19 +71,29 @@
       { VBox2 VBox
         MoveScaled(2,26,9,3)
       }
-      { ButtomImprimir Button
+      { ButtomImprimirCarton Button
         MoveScaled(0,29,13.5714,4)
-        Text = ("Imprimir")
-        Picture = Picture["icon:/16/printer"]
+        ToolTip = ("Imprime Cartones del Bingo seleccionado")
+        Text = ("Cartones")
+        Picture = Picture["iconoimprimircarton20x20.png"]
       }
       { VBox4 VBox
         MoveScaled(1,33,13,4)
+      }
+      { ButtomImprimirElementosBingo Button
+        MoveScaled(0,37,13.5714,4)
+        ToolTip = ("Imprime listado de elementos del bingo seleccionado")
+        Text = ("Elementos")
+        Picture = Picture["icon:/16/printer"]
+      }
+      { VBox8 VBox
+        MoveScaled(0,0,9,3)
         Expand = True
         AutoResize = True
       }
     }
     { ScrollView1 ScrollView
-      MoveScaled(19,6,45,27)
+      MoveScaled(40,9,45,27)
       Expand = True
       Arrangement = Arrange.Fill
       { GridViewFicherosDatos GridView
@@ -94,7 +110,7 @@
     }
   }
   { HBox1 HBox
-    MoveScaled(6,46,71,4)
+    MoveScaled(6,49,71,4)
     { ButtonBorrado Button
       MoveScaled(0,0,13.5714,4)
       Text = ("Borrar")

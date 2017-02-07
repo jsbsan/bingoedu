@@ -189,7 +189,7 @@ Public Sub ButtonAgregarBingo_Click()
   
 End
 
-Public Sub ButtomImprimir_Click()
+Public Sub ButtomImprimirCarton_Click()
   
   Dim bingotmp As Bingo
   
@@ -212,5 +212,26 @@ Public Sub GridViewFicherosDatos_DblClick()
   
   ButtonEditarBingo_Click()
   Stop Event
+  
+End
 
+Public Sub ButtomImprimirElementosBingo_Click()
+  
+  Dim c As New CreandoInformeBingo
+  Dim bingotmp As Bingo
+  
+  If GridViewFicherosDatos.Row = -1 Then
+    Message.Info(("Debe de seleccionar un  bingo educativo"))
+    Return
+  Else
+    
+    bingotmp = New Bingo
+    
+    bingotmp.NombreFichero = GridViewFicherosDatos[GridViewFicherosDatos.Row, 0].Text
+    bingotmp.cargadatos(bingotmp.NombreFichero, True) 'TRUE: los datos vienen de una carpeta en el disco duro,y no de un ".be"
+    
+    c.imprimirBingo(bingotmp)
+    
+  Endif
+  
 End

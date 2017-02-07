@@ -14,43 +14,55 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: FormFicherosBingos.form:51
+#: FormFicherosBingos.form:55
 msgid "Gestión de bingos"
 msgstr ""
 
-#: FormFicherosBingos.form:76
+#: FormFicherosBingos.form:80
 msgid "Crear"
 msgstr ""
 
-#: FormFicherosBingos.form:82
+#: FormFicherosBingos.form:90
 msgid "Editar"
 msgstr ""
 
-#: FormFicherosBingos.form:92
+#: FormFicherosBingos.form:100
 msgid "importa un fichero .be para usarlo en este ordenador"
 msgstr ""
 
-#: FormFicherosBingos.form:93
+#: FormFicherosBingos.form:101
 msgid "Importar"
 msgstr ""
 
-#: FormFicherosBingos.form:99
+#: FormFicherosBingos.form:111
 msgid "exporta para compartir el fichero con otros profesores"
 msgstr ""
 
-#: FormFicherosBingos.form:100
+#: FormFicherosBingos.form:112
 msgid "Exportar"
 msgstr ""
 
-#: FormFicherosBingos.form:110
-msgid "Imprimir"
+#: FormFicherosBingos.form:122
+msgid "Imprime Cartones del Bingo seleccionado"
 msgstr ""
 
-#: FormFicherosBingos.form:146
+#: FormFicherosBingos.form:123
+msgid "Cartones"
+msgstr ""
+
+#: FormFicherosBingos.form:133
+msgid "Imprime listado de elementos del bingo seleccionado"
+msgstr ""
+
+#: FormFicherosBingos.form:134
+msgid "Elementos"
+msgstr ""
+
+#: FormFicherosBingos.form:170
 msgid "Borrar"
 msgstr ""
 
-#: FormFicherosBingos.form:157
+#: FormFicherosBingos.form:181
 msgid "Salir"
 msgstr ""
 

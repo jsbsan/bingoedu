@@ -4,8 +4,7 @@ BingoJuego=[94,103]
 FormFicherosBingos=[211]
 
 [Breakpoints]
-Breakpoint[1]="ModuleVarios.355"
-Count=1
+Count=0
 
 [DebugWindow]
 Count=0
@@ -247,8 +246,23 @@ Geometry=[-4,16,210,210]
 [DebugWindow/bingotmp.ArrayElementosBingo]
 Geometry=[2,24,210,611]
 
+[DebugWindow/bingotmp.ArrayElementosCarton]
+Geometry=[2,24,210,767]
+
+[DebugWindow/bingotmp.ArrayElementosCarton[1]]
+Geometry=[16,38,210,767]
+
+[DebugWindow/bingotmp.ArrayElementosCarton[a]]
+Geometry=[433,106,210,210]
+
 [DebugWindow/btmp.ArrayElementosBingo]
 Geometry=[0,24,210,793]
+
+[DebugWindow/btmp.ArrayElementosCarton]
+Geometry=[828,94,540,560]
+
+[DebugWindow/btmp.ArrayElementosCarton[27]]
+Geometry=[733,294,540,560]
 
 [DebugWindow/btmp.ListaElementosRepetidos]
 Geometry=[0,24,210,210]
@@ -267,6 +281,9 @@ Geometry=[695,390,610,463]
 
 [DebugWindow/e]
 Geometry=[872,202,400,300]
+
+[DebugWindow/eB]
+Geometry=[20,424,210,210]
 
 [DebugWindow/eb]
 Geometry=[-4,16,210,210]
@@ -334,14 +351,13 @@ File[5]=".src/Formularios/FMain.class:50.56"
 File[6]=".src/Formularios/FormFicherosBingos.form"
 File[7]="Nota.txt:15.29"
 File[8]=".src/Formularios/FormModificarBingos.form"
-File[9]=".src/Formularios/FormModificarBingos.class:286.6"
+File[9]=".src/Formularios/FormModificarBingos.class:276.2"
 File[10]=".src/Formularios/FormModificarCartones.form"
-Active=11
-File[11]=".src/Formularios/FormFicherosBingos.class:213.12"
+File[11]=".src/Formularios/FormFicherosBingos.class:233.0"
 File[12]=".src/Clases/controles/SquareButton.class:78.8"
 File[13]=".src/Formularios/FormModificarElementos.form"
 File[14]=".src/Clases/Bingo.class:496.11"
-File[15]=".src/Clases/elemento.class:15.0"
+File[15]=".src/Clases/elemento.class:60.0"
 File[16]=".src/Clases/elementoTexto.class:10.0"
 File[17]=".src/Clases/elementoImagen.class:18.0"
 File[18]=".src/Formularios/FormModificarElementos.class:27.98"
@@ -377,7 +393,7 @@ File[47]=".src/Formularios/FormJuego.form"
 File[48]="lista de elementos.png"
 File[49]=".src/Formularios/FormJuego.class:339.65"
 File[50]=".src/Clases/BingoJuego.class:32.21"
-File[51]=".src/Clases/ModuleVarios.module:48.50"
+File[51]=".src/Clases/ModuleVarios.module:357.32"
 File[52]=".src/Formularios/FormMostrarResultados.form"
 File[53]=".src/Formularios/FormMostrarResultados.class:47.2"
 File[54]="icono sonido grande.png"
@@ -389,8 +405,10 @@ File[59]=".src/Formularios/FormFormatoImpresion.class:32.2"
 File[60]="PlantillaDatosREV01.svg:0.0"
 File[61]=".src/Formularios/FormAvanceInformeBingo.form"
 File[62]=".src/Formularios/FormAvanceInformeBingo.class:36.45"
-File[63]=".src/Clases/CreandoInformeBingo.class:33.11"
-Count=63
+Active=63
+File[63]=".src/Clases/CreandoInformeBingo.class:172.57"
+File[64]="iconoimprimircarton.png"
+Count=64
 
 [Watches]
 Count=1
