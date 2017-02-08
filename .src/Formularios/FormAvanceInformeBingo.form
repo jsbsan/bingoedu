@@ -6,7 +6,7 @@
   { Label1 Label
     MoveScaled(0,1,64,6)
     Font = Font["+3"]
-    Text = ("Creando Informe de elementos de Bingo/Cartón")
+    Text = ("Creando listado de elementos del bingo...")
     Alignment = Align.Center
   }
   { Label2 Label
@@ -15,7 +15,7 @@
   }
   { Label3 Label
     MoveScaled(5,13,13,4)
-    Text = ("Paginas:")
+    Text = ("Páginas:")
   }
   { ProgressBarPaginas ProgressBar
     MoveScaled(35,12,23,4)

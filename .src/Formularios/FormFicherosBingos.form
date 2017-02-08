@@ -42,9 +42,6 @@
         Text = ("Crear")
         Picture = Picture["icon:/16/new"]
       }
-      { VBox3 VBox
-        MoveScaled(1,6,9,3)
-      }
       { ButtonEditarBingo Button
         MoveScaled(0,8,13.5714,4)
         Text = ("Editar")
@@ -59,9 +56,6 @@
         Text = ("Importar")
         Picture = Picture["icon:/16/add"]
       }
-      { VBox6 VBox
-        MoveScaled(3,20,9,3)
-      }
       { ButtonCrearCopia Button
         MoveScaled(1,22,13.5714,4)
         ToolTip = ("exporta para compartir el fichero con otros profesores")
@@ -73,17 +67,14 @@
       }
       { ButtomImprimirCarton Button
         MoveScaled(0,29,13.5714,4)
-        ToolTip = ("Imprime Cartones del Bingo seleccionado")
+        ToolTip = ("Imprime los cartones del bingo seleccionado")
         Text = ("Cartones")
         Picture = Picture["iconoimprimircarton20x20.png"]
       }
-      { VBox4 VBox
-        MoveScaled(1,33,13,4)
-      }
       { ButtomImprimirElementosBingo Button
         MoveScaled(0,37,13.5714,4)
-        ToolTip = ("Imprime listado de elementos del bingo seleccionado")
-        Text = ("Elementos")
+        ToolTip = ("Imprime un listado de los elementos del bingo")
+        Text = ("Listado")
         Picture = Picture["icon:/16/printer"]
       }
       { VBox8 VBox
