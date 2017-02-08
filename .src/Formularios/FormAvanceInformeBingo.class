@@ -38,7 +38,7 @@ Public Sub observador_creandoPagina(n As Integer)
   labelPaginas.text = Str$(n) & " " & ("de") & " " & Str$(totalpaginas)
   
   If n = totalpaginas Then 
-    LabelInformefinal.text = ("Empezando a crear informe final en .PDF")
+    LabelInformefinal.text = ("Empezando a crear el listado en PDF")
   Endif
   Me.Refresh()
   
@@ -46,7 +46,7 @@ End
 
 Public Sub observador_CreandoBingoInicion()
   
-  LabelInformefinal.text = ("Empezando a crear informe final en .PDF") & cadenapunto
+  LabelInformefinal.text = ("Empezando a crear el listado en PDF") & cadenapunto
   Me.Refresh()
   Timer1.Trigger
   Timer1.Start()
@@ -55,7 +55,7 @@ End
 
 Public Sub observador_CreandoBingoFin()
   
-  LabelInformefinal.text = ("Informe final terminado!!!")
+  LabelInformefinal.text = ("¡Informe terminado!")
   Wait 2
   Me.Close
   
@@ -66,7 +66,7 @@ Public Sub Timer1_Timer()
   cadenapunto &= "."
   If Len(cadenapunto) > 10 Then cadenapunto = ""
   
-  LabelInformefinal.text = ("Empezando a crear informe final en .PDF") & cadenapunto
+  LabelInformefinal.text = ("Empezando a crear el listado en PDF") & cadenapunto
   Me.Refresh()
   
 End

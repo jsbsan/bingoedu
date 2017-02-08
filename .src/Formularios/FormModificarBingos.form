@@ -150,8 +150,8 @@
     }
     { ButtonListadoBingo Button
       MoveScaled(36,1,36,5)
-      ToolTip = ("Imprime un listado de elementos de Bingo y Carton")
-      Text = ("Imprimir Listado de Elementos")
+      ToolTip = ("Imprime una lista con los elementos del bingo")
+      Text = ("Imprimir listado de elementos")
       Picture = Picture["icon:/32/print"]
     }
     { HBox3 HBox

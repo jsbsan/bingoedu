@@ -82,7 +82,7 @@ msgstr ""
 msgid "Crear y editar nuevos bingos"
 msgstr ""
 
-#: FMain.form:46 FormFicherosBingos.form:55
+#: FMain.form:46 FormFicherosBingos.form:52
 msgid "Gestión de bingos"
 msgstr ""
 
@@ -102,7 +102,7 @@ msgstr ""
 msgid "Autores: Julio Sánchez Berro (jsbsan) y Antonio Sánchez (introlinux)"
 msgstr ""
 
-#: FMain.form:81 FormFicherosBingos.form:181 FormJuego.form:125
+#: FMain.form:81 FormFicherosBingos.form:166 FormJuego.form:125
 #: FormModificarBingos.form:240 FormModificarCartones.form:192
 #: FormModificarElementos.form:123 FormModoJuego.form:153
 #: FormMultipleElementosDeTexto.form:52 FormMultipleImagenesSonidos.form:62
@@ -123,7 +123,7 @@ msgid "Creando cartones....."
 msgstr ""
 
 #: FormAvanceInformeBingo.form:21
-msgid "Creando Informe de elementos de Bingo/Cartón"
+msgid "Creando listado de elementos del bingo..."
 msgstr ""
 
 #: FormAvanceInformeBingo.form:27
@@ -131,7 +131,7 @@ msgid "Elementos:"
 msgstr ""
 
 #: FormAvanceInformeBingo.form:32
-msgid "Paginas:"
+msgid "Páginas:"
 msgstr ""
 
 #: FormAvanceInformeBingo.class:30
@@ -139,54 +139,54 @@ msgid "de"
 msgstr ""
 
 #: FormAvanceInformeBingo.class:41
-msgid "Empezando a crear informe final en .PDF"
+msgid "Empezando a crear el listado en PDF"
 msgstr ""
 
 #: FormAvanceInformeBingo.class:58
-msgid "Informe final terminado!!!"
+msgid "¡Informe terminado!"
 msgstr ""
 
-#: FormFicherosBingos.form:80
+#: FormFicherosBingos.form:77
 msgid "Crear"
 msgstr ""
 
-#: FormFicherosBingos.form:90
+#: FormFicherosBingos.form:83
 msgid "Editar"
 msgstr ""
 
-#: FormFicherosBingos.form:100
+#: FormFicherosBingos.form:93
 msgid "importa un fichero .be para usarlo en este ordenador"
 msgstr ""
 
-#: FormFicherosBingos.form:101
+#: FormFicherosBingos.form:94
 msgid "Importar"
 msgstr ""
 
-#: FormFicherosBingos.form:111
+#: FormFicherosBingos.form:100
 msgid "exporta para compartir el fichero con otros profesores"
 msgstr ""
 
-#: FormFicherosBingos.form:112
+#: FormFicherosBingos.form:101
 msgid "Exportar"
 msgstr ""
 
-#: FormFicherosBingos.form:122
-msgid "Imprime Cartones del Bingo seleccionado"
+#: FormFicherosBingos.form:111
+msgid "Imprime los cartones del bingo seleccionado"
 msgstr ""
 
-#: FormFicherosBingos.form:123 FormModificarBingos.form:48
+#: FormFicherosBingos.form:112 FormModificarBingos.form:48
 msgid "Cartones"
 msgstr ""
 
-#: FormFicherosBingos.form:133
-msgid "Imprime listado de elementos del bingo seleccionado"
+#: FormFicherosBingos.form:118
+msgid "Imprime un listado de los elementos del bingo"
 msgstr ""
 
-#: FormFicherosBingos.form:134
+#: FormFicherosBingos.form:119
 msgid "Elementos"
 msgstr ""
 
-#: FormFicherosBingos.form:170
+#: FormFicherosBingos.form:155
 msgid "Borrar"
 msgstr ""
 

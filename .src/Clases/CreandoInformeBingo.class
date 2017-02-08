@@ -100,7 +100,7 @@ Public Sub imprimirBingo(bingotmp As Bingo)
     'reemplazar numero de paginas
     contenido = Replace(contenido, "#Pag#", Str$(paginas + 1))
     contenido = Replace(contenido, "#TotalPag#", Str$(NumeroPaginas))
-    contenido = Replace(contenido, "#bingo#", "Nombre Bingo: " & bingotmp.NombreFichero)
+    contenido = Replace(contenido, "#bingo#", "Bingo: " & bingotmp.NombreFichero)
     
     ' genero  fichero
     File.Save("/tmp/trabajo/BingoPag" & Str$(paginas) & ".svg", contenido)
