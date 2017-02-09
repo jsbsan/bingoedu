@@ -14,7 +14,7 @@
    viewBox="0 0 744.09448819 1052.3622047"
    id="svg2"
    version="1.1"
-   inkscape:version="0.48.3.1 r9886"
+   inkscape:version="0.91 r13725"
    sodipodi:docname="PlantillaDatosSoloTextosREV02.svg">
   <defs
      id="defs4" />
@@ -25,16 +25,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.89095454"
-     inkscape:cx="378.44881"
-     inkscape:cy="733.99074"
+     inkscape:zoom="0.63"
+     inkscape:cx="316.07755"
+     inkscape:cy="947.10122"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1904"
-     inkscape:window-height="1005"
-     inkscape:window-x="0"
-     inkscape:window-y="38"
+     inkscape:window-width="1280"
+     inkscape:window-height="931"
+     inkscape:window-x="1280"
+     inkscape:window-y="0"
      inkscape:window-maximized="1"
      inkscape:snap-text-baseline="false" />
   <metadata
@@ -53,6 +53,13 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
+    <rect
+       style="opacity:0.96199999;fill:#ffff00;fill-opacity:0;fill-rule:nonzero;stroke:#1c221c;stroke-width:1.73894489;stroke-miterlimit:4.19999981;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4313"
+       width="338.09955"
+       height="988.08813"
+       x="40.490845"
+       y="31.695631" />
     <g
        id="g4230"
        transform="translate(-11.428572,-16.285715)">

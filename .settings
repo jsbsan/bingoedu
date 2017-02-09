@@ -393,7 +393,7 @@ File[47]=".src/Formularios/FormJuego.form"
 File[48]="lista de elementos.png"
 File[49]=".src/Formularios/FormJuego.class:339.65"
 File[50]=".src/Clases/BingoJuego.class:32.21"
-File[51]=".src/Clases/ModuleVarios.module:357.32"
+File[51]=".src/Clases/ModuleVarios.module:468.46"
 File[52]=".src/Formularios/FormMostrarResultados.form"
 File[53]=".src/Formularios/FormMostrarResultados.class:47.2"
 File[54]="icono sonido grande.png"
@@ -406,7 +406,7 @@ File[60]="PlantillaDatosREV01.svg:0.0"
 File[61]=".src/Formularios/FormAvanceInformeBingo.form"
 File[62]=".src/Formularios/FormAvanceInformeBingo.class:68.61"
 Active=63
-File[63]=".src/Clases/CreandoInformeBingo.class:102.47"
+File[63]=".src/Clases/CreandoInformeBingo.class:238.2"
 File[64]="iconoimprimircarton.png"
 Count=64
 

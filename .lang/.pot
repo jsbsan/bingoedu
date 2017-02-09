@@ -106,7 +106,7 @@ msgstr ""
 #: FormModificarBingos.form:240 FormModificarCartones.form:192
 #: FormModificarElementos.form:123 FormModoJuego.form:153
 #: FormMultipleElementosDeTexto.form:52 FormMultipleImagenesSonidos.form:62
-#: FormVerCartones.form:105
+#: FormVerCartones.form:110
 msgid "Salir"
 msgstr ""
 
@@ -183,7 +183,7 @@ msgid "Imprime un listado de los elementos del bingo"
 msgstr ""
 
 #: FormFicherosBingos.form:119
-msgid "Elementos"
+msgid "Listado"
 msgstr ""
 
 #: FormFicherosBingos.form:155
@@ -477,11 +477,11 @@ msgid "Borrar elemento"
 msgstr ""
 
 #: FormModificarBingos.form:217
-msgid "Imprime un listado de elementos de Bingo y Carton"
+msgid "Imprime una lista con los elementos del bingo"
 msgstr ""
 
 #: FormModificarBingos.form:218
-msgid "Imprimir Listado de Elementos"
+msgid "Imprimir listado de elementos"
 msgstr ""
 
 #: FormModificarBingos.form:234
@@ -858,23 +858,23 @@ msgstr ""
 msgid "cancelar operación"
 msgstr ""
 
-#: FormVerCartones.form:35
+#: FormVerCartones.form:38
 msgid "Lista de cartones...."
 msgstr ""
 
-#: FormVerCartones.form:41
+#: FormVerCartones.form:44
 msgid "Haga click sobre un cartón para verlo en el Visor"
 msgstr ""
 
-#: FormVerCartones.form:54
+#: FormVerCartones.form:59
 msgid "Visor"
 msgstr ""
 
-#: FormVerCartones.form:81
+#: FormVerCartones.form:86
 msgid "Editar con Inkscape"
 msgstr ""
 
-#: FormVerCartones.form:87
+#: FormVerCartones.form:92
 msgid "Imprimir en PDF"
 msgstr ""
 

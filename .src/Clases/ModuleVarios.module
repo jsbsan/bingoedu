@@ -464,9 +464,9 @@ Private Sub crearpdf()
   Dim salida As String
   
   Inc Application.Busy
-  Shell "cd /tmp/trabajo;convert -quality 100 *.png bingo.pdf" To salida
+  Shell "cd /tmp/trabajo;convert -quality 100 pag*.png BingoCarton.pdf" To salida
   
-  Desktop.Open("/tmp/trabajo/bingo.pdf")
+  Desktop.Open("/tmp/trabajo/BingoCarton.pdf")
   Dec Application.Busy  
   
 End
