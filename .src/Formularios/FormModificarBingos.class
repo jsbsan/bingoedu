@@ -140,6 +140,7 @@ Public Sub ButtonGuadarModificaciones_Click()
   bingotmp.tipo = ComboBoxCategoria.Text
   
   bingotmp.guardarBingo(True)
+  'Message.Info(("¡¡datos guardados!!")) 
   
 End
 

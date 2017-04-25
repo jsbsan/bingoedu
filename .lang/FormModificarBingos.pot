@@ -142,59 +142,59 @@ msgstr ""
 msgid "Dato en el cartón"
 msgstr ""
 
-#: FormModificarBingos.class:165
+#: FormModificarBingos.class:166
 msgid "No se pueden generar los cartones...\ndemasiados elementos repetidos, cuadros blancos o negros para este tipo de cartón"
 msgstr ""
 
-#: FormModificarBingos.class:191
+#: FormModificarBingos.class:192
 msgid "Al generar nuevos cartones se borrarán los anteriores, ¿quiere continuar?"
 msgstr ""
 
-#: FormModificarBingos.class:191
+#: FormModificarBingos.class:192
 msgid "Sí, continúa"
 msgstr ""
 
-#: FormModificarBingos.class:191
+#: FormModificarBingos.class:192
 msgid "No, cancelar"
 msgstr ""
 
-#: FormModificarBingos.class:202
+#: FormModificarBingos.class:203
 msgid "Problemas al crear los cartones, causas:"
 msgstr ""
 
-#: FormModificarBingos.class:203
+#: FormModificarBingos.class:204
 msgid "     Hay pocos elementos"
 msgstr ""
 
-#: FormModificarBingos.class:204
+#: FormModificarBingos.class:205
 msgid "     Hay muchos cartones para crear"
 msgstr ""
 
-#: FormModificarBingos.class:205
+#: FormModificarBingos.class:206
 msgid "no es posible crear el número de cartones solicitado"
 msgstr ""
 
-#: FormModificarBingos.class:242
+#: FormModificarBingos.class:243
 msgid "No hay elemento seleccionado"
 msgstr ""
 
-#: FormModificarBingos.class:248
+#: FormModificarBingos.class:249
 msgid "Sí"
 msgstr ""
 
-#: FormModificarBingos.class:255
+#: FormModificarBingos.class:256
 msgid "El elemento ha sido borrado."
 msgstr ""
 
-#: FormModificarBingos.class:285
+#: FormModificarBingos.class:286
 msgid "Desea imprimir el listado de elementos?"
 msgstr ""
 
-#: FormModificarBingos.class:285
+#: FormModificarBingos.class:286
 msgid "Si, imprime"
 msgstr ""
 
-#: FormModificarBingos.class:285
+#: FormModificarBingos.class:286
 msgid "No"
 msgstr ""
 

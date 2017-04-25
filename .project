@@ -3,7 +3,7 @@
 Title=bingoedu
 Startup=FMain
 Icon=icon175x175.jpeg
-Version=0.0.2
+Version=0.0.3
 Component=gb.image
 Component=gb.qt4
 Component=gb.form
@@ -18,7 +18,7 @@ SourcePath=/home/minino/Documentos
 Maintainer=jsbsan
 Address=jusabejusabe@gmail.com
 License=General Public License
-PackageName=bingoedu-0.0.1
+PackageName=bingoedu-0.0.2
 CreateEachDirectory=1
 Packager=1
 Systems=debian

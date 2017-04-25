@@ -6,73 +6,50 @@
 Property enlace As String ''clave que relaciones elemnto bingo-elemento carton
 Property id As String '' clave que identifica al elemento
 
-
 Public Sub _new()
-
+  
   'cuando se crea se identefica
-  Me.id = Hex(CFloat(Now) * 86400000) & "_" & Str$(Int(Rnd(1, 100) * 10))
+  Me.id = Hex(CFloat(Now) * 86400000) & "_" & Str$(Int(Rnd(1, 1000) * 10))
   '' se crea un identificador unico Ref: https://www.gambas-es.org/viewtopic.php?f=5&t=5837
+  Wait 0.001
 
 End
-
 
 'variables:
 ' si es del tipo de elemento Carton -> si es igual a Bingo
 ' datos a coger: texto, imagen (fichero), sonido (fichero)
 
-
-
 Public Sub creaVariant() As Variant
-
-
-
-
-
+  
   Dim tempcole As New Collection
   Dim temp2cole As New Collection
-
+  
   'Dato de Identeificacion
   tempcole.Add(Me.id, "id")
-
+  
   'dato de enlace
   temp2cole.Add(Me.enlace, "enlace")
-
-
-
+  
   'añadir datos segun tipo de elemento
   Me.agregaDatos(ByRef temp2cole) 'lo paso por referencia para modificarlo internamente y no tener que usar el valor de retorno
-
+  
   tempcole.Add(temp2cole, "datos")
-
+  
   Return tempcole 'Replace(Replace(Replace(JsonString, "[", ""), "]", ""),"\"
-
+  
 End
-
 
 Public Sub agregaDatos(ByRef datos As Collection)
-
+  
   'en la API, no lo defino, pero si lo voy a definir en los distintos tipos de elementos.
-
+  
 End
-
 
 Public Function tipoElemento() As String ''devuelve el tipo de elemento que es el objeto
-
-  Return Object.Class(Me).name
-
+  
+  Return Upper(Object.Class(Me).name)
+  
 End
-
-
-
-
-
-
-
-
-
-
-
-
 
 '------------------------------
 '   definicion de propiedades
@@ -82,25 +59,25 @@ Private $enlace As String
 Private $id As String
 
 Private Function id_Read() As String
-
+  
   Return $id
-
+  
 End
 
 Private Sub id_Write(Value As String)
-
+  
   $id = Value
-
+  
 End
 
 Private Function enlace_Read() As String
-
+  
   Return $enlace
-
+  
 End
 
 Private Sub enlace_Write(Value As String)
-
+  
   $enlace = VALUE
-
+  
 End

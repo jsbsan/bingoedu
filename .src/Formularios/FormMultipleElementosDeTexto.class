@@ -86,5 +86,5 @@ Public Sub Form_Open()
   'TextLabel1.text &= (" Puede escribir en varios renglones (pulsando la tecla RETURN o INTRO), para asignar tantos elementos del bingo y carton que necesite.") & "<br>"
   'TextLabel1.text &= ("Nota") & "<br>"
   'TextLabel1.text &= ("Tambien se puede pegar desde otros programas, por ejemplo seleccionando dos columnas de una hoja de cálculo copiandolas y luego pegarlas en area de texto.") & "<br>"
-
+  
 End
